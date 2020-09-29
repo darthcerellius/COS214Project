@@ -1,0 +1,3 @@
+/media/jeanre/Additional/University/2020/Semester 2/COS 214/Project/Code/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/media/jeanre/Additional/University/2020/Semester 2/COS 214/Project/Code/cmake-build-debug/CMakeFiles/edit_cache.dir
+/media/jeanre/Additional/University/2020/Semester 2/COS 214/Project/Code/cmake-build-debug/CMakeFiles/Code.dir
