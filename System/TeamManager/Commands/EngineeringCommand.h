@@ -1,0 +1,14 @@
+//
+// Created by kyle-pc on 2020/10/28.
+//
+
+#ifndef COS214PROJECT_ENGINEERINGCOMMAND_H
+#define COS214PROJECT_ENGINEERINGCOMMAND_H
+
+
+class EngineeringCommand {
+
+};
+
+
+#endif //COS214PROJECT_ENGINEERINGCOMMAND_H
