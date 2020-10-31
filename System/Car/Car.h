@@ -15,6 +15,7 @@ private:
 public:
     Car();
     ~Car();
+    Component* clone();
     void add(Component* c);
     void remove(string c);
     bool test();
