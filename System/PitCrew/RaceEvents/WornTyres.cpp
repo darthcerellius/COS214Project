@@ -1,0 +1,15 @@
+//
+// Created by Marco on 31/10/2020.
+//
+
+#include "WornTyres.h"
+
+WornTyres::WornTyres(){
+    std::cout << "The race car's tyres are worn out, and need to be replaced.\n";
+}
+
+WornTyres::~WornTyres() {}
+
+string WornTyres::eventDescription() {
+    return "The race car proceeds to the pit stop to have its worn out tyres replaced."
+}
