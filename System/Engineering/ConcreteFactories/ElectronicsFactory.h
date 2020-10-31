@@ -1,0 +1,14 @@
+//
+// Created by hannes on 2020/10/31.
+//
+
+#ifndef COS214PROJECT_ELECTRONICSFACTORY_H
+#define COS214PROJECT_ELECTRONICSFACTORY_H
+
+
+class ElectronicsFactory {
+
+};
+
+
+#endif //COS214PROJECT_ELECTRONICSFACTORY_H
