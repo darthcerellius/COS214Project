@@ -5,7 +5,7 @@
 #include "LogisticsCommand.h"
 
 LogisticsCommand::LogisticsCommand() {
-
+    std::cout << "test" << std::endl;
 }
 
 LogisticsCommand::~LogisticsCommand() {
