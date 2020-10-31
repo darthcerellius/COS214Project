@@ -13,7 +13,7 @@ Chassis::Chassis(Chassis *c): Component("chassis") {
 Chassis::~Chassis() {
 
 }
-
+//TODO implementation
 bool Chassis::test() {
     int testResult = rand()%10;
     if(testResult == 0){
