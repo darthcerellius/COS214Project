@@ -9,6 +9,7 @@ using namespace std;
 class Component{
 public:
     Component(string name);
+    string getName();
     virtual void add(Component* c)=0;
     virtual void remove(string c) = 0;
     virtual bool test() = 0;
