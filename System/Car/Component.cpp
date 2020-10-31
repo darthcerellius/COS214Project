@@ -11,3 +11,15 @@ Component::Component(string name) {
 string Component::getName() {
     return name;
 }
+
+Component::~Component() {
+
+}
+
+void Component::add(Component *c) {
+
+}
+
+void Component::remove(string c) {
+
+}
