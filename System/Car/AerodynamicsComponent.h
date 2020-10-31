@@ -14,7 +14,6 @@ public:
     AerodynamicsComponent(string name);
     AerodynamicsComponent(AerodynamicsComponent* a);
     ~AerodynamicsComponent();
-    void add(Component* c);
     bool test();
     Component* clone();
 };

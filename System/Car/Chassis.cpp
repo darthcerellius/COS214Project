@@ -3,3 +3,28 @@
 //
 
 #include "Chassis.h"
+
+Chassis::Chassis():Component("chassis") {
+
+}
+Chassis::Chassis(Chassis *c): Component("chassis") {
+
+}
+Chassis::~Chassis() {
+
+}
+
+bool Chassis::test() {
+    int testResult = rand()%10;
+    if(testResult == 0){
+        return false;//test failed
+    }else{
+        return true;
+    }
+}
+
+Component *Chassis::clone() {
+    return dynamic_cast<Component*>(new Chassis(this));
+}
+
+
