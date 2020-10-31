@@ -4,7 +4,7 @@
 
 #include "Car.h"
 
-Car::Car() {
+Car::Car() : Component("Car"){
     generalStrategy = 0;
 }
 
