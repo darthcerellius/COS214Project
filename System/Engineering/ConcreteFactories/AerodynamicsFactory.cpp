@@ -3,3 +3,7 @@
 //
 
 #include "AerodynamicsFactory.h"
+
+AerodynamicsComponent *AerodynamicsFactory::constructComponent() {
+    return new AerodynamicsComponent("AerodynamicsComponent");
+}
