@@ -65,10 +65,11 @@ void Car::executeStrategy() {
         std::cout << "DEBUG: The race car has not yet been assigned a general race strategy.\n";
 }
 //TODO discuss implementation
+//commented out by Marco
 /*
 void Car::avoidHazard(string hazard) {
     cout<<"Car maneuvers to avoid "<<hazard<<endl;
-}*/ //commented out by Marco
+}*/
 
 void Car::makeTacticalDecision(string decision) {
 /*
@@ -83,6 +84,8 @@ void Car::makeTacticalDecision(string decision) {
 }
 
 //TODO discuss implemntation
+//Finished by Marco
 void Car::respondToEvent(string event) {
-    cout<<event<<endl;
+    std::cout << "The race car is notified of an event by the pit crew and responds appropriately:\n";
+    std::cout<<event<<std::endl;
 }
