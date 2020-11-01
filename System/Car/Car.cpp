@@ -24,8 +24,7 @@ Component* Car::clone() {
     for(it = components.begin(); it!= components.end(); it++){
         temp->add((*it).second->clone());
     }
-    //TODO Add copy constructor or clone for general race strategy
-    //Finished by Marco
+
     temp->setRaceStrategy(generalStrategy->clone());
 
     return temp;
@@ -40,7 +39,7 @@ void Car::remove(string c) {
     if(it != components.end())
         components.erase(it);
 }
-//TODO discuss how this should be implemented
+//TODO discuss how this should be implemented in individual components
 bool Car::test() {
     bool result = true;
     map<string, Component*>::iterator it;
@@ -64,12 +63,7 @@ void Car::executeStrategy() {
     else
         std::cout << "DEBUG: The race car has not yet been assigned a general race strategy.\n";
 }
-//TODO discuss implementation
-//commented out by Marco
-/*
-void Car::avoidHazard(string hazard) {
-    cout<<"Car maneuvers to avoid "<<hazard<<endl;
-}*/
+
 
 void Car::makeTacticalDecision(string decision) {
 /*
@@ -83,8 +77,7 @@ void Car::makeTacticalDecision(string decision) {
  std::cout << decision << std::endl;
 }
 
-//TODO discuss implemntation
-//Finished by Marco
+
 void Car::respondToEvent(string event) {
     std::cout << "The race car is notified of an event by the pit crew and responds appropriately:\n";
     std::cout<<event<<std::endl;
