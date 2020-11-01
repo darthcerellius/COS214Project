@@ -7,6 +7,7 @@ public:
     ConservativeStart();
     virtual ~ConservativeStart();
     void executeStrategy();
+    GeneralRaceStrategy* clone();
 };
 
 #endif

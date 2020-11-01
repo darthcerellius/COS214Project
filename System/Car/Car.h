@@ -21,7 +21,8 @@ public:
     bool test();
     void setRaceStrategy(GeneralRaceStrategy* rs);
     void executeStrategy();
-    void avoidHazard(string hazard);
+   // void avoidHazard(string hazard);          //commented out by Marco
+    void makeTacticalDecision(string decision); // added by Marco, see commentary under Car::makeTacticalDecision() in Car.cpp
     void respondToEvent(string event);
 };
 #endif //COS214PROJECT_CAR_H

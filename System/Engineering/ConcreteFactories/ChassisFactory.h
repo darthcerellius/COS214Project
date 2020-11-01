@@ -5,9 +5,12 @@
 #ifndef COS214PROJECT_CHASSISFACTORY_H
 #define COS214PROJECT_CHASSISFACTORY_H
 
+#include "../Factory.h"
+#include "../../Car/Chassis.h"
 
-class ChassisFactory {
-
+class ChassisFactory : public Factory{
+public:
+    Chassis* constructComponent() override;
 };
 
 

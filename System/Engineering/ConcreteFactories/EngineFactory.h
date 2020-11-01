@@ -5,9 +5,12 @@
 #ifndef COS214PROJECT_ENGINEFACTORY_H
 #define COS214PROJECT_ENGINEFACTORY_H
 
+#include "../Factory.h"
+#include "../../Car/Engine.h"
 
-class EngineFactory {
-
+class EngineFactory : public Factory {
+public:
+    Engine* constructComponent() override;
 };
 
 

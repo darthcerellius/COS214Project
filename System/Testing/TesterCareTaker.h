@@ -1,0 +1,14 @@
+//
+// Created by jeanre on 2020/11/01.
+//
+
+#ifndef COS214PROJECT_TESTERCARETAKER_H
+#define COS214PROJECT_TESTERCARETAKER_H
+
+
+class TesterCareTaker {
+
+};
+
+
+#endif //COS214PROJECT_TESTERCARETAKER_H

@@ -7,6 +7,7 @@ public:
     CorneringTechnique();
     virtual ~CorneringTechnique();
     void executeStrategy();
+    GeneralRaceStrategy* clone();
 };
 
 #endif

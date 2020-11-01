@@ -3,3 +3,7 @@
 //
 
 #include "ChassisFactory.h"
+
+Chassis *ChassisFactory::constructComponent() {
+    return new Chassis();
+}
