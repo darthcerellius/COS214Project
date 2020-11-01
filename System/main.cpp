@@ -6,13 +6,11 @@
 #include "RacingStrategy/Strategies/MinimalPitstops.h"
 #include "RacingStrategy/StrategyTeam.h"
 #include "Car/Car.h"
-#include "Car/Tyre/HardCompound.h"
-#include "Car/Tyre/MediumCompound.h"
-#include "Car/Tyre/SoftCompound.h"
+#include "Car/Tyre/TyreSupplier.h"
 
 void testStrategy();
 void testPitCrewInstructions();
-void testTyreCompound();//----->Ivan
+void testTyres();//----->Ivan
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
@@ -20,7 +18,7 @@ int main() {
     //testStrategy();
     //testPitCrewInstructions();    //WIP
 
-    //testTyreCompound();//----->Ivan
+    //testTyres();//----->Ivan
 
     return 0;
 }
@@ -51,9 +49,12 @@ void testPitCrewInstructions(){
     //-----------------------------------------------------------------------------------
 }
 
-void testTyreCompound() {//----->Ivan
-    Compound* comp = new SoftCompound();
-    Tyre* t = new Tyre(comp);
+void testTyres() {//----->Ivan
+    Supplier* tyreFact = new TyreSupplier();
+    //Compound* comp = new SoftCompound();
+    //Tyre* t = new Tyre(comp);
+    Component* t1 = tyreFact->supply();
+    Tyre* t = dynamic_cast<Tyre*>(t1);
     std::cout << t->getCompound() << std::endl;
     t->change();
     std::cout << t->getCompound() << std::endl;
