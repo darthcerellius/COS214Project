@@ -8,10 +8,14 @@
 #include "Car/Car.h"
 
 void testStrategy();
+void testPitCrewInstructions();
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
-    testStrategy();
+
+    //testStrategy();
+    //testPitCrewInstructions();    //WIP
+
     return 0;
 }
 
@@ -30,4 +34,13 @@ void testStrategy(){
     delete stratTeam;
     delete testVehicle;
     //-----------------------------------------------------------------------------
+}
+
+void testPitCrewInstructions(){
+    //------------------------Testing for Pit Crew instructions--------------------------
+    //WIP, still need to implement the PitCrew class structure
+    Car* testVehicle = new Car();
+
+    delete testVehicle;
+    //-----------------------------------------------------------------------------------
 }
