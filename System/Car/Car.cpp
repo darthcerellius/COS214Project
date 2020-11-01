@@ -65,9 +65,23 @@ void Car::executeStrategy() {
         std::cout << "DEBUG: The race car has not yet been assigned a general race strategy.\n";
 }
 //TODO discuss implementation
+/*
 void Car::avoidHazard(string hazard) {
     cout<<"Car maneuvers to avoid "<<hazard<<endl;
+}*/ //commented out by Marco
+
+void Car::makeTacticalDecision(string decision) {
+/*
+ The original Hazard hierarchy was removed by Hannes during one of the meetings in favour of the new Event hierarchy.
+ Originally the Car class had 2 functions makeTacticalDecision and avoidHazard, I think Hannes intended to replace
+ the avoidHazard function with the respondToEvent during the change but accidentally replaced the makeTacticalDecision
+ function with repondToEvent. That is likely why the outdated avoidHazard function still appears in the class diagram.
+ makeTacticalDecision is necessary for the PitCrew to communicate their tactical decisions to the car.
+ */
+ std::cout << "The race car receives a tactical instruction from the pit crew and executes it:\n";
+ std::cout << decision << std::endl;
 }
+
 //TODO discuss implemntation
 void Car::respondToEvent(string event) {
     cout<<event<<endl;
