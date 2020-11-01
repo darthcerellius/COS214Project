@@ -6,19 +6,21 @@
 #include "RacingStrategy/Strategies/MinimalPitstops.h"
 #include "RacingStrategy/StrategyTeam.h"
 #include "Car/Car.h"
-
 #include "Car/Tyre/HardCompound.h"
-#include "Car/Tyre/SoftCompound.h"
 #include "Car/Tyre/MediumCompound.h"
+#include "Car/Tyre/SoftCompound.h"
 
 void testStrategy();
 void testPitCrewInstructions();
+void testTyreCompound();//----->Ivan
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
 
     //testStrategy();
     //testPitCrewInstructions();    //WIP
+
+    //testTyreCompound();//----->Ivan
 
     return 0;
 }
@@ -47,4 +49,26 @@ void testPitCrewInstructions(){
 
     delete testVehicle;
     //-----------------------------------------------------------------------------------
+}
+
+void testTyreCompound() {//----->Ivan
+    Compound* comp = new SoftCompound();
+    Tyre* t = new Tyre(comp);
+    std::cout << t->getCompound() << std::endl;
+    t->change();
+    std::cout << t->getCompound() << std::endl;
+    t->change();
+    std::cout << t->getCompound() << std::endl;
+    t->change();
+    std::cout << t->getCompound() << std::endl;
+    t->change();
+    std::cout << t->getCompound() << std::endl;
+
+    /*
+        Soft Compound
+        Medium Compound
+        Hard Compound
+        Soft Compound
+        Medium Compound
+    */
 }

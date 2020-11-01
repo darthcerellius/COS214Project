@@ -19,7 +19,6 @@ public:
     void change();
     string getCompound();
     void setState(Compound* state_);
-    Compound* getState();
 
     bool test();
     Component* clone();

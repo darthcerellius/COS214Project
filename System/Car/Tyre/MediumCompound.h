@@ -10,8 +10,8 @@
 
 class MediumCompound: public Compound {
 public:
-    virtual void handleChange(Tyre* t);
-    virtual string getCompound();
+    void handleChange(Tyre* t);
+    string getCompound();
 };
 
 

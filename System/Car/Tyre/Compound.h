@@ -6,6 +6,7 @@
 #define COS214PROJECT_COMPOUND_H
 #include "Tyre.h"
 
+class Tyre;
 
 class Compound {
 public:

@@ -6,4 +6,4 @@
 
 ElectronicsComponent *ElectronicsFactory::constructComponent() {
     return new ElectronicsComponent("ElectronicsComponent");
-}=
+}

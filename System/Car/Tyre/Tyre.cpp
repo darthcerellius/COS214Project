@@ -16,7 +16,7 @@ Tyre::Tyre(Compound* state_):Component("tyre") {
 }
 
 Tyre::~Tyre() {
-    //delete state;
+    delete state;
 }
 
 void Tyre::change() {
@@ -29,11 +29,6 @@ string Tyre::getCompound() {
 
 void Tyre::setState(Compound *state_) {
     state = state_;
-}
-
-
-Compound* Tyre::getState() {
-    return state;
 }
 
 bool Tyre::test() {
