@@ -7,6 +7,7 @@ public:
     TaxiStyle();
     virtual ~TaxiStyle();
     void executeStrategy();
+    GeneralRaceStrategy* clone();
 };
 
 #endif

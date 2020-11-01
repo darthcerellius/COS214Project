@@ -7,6 +7,7 @@ public:
     InertiaDrift();
     virtual ~InertiaDrift();
     void executeStrategy();
+    GeneralRaceStrategy* clone();
 };
 
 #endif

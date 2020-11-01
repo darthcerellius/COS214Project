@@ -25,8 +25,10 @@ Component* Car::clone() {
         temp->add((*it).second->clone());
     }
     //TODO Add copy constructor or clone for general race strategy
-    //temp->setRaceStrategy(new GeneralRaceStrategy(generalStrategy));
+    //Finished by Marco
+    temp->setRaceStrategy(generalStrategy->clone());
 
+    return 0;
 }
 
 void Car::add(Component *c) {

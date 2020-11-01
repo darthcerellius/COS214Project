@@ -7,6 +7,7 @@ public:
     MinimalPitstops();
     virtual ~MinimalPitstops();
     void executeStrategy();
+    GeneralRaceStrategy* clone();
 };
 
 #endif
