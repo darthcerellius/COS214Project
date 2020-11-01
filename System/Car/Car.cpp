@@ -28,7 +28,7 @@ Component* Car::clone() {
     //Finished by Marco
     temp->setRaceStrategy(generalStrategy->clone());
 
-    return 0;
+    return temp;
 }
 
 void Car::add(Component *c) {

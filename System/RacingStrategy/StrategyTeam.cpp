@@ -19,7 +19,9 @@ StrategyTeam::StrategyTeam(Car* raceCar) {
     std::cout << "A strategy team for the next season has been selected.\n";
 }
 
-StrategyTeam::~StrategyTeam(){}
+StrategyTeam::~StrategyTeam(){
+    std::cout << "As the season comes to an end, the corresponding strategy team is disbanded.\n";
+}
 
 void StrategyTeam::decideStrategy(int strategyDecider) {
     //strategyDecider should be a randomly generated number between 0 and 4 to determine which strategy will be used per race
@@ -40,7 +42,7 @@ void StrategyTeam::decideStrategy(int strategyDecider) {
     }
 
     if(raceCar){
-        //raceCar->generalStrategy = chosenStrategy; //this is valid since StrategyTeam is a friend class of Car
+        raceCar->setRaceStrategy(chosenStrategy);
         std::cout << "The strategy team has decided on a general race strategy for the car to follow for this race.\n";
     }
     else

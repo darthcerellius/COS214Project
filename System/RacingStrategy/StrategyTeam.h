@@ -5,8 +5,7 @@
 #ifndef COS214PROJECT_STRATEGYTEAM_H
 #define COS214PROJECT_STRATEGYTEAM_H
 #include <iostream>
-
-class Car;
+#include "../Car/Car.h"
 
 class StrategyTeam{
 private:
