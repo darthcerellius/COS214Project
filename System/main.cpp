@@ -7,6 +7,10 @@
 #include "RacingStrategy/StrategyTeam.h"
 #include "Car/Car.h"
 
+#include "Car/Tyre/HardCompound.h"
+#include "Car/Tyre/SoftCompound.h"
+#include "Car/Tyre/MediumCompound.h"
+
 void testStrategy();
 void testPitCrewInstructions();
 

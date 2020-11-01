@@ -4,10 +4,28 @@
 
 #ifndef COS214PROJECT_TYRE_H
 #define COS214PROJECT_TYRE_H
+
 #include "../Component.h"
+#include "Compound.h"
 
-class Tyre {
+class Compound;
 
+class Tyre: public Component {
+public:
+    Tyre(string name);
+    Tyre(Tyre*);
+    Tyre(Compound* state_);
+    ~Tyre();
+    void change();
+    string getCompound();
+    void setState(Compound* state_);
+    Compound* getState();
+
+    bool test();
+    Component* clone();
+
+private:
+    Compound* state;
 };
 
 
