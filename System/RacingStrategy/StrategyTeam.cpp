@@ -39,6 +39,7 @@ void StrategyTeam::decideStrategy(int strategyDecider) {
             chosenStrategy = new InertiaDrift(); break;
         default:
             std::cout << "The strategy team received an invalid input to choose a general race strategy. Received input: " << strategyDecider << std::endl;
+            return;
     }
 
     if(raceCar){
