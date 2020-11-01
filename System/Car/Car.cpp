@@ -10,8 +10,11 @@ Car::Car() : Component("Car"){
 
 Car::~Car() {
     components.clear();
-    //Who is responsible for the deletion of race strategy
-    delete generalStrategy;
+    //QUESTION: Who is responsible for the deletion of race strategy
+    //Answered by Marco: Car should delete race strategy if one has been assigned to it.
+    //When assigning a new strategy, previous one should also be deleted
+    if(generalStrategy)
+        delete generalStrategy;
 }
 
 Component* Car::clone() {
@@ -48,11 +51,16 @@ bool Car::test() {
 }
 
 void Car::setRaceStrategy(GeneralRaceStrategy *rs) {
+    if(generalStrategy)
+        delete generalStrategy;
     this->generalStrategy = rs;
 }
 
 void Car::executeStrategy() {
-    generalStrategy->executeStrategy();
+    if(generalStrategy)
+        generalStrategy->executeStrategy();
+    else
+        std::cout << "DEBUG: The race car has not yet been assigned a general race strategy.\n";
 }
 //TODO discuss implementation
 void Car::avoidHazard(string hazard) {
