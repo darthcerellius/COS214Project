@@ -3,3 +3,7 @@
 //
 
 #include "ElectronicsFactory.h"
+
+ElectronicsComponent *ElectronicsFactory::constructComponent() {
+    return new ElectronicsComponent("ElectronicsComponent");
+}=

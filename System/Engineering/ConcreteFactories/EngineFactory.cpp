@@ -3,3 +3,7 @@
 //
 
 #include "EngineFactory.h"
+
+Engine *EngineFactory::constructComponent() {
+    return new Engine();
+}

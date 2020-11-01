@@ -15,7 +15,7 @@ ElectronicsComponent::ElectronicsComponent(ElectronicsComponent *c) :Component(c
 ElectronicsComponent::~ElectronicsComponent() {
 
 }
-
+//TODO implementation
 bool ElectronicsComponent::test() {
     int testResult = rand()%10;
     if(testResult == 0){

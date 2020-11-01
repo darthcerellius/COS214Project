@@ -5,9 +5,13 @@
 #ifndef COS214PROJECT_AERODYNAMICSFACTORY_H
 #define COS214PROJECT_AERODYNAMICSFACTORY_H
 
+#include "../Factory.h"
+#include "../../Car/AerodynamicsComponent.h"
 
-class AerodynamicsFactory {
 
+class AerodynamicsFactory : public Factory{
+public:
+    AerodynamicsComponent* constructComponent() override;
 };
 
 
