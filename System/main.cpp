@@ -14,7 +14,6 @@ void testTyres();//----->Ivan
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
-
     //testStrategy();
     //testPitCrewInstructions();    //WIP
 

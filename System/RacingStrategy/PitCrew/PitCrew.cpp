@@ -3,3 +3,8 @@
 //
 
 #include "PitCrew.h"
+
+PitCrew::PitCrew(){
+    racecar = 0;
+    currentEvent = 0;
+}

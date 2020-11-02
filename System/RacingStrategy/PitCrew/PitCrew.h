@@ -4,11 +4,19 @@
 
 #ifndef SYSTEM_PITCREW_H
 #define SYSTEM_PITCREW_H
-
-class Car;
+#include "RaceEvents/RaceEvent.h"
+#include "../../Car/Car.h"
 
 class PitCrew {
-
+private:
+    Car* racecar;
+    RaceEvent* currentEvent;
+public:
+    PitCrew();
+    PitCrew(Car*);
+    ~PitCrew();
+    void makeTacticalInstruction();
+    void respondToEvent();
 };
 
 
