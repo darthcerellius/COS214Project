@@ -10,9 +10,6 @@ Car::Car() : Component("Car"){
 
 Car::~Car() {
     components.clear();
-    //QUESTION: Who is responsible for the deletion of race strategy
-    //Answered by Marco: Car should delete race strategy if one has been assigned to it.
-    //When assigning a new strategy, previous one should also be deleted
     if(generalStrategy)
         delete generalStrategy;
 }
@@ -64,19 +61,10 @@ void Car::executeStrategy() {
         std::cout << "DEBUG: The race car has not yet been assigned a general race strategy.\n";
 }
 
-
 void Car::makeTacticalDecision(string decision) {
-/*
- The original Hazard hierarchy was removed by Hannes during one of the meetings in favour of the new Event hierarchy.
- Originally the Car class had 2 functions makeTacticalDecision and avoidHazard, I think Hannes intended to replace
- the avoidHazard function with the respondToEvent during the change but accidentally replaced the makeTacticalDecision
- function with repondToEvent. That is likely why the outdated avoidHazard function still appears in the class diagram.
- makeTacticalDecision is necessary for the PitCrew to communicate their tactical decisions to the car.
- */
  std::cout << "The race car receives a tactical instruction from the pit crew and executes it:\n";
  std::cout << decision << std::endl;
 }
-
 
 void Car::respondToEvent(string event) {
     std::cout << "The race car is notified of an event by the pit crew and responds appropriately:\n";

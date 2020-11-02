@@ -7,6 +7,12 @@
 #include "RacingStrategy/StrategyTeam.h"
 #include "Car/Car.h"
 #include "Car/Tyre/TyreSupplier.h"
+#include "RacingStrategy/PitCrew/PitCrew.h"
+#include "RacingStrategy/PitCrew/RaceEvents/WornTyres.h"
+#include "RacingStrategy/PitCrew/RaceEvents/BrokenComponent.h"
+#include "RacingStrategy/PitCrew/RaceEvents/YellowFlag.h"
+#include "RacingStrategy/PitCrew/RaceEvents/RedFlag.h"
+#include "RacingStrategy/PitCrew/RaceEvents/SafetyCar.h"
 
 void testStrategy();
 void testPitCrewInstructions();
@@ -14,11 +20,6 @@ void testTyres();//----->Ivan
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
-
-    //testStrategy();
-    //testPitCrewInstructions();    //WIP
-
-    //testTyres();//----->Ivan
 
     return 0;
 }
@@ -42,9 +43,25 @@ void testStrategy(){
 
 void testPitCrewInstructions(){
     //------------------------Testing for Pit Crew instructions--------------------------
-    //WIP, still need to implement the PitCrew class structure
     Car* testVehicle = new Car();
+    PitCrew* testCrew = new PitCrew(testVehicle);
 
+    RaceEvent* currEvent = new SafetyCar();
+    //currEvent can be
+    /*
+     WornTyres
+     BrokenComponent
+     YellowFlag
+     RedFlag
+     SafetyCar
+     */
+    currEvent->changeEvent(testCrew);
+    delete currEvent;
+
+    const int tacticalDecision = 0; //[0,inf)
+    testCrew->makeTacticalInstruction(tacticalDecision);
+
+    delete testCrew;
     delete testVehicle;
     //-----------------------------------------------------------------------------------
 }

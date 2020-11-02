@@ -7,3 +7,7 @@
 RaceEvent::RaceEvent(){}
 
 RaceEvent::~RaceEvent() {}
+
+void RaceEvent::changeEvent(PitCrew * crew) {
+    crew->observeNewEvent(this);
+}
