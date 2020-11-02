@@ -30,4 +30,20 @@ Component* AerodynamicsComponent::clone() {
     return dynamic_cast<Component*>(new AerodynamicsComponent(this));
 }
 
+double AerodynamicsComponent::getDownForce() {
+    return this->downForce;
+}
+
+double AerodynamicsComponent::getWindResistance() {
+    return this->windResistance;
+}
+
+void AerodynamicsComponent::setWindResistance(double newWindResistance) {
+    this->windResistance = newWindResistance;
+}
+
+void AerodynamicsComponent::setDownForce(double newDownForce) {
+    this->downForce = newDownForce;
+}
+
 

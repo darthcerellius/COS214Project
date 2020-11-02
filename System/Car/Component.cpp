@@ -23,3 +23,19 @@ void Component::add(Component *c) {
 void Component::remove(string c) {
 
 }
+
+void Component::setWeight(double newWeight) {
+    this->weight=newWeight;
+}
+
+double Component::getStrength() {
+    return strength;
+}
+
+void Component::setStrength(double newStrength) {
+    this->strength=newStrength;
+}
+
+double Component::getWeight() {
+    return weight;
+}

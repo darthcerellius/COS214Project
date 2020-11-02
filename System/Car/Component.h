@@ -15,7 +15,14 @@ public:
     virtual void remove(string c);
     virtual bool test() = 0;
     virtual Component* clone() = 0;
+    void setWeight(double);
+    void setStrength(double);
+    double getStrength();
+    double getWeight();
 private:
     string name;
+protected:
+    double strength;
+    double weight;
 };
 #endif //COS214PROJECT_COMPONENT_H
