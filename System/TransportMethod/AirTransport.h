@@ -5,9 +5,12 @@
 #ifndef COS214PROJECT_AIRTRANSPORT_H
 #define COS214PROJECT_AIRTRANSPORT_H
 
+#include "TransportMethod.h"
 
-class AirTransport {
-
+class AirTransport : public TransportMethod {
+public:
+    AirTransport();
+    ~AirTransport() override;
 };
 
 

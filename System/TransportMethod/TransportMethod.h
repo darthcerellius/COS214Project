@@ -5,9 +5,17 @@
 #ifndef COS214PROJECT_TRANSPORTMETHOD_H
 #define COS214PROJECT_TRANSPORTMETHOD_H
 
+enum TransportType {
+    AIR,
+    SEA,
+    ROAD
+};
 
 class TransportMethod {
-
+public:
+    static TransportMethod* createTransportMethod(TransportType type);
+    TransportMethod();
+    virtual ~TransportMethod();
 };
 
 
