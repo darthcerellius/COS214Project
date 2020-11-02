@@ -3,3 +3,11 @@
 //
 
 #include "AirTransport.h"
+
+AirTransport::AirTransport() {
+
+}
+
+AirTransport::~AirTransport() {
+
+}

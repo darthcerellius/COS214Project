@@ -3,3 +3,11 @@
 //
 
 #include "SeaTransport.h"
+
+SeaTransport::SeaTransport() {
+
+}
+
+SeaTransport::~SeaTransport() {
+
+}

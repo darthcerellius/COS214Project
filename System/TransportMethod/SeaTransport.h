@@ -5,9 +5,12 @@
 #ifndef COS214PROJECT_SEATRANSPORT_H
 #define COS214PROJECT_SEATRANSPORT_H
 
+#include "TransportMethod.h"
 
-class SeaTransport {
-
+class SeaTransport : public TransportMethod{
+public:
+    SeaTransport();
+    ~SeaTransport() override;
 };
 
 

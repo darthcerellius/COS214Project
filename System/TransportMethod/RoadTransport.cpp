@@ -3,3 +3,11 @@
 //
 
 #include "RoadTransport.h"
+
+RoadTransport::RoadTransport() {
+
+}
+
+RoadTransport::~RoadTransport() {
+
+}
