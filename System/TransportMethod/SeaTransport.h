@@ -5,7 +5,7 @@
 #ifndef COS214PROJECT_SEATRANSPORT_H
 #define COS214PROJECT_SEATRANSPORT_H
 
-#include "TransportMethod.h"
+#include "TransportMethod.cpp"
 #include "../Container/GoodsContainer.h"
 
 class SeaTransport : public TransportMethod<GoodsContainer>{

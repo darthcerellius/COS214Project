@@ -6,11 +6,17 @@
 #define COS214PROJECT_AIRTRANSPORT_H
 
 #include "TransportMethod.h"
+#include "../Memento/Component/ComponentCareTaker.h"
 
-class AirTransport : public TransportMethod {
+class AirTransport : public TransportMethod<ComponentCareTaker> {
 public:
     AirTransport();
     ~AirTransport() override;
+
+protected:
+    void package(ComponentCareTaker* component) override;
+    void ship() override;
+    ComponentCareTaker* unpackage() override;
 };
 
 

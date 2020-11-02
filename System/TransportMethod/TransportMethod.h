@@ -15,16 +15,14 @@ enum TransportType {
 
 template <typename T>
 class TransportMethod {
-private:
-
 public:
-    static TransportMethod* createTransportMethod(TransportType type);
     TransportMethod();
     virtual ~TransportMethod();
     void load(T* component);
     T* unload();
 
 protected:
+    T* shippingContainer;
     /*puts the pointer into a memento*/
     virtual void package(T* component) = 0;
     /*specify how the car is being shipped*/
