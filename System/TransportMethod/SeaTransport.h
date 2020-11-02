@@ -6,11 +6,17 @@
 #define COS214PROJECT_SEATRANSPORT_H
 
 #include "TransportMethod.h"
+#include "../Container/GoodsContainer.h"
 
-class SeaTransport : public TransportMethod{
+class SeaTransport : public TransportMethod<GoodsContainer>{
 public:
     SeaTransport();
     ~SeaTransport() override;
+
+protected:
+    void package(GoodsContainer* component) override;
+    void ship() override;
+    GoodsContainer* unpackage() override;
 };
 
 

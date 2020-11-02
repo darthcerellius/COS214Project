@@ -6,11 +6,17 @@
 #define COS214PROJECT_ROADTRANSPORT_H
 
 #include "TransportMethod.h"
+#include "../Container/GoodsContainer.h"
 
-class RoadTransport : public TransportMethod{
+class RoadTransport : public TransportMethod<GoodsContainer>{
 public:
     RoadTransport();
     ~RoadTransport() override;
+
+protected:
+    void package(GoodsContainer* component) override;
+    void ship() override;
+    GoodsContainer* unpackage() override;
 };
 
 
