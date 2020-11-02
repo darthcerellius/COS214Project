@@ -5,7 +5,7 @@
 #include "Chassis.h"
 
 Chassis::Chassis():Component("chassis") {
-
+    this->strength = 12.0;
 }
 Chassis::Chassis(Chassis *c): Component("chassis") {
 

@@ -5,6 +5,8 @@
 #ifndef COS214PROJECT_COMPONENT_H
 #define COS214PROJECT_COMPONENT_H
 #include <string>
+#include "../Memento/Component/ComponentMemento.h"
+
 using namespace std;
 class Component{
 public:
@@ -15,7 +17,21 @@ public:
     virtual void remove(string c);
     virtual bool test() = 0;
     virtual Component* clone() = 0;
+    void setWeight(double);
+    void setStrength(double);
+    double getStrength();
+    double getWeight();
+    void restore(ComponentMemento*);
+    ComponentMemento* createMemento();
+
 private:
     string name;
+protected:
+    double strength;
+    double weight;
 };
+
+
+
+
 #endif //COS214PROJECT_COMPONENT_H

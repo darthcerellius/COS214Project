@@ -9,12 +9,17 @@
 
 class AerodynamicsComponent: public Component{
 private:
-
+    double downForce;
+    double windResistance;
 public:
     AerodynamicsComponent(string name);
     AerodynamicsComponent(AerodynamicsComponent* a);
     ~AerodynamicsComponent();
     bool test();
     Component* clone();
+    double getDownForce();
+    void setDownForce(double);
+    double getWindResistance();
+    void setWindResistance(double);
 };
 #endif //COS214PROJECT_AERODYNAMICSCOMPONENT_H
