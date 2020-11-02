@@ -5,11 +5,15 @@
 #include "ComponentState.h"
 
 ComponentState::ComponentState() {
-
+    this->strength = 0;
+    this->weight=0;
+    this->name= "Non existant";
 }
 
-ComponentState::ComponentState(double, double, std::string) {
-
+ComponentState::ComponentState(double weight, double strength, std::string name) {
+    this->strength = strength;
+    this->weight = weight;
+    this->name = name;
 }
 
 ComponentState::~ComponentState() {
@@ -29,13 +33,13 @@ std::string ComponentState::getName() {
 }
 
 void ComponentState::setWeight(double newWeight) {
-    this->weight=
+    this->weight= newWeight;
 }
 
-void ComponentState::setStrength(double) {
-
+void ComponentState::setStrength(double newStrength) {
+    this->strength = newStrength;
 }
 
-void ComponentState::setName(std::string) {
-
+void ComponentState::setName(std::string newName) {
+    this->name = newName;
 }

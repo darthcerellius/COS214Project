@@ -10,8 +10,9 @@ class ComponentMemento {
 private:
     friend class Component;
     ComponentState* state;
-    void setMemento();
+    void setMemento(double,double,std::string);
     ComponentState* getMemento();
+    ComponentMemento();
 public:
     ~ComponentMemento();
 };
