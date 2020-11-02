@@ -32,21 +32,20 @@ void PitCrew::respondToEvent() {
 
 void PitCrew::makeTacticalInstruction(int decisionSelector) {
     if(racecar){
-        string decision;
+        std::string decision;
         switch(decisionSelector){
             case 0:
-                decision = "The race car speeds up to overtake the car directly in front of it.\n"; break;
+                decision = "The race car speeds up to overtake the car directly in front of it."; break;
             case 1:
-                decision = "The race car blocks the car behind it from overtaking it.\n"; break;
+                decision = "The race car blocks the car behind it from overtaking it."; break;
             case 2:
-                decision = "The race car slows down to allow the car behind it to overtake it.\n"; break;
+                decision = "The race car slows down to allow the car behind it to overtake it."; break;
             default:
-                decision = "The race car heads to the pitstop for an early maintenance.\n";
-
-            TacticalDecision* instruction = new TacticalDecision(racecar, decision);
-            instruction->executeInstruction();
-            delete instruction;
+                decision = "The race car heads to the pitstop for an early maintenance."; break;
         }
+        TacticalDecision* instruction = new TacticalDecision(racecar, decision);
+        instruction->executeInstruction();
+        delete instruction;
     } else
         std::cout << "DEBUG: Pitcrew cannot make a tactical decision as it is not assigned to a car.\n";
 }

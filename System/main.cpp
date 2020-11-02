@@ -20,10 +20,6 @@ void testTyres();//----->Ivan
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
-    //testStrategy();
-    testPitCrewInstructions();
-
-    //testTyres();//----->Ivan
 
     return 0;
 }
@@ -61,6 +57,9 @@ void testPitCrewInstructions(){
      */
     currEvent->changeEvent(testCrew);
     delete currEvent;
+
+    const int tacticalDecision = 0; //[0,inf)
+    testCrew->makeTacticalInstruction(tacticalDecision);
 
     delete testCrew;
     delete testVehicle;
