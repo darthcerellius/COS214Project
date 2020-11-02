@@ -7,15 +7,18 @@
 #include "SeaTransport.h"
 #include "RoadTransport.h"
 
-TransportMethod::TransportMethod() {
+template <typename T>
+TransportMethod<T>::TransportMethod() {
 
 }
 
-TransportMethod::~TransportMethod() {
+template <typename T>
+TransportMethod<T>::~TransportMethod() {
 
 }
 
-TransportMethod *TransportMethod::createTransportMethod(TransportType type) {
+template <typename T>
+TransportMethod<T>* TransportMethod<T>::createTransportMethod(TransportType type) {
     switch (type) {
         case AIR:
             return new AirTransport();
@@ -24,4 +27,15 @@ TransportMethod *TransportMethod::createTransportMethod(TransportType type) {
         default:
             return new RoadTransport();
     }
+}
+
+template <typename T>
+void TransportMethod<T>::load(T* component) {
+    package(component);
+    ship();
+}
+
+template <typename T>
+T* TransportMethod<T>::unload() {
+    return unpackage();
 }
