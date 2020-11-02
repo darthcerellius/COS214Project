@@ -7,6 +7,8 @@
 #include "RaceEvents/RaceEvent.h"
 #include "../../Car/Car.h"
 
+class RaceEvent;
+
 class PitCrew {
 private:
     Car* racecar;
@@ -17,6 +19,7 @@ public:
     ~PitCrew();
     void makeTacticalInstruction(int);
     void respondToEvent();
+    void observeNewEvent(RaceEvent*);
 };
 
 

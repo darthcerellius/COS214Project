@@ -50,3 +50,10 @@ void PitCrew::makeTacticalInstruction(int decisionSelector) {
     } else
         std::cout << "DEBUG: Pitcrew cannot make a tactical decision as it is not assigned to a car.\n";
 }
+
+void PitCrew::observeNewEvent(RaceEvent * newEvent) {
+    RaceEvent* temp = currentEvent; //NoEvent
+    currentEvent = newEvent;
+    respondToEvent();
+    currentEvent = temp;
+}

@@ -6,12 +6,16 @@
 #define SYSTEM_RACEEVENT_H
 #include <iostream>
 #include <string>
+#include "../PitCrew.h"
+
+class PitCrew;
 
 class RaceEvent {
 public:
     RaceEvent();
     virtual ~RaceEvent();
     virtual std::string eventDescription() = 0;
+    void changeEvent(PitCrew*);
 };
 
 
