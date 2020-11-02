@@ -15,7 +15,7 @@ public:
     PitCrew();
     PitCrew(Car*);
     ~PitCrew();
-    void makeTacticalInstruction();
+    void makeTacticalInstruction(int);
     void respondToEvent();
 };
 

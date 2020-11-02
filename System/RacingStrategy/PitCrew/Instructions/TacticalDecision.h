@@ -10,7 +10,7 @@ class TacticalDecision: public Instruction {
 protected:
     std::string decision;
 public:
-    TacticalDecision(Car* = 0, string = "");
+    TacticalDecision(Car* = 0, std::string = "");
     ~TacticalDecision();
     void executeInstruction();
 };
