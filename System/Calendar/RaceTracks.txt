@@ -1,0 +1,95 @@
+Red Bull Ring
+4.326 km
+Europe
+
+Hungaroring
+4.381 km
+Europe
+
+Silverstone circuit
+5.89 km
+Europe
+
+Circuit de Catalunya
+4.655 km
+Europe
+
+Circuit de Spa-Francorchamps
+7.004 km
+Europe
+
+Autodromo di Monza
+5.793 km
+Europe
+
+Sochi Autodrom
+5.853 km
+Europe
+
+Nurburgring
+5.148 km
+Europe
+
+Istanbul Park
+5.338 km
+Asia
+
+Bahrain International Circuit
+5.412 km
+Asia
+
+Yas Marina Circuit
+5.554 km
+Asia
+
+Albert Park Circuit
+5.303 km
+Australia
+
+Baku City Circuit
+6.006 km
+Asia
+
+Interlagos Circui
+4.309 km
+South America
+
+Circuit Gilles Villeneuve
+4.361 km
+North America
+
+Shanghai International Circuit
+5.451 km
+Asia
+
+Circuit Zandvoort
+4.3 km
+Europe
+
+Circuit Paul Ricard
+5.8 km
+Europe
+
+Suzuka International Racing Course
+5.807 km
+Asia
+
+Autodromo Hermanos Rodriguez
+4.304 km
+North America
+
+Circuit de Monaco
+3.340 km
+Europe
+
+Marina Bay Street Circuit
+5.073 km
+Asia
+
+Circuit of the Americas
+5.516 km
+North America
+
+Hanoi Street Circuit
+5.565 km
+Asia
