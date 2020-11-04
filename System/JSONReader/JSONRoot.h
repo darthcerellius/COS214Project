@@ -5,6 +5,9 @@
 #ifndef COS214PROJECT_JSONROOT_H
 #define COS214PROJECT_JSONROOT_H
 #include "AbstractJSONReader.h"
+#include "Iterators/JSONRootIterator.h"
+#include "Iterators/JSONObjectHolderIterator.h"
+
 #include <map>
 
 class JSONRoot : public AbstractJSONReader{
@@ -17,6 +20,8 @@ public:
     explicit operator std::string () const override;
     explicit operator int() const override;
     explicit operator double() const override;
+    JSONRootIterator begin();
+    JSONRootIterator end();
 
 protected:
     void addContext(std::string ctx) override;

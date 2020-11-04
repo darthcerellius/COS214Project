@@ -20,6 +20,9 @@ int main() {
                     std::istreambuf_iterator<char>());
     JSONRoot root(str);
     //std::cout << (std::string)root["hello"]["world"]["me"] << std::endl;
+    for (auto val : dynamic_cast<JSONRoot&>(root["quiz"]["maths"])) {
+        std::cout << val.first << std::endl;
+    }
     std::cout << (int)root["quiz"]["maths"]["q1"]["options"][3] << std::endl;
 
 }

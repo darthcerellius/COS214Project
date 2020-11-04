@@ -129,3 +129,11 @@ JSONObjectHolder::operator int() const {
 JSONObjectHolder::operator double() const {
     return 0;
 }
+
+JSONObjectHolderIterator JSONObjectHolder::begin() {
+    return JSONObjectHolderIterator(children.begin());
+}
+
+JSONObjectHolderIterator JSONObjectHolder::end() {
+    return JSONObjectHolderIterator(children.end());
+}

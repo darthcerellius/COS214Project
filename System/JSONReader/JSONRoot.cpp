@@ -143,3 +143,11 @@ JSONRoot::operator int() const {
 JSONRoot::operator double() const {
     return 0;
 }
+
+JSONRootIterator JSONRoot::begin() {
+    return JSONRootIterator(elements.begin());
+}
+
+JSONRootIterator JSONRoot::end() {
+    return JSONRootIterator(elements.end());
+}

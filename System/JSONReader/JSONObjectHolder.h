@@ -6,6 +6,7 @@
 #define COS214PROJECT_JSONOBJECTHOLDER_H
 
 #include "AbstractJSONReader.h"
+#include "Iterators/JSONObjectHolderIterator.h"
 
 class JSONObjectHolder : public AbstractJSONReader {
 private:
@@ -18,6 +19,8 @@ public:
     explicit operator std::string () const override;
     explicit operator int() const override;
     explicit operator double() const override;
+    JSONObjectHolderIterator begin();
+    JSONObjectHolderIterator end();
 
 protected:
     void addContext(std::string ctx) override;
