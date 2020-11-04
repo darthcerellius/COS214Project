@@ -1,0 +1,385 @@
+[
+  {
+    "track": "Red Bull Ring",
+    "length": 4.326,
+    "continent": "Europe",
+    "date" : {
+      "year" : 2020,
+      "month" : 4,
+      "day" : 29
+    },
+    "conditions" : {
+      "weather" : "sunny",
+      "temperature": 32.5,
+      "humidity": 68.3
+    }
+  },
+
+  {
+    "track": "Hungaroring",
+    "length": 4.381,
+    "continent:": "Europe",
+    "date" : {
+      "year" : 2020,
+      "month" : 5,
+      "day" : 10
+    },
+    "conditions" : {
+      "weather" : "sunny",
+      "temperature": 24.3,
+      "humidity": 72.0
+    }
+  },
+
+  {
+    "track": "Silverstone circuit",
+    "length": 5.89,
+    "continent:": "Europe",
+    "date" : {
+      "year" : 2020,
+      "month" : 5,
+      "day" : 15
+    },
+    "conditions" : {
+      "weather" : "cloudy",
+      "temperature": 19.8,
+      "humidity": 69.0
+    }
+  },
+
+  {
+    "track": "Circuit de Catalunya",
+    "length": 4.655,
+    "continent:": "Europe",
+    "date" : {
+      "year" : 2020,
+      "month" : 7,
+      "day" : 25
+    },
+    "conditions" : {
+      "weather" : "sunny",
+      "temperature": 24.8,
+      "humidity": 69.0
+    }
+  },
+
+  {
+    "track": "Circuit de Spa-Francorchamps",
+    "length": 7.004,
+    "continent:": "Europe",
+    "date" : {
+      "year" : 2020,
+      "month" : 7,
+      "day" : 30
+    },
+    "conditions" : {
+      "weather" : "sunny",
+      "temperature": 23.2,
+      "humidity": 66.1
+    }
+  },
+
+  {
+    "track": "Autodromo di Monza",
+    "length": 5.793,
+    "continent:": "Europe",
+    "date" : {
+      "year" : 2020,
+      "month" : 8,
+      "day" : 2
+    },
+    "conditions" : {
+      "weather" : "windy",
+      "temperature": 21.2,
+      "humidity": 68.5
+    }
+  },
+
+  {
+    "track": "Sochi Autodrom",
+    "length": 5.853,
+    "continent:": "Europe",
+    "date" : {
+      "year" : 2020,
+      "month" : 8,
+      "day" : 7
+    },
+    "conditions" : {
+      "weather" : "cloudy",
+      "temperature": 20.0,
+      "humidity": 70.7
+    }
+  },
+
+  {
+    "track": "Nurburgring",
+    "length": 5.148,
+    "continent:": "Europe",
+    "date" : {
+      "year" : 2020,
+      "month" : 8,
+      "day" : 17
+    },
+    "conditions" : {
+      "weather" : "rainy",
+      "temperature": 16.6,
+      "humidity": 79.3
+    }
+  },
+
+  {
+    "track": "Istanbul Park",
+    "length": 5.338,
+    "continent:": "Asia",
+    "date" : {
+      "year" : 2020,
+      "month" : 9,
+      "day" : 15
+    },
+    "conditions" : {
+      "weather" : "cloudy",
+      "temperature": 25.8,
+      "humidity": 62.4
+    }
+  },
+
+  {
+    "track": "Bahrain International Circuit",
+    "length": 5.412,
+    "continent:": "Asia",
+    "date" : {
+      "year" : 2020,
+      "month" : 9,
+      "day" : 20
+    },
+    "conditions" : {
+      "weather" : "sunny",
+      "temperature": 27.2,
+      "humidity": 59.7
+    }
+  },
+
+  {
+    "track": "Yas Marina Circuit",
+    "length": 5.554,
+    "continent:": "Asia",
+    "date" : {
+      "year" : 2020,
+      "month" : 11,
+      "day" : 15
+    },
+    "conditions" : {
+      "weather" : "sunny",
+      "temperature": 28.3,
+      "humidity": 66.6
+    }
+  },
+
+  {
+    "track": "Albert Park Circuit",
+    "length": 5.303,
+    "continent:": "Australia",
+    "date" : {
+      "year" : 2021,
+      "month" : 1,
+      "day" : 7
+    },
+    "conditions" : {
+      "weather" : "rainy",
+      "temperature": 21.3,
+      "humidity": 79.6
+    }
+  },
+
+  {
+    "track": "Baku City Circuit",
+    "length": 6.006,
+    "continent:": "Asia",
+    "date" : {
+      "year" : 2021,
+      "month" : 1,
+      "day" : 15
+    },
+    "conditions" : {
+      "weather" : "windy",
+      "temperature": 24.2,
+      "humidity": 64.9
+    }
+  },
+
+  {
+    "track": "Interlagos Circui",
+    "length": 4.309,
+    "continent:": "South America",
+    "date" : {
+      "year" : 2021,
+      "month" : 3,
+      "day" : 16
+    },
+    "conditions" : {
+      "weather" : "sunny",
+      "temperature": 31.0,
+      "humidity": 58.8
+    }
+  },
+
+  {
+    "track": "Circuit Gilles Villeneuve",
+    "length": 4.361,
+    "continent:": "North America",
+    "date" : {
+      "year" : 2021,
+      "month" : 3,
+      "day" : 23
+    },
+    "conditions" : {
+      "weather" : "sunny",
+      "temperature": 32.5,
+      "humidity": 62.6
+    }
+  },
+
+  {
+    "track": "Shanghai International Circuit",
+    "length": 5.451,
+    "continent:": "Asia",
+    "date" : {
+      "year" : 2021,
+      "month" : 4,
+      "day" : 1
+    },
+    "conditions" : {
+      "weather" : "cloudy",
+      "temperature": 26.7,
+      "humidity": 66.3
+    }
+  },
+
+  {
+    "track": "Circuit Zandvoort",
+    "length": 4.3,
+    "continent:": "Europe",
+    "date" : {
+      "year" : 2021,
+      "month" : 4,
+      "day" : 6
+    },
+    "conditions" : {
+      "weather" : "rainy",
+      "temperature": 21.1,
+      "humidity": 80.1
+    }
+  },
+
+  {
+    "track": "Circuit Paul Ricard",
+    "length": 5.8,
+    "continent:": "Europe",
+    "date" : {
+      "year" : 2021,
+      "month" : 4,
+      "day" : 15
+    },
+    "conditions" : {
+      "weather" : "cloudy",
+      "temperature": 26.7,
+      "humidity": 66.3
+    }
+  },
+
+  {
+    "track": "Suzuka International Racing Course",
+    "length": 5.807,
+    "continent:": "Asia",
+    "date" : {
+      "year" : 2021,
+      "month" : 4,
+      "day" : 23
+    },
+    "conditions" : {
+      "weather" : "sunny",
+      "temperature": 28.7,
+      "humidity": 64.3
+    }
+  },
+
+  {
+    "track": "Autodromo Hermanos Rodriguez",
+    "length": 4.304,
+    "continent:": "North America",
+    "date" : {
+      "year" : 2021,
+      "month" : 5,
+      "day" : 4
+    },
+    "conditions" : {
+      "weather" : "sunny",
+      "temperature": 32.7,
+      "humidity": 61.1
+    }
+  },
+
+  {
+    "track": "Circuit de Monaco",
+    "length": 3.340,
+    "continent:": "Europe",
+    "date" : {
+      "year" : 2021,
+      "month" : 5,
+      "day" : 9
+    },
+    "conditions" : {
+      "weather" : "sunny",
+      "temperature": 32.7,
+      "humidity": 61.4
+    }
+  },
+
+  {
+    "track": "Marina Bay Street Circuit",
+    "length": 5.073,
+    "continent:": "Asia",
+    "date" : {
+      "year" : 2021,
+      "month" : 5,
+      "day" : 16
+    },
+    "conditions" : {
+      "weather" : "cloudy",
+      "temperature": 23.1,
+      "humidity": 62.9
+    }
+  },
+
+  {
+    "track": "Circuit of the Americas",
+    "length": 5.516,
+    "continent:": "North America",
+    "date" : {
+      "year" : 2021,
+      "month" : 6,
+      "day" : 18
+    },
+    "conditions" : {
+      "weather" : "sunny",
+      "temperature": 27.1,
+      "humidity": 65.2
+    }
+  },
+
+  {
+    "track": "Hanoi Street Circuit",
+    "length": 5.565,
+    "continent:": "Asia",
+    "date" : {
+      "year" : 2021,
+      "month" : 6,
+      "day" : 23
+    },
+    "conditions" : {
+      "weather" : "sunny",
+      "temperature": 27.4,
+      "humidity": 62.2
+    }
+  }
+]
