@@ -7,14 +7,11 @@
 #include "AbstractJSONReader.h"
 
 class JSONElement : public AbstractJSONReader{
-    std::string type;
+protected:
     std::string value;
 public:
-    JSONElement(std::string type, std::string element);
+    JSONElement(std::string element);
     ~JSONElement() override = default;
-    explicit operator std::string () const override;
-    explicit operator int() const override;
-    explicit operator double() const override;
     AbstractJSONReader& operator[](std::string key) override;
     AbstractJSONReader& operator[](int pos) override;
 

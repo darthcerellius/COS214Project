@@ -4,7 +4,9 @@
 
 #include "JSONRoot.h"
 #include "ElementType.h"
-#include "JSONElement.h"
+#include "StringElement.h"
+#include "IntegerElement.h"
+#include "DoubleElement.h"
 #include "JSONObjectHolder.h"
 
 JSONRoot::JSONRoot(std::string ctx) : AbstractJSONReader("") {
@@ -51,7 +53,11 @@ void JSONRoot::addContext(std::string ctx) {
             }
             if(*strIter == '}') {
                 if (type == ElementType::JOSN_DOUBLE || type == ElementType::JSON_INTEGER) {
-                    reader = new JSONElement((type == ElementType::JOSN_DOUBLE ? "double" : "int"), substr);
+                    if (type == ElementType::JOSN_DOUBLE) {
+                        reader = new DoubleElement(substr);
+                    } else {
+                        reader = new IntegerElement(substr);
+                    }
                     elements[key] = reader;
                     substr = "";
                     add = false;
@@ -74,7 +80,7 @@ void JSONRoot::addContext(std::string ctx) {
                     type = ElementType::JSON_STRING;
                     add = false;
                 } else if (type == ElementType::JSON_STRING) {
-                    reader = new JSONElement("string", substr);
+                    reader = new StringElement(substr);
                     elements[key] = reader;
                     substr = "";
                     add = false;
@@ -98,13 +104,13 @@ void JSONRoot::addContext(std::string ctx) {
             }
             if (*strIter == ',') {
                 if (type == ElementType::JOSN_DOUBLE) {
-                    reader = new JSONElement("double", substr);
+                    reader = new DoubleElement(substr);
                     elements[key] = reader;
                     substr = "";
                     add = false;
                     type = ElementType::JSON_BLANK;
                 } else if (type == ElementType::JSON_INTEGER) {
-                    reader = new JSONElement("int", substr);
+                    reader = new IntegerElement(substr);
                     elements[key] = reader;
                     substr = "";
                     add = false;
@@ -150,4 +156,10 @@ JSONRootIterator JSONRoot::begin() {
 
 JSONRootIterator JSONRoot::end() {
     return JSONRootIterator(elements.end());
+}
+
+JSONRoot::~JSONRoot() {
+    for (auto val : elements) {
+        delete val.second;
+    }
 }

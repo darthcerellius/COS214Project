@@ -15,6 +15,7 @@ private:
     std::map<std::string, AbstractJSONReader*> elements;
 public:
     explicit JSONRoot(std::string ctx);
+    ~JSONRoot() override;
     AbstractJSONReader& operator[](std::string key) override;
     AbstractJSONReader& operator[](int pos) override;
     explicit operator std::string () const override;

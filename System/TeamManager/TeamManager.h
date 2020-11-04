@@ -5,15 +5,21 @@
 #ifndef COS214PROJECT_TEAMMANAGER_H
 #define COS214PROJECT_TEAMMANAGER_H
 
-#include "Manager.h"
+#include "Commands/Command.h"
+#include "../Calendar/ConcreteCalendar.h"
 
-class TeamManager : public Manager{
+class TeamManager{
 private:
-    Receiver* receiver;
+    Command* root;
+    ConcreteCalendar* calendar;
+    static TeamManager manager;
+    static bool isCreated;
 public:
+    ~TeamManager();
+    static TeamManager& getTeamManager();
+    void run();
+private:
     TeamManager();
-    virtual ~TeamManager() override;
-    void bind(Receiver* r) override;
 };
 
 

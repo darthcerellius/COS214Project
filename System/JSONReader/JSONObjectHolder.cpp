@@ -5,7 +5,9 @@
 #include "JSONObjectHolder.h"
 #include "ElementType.h"
 #include "JSONRoot.h"
-#include "JSONElement.h"
+#include "StringElement.h"
+#include "IntegerElement.h"
+#include "DoubleElement.h"
 
 JSONObjectHolder::JSONObjectHolder(std::string ctx) : AbstractJSONReader("") {
     JSONObjectHolder::addContext(std::move(ctx));
@@ -36,7 +38,7 @@ void JSONObjectHolder::addContext(std::string ctx) {
                 type = ElementType::JSON_STRING;
                 add = false;
             } else if (type == ElementType::JSON_STRING) {
-                reader = new JSONElement("string", substr);
+                reader = new StringElement(substr);
                 children.push_back(reader);
                 substr = "";
                 add = false;
@@ -60,7 +62,11 @@ void JSONObjectHolder::addContext(std::string ctx) {
         }
         if (*strIter == ']') {
             if (type == ElementType::JOSN_DOUBLE || type == ElementType::JSON_INTEGER) {
-                reader = new JSONElement((type == ElementType::JOSN_DOUBLE ? "double" : "int"), substr);
+                if (type == ElementType::JOSN_DOUBLE) {
+                    reader = new DoubleElement(substr);
+                } else {
+                    reader = new IntegerElement(substr);
+                }
                 children.push_back(reader);
                 substr = "";
                 add = false;
@@ -82,13 +88,13 @@ void JSONObjectHolder::addContext(std::string ctx) {
         }
         if (*strIter == ',') {
             if (type == ElementType::JOSN_DOUBLE) {
-                reader = new JSONElement("double", substr);
+                reader = new DoubleElement(substr);
                 children.push_back(reader);
                 substr = "";
                 add = false;
                 type = ElementType::JSON_BLANK;
             } else if (type == ElementType::JSON_INTEGER) {
-                reader = new JSONElement("int", substr);
+                reader = new IntegerElement(substr);
                 children.push_back(reader);
                 substr = "";
                 add = false;
