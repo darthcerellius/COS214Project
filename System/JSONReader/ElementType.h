@@ -1,0 +1,19 @@
+//
+// Created by kyle-pc on 2020/11/04.
+//
+
+#ifndef COS214PROJECT_ELEMENTTYPE_H
+#define COS214PROJECT_ELEMENTTYPE_H
+
+
+enum ElementType {
+    JSON_BLANK,
+    JSON_ROOT,
+    JSON_INTEGER,
+    JOSN_DOUBLE,
+    JSON_STRING,
+    JSON_ARRAY,
+};
+
+
+#endif //COS214PROJECT_ELEMENTTYPE_H

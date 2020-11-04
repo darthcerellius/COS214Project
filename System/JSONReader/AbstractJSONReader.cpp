@@ -3,3 +3,6 @@
 //
 
 #include "AbstractJSONReader.h"
+
+AbstractJSONReader::AbstractJSONReader(std::string ctx) {
+}
