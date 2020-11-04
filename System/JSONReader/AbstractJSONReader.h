@@ -1,0 +1,14 @@
+//
+// Created by kyle-pc on 2020/11/04.
+//
+
+#ifndef COS214PROJECT_ABSTRACTJSONREADER_H
+#define COS214PROJECT_ABSTRACTJSONREADER_H
+
+
+class AbstractJSONReader {
+
+};
+
+
+#endif //COS214PROJECT_ABSTRACTJSONREADER_H

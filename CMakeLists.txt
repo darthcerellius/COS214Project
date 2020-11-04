@@ -11,6 +11,7 @@ add_subdirectory("${PROJECT_SOURCE_DIR}/System/Memento")
 add_subdirectory("${PROJECT_SOURCE_DIR}/System/Container")
 add_subdirectory("${PROJECT_SOURCE_DIR}/System/RacingStrategy")
 add_subdirectory("${PROJECT_SOURCE_DIR}/System/TeamManager")
+add_subdirectory("${PROJECT_SOURCE_DIR}/System/JSONReader")
 
 set(SOURCES
         ${TRANSPORT_SOURCES}
