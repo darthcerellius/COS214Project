@@ -21,6 +21,7 @@ set(SOURCES
         ${CONTAINER_SOURCES}
         ${RACINGSTRATEGY_SOURCES}
         ${TEAMMANAGER_SOURCES}
+        ${JSONREADER_SOURCES}
         )
 
 add_executable(COS214Project System/kyleMain.cpp ${SOURCES})
@@ -33,4 +34,5 @@ target_link_libraries(COS214Project
         MEMENTO
         CONTAINER
         RACINGSTRATEGY
-        TEAMMANAGER)
+        TEAMMANAGER
+        JSONREADER)
