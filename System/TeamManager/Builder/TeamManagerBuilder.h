@@ -1,0 +1,14 @@
+//
+// Created by kyle-pc on 2020/11/02.
+//
+
+#ifndef COS214PROJECT_TEAMMANAGERBUILDER_H
+#define COS214PROJECT_TEAMMANAGERBUILDER_H
+
+
+class TeamManagerBuilder {
+
+};
+
+
+#endif //COS214PROJECT_TEAMMANAGERBUILDER_H
