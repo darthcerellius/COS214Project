@@ -9,12 +9,15 @@
 
 class Engine: public Component{
 private:
+    int HP; //HP = horsepower
 public:
     Engine();
     Engine(Engine* c);
     ~Engine();
     bool test();
     Component* clone();
+    int getHP();
+    void setHP(int);
 
 };
 #endif //COS214PROJECT_ENGINE_H

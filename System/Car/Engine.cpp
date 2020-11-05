@@ -5,11 +5,11 @@
 #include "Engine.h"
 
 Engine::Engine() : Component("engine"){
-
+    this->HP = 0;
 }
 
 Engine::Engine(Engine *c) :Component("engine"){
-
+    this->HP = c->getHP();
 }
 
 Engine::~Engine() {
@@ -27,4 +27,11 @@ bool Engine::test() {
 
 Component *Engine::clone() {
     return dynamic_cast<Component*>(new Engine(this));
+}
+
+int Engine::getHP() {
+    return this->HP;
+}
+void Engine::setHP(int newHP) {
+    this->HP = newHP;
 }

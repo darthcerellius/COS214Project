@@ -5,15 +5,15 @@
 #ifndef COS214PROJECT_COMPONENTSTORE_H
 #define COS214PROJECT_COMPONENTSTORE_H
 
-#include "ComponentMemento.h"
+#include "ComponentCareTaker.h"
 class ComponentStore {
 private:
-    ComponentMemento* memento;
+    ComponentCareTaker* memento;
 public:
     ComponentStore();
     ~ComponentStore();
-    void setMemento(ComponentMemento*);
-    ComponentMemento* getMemento();
+    void setMemento(ComponentCareTaker*);
+    ComponentCareTaker* getMemento();
 };
 
 

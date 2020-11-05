@@ -12,10 +12,10 @@ ComponentStore::~ComponentStore() {
     delete memento;
 }
 
-void ComponentStore::setMemento(ComponentMemento * newMemento) {
+void ComponentStore::setMemento(ComponentCareTaker * newMemento) {
     this->memento = newMemento;
 }
 
-ComponentMemento *ComponentStore::getMemento() {
+ComponentCareTaker *ComponentStore::getMemento() {
     return memento;
 }
