@@ -22,3 +22,23 @@ public:
 
 
 #endif //COS214PROJECT_STRATEGYTEAM_H
+
+/**
+ * \class StrategyTeam
+ * \brief The Strategy Team is responsible for choosing a general strategy for the racecar to follow per race, as well as selectign components that should be used when building the car
+ */
+
+/**
+ * \var Car* raceCar
+ * \brief A pointer to the race car object to which this team is assigned
+*/
+
+/**
+ * \fn void StrategyTeam::decideStrategy(int)
+ * \brief Selects one of five general strategies depending on input and assigns it to the car
+*/
+
+/**
+ * \fn void decideComponents(AbtractEngineeringTeam*)
+ * \brief Selects components to be used during the car construction and issues the construction of the car
+*/
