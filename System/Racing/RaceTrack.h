@@ -5,7 +5,12 @@
 #ifndef COS214PROJECT_RACETRACK_H
 #define COS214PROJECT_RACETRACK_H
 #include <cmath>
-#include "../Car/Car.h"
+#include "../RacingStrategy/PitCrew/RaceEvents/BrokenComponent.h"
+#include "../RacingStrategy/PitCrew/RaceEvents/NoEvent.h"
+#include "../RacingStrategy/PitCrew/RaceEvents/RedFlag.h"
+#include "../RacingStrategy/PitCrew/RaceEvents/SafetyCar.h"
+#include "../RacingStrategy/PitCrew/RaceEvents/WornTyres.h"
+#include "../RacingStrategy/PitCrew/RaceEvents/YellowFlag.h"
 #include "../RacingStrategy/PitCrew/PitCrew.h"
 #include "../Calendar/RaceWeekend.h"
 
@@ -13,16 +18,15 @@ class TeamManager;
 
 class RaceTrack {
 public:
-    RaceTrack(Car* _car, PitCrew* _crew, RaceInfo* _info);
+    RaceTrack(PitCrew* _crew, RaceInfo* _info);
     void numLaps();
     int getLaps();
     void race();
-    void notifyPitcrew();
 private:
-    Car* car;
     PitCrew* crew;
     RaceInfo* info;
     int laps;
+    RaceEvent* event;
 };
 
 

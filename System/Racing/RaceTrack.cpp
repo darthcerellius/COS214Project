@@ -3,15 +3,11 @@
 //
 
 #include "RaceTrack.h"
- //subject in observer
- //300/length , round to nearest
- //for(0<laps) {random num for events (randbetween 5 - 80) 5 = pop tyre
- // pop tyre 5%, oil leak 10%, .....
 
-RaceTrack::RaceTrack(Car* _car, PitCrew* _crew, RaceInfo* _info){
-    car = _car;
+RaceTrack::RaceTrack(PitCrew* _crew, RaceInfo* _info){
     crew = _crew;
     info = _info;
+    event = new NoEvent();
 }
 
 void RaceTrack::numLaps(){
@@ -24,11 +20,63 @@ int RaceTrack::getLaps(){
 }
 
 void RaceTrack::race(){
-    for(int i = 0; i < laps, i++){
+    bool brokenComponent;
+    bool redFlag;
+    bool safetyCar;
+    bool wornTyres;
+    bool yellowFlag;
+    int chance = 0;
+    for(int i = 0; i < laps; i++){
+        bool brokenComponent = (rand() % 100) < 10;
+        bool redFlag = (rand() % 100) < (5 + chance);
+        bool safetyCar = (rand() % 100) < (5 + chance);
+        bool wornTyres = (rand() % 100) < (5 + chance);
+        bool yellowFlag = (rand() % 100) < (5 + chance);
 
+        if(brokenComponent){
+            delete event;
+            event = new BrokenComponent();
+            event->eventDescription();
+            event->changeEvent(crew);
+            chance++;
+            continue;
+        }
+        else if(wornTyres){
+            delete event;
+            event = new WornTyres();
+            event->eventDescription();
+            event->changeEvent(crew);
+            chance++;
+            continue;
+        }
+        else if(redFlag){
+            delete event;
+            event = new RedFlag();
+            event->eventDescription();
+            event->changeEvent(crew);
+            chance++;
+            continue;
+        }
+        else if(safetyCar){
+            delete event;
+            event = new SafetyCar();
+            event->eventDescription();
+            event->changeEvent(crew);
+            chance++;
+            continue;
+        }
+        else if(yellowFlag){
+            delete event;
+            event = new YellowFlag();
+            event->eventDescription();
+            event->changeEvent(crew);
+            chance++;
+            continue;
+        }
+        else{
+            event->eventDescription();
+            chance++;
+            continue;
+        }
     }
-}
-
-void notifyPitcrew(){
-
 }
