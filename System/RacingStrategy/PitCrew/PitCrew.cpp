@@ -35,13 +35,13 @@ void PitCrew::makeTacticalInstruction(int decisionSelector) {
         std::string decision;
         switch(decisionSelector){
             case 0:
-                decision = "The race car speeds up to overtake the car directly in front of it."; break;
+                decision = "TACTICS: The race car speeds up to overtake the car directly in front of it."; break;
             case 1:
-                decision = "The race car blocks the car behind it from overtaking it."; break;
+                decision = "TACTICS: The race car blocks the car behind it from overtaking it."; break;
             case 2:
-                decision = "The race car slows down to allow the car behind it to overtake it."; break;
+                decision = "TACTICS: The race car slows down to allow the car behind it to overtake it."; break;
             default:
-                decision = "The race car heads to the pitstop for an early maintenance."; break;
+                decision = "TACTICS: The race car heads to the pitstop for an early maintenance."; break;
         }
         TacticalDecision* instruction = new TacticalDecision(racecar, decision);
         instruction->executeInstruction();
