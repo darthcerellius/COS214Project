@@ -50,3 +50,8 @@ void StrategyTeam::decideStrategy(int strategyDecider) {
         std::cout << "STRATEGY: The strategy team has not been assigned a race car for the season, and thus cannot decide on a general race strategy.\n";
 
 }
+
+void StrategyTeam::decideComponents(AbstractEngineeringTeam * engineeringTeam, TyreSupplier* tyreSupplier) {
+    engineeringTeam->receiveOrderedTyres(tyreSupplier->supply());
+    engineeringTeam->buildCar();
+}
