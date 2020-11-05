@@ -10,17 +10,14 @@
 class AbstractEngineeringTeam {
 protected:
     Car* car;
-    Component* tyres;   //added by Marco
     virtual Component* buildEngine()=0;
     virtual Component* buildAerodynamicsComponent()=0;
     virtual Component* buildElectronicsComponent()=0;
     virtual Component* buildChassis()=0;
 public:
-    AbstractEngineeringTeam();//added by Marco
     void buildCar();
     Car* getCar();
     void serviceCar();
-    void receiveOrderedTyres(Component*); //added by Marco
 };
 
 

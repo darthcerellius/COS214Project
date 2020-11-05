@@ -10,8 +10,6 @@ void AbstractEngineeringTeam::buildCar() {
     car->add(buildChassis());
     car->add(buildEngine());
     car->add(buildElectronicsComponent());
-    if(tyres)
-        car->add(tyres);    //added by Marco
 }
 
 Car *AbstractEngineeringTeam::getCar() {
@@ -20,16 +18,4 @@ Car *AbstractEngineeringTeam::getCar() {
 
 void AbstractEngineeringTeam::serviceCar() {
     cout<<"Car has been serviced"<<endl;
-}
-
-//added by Marco
-void AbstractEngineeringTeam::receiveOrderedTyres(Component* receivedTyres) {
-    if(tyres)
-        delete tyres;
-    tyres = receivedTyres;
-}
-
-//added by Marco
-AbstractEngineeringTeam::AbstractEngineeringTeam() {
-    tyres = 0;
 }
