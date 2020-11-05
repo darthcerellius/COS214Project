@@ -5,7 +5,7 @@
 #ifndef COS214PROJECT_COMPONENT_H
 #define COS214PROJECT_COMPONENT_H
 #include <string>
-#include "../Memento/Component/ComponentMemento.h"
+#include "../Memento/Component/ComponentCareTaker.h"
 
 using namespace std;
 class Component{
@@ -21,8 +21,8 @@ public:
     void setStrength(double);
     double getStrength();
     double getWeight();
-    void restore(ComponentMemento*);
-    ComponentMemento* createMemento();
+    void restore(ComponentCareTaker*);
+    ComponentCareTaker* createMemento();
 
 private:
     string name;

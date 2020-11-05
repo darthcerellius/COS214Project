@@ -12,6 +12,8 @@ class Car: public Component{
 private:
     map<string,Component*> components;
     GeneralRaceStrategy* generalStrategy;
+    double downForce;
+    double windResistance;
 public:
     Car();
     ~Car();
