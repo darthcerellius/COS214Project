@@ -6,7 +6,7 @@
 #define COS214PROJECT_STRATEGYTEAM_H
 #include <iostream>
 #include "../Car/Car.h"
-#include "../Engineering/AbstractEngineeringTeam.h"
+#include "../Engineering/EngineeringTeam.h"
 #include "../Car/Tyre/TyreSupplier.h"
 
 class StrategyTeam{
@@ -17,7 +17,7 @@ public:
     StrategyTeam();
     ~StrategyTeam();
     void decideStrategy(int);
-    void decideComponents(AbstractEngineeringTeam*);
+    void decideComponents(EngineeringTeam*);
 };
 
 
