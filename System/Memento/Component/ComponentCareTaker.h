@@ -6,6 +6,7 @@
 #define COS214PROJECT_COMPONENTCARETAKER_H
 
 #include "ComponentState.h"
+
 class ComponentCareTaker {
 private:
     friend class Component;

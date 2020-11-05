@@ -4,6 +4,7 @@
 
 #ifndef COS214PROJECT_AERODYNAMICSCOMPONENT_H
 #define COS214PROJECT_AERODYNAMICSCOMPONENT_H
+#include "../Memento/Component/ComponentCareTaker.h"
 
 #include "Component.h"
 

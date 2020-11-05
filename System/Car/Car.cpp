@@ -23,21 +23,25 @@ Component* Car::clone() {
     }
 
     temp->setRaceStrategy(generalStrategy->clone());
-
     return temp;
+
 }
 
 void Car::add(Component *c) {
     components.insert(pair<string, Component*>(c->getName(),c));
+
 }
 
 void Car::remove(string c) {
-    map<string,Component*>::iterator it = components.find(c);
-    if(it != components.end())
+    map<string, Component *>::iterator it = components.find(c);
+    if (it != components.end())
         components.erase(it);
 }
+
+
 //TODO discuss how this should be implemented in individual components
 bool Car::test() {
+
     bool result = true;
     map<string, Component*>::iterator it;
     for(it = components.begin(); it != components.end();it++){
@@ -70,3 +74,5 @@ void Car::respondToEvent(string event) {
     std::cout << "EVENT: The race car is notified of an event by the pit crew and responds appropriately:\n";
     std::cout<<event<<std::endl;
 }
+
+

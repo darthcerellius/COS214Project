@@ -8,7 +8,7 @@
 #include "Component.h"
 
 class Chassis: public Component{
-private:
+
 public:
     Chassis();
     Chassis(Chassis* c);

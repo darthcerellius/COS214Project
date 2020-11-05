@@ -41,9 +41,8 @@ double Component::getWeight() {
 }
 
 void Component::restore(ComponentCareTaker * m) {
-    this->name = m->getMemento()->getName();
-    this->weight = m->getMemento()->getWeight();
-    this->strength = m->getMemento()->getStrength();
+
+
 }
 
 ComponentCareTaker *Component::createMemento() {

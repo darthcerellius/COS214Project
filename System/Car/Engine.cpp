@@ -6,6 +6,7 @@
 
 Engine::Engine() : Component("engine"){
     this->HP = 0;
+    this->fuelConsumption =0;
 }
 
 Engine::Engine(Engine *c) :Component("engine"){
@@ -34,4 +35,9 @@ int Engine::getHP() {
 }
 void Engine::setHP(int newHP) {
     this->HP = newHP;
+}
+
+Engine::Engine(int fuelConsumption, int horsepower):Component("engine"){
+    this->HP = horsepower;
+    this->fuelConsumption=fuelConsumption;
 }

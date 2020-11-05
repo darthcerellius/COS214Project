@@ -6,13 +6,16 @@
 #define COS214PROJECT_CARCARETAKER_H
 
 #include "CarState.h"
+class Car;
 class CarCareTaker {
 private:
-    friend class CarState;
+    friend class Car;
     CarState* state;
-    void setMemento();
+    void setMemento(std::string, std::string, map<std::string, Component*>,GeneralRaceStrategy*,double,double);
     CarState* getMemento();
     CarCareTaker();
+
+public:
     ~CarCareTaker();
 };
 
