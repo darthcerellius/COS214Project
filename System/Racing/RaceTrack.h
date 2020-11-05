@@ -7,7 +7,9 @@
 
 
 class RaceTrack {
-
+public:
+    RaceTrack();
+    private
 };
 
 
