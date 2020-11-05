@@ -3,12 +3,13 @@
 //
 
 #include "EngineeringCommand.h"
+#include "../../RacingStrategy/StrategyTeam.h"
+#include "../../Car/Tyre/TyreSupplier.h"
 
 EngineeringCommand::EngineeringCommand() {
-    engTeam = new EngineeringTeam();
 }
 
 void EngineeringCommand::execute(Car *car) {
-    engTeam->buildCar();
+    CurrentSeason::getStrategyTeam(car)->decideComponents(CurrentSeason::getEngineeringTeam())
     successor->execute(engTeam->getCar());
 }

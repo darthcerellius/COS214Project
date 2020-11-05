@@ -5,8 +5,15 @@
 #ifndef COS214PROJECT_STRATEGYCOMMAND_H
 #define COS214PROJECT_STRATEGYCOMMAND_H
 
+#include "Command.h"
 
-class StrategyCommand {
+class StrategyTeam;
+
+class StrategyCommand : public Command {
+public:
+    StrategyCommand() = default;
+    ~StrategyCommand() override = default;
+    void execute(Car* car) override;
 
 };
 

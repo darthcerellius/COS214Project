@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include "TeamManager.h"
+#include "TeamManagerObjects.h"
 
 bool TeamManager::isCreated = false;
 
@@ -13,8 +14,8 @@ TeamManager::TeamManager() {
 
 
 TeamManager::~TeamManager() {
-    //delete root;
-    delete calendar;
+    CurrentSeason::clean();
+    NextSeason::clean();
 }
 
 TeamManager &TeamManager::getTeamManager() {

@@ -29,9 +29,9 @@ void JSONObjectHolder::addContext(std::string ctx) {
     for(; strIter != ctx.end(); strIter++) {
         bool add = true;
         if (*strIter == '{' && (type == ElementType::JSON_BLANK || type == ElementType::JSON_ROOT)) {
+            add = type != ElementType::JSON_BLANK;
             type = ElementType::JSON_ROOT;
             pushers++;
-            add = false;
         }
         if (*strIter == '"') {
             if (type == ElementType::JSON_BLANK) {

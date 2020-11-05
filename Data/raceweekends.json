@@ -18,7 +18,7 @@
   {
     "track": "Hungaroring",
     "length": 4.381,
-    "continent:": "Europe",
+    "continent": "Europe",
     "date" : {
       "year" : 2020,
       "month" : 5,
@@ -34,7 +34,7 @@
   {
     "track": "Silverstone circuit",
     "length": 5.89,
-    "continent:": "Europe",
+    "continent": "Europe",
     "date" : {
       "year" : 2020,
       "month" : 5,
@@ -50,7 +50,7 @@
   {
     "track": "Circuit de Catalunya",
     "length": 4.655,
-    "continent:": "Europe",
+    "continent": "Europe",
     "date" : {
       "year" : 2020,
       "month" : 7,
@@ -66,7 +66,7 @@
   {
     "track": "Circuit de Spa-Francorchamps",
     "length": 7.004,
-    "continent:": "Europe",
+    "continent": "Europe",
     "date" : {
       "year" : 2020,
       "month" : 7,
@@ -82,7 +82,7 @@
   {
     "track": "Autodromo di Monza",
     "length": 5.793,
-    "continent:": "Europe",
+    "continent": "Europe",
     "date" : {
       "year" : 2020,
       "month" : 8,
@@ -98,7 +98,7 @@
   {
     "track": "Sochi Autodrom",
     "length": 5.853,
-    "continent:": "Europe",
+    "continent": "Europe",
     "date" : {
       "year" : 2020,
       "month" : 8,
@@ -114,7 +114,7 @@
   {
     "track": "Nurburgring",
     "length": 5.148,
-    "continent:": "Europe",
+    "continent": "Europe",
     "date" : {
       "year" : 2020,
       "month" : 8,
@@ -130,7 +130,7 @@
   {
     "track": "Istanbul Park",
     "length": 5.338,
-    "continent:": "Asia",
+    "continent": "Asia",
     "date" : {
       "year" : 2020,
       "month" : 9,
@@ -146,7 +146,7 @@
   {
     "track": "Bahrain International Circuit",
     "length": 5.412,
-    "continent:": "Asia",
+    "continent": "Asia",
     "date" : {
       "year" : 2020,
       "month" : 9,
@@ -162,7 +162,7 @@
   {
     "track": "Yas Marina Circuit",
     "length": 5.554,
-    "continent:": "Asia",
+    "continent": "Asia",
     "date" : {
       "year" : 2020,
       "month" : 11,
@@ -178,7 +178,7 @@
   {
     "track": "Albert Park Circuit",
     "length": 5.303,
-    "continent:": "Australia",
+    "continent": "Australia",
     "date" : {
       "year" : 2021,
       "month" : 1,
@@ -194,7 +194,7 @@
   {
     "track": "Baku City Circuit",
     "length": 6.006,
-    "continent:": "Asia",
+    "continent": "Asia",
     "date" : {
       "year" : 2021,
       "month" : 1,
@@ -210,7 +210,7 @@
   {
     "track": "Interlagos Circui",
     "length": 4.309,
-    "continent:": "South America",
+    "continent": "South America",
     "date" : {
       "year" : 2021,
       "month" : 3,
@@ -226,7 +226,7 @@
   {
     "track": "Circuit Gilles Villeneuve",
     "length": 4.361,
-    "continent:": "North America",
+    "continent": "North America",
     "date" : {
       "year" : 2021,
       "month" : 3,
@@ -242,7 +242,7 @@
   {
     "track": "Shanghai International Circuit",
     "length": 5.451,
-    "continent:": "Asia",
+    "continent": "Asia",
     "date" : {
       "year" : 2021,
       "month" : 4,
@@ -258,7 +258,7 @@
   {
     "track": "Circuit Zandvoort",
     "length": 4.3,
-    "continent:": "Europe",
+    "continent": "Europe",
     "date" : {
       "year" : 2021,
       "month" : 4,
@@ -274,7 +274,7 @@
   {
     "track": "Circuit Paul Ricard",
     "length": 5.8,
-    "continent:": "Europe",
+    "continent": "Europe",
     "date" : {
       "year" : 2021,
       "month" : 4,
@@ -290,7 +290,7 @@
   {
     "track": "Suzuka International Racing Course",
     "length": 5.807,
-    "continent:": "Asia",
+    "continent": "Asia",
     "date" : {
       "year" : 2021,
       "month" : 4,
@@ -306,7 +306,7 @@
   {
     "track": "Autodromo Hermanos Rodriguez",
     "length": 4.304,
-    "continent:": "North America",
+    "continent": "North America",
     "date" : {
       "year" : 2021,
       "month" : 5,
@@ -322,7 +322,7 @@
   {
     "track": "Circuit de Monaco",
     "length": 3.340,
-    "continent:": "Europe",
+    "continent": "Europe",
     "date" : {
       "year" : 2021,
       "month" : 5,
@@ -338,7 +338,7 @@
   {
     "track": "Marina Bay Street Circuit",
     "length": 5.073,
-    "continent:": "Asia",
+    "continent": "Asia",
     "date" : {
       "year" : 2021,
       "month" : 5,
@@ -354,7 +354,7 @@
   {
     "track": "Circuit of the Americas",
     "length": 5.516,
-    "continent:": "North America",
+    "continent": "North America",
     "date" : {
       "year" : 2021,
       "month" : 6,
@@ -370,7 +370,7 @@
   {
     "track": "Hanoi Street Circuit",
     "length": 5.565,
-    "continent:": "Asia",
+    "continent": "Asia",
     "date" : {
       "year" : 2021,
       "month" : 6,

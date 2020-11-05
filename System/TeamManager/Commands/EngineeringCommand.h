@@ -9,8 +9,6 @@
 #include "Command.h"
 
 class EngineeringCommand : public Command {
-private:
-    EngineeringTeam* engTeam;
 public:
     EngineeringCommand();
     void execute(Car *car) override;

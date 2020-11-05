@@ -7,3 +7,11 @@
 void Command::addSuccessor(Command *succ) {
     successor = succ;
 }
+
+Command::Command() {
+    successor = nullptr;
+}
+
+Command::~Command() {
+    delete successor;
+}

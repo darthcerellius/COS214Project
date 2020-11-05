@@ -5,12 +5,16 @@
 #ifndef COS214PROJECT_COMMAND_H
 #define COS214PROJECT_COMMAND_H
 
-class Car;
+#include "../../Car/Car.h"
+#include "../TeamManagerObjects.h"
+
 
 class Command {
 protected:
     Command* successor;
 public:
+    Command();
+    virtual ~Command();
     void addSuccessor(Command* succ);
     virtual void execute(Car* car) = 0;
 
