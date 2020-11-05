@@ -10,23 +10,42 @@
 #include <string>
 class CarState {
 private:
+    std::string carName;
+    std::string name;
+    map<std::string,Component*> components;
+    GeneralRaceStrategy* strategy;
+    double weight;
+    double strength;
+    double windResistance;
+    double downForce;
 public:
+    ~CarState();
     CarState();
-    CarState(std::string, map<std::string, Component*>,double,double, double , double);
+    CarState(std::string, std::string, map<std::string, Component*>,GeneralRaceStrategy*, double , double);
     map<std::string, Component*> getComponents();
     void setComponents(map<std::string,Component*>);
     void setWeight(double);
     double getWeight(double);
-    double getStrengt();
+    double getStrength();
     void setStrength(double );
     std::string getName();
     void setName(std::string);
+    void setCarName(std::string);
+    std::string getCarName();
+    void setWindResistance(double );
+    double getWindResistance();
+    double getDownForce();
+    void setDownForce(double);
+    void setStrategy(GeneralRaceStrategy*);
+    GeneralRaceStrategy* getStrategy();
 
 
 
 
 
 };
+
+
 
 
 #endif //COS214PROJECT_CARSTATE_H

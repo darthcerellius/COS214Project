@@ -27,4 +27,16 @@ Component *Chassis::clone() {
     return dynamic_cast<Component*>(new Chassis(this));
 }
 
+ComponentCareTaker *Chassis::createMemento() {
+    ComponentCareTaker* newMemento = new ComponentCareTaker();
+    newMemento->setMemento(getStrength(),getWeight(),getName());
+    return newMemento;
+}
+
+void Chassis::restore(ComponentCareTaker *m) {
+    this->name = m->getMemento()->getName();
+    this->weight = m->getMemento()->getWeight();
+    this->strength = m->getMemento()->getStrength();
+}
+
 

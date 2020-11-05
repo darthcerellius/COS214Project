@@ -10,8 +10,11 @@
 class Engine: public Component{
 private:
     int HP; //HP = horsepower
+    int fuelConsumption;
+
 public:
     Engine();
+    Engine(int,int);
     Engine(Engine* c);
     ~Engine();
     bool test();

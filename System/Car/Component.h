@@ -21,14 +21,12 @@ public:
     void setStrength(double);
     double getStrength();
     double getWeight();
-    void restore(ComponentCareTaker*);
-    ComponentCareTaker* createMemento();
+
 
 private:
     string name;
-protected:
-    double strength;
-    double weight;
+
+
 };
 
 
