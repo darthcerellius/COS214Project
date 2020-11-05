@@ -27,11 +27,11 @@ void RaceTrack::race(){
     bool yellowFlag;
     int chance = 0;
     for(int i = 0; i < laps; i++){
-        bool brokenComponent = (rand() % 100) < 10;
-        bool redFlag = (rand() % 100) < (5 + chance);
-        bool safetyCar = (rand() % 100) < (5 + chance);
-        bool wornTyres = (rand() % 100) < (5 + chance);
-        bool yellowFlag = (rand() % 100) < (5 + chance);
+        brokenComponent = (rand() % 100) < (5 + chance);
+        redFlag = (rand() % 100) < (5 + chance);
+        safetyCar = (rand() % 100) < (5 + chance);
+        wornTyres = (rand() % 100) < (5 + chance);
+        yellowFlag = (rand() % 100) < (5 + chance);
 
         if(brokenComponent){
             delete event;
@@ -76,7 +76,6 @@ void RaceTrack::race(){
         else{
             event->eventDescription();
             chance++;
-            continue;
         }
     }
 }
