@@ -18,17 +18,17 @@ class TransportMethod {
 public:
     TransportMethod();
     virtual ~TransportMethod();
-    void load(T* component);
-    T* unload();
+    void load(T component);
+    T unload(std::string place);
 
 protected:
-    T* shippingContainer;
+    T shippingContainer;
     /*puts the pointer into a memento*/
-    virtual void package(T* component) = 0;
+    virtual void package(T component) = 0;
     /*specify how the car is being shipped*/
     virtual void ship() = 0;
     /*Brings the pointer out of the memento*/
-    virtual T* unpackage() = 0;
+    virtual T unpackage(std::string place) = 0;
 };
 
 

@@ -15,12 +15,12 @@ TransportMethod<T>::~TransportMethod() {
 }
 
 template <typename T>
-void TransportMethod<T>::load(T* component) {
+void TransportMethod<T>::load(T component) {
     package(component);
     ship();
 }
 
 template <typename T>
-T* TransportMethod<T>::unload() {
-    return unpackage();
+T TransportMethod<T>::unload(std::string place) {
+    return unpackage(place);
 }

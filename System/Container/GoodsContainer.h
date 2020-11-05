@@ -6,8 +6,20 @@
 #define COS214PROJECT_GOODSCONTAINER_H
 
 
-class GoodsContainer {
+#include "../Calendar/Calendar.h"
 
+class GoodsContainer {
+private:
+    std::string contents;
+    Date* shippingDate;
+    std::string shippingContinent;
+    std::string shippingTrack;
+public:
+    GoodsContainer() = default;
+    void setShippingLabel(std::string track, std::string continent, Date* date);
+    std::string getTrack();
+    std::string getContinent();
+    Date* getDate();
 };
 
 

@@ -7,11 +7,11 @@
 
 #include "../TeamManager.h"
 
-class LogisticsCommand : public TeamManager{
+class LogisticsCommand : public Command {
 public:
     LogisticsCommand();
     ~LogisticsCommand() override;
-    void execute(Calendar* c) override;
+    void execute(Car* c) override;
 };
 
 

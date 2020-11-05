@@ -14,9 +14,9 @@ public:
     ~AirTransport() override;
 
 protected:
-    void package(ComponentCareTaker* component) override;
+    void package(ComponentCareTaker component) override;
     void ship() override;
-    ComponentCareTaker* unpackage() override;
+    ComponentCareTaker unpackage(std::string place) override;
 };
 
 

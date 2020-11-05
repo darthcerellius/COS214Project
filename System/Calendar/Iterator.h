@@ -1,10 +1,9 @@
 //
-// Created by janine on 2020/11/02.
+// Created by kyle-pc on 2020/11/05.
 //
 
-#ifndef COS214PROJECT_ITERATOR_CPP
-#define COS214PROJECT_ITERATOR_CPP
-
+#ifndef COS214PROJECT_ITERATOR_H
+#define COS214PROJECT_ITERATOR_H
 class RaceWeekend;
 
 class Iterator
@@ -15,5 +14,4 @@ public:
     virtual bool isDone() = 0;
     virtual RaceWeekend* current() = 0;
 };
-
-#endif //COS214PROJECT_ITERATOR_CPP
+#endif //COS214PROJECT_ITERATOR_H

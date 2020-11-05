@@ -4,13 +4,16 @@
 
 #ifndef COS214PROJECT_TEAMMANAGEROBJECTS_H
 #define COS214PROJECT_TEAMMANAGEROBJECTS_H
+#include <map>
 #define FRIENDS \
 friend class StrategyCommand; \
 friend class TeamManager; \
-friend class EngineeringCommand;
+friend class EngineeringCommand; \
+friend class SeaTransport;
 
 class StrategyTeam;
 class EngineeringTeam;
+class GoodsContainer;
 class Car;
 
 class CurrentSeason {
@@ -19,6 +22,10 @@ class CurrentSeason {
     //fields
     static StrategyTeam *strategyTeam;
     static EngineeringTeam *engineeringTeam;
+    static std::map<std::string, GoodsContainer> harbours;
+
+    static void shipToHarbor(std::string name, GoodsContainer container);
+    static GoodsContainer getContainer(std::string name);
 
     static StrategyTeam *getStrategyTeam(Car* car);
 

@@ -12,6 +12,6 @@ LogisticsCommand::~LogisticsCommand() {
 
 }
 
-void LogisticsCommand::execute(Calendar *c) {
+void LogisticsCommand::execute(Car *c) {
 
 }

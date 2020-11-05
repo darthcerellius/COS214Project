@@ -6,7 +6,7 @@
 #define COS214PROJECT_CALENDARITERATOR_H
 
 #include <vector>
-#include "Iterator.cpp"
+#include "Iterator.h"
 
 class CalendarIterator : public Iterator
 {

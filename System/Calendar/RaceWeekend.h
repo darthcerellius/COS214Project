@@ -29,8 +29,8 @@ public:
     Date* getDate();
     void setCondis(Conditions* _condis);
     Conditions* getCondis();
-    int daysBetween(Date* date1, Date* date2);
-    int countLeapYears(Date* date);
+    static int daysBetween(Date* date1, Date* date2);
+    static int countLeapYears(Date* date);
 private:
     std::string trackName;
     double length;

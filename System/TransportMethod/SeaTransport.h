@@ -14,9 +14,9 @@ public:
     ~SeaTransport() override;
 
 protected:
-    void package(GoodsContainer* component) override;
+    void package(GoodsContainer component) override;
     void ship() override;
-    GoodsContainer* unpackage() override;
+    GoodsContainer unpackage(std::string place) override;
 };
 
 

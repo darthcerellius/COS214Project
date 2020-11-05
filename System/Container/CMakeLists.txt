@@ -1,6 +1,8 @@
 file(GLOB ContainerSources
         "*.h"
         "*.cpp"
+        "Memento/*.h"
+        "Memento/*.cpp"
         )
 
 set(CONTAINER_SOURCES ${ContainerSources})

@@ -13,7 +13,7 @@ AirTransport::~AirTransport() {
 
 }
 
-void AirTransport::package(ComponentCareTaker *component) {
+void AirTransport::package(ComponentCareTaker component) {
     std::cout << "Loading car onto the plane" << std::endl;
     shippingContainer = component;
 }
@@ -22,7 +22,7 @@ void AirTransport::ship() {
     std::cout << "Plane is on it's way to the race track" << std::endl;
 }
 
-ComponentCareTaker *AirTransport::unpackage() {
+ComponentCareTaker AirTransport::unpackage(std::string place) {
     std::cout << "Unloading car from the plane" << std::endl;
     return shippingContainer;
 }

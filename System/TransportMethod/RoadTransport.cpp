@@ -13,16 +13,16 @@ RoadTransport::~RoadTransport() {
 
 }
 
-void RoadTransport::package(GoodsContainer *component) {
+void RoadTransport::package(GoodsContainer component) {
     std::cout << "Packaging container into truck" << std::endl;
-    shippingContainer = component;
+    shippingContainer = std::move(component);
 }
 
 void RoadTransport::ship() {
-    std::cout << "The fleet of trucks is on it's way to the track" << std::endl;
+    std::cout << "The fleet of trucks is on it's way to track " << shippingContainer.getTrack() << std::endl;
 }
 
-GoodsContainer *RoadTransport::unpackage() {
+GoodsContainer RoadTransport::unpackage(std::string place) {
     std::cout << "Unloading container from the trucks" << std::endl;
     return shippingContainer;
 }
