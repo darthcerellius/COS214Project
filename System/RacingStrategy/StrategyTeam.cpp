@@ -11,16 +11,16 @@
 
 StrategyTeam::StrategyTeam(){
     this->raceCar = 0;
-    std::cout << "A strategy team for the next season has been selected.\n";
+    std::cout << "STRATEGY: A strategy team for the next season has been selected.\n";
 }
 
 StrategyTeam::StrategyTeam(Car* raceCar) {
     this->raceCar = raceCar;
-    std::cout << "A strategy team for the next season has been selected.\n";
+    std::cout << "STRATEGY: A strategy team for the next season has been selected.\n";
 }
 
 StrategyTeam::~StrategyTeam(){
-    std::cout << "As the season comes to an end, the corresponding strategy team is disbanded.\n";
+    std::cout << "STRATEGY: As the season comes to an end, the corresponding strategy team is disbanded.\n";
 }
 
 void StrategyTeam::decideStrategy(int strategyDecider) {
@@ -38,15 +38,15 @@ void StrategyTeam::decideStrategy(int strategyDecider) {
         case 4:
             chosenStrategy = new InertiaDrift(); break;
         default:
-            std::cout << "The strategy team received an invalid input to choose a general race strategy. Received input: " << strategyDecider << std::endl;
+            std::cout << "DEBUG: The strategy team received an invalid input to choose a general race strategy. Received input: " << strategyDecider << std::endl;
             return;
     }
 
     if(raceCar){
         raceCar->setRaceStrategy(chosenStrategy);
-        std::cout << "The strategy team has decided on a general race strategy for the car to follow for this race.\n";
+        std::cout << "STRATEGY: The strategy team has decided on a general race strategy for the car to follow for this race.\n";
     }
     else
-        std::cout << "The strategy team has not been assigned a race car for the season, and thus cannot decide on a general race strategy.\n";
+        std::cout << "STRATEGY: The strategy team has not been assigned a race car for the season, and thus cannot decide on a general race strategy.\n";
 
 }

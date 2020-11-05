@@ -20,6 +20,7 @@ void testTyres();//----->Ivan
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
+    testStrategy();
 
     return 0;
 }
