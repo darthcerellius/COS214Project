@@ -33,6 +33,8 @@ void EngineeringTeam::buildCar() {
     car->add(buildChassis());
     car->add(buildEngine());
     car->add(buildElectronicsComponent());
+
+    cout<<"Engineering: Car constructed successfully!"<<endl;
 }
 
 Car *EngineeringTeam::getCar() {
@@ -40,5 +42,5 @@ Car *EngineeringTeam::getCar() {
 }
 
 void EngineeringTeam::serviceCar() {
-    cout<<"Car has been serviced"<<endl;
+    cout<<"Engineering: Car has been serviced"<<endl;
 }
