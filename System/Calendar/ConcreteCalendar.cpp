@@ -4,6 +4,6 @@
 
 #include "ConcreteCalendar.h"
 
-CalendarIterator* ConcreteCalendar::createIterator(std::vector<RaceWeekend*> weekends){
+CalendarIterator* ConcreteCalendar::createIterator(){
     return new CalendarIterator(weekends);
 }

@@ -5,7 +5,7 @@
 #ifndef COS214PROJECT_ITERATOR_CPP
 #define COS214PROJECT_ITERATOR_CPP
 
-#include "RaceWeekend.h"
+class RaceWeekend;
 
 class Iterator
 {

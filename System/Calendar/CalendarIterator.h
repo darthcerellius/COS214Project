@@ -7,7 +7,6 @@
 
 #include <vector>
 #include "Iterator.cpp"
-#include "RaceWeekend.h"
 
 class CalendarIterator : public Iterator
 {

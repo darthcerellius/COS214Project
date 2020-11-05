@@ -4,19 +4,31 @@
 
 #include "RaceWeekend.h"
 
-RaceWeekend::RaceWeekend(int day, int month, int year, std::string location, std::string trackName){
-    this->location = location;
-    this->trackName = trackName;
-    date = new Date();
-    date->d = day;
-    date->m = month;
-    date->y = year;
+RaceWeekend::RaceWeekend(std::string _trackName, double _length, std::string _location, Date* _date, Conditions* _condis){
+    trackName = _trackName;
+    length = _length;
+    location = _location;
+    date = _date;
+    condis = _condis;
 }
 
-void RaceWeekend::setDate(int day, int month, int year){
-    date->d = day;
-    date->m = month;
-    date->y = year;
+void RaceWeekend::setName(std::string _trackName){
+    trackName = _trackName;
+}
+std::string RaceWeekend::getName(){
+    return trackName;
+}
+
+void RaceWeekend::setLength(double _length){
+    length = _length;
+}
+
+double RaceWeekend::getLength(){
+    return length;
+}
+
+void RaceWeekend::setDate(Date* _date){
+    date = _date;
 }
 
 Date* RaceWeekend::getDate(){
@@ -31,11 +43,12 @@ std::string RaceWeekend::getLocation(){
     return location;
 }
 
-void RaceWeekend::setName(std::string trackName){
-    this->trackName = trackName;
+void RaceWeekend::setCondis(Conditions* _condis){
+    condis = _condis;
 }
-std::string RaceWeekend::getName(){
-    return trackName;
+
+Conditions* RaceWeekend::getCondis(){
+    return condis;
 }
 
 int RaceWeekend::daysBetween(Date* date1, Date* date2){

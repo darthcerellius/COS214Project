@@ -3,6 +3,7 @@
 //
 
 #include "CalendarIterator.h"
+#include "RaceWeekend.h"
 
 CalendarIterator::CalendarIterator(std::vector<RaceWeekend*> weekends){
     this->weekends = weekends;

@@ -5,11 +5,11 @@
 #ifndef COS214PROJECT_CONCRETECALENDAR_H
 #define COS214PROJECT_CONCRETECALENDAR_H
 
-#include "Calendar.cpp"
+#include "Calendar.h"
 
-class ConcreteCalendar{
+class ConcreteCalendar : public Calendar{
 public:
-    CalendarIterator* createIterator(std::vector<RaceWeekend*> weekends);
+    CalendarIterator* createIterator();
 };
 
 
