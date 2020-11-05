@@ -44,3 +44,12 @@ Car *EngineeringTeam::getCar() {
 void EngineeringTeam::serviceCar() {
     cout<<"Engineering: Car has been serviced"<<endl;
 }
+
+EngineeringTeam::~EngineeringTeam() {
+    delete engineFactory;
+    delete chassisFactory;
+    delete aerodynamicsFactory;
+    delete electronicsFactory;
+    delete car;
+
+}

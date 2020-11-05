@@ -5,14 +5,13 @@
 #ifndef COS214PROJECT_ENGINEERINGTEAM_H
 #define COS214PROJECT_ENGINEERINGTEAM_H
 
-#include "AbstractEngineeringTeam.h"
 #include "ConcreteFactories/AerodynamicsFactory.h"
 #include "ConcreteFactories/EngineFactory.h"
 #include "ConcreteFactories/ElectronicsFactory.h"
 #include "ConcreteFactories/ChassisFactory.h"
 #include "../Car/Car.h"
 
-class EngineeringTeam : public AbstractEngineeringTeam{
+class EngineeringTeam{
 private:
     AerodynamicsFactory* aerodynamicsFactory;
     EngineFactory* engineFactory;
@@ -26,6 +25,7 @@ private:
     Chassis* buildChassis();
 public:
     EngineeringTeam();
+    ~EngineeringTeam();
     void buildCar();
     Car* getCar();
     void serviceCar();
