@@ -26,7 +26,7 @@ set(SOURCES
         ${RACING_SOURCES}
         )
 
-add_executable(COS214Project System/JanineMain.cpp System/kyleMain.cpp ${SOURCES})
+add_executable(COS214Project System/kyleMain.cpp ${SOURCES})
 
 target_link_libraries(COS214Project
         TRANSPORT
