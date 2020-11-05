@@ -9,6 +9,7 @@
 
 PitCrew::PitCrew(){
     racecar = 0;
+    currentTyre = 0;
     currentEvent = new NoEvent();
 }
 
@@ -19,6 +20,9 @@ PitCrew::PitCrew(Car* racecar) {
 
 PitCrew::~PitCrew() {
     delete currentEvent;
+    for(int k=0; k<5;k++)
+        delete tyres[k];
+    delete [] tyres;
 }
 
 void PitCrew::respondToEvent() {
@@ -56,4 +60,17 @@ void PitCrew::observeNewEvent(RaceEvent * newEvent) {
     respondToEvent();
     delete currentEvent;
     currentEvent = temp;
+}
+
+void PitCrew::orderTyres(TyreSupplier* supplier) {
+    std::cout << "STRATEGY: 5 sets of tyres have been ordered from the tyre supplier for the coming race.\n";
+    tyres = new Component*[5];
+    for(int k=0; k<5;k++)
+        tyres[k] = supplier->supply();
+}
+
+void PitCrew::changeTyre() {
+    racecar->remove("tyres"); // double check on this
+    racecar->add(tyres[currentTyre++]);
+    std::cout << "RACING: The car's tyres are switched out. Tyre set number used for this race: " << currentTyre << std::endl;
 }
