@@ -17,7 +17,7 @@ public:
     StrategyTeam();
     ~StrategyTeam();
     void decideStrategy(int);
-    void decideComponents(AbstractEngineeringTeam*, TyreSupplier*);
+    void decideComponents(AbstractEngineeringTeam*);
 };
 
 

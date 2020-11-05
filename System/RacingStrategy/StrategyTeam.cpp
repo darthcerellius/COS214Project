@@ -51,6 +51,6 @@ void StrategyTeam::decideStrategy(int strategyDecider) {
 
 }
 
-void StrategyTeam::decideComponents(AbstractEngineeringTeam * engineeringTeam, TyreSupplier* tyreSupplier) {
+void StrategyTeam::decideComponents(AbstractEngineeringTeam * engineeringTeam) {
     engineeringTeam->buildCar();
 }
