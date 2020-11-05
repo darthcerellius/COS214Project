@@ -5,11 +5,11 @@
 #include "YellowFlag.h"
 
 YellowFlag::YellowFlag(){
-    std::cout << "Due to mildly hazardous conditions on the track, the yellow flag is displayed.\n";
+    std::cout << "EVENT: Due to mildly hazardous conditions on the track, the yellow flag is displayed.\n";
 }
 
 YellowFlag::~YellowFlag() {}
 
 std::string YellowFlag::eventDescription() {
-    return "The race car acknowledges the yellow flag and slows down until the flag is no longer displayed.";
+    return "EVENT: The race car acknowledges the yellow flag and slows down until the flag is no longer displayed.";
 }
