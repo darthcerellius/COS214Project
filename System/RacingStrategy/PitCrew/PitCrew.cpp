@@ -70,6 +70,10 @@ void PitCrew::orderTyres(TyreSupplier* supplier) {
 }
 
 void PitCrew::changeTyre() {
+    if(currentTyre == 5){
+        std::cout << "RACING: The car has used all 5 of its tyre sets allowed for this race and cannot change anymore tyres.\n";
+        return;
+    }
     racecar->remove("tyres"); // double check on this
     racecar->add(tyres[currentTyre++]);
     std::cout << "RACING: The car's tyres are switched out. Tyre set number used for this race: " << currentTyre << std::endl;
