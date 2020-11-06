@@ -6,13 +6,15 @@
 #define COS214PROJECT_CARSTATE_H
 
 
-#include "../../Car/Car.h"
+#include "../../Car/Component.h"]
+#include "../../RacingStrategy/Strategies/GeneralRaceStrategy.h"
+#include <map>
 #include <string>
 class CarState {
 private:
     std::string carName;
     std::string name;
-    map<std::string,Component*> components;
+    map<std::string,Component*>* components;
     GeneralRaceStrategy* strategy;
     double weight;
     double strength;
@@ -21,13 +23,9 @@ private:
 public:
     ~CarState();
     CarState();
-    CarState(std::string, std::string, map<std::string, Component*>,GeneralRaceStrategy*, double , double);
-    map<std::string, Component*> getComponents();
-    void setComponents(map<std::string,Component*>);
-    void setWeight(double);
-    double getWeight(double);
-    double getStrength();
-    void setStrength(double );
+    CarState(std::string, std::string, map<std::string, Component*>*,GeneralRaceStrategy*, double , double);
+    map<std::string, Component*>* getComponents();
+    void setComponents(map<std::string,Component*>*);
     std::string getName();
     void setName(std::string);
     void setCarName(std::string);

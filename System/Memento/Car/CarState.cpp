@@ -5,10 +5,14 @@
 #include "CarState.h"
 
 CarState::CarState() {
-
+    this->strategy = nullptr;
+    this->carName= "No car Name";
+    this->name="Car";
+    this->downForce=0;
+    this->windResistance=0;
 }
 
-CarState::CarState(std::string carName, std::string name, map<std::string, Component *> components,GeneralRaceStrategy* strategy1, double windResistance, double downForce) {
+CarState::CarState(std::string carName, std::string name, map<std::string, Component *>* components,GeneralRaceStrategy* strategy1, double windResistance, double downForce) {
     this->strategy= strategy1;
     this->carName= carName;
     this->components = components;
@@ -18,11 +22,11 @@ CarState::CarState(std::string carName, std::string name, map<std::string, Compo
 
 }
 
-map<std::string, Component *> CarState::getComponents() {
+map<std::string, Component *>* CarState::getComponents() {
     return components;
 }
 
-void CarState::setComponents(map<std::string, Component *> newComponents) {
+void CarState::setComponents(map<std::string, Component *>* newComponents) {
     this->components = newComponents;
 }
 
@@ -45,7 +49,7 @@ std::string CarState::getCarName() {
 
 CarState::~CarState() {
     map<string,Component*>::iterator it;
-    for(it = components.begin(); it!= components.end(); it++){
+    for(it = components->begin(); it!= components->end(); it++){
         delete it->second;
     }
     delete strategy;

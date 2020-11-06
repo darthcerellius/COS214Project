@@ -13,7 +13,8 @@ private:
     double downForce;
     double windResistance;
 public:
-    AerodynamicsComponent(string name);
+    AerodynamicsComponent(double,double);
+    AerodynamicsComponent();
     AerodynamicsComponent(AerodynamicsComponent* a);
     ~AerodynamicsComponent();
     bool test();

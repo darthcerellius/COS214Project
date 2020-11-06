@@ -5,5 +5,5 @@ file(GLOB MementoSources
         "Component/*.cpp"
         )
 
-set(MEMENTO_SOURCES ${MementoSources})
+set(MEMENTO_SOURCES ${MementoSources} Component/ChassisAndAeroState.cpp Component/ChassisAndAeroState.h Component/EngineState.cpp Component/EngineState.h)
 add_library(MEMENTO ${MEMENTO_SOURCES})

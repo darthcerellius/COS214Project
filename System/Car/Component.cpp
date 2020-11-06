@@ -9,7 +9,7 @@ Component::Component(string name) {
 }
 
 string Component::getName() {
-    return name;
+    return this->name;
 }
 
 Component::~Component() {
@@ -24,29 +24,10 @@ void Component::remove(string c) {
 
 }
 
-void Component::setWeight(double newWeight) {
-    this->weight=newWeight;
-}
-
-double Component::getStrength() {
-    return strength;
-}
-
-void Component::setStrength(double newStrength) {
-    this->strength=newStrength;
-}
-
-double Component::getWeight() {
-    return weight;
-}
-
-void Component::restore(ComponentCareTaker * m) {
 
 
-}
 
-ComponentCareTaker *Component::createMemento() {
-    ComponentCareTaker* newMemento = new ComponentCareTaker();
-    newMemento->setMemento(getStrength(),getWeight(),getName());
-    return newMemento;
-}
+
+
+
+

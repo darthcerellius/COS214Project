@@ -9,7 +9,7 @@ Car::Car() : Component("Car"){
 }
 
 Car::~Car() {
-    components.clear();
+    components->clear();
     if(generalStrategy)
         delete generalStrategy;
 }
@@ -18,7 +18,7 @@ Component* Car::clone() {
     Car* temp = new Car();
     map<string,Component*>::iterator it;
 
-    for(it = components.begin(); it!= components.end(); it++){
+    for(it = components->begin(); it!= components->end(); it++){
         temp->add((*it).second->clone());
     }
 
@@ -28,14 +28,14 @@ Component* Car::clone() {
 }
 
 void Car::add(Component *c) {
-    components.insert(pair<string, Component*>(c->getName(),c));
+    components->insert(pair<string, Component*>(c->getName(),c));
 
 }
 
 void Car::remove(string c) {
-    map<string, Component *>::iterator it = components.find(c);
-    if (it != components.end())
-        components.erase(it);
+    map<string, Component *>::iterator it = components->find(c);
+    if (it != components->end())
+        components->erase(it);
 }
 
 
@@ -44,7 +44,7 @@ bool Car::test() {
 
     bool result = true;
     map<string, Component*>::iterator it;
-    for(it = components.begin(); it != components.end();it++){
+    for(it = components->begin(); it != components->end();it++){
         if(!(*it).second->test()){
             result = false;
         }
@@ -73,6 +73,21 @@ void Car::makeTacticalDecision(string decision) {
 void Car::respondToEvent(string event) {
     std::cout << "EVENT: The race car is notified of an event by the pit crew and responds appropriately:\n";
     std::cout<<event<<std::endl;
+}
+
+CarCareTaker *Car::createMemento() {
+    CarCareTaker* state= new CarCareTaker();
+    state->setMemento(this->carName, this->getName(),dynamic_cast<Car*>(clone())->getComponents(),dynamic_cast<Car*>(clone())->getStrategy(),this->windResistance,this->downForce);
+    return state;
+
+}
+
+map<string, Component *> *Car::getComponents() {
+    return components;
+}
+
+GeneralRaceStrategy *Car::getStrategy() {
+    return this->generalStrategy;
 }
 
 

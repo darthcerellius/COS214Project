@@ -4,12 +4,14 @@
 
 #include "AerodynamicsComponent.h"
 
-AerodynamicsComponent::AerodynamicsComponent(string name) : Component(name) {
-
+AerodynamicsComponent::AerodynamicsComponent() : Component("aerodynamic") {
+    this->windResistance=0;
+    this->downForce=0;
 }
 
 AerodynamicsComponent::AerodynamicsComponent(AerodynamicsComponent *a):Component(a->getName()){
-
+    this->downForce=a->getDownForce();
+    this->windResistance=a->getWindResistance();
 }
 
 AerodynamicsComponent::~AerodynamicsComponent() {
@@ -44,6 +46,11 @@ void AerodynamicsComponent::setWindResistance(double newWindResistance) {
 
 void AerodynamicsComponent::setDownForce(double newDownForce) {
     this->downForce = newDownForce;
+}
+
+AerodynamicsComponent::AerodynamicsComponent(double downForce, double windResistance) :Component("aerodynamic"){
+    this->downForce= downForce;
+    this->windResistance= windResistance;
 }
 
 

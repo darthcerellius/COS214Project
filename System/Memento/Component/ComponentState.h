@@ -8,19 +8,12 @@
 #include <string>
 class ComponentState {
 private:
-    double weight;
-    double strength;
     std::string name;
 
 public:
-    ComponentState();
-    ComponentState(double,double,std::string);
+    ComponentState(std::string);
     ~ComponentState();
-    double getWeight();
-    double getStrength();
-    std::string getName();
-    void setWeight(double);
-    void setStrength(double);
+     std::string getName();
     void setName(std::string);
 };
 

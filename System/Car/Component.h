@@ -5,8 +5,9 @@
 #ifndef COS214PROJECT_COMPONENT_H
 #define COS214PROJECT_COMPONENT_H
 #include <string>
-#include "../Memento/Component/ComponentCareTaker.h"
 
+//#include "../Memento/Component/ComponentCareTaker.h"
+class ComponentCareTaker;
 using namespace std;
 class Component{
 public:
@@ -17,11 +18,6 @@ public:
     virtual void remove(string c);
     virtual bool test() = 0;
     virtual Component* clone() = 0;
-    void setWeight(double);
-    void setStrength(double);
-    double getStrength();
-    double getWeight();
-
 
 private:
     string name;

@@ -6,12 +6,21 @@
 #define COS214PROJECT_COMPONENTCARETAKER_H
 
 #include "ComponentState.h"
+#include "EngineState.h"
+#include <iostream>
+
+#include "ChassisAndAeroState.h"
+
+#include "../../Car/Chassis.h"
+#include "../../Car/Engine.h"
+#include "../../Car/AerodynamicsComponent.h"
+#include "../../Car/Component.h"
 
 class ComponentCareTaker {
 private:
     friend class Component;
     ComponentState* state;
-    void setMemento(double,double,std::string);
+    void setMemento(Component*);
     ComponentState* getMemento();
     ComponentCareTaker();
 public:

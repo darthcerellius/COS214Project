@@ -11,6 +11,7 @@ Engine::Engine() : Component("engine"){
 
 Engine::Engine(Engine *c) :Component("engine"){
     this->HP = c->getHP();
+    this->fuelConsumption= c->getFuelConsumption();
 }
 
 Engine::~Engine() {
@@ -40,4 +41,21 @@ void Engine::setHP(int newHP) {
 Engine::Engine(int fuelConsumption, int horsepower):Component("engine"){
     this->HP = horsepower;
     this->fuelConsumption=fuelConsumption;
+}
+
+int Engine::getFuelConsumption() {
+    return this->fuelConsumption;
+}
+
+void Engine::setFuelConsumption(int newFuelConsumption) {
+    this->fuelConsumption= newFuelConsumption;
+}
+
+void Engine::restore(ComponentCareTaker *) {
+    ComponentCareTaker* x = new ComponentCareTaker();
+
+}
+
+ComponentCareTaker *Engine::createMemento() {
+    return nullptr;
 }
