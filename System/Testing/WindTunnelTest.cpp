@@ -6,16 +6,18 @@
 
 bool WindTunnelTest::test(Component * component) {
 
-    if (component->getName()!="chassis" || component->getName()!="aerodynamic"){
-        std::cout << "Cannot perform wintunnel test on components other that the chassis or aerodynamic components" << std::endl;
-        return false;
-    }else{
-        if (component->getName()=="chassis"){
-            return chassisTest(dynamic_cast<Chassis*>(component));
-        }else{
-            return aerodynamicComponentTest(dynamic_cast<AerodynamicsComponent*>(component));
-        }
+    if (component->getName()=="chassis"){
+        std::cout << "Starting wind tunnel test on the chassis" << std::endl;
+        return chassisTest(dynamic_cast<Chassis*>(component));
+    }else if(component->getName()=="aerodynamic"){
+        std::cout << "Starting wind tunnel test on aerodynamic component" << std::endl;
+        return aerodynamicComponentTest(dynamic_cast<AerodynamicsComponent*>(component));
     }
+    std::cout << "Cannot perform wind tunnel test on components other that the chassis or aerodynamic components" << std::endl;
+    return false;
+
+
+
 }
 
 bool WindTunnelTest::chassisTest(Chassis * testingChassis) {
@@ -24,12 +26,15 @@ bool WindTunnelTest::chassisTest(Chassis * testingChassis) {
     double downForce = testingChassis->getDownForce();
     double windResistance = testingChassis->getWindResistance();
     for (int i = 0; i < 500; ++i) {
-        if (){
+        double val = log(downForce);
+        windResistance += log(windResistance);
+        if (val<20 || windResistance>50){
             std::cout << "Wind tunnel test failed at test number : " + to_string(i) << std::endl;
             return false;
         }
     }
-    std::cout << "Wind tunnel test passed"<< std::endl;
+    testingChassis->restore(preTestingState->getMemento());
+    std::cout << "Wind tunnel test passed, chassis restored to previous state"<< std::endl;
     return true;
 }
 
@@ -39,12 +44,14 @@ bool WindTunnelTest::aerodynamicComponentTest(AerodynamicsComponent * aeroCompon
     double downForce = aeroComponent->getDownForce();
     double windResistance = aeroComponent->getWindResistance();
     for (int i = 0; i < 500; ++i) {
-        if (){
+        double val = log(downForce);
+        windResistance += log(windResistance);
+        if (val<10 || windResistance>20){
             std::cout << "Wind tunnel test failed at test number : " + to_string(i) << std::endl;
             return false;
         }
     }
-    std::cout << "Wind tunnel test passed"<< std::endl;
     aeroComponent->restore(preTestingState->getMemento());
+    std::cout << "Wind tunnel test passed, aerodynamic component restored to previous state"<< std::endl;
     return true;
 }

@@ -4,7 +4,7 @@
 
 #ifndef COS214PROJECT_WINDTUNNELTEST_H
 #define COS214PROJECT_WINDTUNNELTEST_H
-
+#include "cmath"
 #include "Testing.h"
 class WindTunnelTest : public Testing {
 private:
