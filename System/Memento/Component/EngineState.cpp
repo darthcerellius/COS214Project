@@ -36,4 +36,8 @@ EngineState::~EngineState() {
 
 }
 
+void EngineState::setName(std::string newName) {
+    this->name= newName;
+}
+
 

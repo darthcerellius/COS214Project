@@ -31,3 +31,7 @@ ChassisAndAeroState::ChassisAndAeroState() :ComponentState("N/A"){
     this->downForce=0;
     this->windResistance=0;
 }
+
+void ChassisAndAeroState::setName(std::string newName) {
+    this->name = newName;
+}

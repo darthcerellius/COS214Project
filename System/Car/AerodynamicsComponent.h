@@ -4,7 +4,7 @@
 
 #ifndef COS214PROJECT_AERODYNAMICSCOMPONENT_H
 #define COS214PROJECT_AERODYNAMICSCOMPONENT_H
-#include "../Memento/Component/ComponentCareTaker.h"
+
 
 #include "Component.h"
 
@@ -23,5 +23,8 @@ public:
     void setDownForce(double);
     double getWindResistance();
     void setWindResistance(double);
+    void restore(ComponentCareTaker*);
+    ComponentCareTaker* createMemento();
+
 };
 #endif //COS214PROJECT_AERODYNAMICSCOMPONENT_H

@@ -17,6 +17,8 @@ public:
     double getWindResistance();
     ChassisAndAeroState(double,double,std::string);
     ChassisAndAeroState();
+    void setName(std::string) override;
+
 };
 
 

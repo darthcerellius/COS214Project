@@ -6,7 +6,7 @@
 #define COS214PROJECT_CHASSIS_H
 
 #include "Component.h"
-
+class ComponentCareTaker;
 class Chassis: public Component{
 private:
     double downForce;

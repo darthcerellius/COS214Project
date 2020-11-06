@@ -90,4 +90,8 @@ GeneralRaceStrategy *Car::getStrategy() {
     return this->generalStrategy;
 }
 
+void Car::restore(CarCareTaker * state) {
+
+}
+
 

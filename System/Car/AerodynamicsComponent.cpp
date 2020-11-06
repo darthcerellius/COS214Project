@@ -3,7 +3,7 @@
 //
 
 #include "AerodynamicsComponent.h"
-
+#include "../Memento/Component/ComponentCareTaker.h"
 AerodynamicsComponent::AerodynamicsComponent() : Component("aerodynamic") {
     this->windResistance=0;
     this->downForce=0;
@@ -51,6 +51,21 @@ void AerodynamicsComponent::setDownForce(double newDownForce) {
 AerodynamicsComponent::AerodynamicsComponent(double downForce, double windResistance) :Component("aerodynamic"){
     this->downForce= downForce;
     this->windResistance= windResistance;
+}
+
+
+
+ComponentCareTaker *AerodynamicsComponent::createMemento() {
+    ComponentCareTaker* state=new ComponentCareTaker();
+    state->setMemento(this);
+    return state;
+
+}
+
+void AerodynamicsComponent::restore(ComponentCareTaker * state) {
+    this->windResistance= dynamic_cast<ChassisAndAeroState*>(state->getMemento())->getWindResistance();
+    this->downForce=dynamic_cast<ChassisAndAeroState*>(state->getMemento())->getDownForce();
+
 }
 
 

@@ -45,5 +45,6 @@ bool WindTunnelTest::aerodynamicComponentTest(AerodynamicsComponent * aeroCompon
         }
     }
     std::cout << "Wind tunnel test passed"<< std::endl;
+    aeroComponent->restore(preTestingState->getMemento());
     return true;
 }

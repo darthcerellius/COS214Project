@@ -7,7 +7,7 @@
 
 #include "Component.h"
 class ComponentCareTaker;
-class Component;
+
 class Engine: public Component{
 private:
     int HP; //HP = horsepower

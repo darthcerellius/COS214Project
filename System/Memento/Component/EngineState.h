@@ -20,6 +20,7 @@ public:
     double getHorsePower();
     void setfuelConsumption(double);
     double getFuelConsumption();
+    void setName(std::string) override ;
 
 
 

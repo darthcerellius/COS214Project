@@ -15,15 +15,22 @@
 #include "../../Car/Engine.h"
 #include "../../Car/AerodynamicsComponent.h"
 #include "../../Car/Component.h"
+//class Engine;
+//class AerodynamicsComponent;
+//class Chassis;
+//class Component;
 
 class ComponentCareTaker {
 private:
     friend class Component;
+    friend class AerodynamicsComponent;
+    friend class Engine;
+    friend class Chassis;
     ComponentState* state;
     void setMemento(Component*);
     ComponentState* getMemento();
-    ComponentCareTaker();
 public:
+    ComponentCareTaker();
     ~ComponentCareTaker();
 };
 

@@ -9,9 +9,9 @@ bool SoftwareTest::test(Component * c) {
         std::cout << "Cannot perform software test on components except engine" << std::endl;
         return false;
     }
-    int HP = dynamic_cast<Engine*>(c)->getHorsePower();
+    int HP = dynamic_cast<Engine*>(c)->getHP();
     int fuelConsumption = dynamic_cast<Engine*>(c)->getFuelConsumption();
-    bool result=false;
+
     if (fuelConsumption>6){
         std::cout << "Software test failed, engine fuel consumption too high" << std::endl;
         return false;

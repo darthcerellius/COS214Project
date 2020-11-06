@@ -6,15 +6,21 @@
 #define COS214PROJECT_COMPONENTSTATE_H
 
 #include <string>
+
+class ComponentCaretaker;
 class ComponentState {
 private:
-    std::string name;
 
 public:
     ComponentState(std::string);
-    ~ComponentState();
+    virtual ~ComponentState();
      std::string getName();
-    void setName(std::string);
+
+
+protected:
+    std::string name;
+
+    virtual void setName(std::string)=0;
 };
 
 

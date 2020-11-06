@@ -16,6 +16,4 @@ std::string ComponentState::getName() {
     return this->name;
 }
 
-void ComponentState::setName(std::string newName) {
-    this->name = newName;
-}
+

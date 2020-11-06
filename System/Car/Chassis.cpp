@@ -3,7 +3,7 @@
 //
 
 #include "Chassis.h"
-
+#include "../Memento/Component/ComponentCareTaker.h"
 Chassis::Chassis():Component("chassis") {
     this->windResistance=0;
     this->downForce=0;
@@ -49,6 +49,10 @@ double Chassis::getWindResistance() {
 Chassis::Chassis(double windResistance, double downForce) : Component("chassis") {
     this->windResistance= windResistance;
     this->downForce=downForce;
+}
+
+ComponentCareTaker *Chassis::createMemento() {
+    return nullptr;
 }
 
 
