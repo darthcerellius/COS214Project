@@ -9,5 +9,5 @@ using namespace std;
 
 AerodynamicsComponent *AerodynamicsFactory::constructComponent() {
     cout<<"Engineering: AerodynamicsComponent constructed"<<endl;
-    return new AerodynamicsComponent("AerodynamicsComponent");
+    return new AerodynamicsComponent();
 }

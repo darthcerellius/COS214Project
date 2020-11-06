@@ -13,7 +13,7 @@ PitCrew::PitCrew(){
     currentEvent = new NoEvent();
 }
 
-PitCrew::PitCrew(Car* racecar) {
+void PitCrew::setCar(Car * racecar) {
     this->racecar = racecar;
     currentEvent = new NoEvent();
 }

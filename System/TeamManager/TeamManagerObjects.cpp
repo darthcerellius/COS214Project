@@ -6,9 +6,11 @@
 #include "../RacingStrategy/StrategyTeam.h"
 #include "../Engineering/EngineeringTeam.h"
 #include "../Container/GoodsContainer.h"
+#include "../Calendar/RaceWeekend.h"
 
 StrategyTeam* CurrentSeason::strategyTeam = nullptr;
 EngineeringTeam* CurrentSeason::engineeringTeam = nullptr;
+RaceWeekend* CurrentSeason::currentWeekend = nullptr;
 
 StrategyTeam* NextSeason::strategyTeam = nullptr;
 EngineeringTeam* NextSeason::engineeringTeam = nullptr;

@@ -10,7 +10,7 @@
 class ElectronicsComponent: public Component{
 private:
 public:
-    ElectronicsComponent(string name);
+    ElectronicsComponent();
     ElectronicsComponent(ElectronicsComponent*);
     ~ElectronicsComponent();
 

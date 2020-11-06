@@ -18,7 +18,7 @@ private:
     int currentTyre;
 public:
     PitCrew();
-    PitCrew(Car*);
+    void setCar(Car*);
     ~PitCrew();
     void makeTacticalInstruction(int);
     void respondToEvent();

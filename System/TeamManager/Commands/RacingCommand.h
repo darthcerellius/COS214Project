@@ -6,11 +6,17 @@
 #define COS214PROJECT_RACINGCOMMAND_H
 
 #include "Command.h"
-#include "../../Racing/"
+#include "../../Racing/RaceTrack.h"
+class PitCrew;
 
 class RacingCommand : public Command {
 private:
-R
+    RaceTrack* track;
+    PitCrew* crew;
+public:
+    RacingCommand();
+    ~RacingCommand() override;
+    void execute(Car* car) override;
 
 };
 

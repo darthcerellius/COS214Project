@@ -4,7 +4,7 @@
 
 #include "ElectronicsComponent.h"
 
-ElectronicsComponent::ElectronicsComponent(string name) : Component(name) {
+ElectronicsComponent::ElectronicsComponent() : Component("electronics") {
 
 }
 

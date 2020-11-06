@@ -4,14 +4,14 @@
 
 #include "RaceTrack.h"
 
-RaceTrack::RaceTrack(PitCrew* _crew, RaceInfo* _info){
+RaceTrack::RaceTrack(PitCrew* _crew, RaceWeekend* _info){
     crew = _crew;
     info = _info;
     event = new NoEvent();
 }
 
 void RaceTrack::numLaps(){
-    double km = info->length;
+    double km = info->getLength();
     laps = round(300/km);
 }
 

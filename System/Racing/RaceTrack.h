@@ -15,16 +15,17 @@
 #include "../Calendar/RaceWeekend.h"
 
 class TeamManager;
+class RaceInfo;
 
 class RaceTrack {
 public:
-    RaceTrack(PitCrew* _crew, RaceInfo* _info);
+    RaceTrack(PitCrew* _crew, RaceWeekend* _info);
     void numLaps();
     int getLaps();
     void race();
 private:
     PitCrew* crew;
-    RaceInfo* info;
+    RaceWeekend* info;
     int laps;
     RaceEvent* event;
 };

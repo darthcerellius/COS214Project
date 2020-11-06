@@ -9,5 +9,5 @@ using namespace std;
 
 ElectronicsComponent *ElectronicsFactory::constructComponent() {
     cout<<"Engineering: ElectronicsComponent constructed"<<endl;
-    return new ElectronicsComponent("ElectronicsComponent");
+    return new ElectronicsComponent();
 }
