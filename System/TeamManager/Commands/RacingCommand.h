@@ -5,8 +5,12 @@
 #ifndef COS214PROJECT_RACINGCOMMAND_H
 #define COS214PROJECT_RACINGCOMMAND_H
 
+#include "Command.h"
+#include "../../Racing/"
 
-class RacingCommand {
+class RacingCommand : public Command {
+private:
+R
 
 };
 

@@ -12,6 +12,8 @@
 
 class Car: public Component{
 private:
+    //Added this so that the Team manager can test individual components.
+    friend class TestingCommand;
     std::string carName;
     map<string,Component*>* components;
     GeneralRaceStrategy* generalStrategy;
