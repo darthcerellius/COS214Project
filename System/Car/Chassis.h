@@ -16,13 +16,13 @@ public:
     Chassis(double,double);
     Chassis(Chassis* c);
     ~Chassis();
-    bool test();
     Component* clone();
     void setDownForce(double);
     double getDownForce();
     void setWindResistance(double);
     double getWindResistance();
     ComponentCareTaker* createMemento();
+    void restore(ComponentCareTaker*);
 
 };
 #endif //COS214PROJECT_CHASSIS_H

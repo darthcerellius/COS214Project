@@ -1,7 +1,7 @@
 //
 // Created by bieldt on 2020/10/31.
 //
-
+#include "../Memento/Component/ComponentCareTaker.h"
 #include "Component.h"
 
 Component::Component(string name) {
@@ -22,6 +22,10 @@ void Component::add(Component *c) {
 
 void Component::remove(string c) {
 
+}
+
+void Component::setName(std::string newName) {
+    this->name= newName;
 }
 
 

@@ -39,18 +39,6 @@ void Car::remove(string c) {
 }
 
 
-//TODO discuss how this should be implemented in individual components
-bool Car::test() {
-
-    bool result = true;
-    map<string, Component*>::iterator it;
-    for(it = components->begin(); it != components->end();it++){
-        if(!(*it).second->test()){
-            result = false;
-        }
-    }
-    return result;
-}
 
 void Car::setRaceStrategy(GeneralRaceStrategy *rs) {
     if(generalStrategy)

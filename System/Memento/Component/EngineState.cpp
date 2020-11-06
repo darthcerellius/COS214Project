@@ -11,23 +11,23 @@ EngineState::EngineState() : ComponentState("engine") {
 
 
 
-void EngineState::setHorsePower(double newHP) {
+void EngineState::setHorsePower(int newHP) {
     this->horsePower=newHP;
 }
 
-double EngineState::getHorsePower() {
+int EngineState::getHorsePower() {
     return horsePower;
 }
 
-void EngineState::setfuelConsumption(double newFuelConsumption) {
+void EngineState::setfuelConsumption(int newFuelConsumption) {
     this->fuelConsumption=newFuelConsumption;
 }
 
-double EngineState::getFuelConsumption() {
+int EngineState::getFuelConsumption() {
     return fuelConsumption;
 }
 
-EngineState::EngineState(double horsePower, double fuelConsumption) : ComponentState("engine"){
+EngineState::EngineState(int horsePower, int fuelConsumption) : ComponentState("engine"){
     this->horsePower=horsePower;
     this->fuelConsumption=fuelConsumption;
 }

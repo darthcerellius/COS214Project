@@ -26,7 +26,6 @@ public:
     Component* clone();
     void add(Component* c);
     void remove(string c);
-    bool test();
     void setRaceStrategy(GeneralRaceStrategy* rs);
     void executeStrategy();
     GeneralRaceStrategy* getStrategy();

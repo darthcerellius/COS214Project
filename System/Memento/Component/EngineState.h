@@ -9,17 +9,17 @@
 #include "ComponentState.h"
 class EngineState : public ComponentState {
 private:
-    double horsePower;
-    double fuelConsumption;
+    int horsePower;
+    int fuelConsumption;
     std::string name;
 public:
-    EngineState(double,double);
+    EngineState(int,int);
     EngineState();
     ~EngineState();
-    void setHorsePower(double);
-    double getHorsePower();
-    void setfuelConsumption(double);
-    double getFuelConsumption();
+    void setHorsePower(int);
+    int getHorsePower();
+    void setfuelConsumption(int);
+    int getFuelConsumption();
     void setName(std::string) override ;
 
 

@@ -18,15 +18,7 @@ AerodynamicsComponent::~AerodynamicsComponent() {
 
 }
 
-//TODO discuss implementation
-bool AerodynamicsComponent::test() {
-    int testResult = rand()%10;
-    if(testResult == 0){
-        return false;//test failed
-    }else{
-        return true;
-    }
-}
+
 
 Component* AerodynamicsComponent::clone() {
     return dynamic_cast<Component*>(new AerodynamicsComponent(this));
@@ -65,6 +57,7 @@ ComponentCareTaker *AerodynamicsComponent::createMemento() {
 void AerodynamicsComponent::restore(ComponentCareTaker * state) {
     this->windResistance= dynamic_cast<ChassisAndAeroState*>(state->getMemento())->getWindResistance();
     this->downForce=dynamic_cast<ChassisAndAeroState*>(state->getMemento())->getDownForce();
+    this->setName(dynamic_cast<ChassisAndAeroState*>(state->getMemento())->getName());
 
 }
 

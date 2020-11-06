@@ -6,7 +6,7 @@
 #define COS214PROJECT_COMPONENT_H
 #include <string>
 
-
+class ComponentCareTaker;
 using namespace std;
 class Component{
 public:
@@ -15,8 +15,8 @@ public:
     string getName();
     virtual void add(Component* c);
     virtual void remove(string c);
-    virtual bool test() = 0;
     virtual Component* clone() = 0;
+    void setName(std::string);
 
 private:
     string name;
