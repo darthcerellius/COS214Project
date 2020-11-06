@@ -3,3 +3,11 @@
 //
 
 #include "SimulationCommand.h"
+
+SimulationCommand::SimulationCommand(){
+
+}
+
+void SimulationCommand::execute(Car *car) {
+
+}
