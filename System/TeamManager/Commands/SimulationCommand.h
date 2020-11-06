@@ -1,0 +1,14 @@
+//
+// Created by kyle-pc on 2020/11/06.
+//
+
+#ifndef COS214PROJECT_SIMULATIONCOMMAND_H
+#define COS214PROJECT_SIMULATIONCOMMAND_H
+
+
+class SimulationCommand {
+
+};
+
+
+#endif //COS214PROJECT_SIMULATIONCOMMAND_H

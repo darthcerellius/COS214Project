@@ -33,6 +33,9 @@ TeamManager &TeamManager::getTeamManager() {
 
 void TeamManager::run() {
 
+    //run the pre-season command
+    preSeasonCommand->execute(nullptr);
+
     std::cout << "Team Manager running" << std::endl;
     Iterator * calIterator = calendar->createIterator();
 
@@ -66,7 +69,7 @@ void TeamManager::run() {
         std::cout << std::endl;
 
         //This assumes that a Command that will be called won't need an existing car, and will instead make one
-        root->execute(nullptr);
+        curSeasonCommand->execute(nullptr);
         calIterator->next();
     }
 }

@@ -1,0 +1,14 @@
+//
+// Created by kyle-pc on 2020/11/05.
+//
+
+#ifndef COS214PROJECT_CURSEASONBUILDER_H
+#define COS214PROJECT_CURSEASONBUILDER_H
+
+
+class CurSeasonBuilder {
+
+};
+
+
+#endif //COS214PROJECT_CURSEASONBUILDER_H

@@ -10,7 +10,8 @@
 
 class TeamManager{
 private:
-    Command* root;
+    Command* preSeasonCommand;
+    Command* curSeasonCommand;
     ConcreteCalendar* calendar;
     static TeamManager manager;
     static bool isCreated;

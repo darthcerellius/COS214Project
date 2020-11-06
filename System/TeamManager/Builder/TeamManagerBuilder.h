@@ -5,9 +5,13 @@
 #ifndef COS214PROJECT_TEAMMANAGERBUILDER_H
 #define COS214PROJECT_TEAMMANAGERBUILDER_H
 
+class Command;
 
 class TeamManagerBuilder {
-
+public:
+    TeamManagerBuilder() = default;
+    virtual ~TeamManagerBuilder() = default;
+    virtual Command* buildCommandChain() = 0;
 };
 
 
