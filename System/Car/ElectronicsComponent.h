@@ -13,8 +13,9 @@ public:
     ElectronicsComponent(string name);
     ElectronicsComponent(ElectronicsComponent*);
     ~ElectronicsComponent();
-    bool test();
+
     Component* clone();
+    void restore(ComponentCareTaker*);
 
 };
 #endif //COS214PROJECT_ELECTRONICSCOMPONENT_H

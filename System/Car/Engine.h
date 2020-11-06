@@ -18,7 +18,7 @@ public:
     Engine(int,int);
     Engine(Engine* c);
     ~Engine();
-    bool test();
+
     Component* clone();
     int getHP();
     void setHP(int);

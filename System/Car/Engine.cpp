@@ -3,7 +3,7 @@
 //
 
 #include "Engine.h"
-
+#include "../Memento/Component/ComponentCareTaker.h"
 Engine::Engine() : Component("engine"){
     this->HP = 0;
     this->fuelConsumption =0;
@@ -17,15 +17,7 @@ Engine::Engine(Engine *c) :Component("engine"){
 Engine::~Engine() {
 
 }
-//TODO implementation
-bool Engine::test() {
-    int testResult = rand()%10;
-    if(testResult == 0){
-        return false;//test failed
-    }else{
-        return true;
-    }
-}
+
 
 Component *Engine::clone() {
     return dynamic_cast<Component*>(new Engine(this));
@@ -51,11 +43,15 @@ void Engine::setFuelConsumption(int newFuelConsumption) {
     this->fuelConsumption= newFuelConsumption;
 }
 
-void Engine::restore(ComponentCareTaker *) {
-    ComponentCareTaker* x = new ComponentCareTaker();
+void Engine::restore(ComponentCareTaker * state) {
+    this->fuelConsumption= dynamic_cast<EngineState*>(state->getMemento())->getFuelConsumption();
+    this->HP = dynamic_cast<EngineState*>(state->getMemento())->getHorsePower();
+    this->setName(dynamic_cast<EngineState*>(state->getMemento())->getName());
 
 }
 
 ComponentCareTaker *Engine::createMemento() {
-    return nullptr;
+    ComponentCareTaker* x = new ComponentCareTaker();
+    x->setMemento(this);
+    return x;
 }

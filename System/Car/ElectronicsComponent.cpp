@@ -15,16 +15,12 @@ ElectronicsComponent::ElectronicsComponent(ElectronicsComponent *c) :Component(c
 ElectronicsComponent::~ElectronicsComponent() {
 
 }
-//TODO implementation
-bool ElectronicsComponent::test() {
-    int testResult = rand()%10;
-    if(testResult == 0){
-        return false;//test failed
-    }else{
-        return true;
-    }
-}
+
 
 Component *ElectronicsComponent::clone() {
     return dynamic_cast<Component*>(new ElectronicsComponent(this));
+}
+
+void ElectronicsComponent::restore(ComponentCareTaker *) {
+
 }

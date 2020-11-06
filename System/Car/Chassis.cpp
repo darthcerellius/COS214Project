@@ -15,15 +15,7 @@ Chassis::Chassis(Chassis *c): Component("chassis") {
 Chassis::~Chassis() {
 
 }
-//TODO implementation
-bool Chassis::test() {
-    int testResult = rand()%10;
-    if(testResult == 0){
-        return false;//test failed
-    }else{
-        return true;
-    }
-}
+
 
 Component *Chassis::clone() {
     return dynamic_cast<Component*>(new Chassis(this));
@@ -52,7 +44,15 @@ Chassis::Chassis(double windResistance, double downForce) : Component("chassis")
 }
 
 ComponentCareTaker *Chassis::createMemento() {
-    return nullptr;
+   ComponentCareTaker* state = new ComponentCareTaker();
+   state->setMemento(this);
+   return state;
+}
+
+void Chassis::restore(ComponentCareTaker * state) {
+    this->downForce =dynamic_cast<ChassisAndAeroState*>(state->getMemento())->getDownForce();
+    this->windResistance= dynamic_cast<ChassisAndAeroState*>(state->getMemento())->getWindResistance();
+    this->setName(dynamic_cast<ChassisAndAeroState*>(state->getMemento())->getName());
 }
 
 

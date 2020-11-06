@@ -7,7 +7,7 @@
 
 
 #include "Component.h"
-
+class ComponentCareTaker;
 class AerodynamicsComponent: public Component{
 private:
     double downForce;
@@ -17,7 +17,6 @@ public:
     AerodynamicsComponent();
     AerodynamicsComponent(AerodynamicsComponent* a);
     ~AerodynamicsComponent();
-    bool test();
     Component* clone();
     double getDownForce();
     void setDownForce(double);

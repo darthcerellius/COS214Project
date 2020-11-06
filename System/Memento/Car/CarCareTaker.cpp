@@ -14,7 +14,7 @@ void CarCareTaker::setMemento(std::string carName, std::string componentName, ma
     this->state->setStrategy(strategy);
     this->state->setCarName(carName);
     this->state->setName(componentName);
-    this->state->setComponents(component*);
+    this->state->setComponents(component);
     this->state->setWindResistance(windResistance);
     this->state->setDownForce(downForce);
 }
