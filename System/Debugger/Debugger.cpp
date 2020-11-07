@@ -116,4 +116,5 @@ void Debugger::testEngineering(){
     EngineeringTeam* engineeringTeam=new EngineeringTeam();
     engineeringTeam->buildCar();
     engineeringTeam->serviceCar();
+    delete engineeringTeam;
 }
