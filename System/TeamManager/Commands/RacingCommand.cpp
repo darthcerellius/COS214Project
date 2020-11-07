@@ -29,6 +29,6 @@ void RacingCommand::execute(Car *car) {
     crew->orderTyres(&supplier);
     std::cout << "Starting race!" << std::endl;
     track->race();
-    std::cout << "Race is over"
+    std::cout << "Race is over" << std::endl;
     successor->execute(car);
 }

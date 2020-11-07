@@ -5,7 +5,7 @@
 #ifndef COS214PROJECT_AERODYNAMICSCOMPONENT_H
 #define COS214PROJECT_AERODYNAMICSCOMPONENT_H
 
-
+#include <cmath>
 #include "Component.h"
 class ComponentCareTaker;
 class AerodynamicsComponent: public Component{

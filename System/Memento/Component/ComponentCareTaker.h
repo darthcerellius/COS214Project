@@ -11,14 +11,11 @@
 
 #include "ChassisAndAeroState.h"
 
-#include "../../Car/Chassis.h"
-#include "../../Car/Engine.h"
-#include "../../Car/AerodynamicsComponent.h"
-#include "../../Car/Component.h"
-//class Engine;
-//class AerodynamicsComponent;
-//class Chassis;
-//class Component;
+
+class Engine;
+class AerodynamicsComponent;
+class Chassis;
+class Component;
 
 class ComponentCareTaker {
 private:

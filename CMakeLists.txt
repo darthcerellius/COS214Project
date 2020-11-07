@@ -22,7 +22,7 @@ set(SOURCES
         ${CALENDAR_SOURCES}
         ${CAR_SOURCES}
         ${ENGINEERING_SOURCES}
-        #${MEMENTO_SOURCES}
+        ${MEMENTO_SOURCES}
         ${CONTAINER_SOURCES}
         ${RACINGSTRATEGY_SOURCES}
         ${TEAMMANAGER_SOURCES}
@@ -43,8 +43,9 @@ target_link_libraries(COS214Project
         TRANSPORT
         CALENDAR
         ENGINEERING
+        MEMENTO
         CAR
-        #MEMENTO
+
         CONTAINER
         RACINGSTRATEGY
         JSONREADER

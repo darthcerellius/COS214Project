@@ -6,7 +6,7 @@
 #define COS214PROJECT_CARSTATE_H
 
 
-#include "../../Car/Component.h"]
+#include "../../Car/Component.h"
 #include "../../RacingStrategy/Strategies/GeneralRaceStrategy.h"
 #include <map>
 #include <string>

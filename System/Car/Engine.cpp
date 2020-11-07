@@ -51,7 +51,7 @@ void Engine::restore(ComponentCareTaker * state) {
 }
 
 ComponentCareTaker *Engine::createMemento() {
-    ComponentCareTaker* x = new ComponentCareTaker();
+    auto* x = new ComponentCareTaker();
     x->setMemento(this);
     return x;
 }

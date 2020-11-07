@@ -3,7 +3,10 @@
 //
 
 #include "ComponentCareTaker.h"
-
+#include "../../Car/Chassis.h"
+#include "../../Car/Engine.h"
+#include "../../Car/AerodynamicsComponent.h"
+#include "../../Car/Component.h"
 ComponentCareTaker::ComponentCareTaker() {
     state = nullptr;
 }
@@ -11,11 +14,7 @@ ComponentCareTaker::~ComponentCareTaker() {
     delete state;
 }
 
-//void ComponentCareTaker::setMemento(double strength, double weight, std::string name) {
-//    this->state->setName(name);
-//    this->state->setWeight(weight);
-//    this->state->setStrength(strength);
-//}
+
 ComponentState* ComponentCareTaker::getMemento() {
     if (state){
         return state;
