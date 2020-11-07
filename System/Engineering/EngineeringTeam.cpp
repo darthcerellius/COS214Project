@@ -44,7 +44,8 @@ Car *EngineeringTeam::getCar() {
 }
 
 void EngineeringTeam::serviceCar() {
-    cout<<"Engineering: Car has been serviced"<<endl;
+    if(car== nullptr) cout<<"Engineering: Car needs to be constructed before it is serviced"<<endl;
+    else cout<<"Engineering: Car has been serviced"<<endl;
 }
 
 EngineeringTeam::~EngineeringTeam() {

@@ -10,6 +10,7 @@ public:
     void testStrategy();
     void testPitCrewInstructions();
     void testTyres();
+    void testEngineering();
 };
 
 
