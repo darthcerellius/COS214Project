@@ -13,7 +13,7 @@ private:
     int event;
 public:
     Observer();
-    void attach(RaceTrack* s);S
+    void attach(RaceTrack* s);
     virtual ~Observer() = default;
     void notify();
     int getEvent();
