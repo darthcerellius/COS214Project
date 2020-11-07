@@ -7,12 +7,14 @@
 
 #include "Command.h"
 #include "../../Racing/RaceTrack.h"
+#include "../../Racing/Observers/Observer.h"
 class PitCrew;
 
 class RacingCommand : public Command {
 private:
     RaceTrack* track;
     PitCrew* crew;
+    Observer* posRecorder;
 public:
     RacingCommand();
     ~RacingCommand() override;

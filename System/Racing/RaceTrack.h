@@ -15,19 +15,24 @@
 #include "../Calendar/RaceWeekend.h"
 
 class TeamManager;
-class RaceInfo;
+class Observer;
 
 class RaceTrack {
 public:
-    RaceTrack(PitCrew* _crew, RaceWeekend* _info);
+    RaceTrack(Observer* observer, PitCrew* _crew, RaceWeekend* _info);
     void numLaps();
     int getLaps();
+    int getPosition();
     void race();
+    void practice();
+    void qualify();
 private:
     PitCrew* crew;
     RaceWeekend* info;
     int laps;
+    int position;
     RaceEvent* event;
+    Observer* positionRecorder;
 };
 
 
