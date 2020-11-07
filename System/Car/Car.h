@@ -7,9 +7,9 @@
 
 #include "Component.h"
 #include "../RacingStrategy/Strategies/GeneralRaceStrategy.h"
-#include "../Memento/Car/CarCareTaker.h"
+#include "../Car/Memento/Car/CarCareTaker.h"
 #include<map>
-
+class CarCareTaker;
 class Car: public Component{
 private:
     //Added this so that the Team manager can test individual components.

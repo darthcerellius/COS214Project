@@ -7,7 +7,6 @@ add_subdirectory("${PROJECT_SOURCE_DIR}/System/TransportMethod")
 add_subdirectory("${PROJECT_SOURCE_DIR}/System/Calendar")
 add_subdirectory("${PROJECT_SOURCE_DIR}/System/Car")
 add_subdirectory("${PROJECT_SOURCE_DIR}/System/Engineering")
-add_subdirectory("${PROJECT_SOURCE_DIR}/System/Memento")
 add_subdirectory("${PROJECT_SOURCE_DIR}/System/Container")
 add_subdirectory("${PROJECT_SOURCE_DIR}/System/RacingStrategy")
 add_subdirectory("${PROJECT_SOURCE_DIR}/System/TeamManager")
@@ -22,7 +21,7 @@ set(SOURCES
         ${CALENDAR_SOURCES}
         ${CAR_SOURCES}
         ${ENGINEERING_SOURCES}
-        ${MEMENTO_SOURCES}
+
         ${CONTAINER_SOURCES}
         ${RACINGSTRATEGY_SOURCES}
         ${TEAMMANAGER_SOURCES}
@@ -34,7 +33,7 @@ set(SOURCES
         )
 
 add_executable(COS214Project System/kyleMain.cpp ${SOURCES})
-
+add_executable(JeanreTesting System/JeanreMain.cpp ${SOURCES})
 
 target_link_libraries(COS214Project
         TEAMMANAGER
@@ -43,7 +42,7 @@ target_link_libraries(COS214Project
         TRANSPORT
         CALENDAR
         ENGINEERING
-        MEMENTO
+
         CAR
 
         CONTAINER

@@ -6,7 +6,7 @@
 #define COS214PROJECT_AIRTRANSPORT_H
 
 #include "TransportMethod.h"
-#include "../Memento/Component/ComponentCareTaker.h"
+#include "../Car/Memento/Component/ComponentCareTaker.h"
 
 class AirTransport : public TransportMethod<ComponentCareTaker> {
 public:

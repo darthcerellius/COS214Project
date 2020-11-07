@@ -2,10 +2,12 @@
 // Created by bieldt on 2020/10/31.
 //
 
+
 #include "Car.h"
 
 Car::Car() : Component("Car"){
     generalStrategy = 0;
+    components = new map<string,Component*>;
 }
 
 Car::~Car() {

@@ -3,7 +3,7 @@
 //
 
 #include "Chassis.h"
-#include "../Memento/Component/ComponentCareTaker.h"
+#include "../Car/Memento/Component/ComponentCareTaker.h"
 Chassis::Chassis():Component("chassis") {
     this->windResistance=0;
     this->downForce=0;
@@ -64,9 +64,11 @@ bool Chassis::windTunnelTest() {
         this->windResistance += log(i);
         if (this->downForce<1 ){
             std::cout << "Wind tunnel test failed at test number : " + to_string(i) << ", the downforce generated was not enough"<< std::endl;
+            restore(s);
             return false;
         }else if(this->windResistance>50){
             std::cout << "Wind tunnel test failed at test number : " + to_string(i) << ", the wind resistance was too high"<< std::endl;
+            restore(s);
             return false;
         }
     }
@@ -76,7 +78,8 @@ bool Chassis::windTunnelTest() {
 }
 
 bool Chassis::softwareTest() {
-    return false;
+    std::cout << "No software test can be performed on a chassis" << std::endl;
+    return true;;
 }
 
 

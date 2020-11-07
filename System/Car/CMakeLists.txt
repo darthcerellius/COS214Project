@@ -3,6 +3,10 @@ file(GLOB CarSources
         "*.cpp"
         "Tyre/*.cpp"
         "Tyre/*.h"
+        "Memento/Car/*.h
+        "Memento/Car/*.cpp
+        "Memento/Component/*.h
+        "Memento/Component/*.cpp
         )
 
 set(CAR_SOURCES ${CarSources})

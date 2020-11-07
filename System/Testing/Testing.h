@@ -6,9 +6,9 @@
 #define COS214PROJECT_TESTING_H
 
 #include "../Car/Component.h"
-#include "../Memento/Component/ComponentState.h"
-#include "../Memento/Component/ComponentCareTaker.h"
-#include "../Memento/Component/ComponentStore.h"
+#include "../Car/Memento/Component/ComponentState.h"
+#include "../Car/Memento/Component/ComponentCareTaker.h"
+#include "../Car/Memento/Component/ComponentStore.h"
 class Testing {
 protected:
     virtual bool test(Component*)=0;

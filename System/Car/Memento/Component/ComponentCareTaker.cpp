@@ -3,10 +3,10 @@
 //
 
 #include "ComponentCareTaker.h"
-#include "../../Car/Chassis.h"
-#include "../../Car/Engine.h"
-#include "../../Car/AerodynamicsComponent.h"
-#include "../../Car/Component.h"
+#include "../../Chassis.h"
+#include "../../Engine.h"
+#include "../../AerodynamicsComponent.h"
+#include "../../Component.h"
 ComponentCareTaker::ComponentCareTaker() {
     state = nullptr;
 }
