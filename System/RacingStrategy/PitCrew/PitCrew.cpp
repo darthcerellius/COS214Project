@@ -59,6 +59,7 @@ void PitCrew::observeNewEvent(RaceEvent * newEvent) {
     RaceEvent* temp = currentEvent; //NoEvent
     currentEvent = newEvent;
     respondToEvent();
+    delete currentEvent; //delete this if segfault occurs
     currentEvent = temp;
 }
 
