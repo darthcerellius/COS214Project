@@ -5,13 +5,14 @@
 #include "LogisticsCommand.h"
 
 LogisticsCommand::LogisticsCommand() {
-    std::cout << "test" << std::endl;
+    transport = new AirTransport();
 }
 
 LogisticsCommand::~LogisticsCommand() {
-
+    delete transport;
 }
 
 void LogisticsCommand::execute(Car *c) {
-
+    transport->load(c->createMemento());
+    successor->execute(c);
 }

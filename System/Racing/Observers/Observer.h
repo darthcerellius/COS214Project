@@ -5,15 +5,15 @@
 #ifndef COS214PROJECT_OBSERVER_H
 #define COS214PROJECT_OBSERVER_H
 
-class RaceTrack;
+class RealRaceTrack;
 
 class Observer {
 private:
-    RaceTrack* subject;
+    RealRaceTrack* subject;
     int event;
 public:
     Observer();
-    void attach(RaceTrack* s);
+    void attach(RealRaceTrack* s);
     virtual ~Observer() = default;
     void notify();
     int getEvent();

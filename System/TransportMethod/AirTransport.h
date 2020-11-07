@@ -6,17 +6,17 @@
 #define COS214PROJECT_AIRTRANSPORT_H
 
 #include "TransportMethod.h"
-#include "../Car/Memento/Component/ComponentCareTaker.h"
+#include "../Car/Memento/Car/CarCareTaker.h"
 
-class AirTransport : public TransportMethod<ComponentCareTaker> {
+class AirTransport : public TransportMethod<CarCareTaker*> {
 public:
     AirTransport();
     ~AirTransport() override;
 
 protected:
-    void package(ComponentCareTaker component) override;
+    void package(CarCareTaker* component) override;
     void ship() override;
-    ComponentCareTaker unpackage(std::string place) override;
+    CarCareTaker* unpackage(std::string place) override;
 };
 
 

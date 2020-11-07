@@ -6,8 +6,11 @@
 #define COS214PROJECT_LOGISTICSCOMMAND_H
 
 #include "../TeamManager.h"
+#include "../../TransportMethod/AirTransport.h"
 
 class LogisticsCommand : public Command {
+private:
+    AirTransport* transport;
 public:
     LogisticsCommand();
     ~LogisticsCommand() override;

@@ -1,12 +1,13 @@
 //
-// Created by kyle-pc on 2020/11/04.
+// Created by kyle-pc on 2020/11/07.
 //
 
-#include "RaceTrack.h"
+#include "RealRaceTrack.h"
+#include <ctime>
 #include "Observers/Observer.h"
 #include <ctime>
 
-RaceTrack::RaceTrack(Observer* observer, PitCrew* _crew, RaceWeekend* _info){
+RealRaceTrack::RealRaceTrack(Observer* observer, PitCrew* _crew, RaceWeekend* _info){
     crew = _crew;
     info = _info;
     positionRecorder = observer;
@@ -14,16 +15,16 @@ RaceTrack::RaceTrack(Observer* observer, PitCrew* _crew, RaceWeekend* _info){
     srand(time(NULL));
 }
 
-void RaceTrack::numLaps(){
+void RealRaceTrack::numLaps(){
     double km = info->getLength();
     laps = round(300/km);
 }
 
-int RaceTrack::getLaps(){
+int RealRaceTrack::getLaps(){
     return laps;
 }
 
-void RaceTrack::race(){
+void RealRaceTrack::race(){
     std::cout << "The day is: Sunday, " << info->getDate()->d + 2 << "-" << info->getDate()->m << "-" <<info->getDate()->y << std::endl;
     bool brokenComponent;
     bool redFlag;
@@ -94,12 +95,12 @@ void RaceTrack::race(){
     positionRecorder->notify();
 }
 
-void RaceTrack::practice() {
+void RealRaceTrack::practice() {
     std::cout << "The day is: Friday, " << info->getDate()->d << "-" << info->getDate()->m << "-" <<info->getDate()->y << std::endl;
     std::cout << "The driver is practicing on the race track!" << std::endl;
 }
 
-void RaceTrack::qualify() {
+void RealRaceTrack::qualify() {
     std::cout << "The day is: Saturday, " << info->getDate()->d + 1 << "-" << info->getDate()->m << "-" <<info->getDate()->y << std::endl;
     std::cout << "The Car is busy with the qualifier round..." << std::endl;
     position = (rand() % 10) + 1;
@@ -107,6 +108,6 @@ void RaceTrack::qualify() {
     std::cout << "The qualifying round has finished." << std::endl;
 }
 
-int RaceTrack::getPosition() {
+int RealRaceTrack::getPosition() {
     return position;
 }

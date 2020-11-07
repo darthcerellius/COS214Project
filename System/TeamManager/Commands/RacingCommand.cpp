@@ -4,11 +4,12 @@
 
 #include "RacingCommand.h"
 #include "../../RacingStrategy/PitCrew/PitCrew.h"
+#include "../../Car/Memento/Car/CarStore.h"
 
 RacingCommand::RacingCommand() {
     crew = new PitCrew();
     posRecorder = new Observer();
-    track = new RaceTrack(posRecorder, crew, CurrentSeason::currentWeekend);
+    track = new RealRaceTrack(posRecorder, crew, CurrentSeason::currentWeekend);
     posRecorder->attach(track);
     track->numLaps();
 }
@@ -20,6 +21,8 @@ RacingCommand::~RacingCommand() {
 }
 
 void RacingCommand::execute(Car *car) {
+    std::cout << "Unloading car from airplane" << std::endl;
+    car->restore(CurrentSeason::garage->getMemento());
     std::cout << "Current race is happening at: " <<
     CurrentSeason::currentWeekend->getName() << ", "
     << CurrentSeason::currentWeekend->getLocation() << std::endl;

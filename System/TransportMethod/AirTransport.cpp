@@ -4,6 +4,8 @@
 
 #include <iostream>
 #include "AirTransport.h"
+#include "../TeamManager/TeamManagerObjects.h"
+#include "../Car/Memento/Car/CarStore.h"
 
 AirTransport::AirTransport() {
 
@@ -13,16 +15,17 @@ AirTransport::~AirTransport() {
 
 }
 
-void AirTransport::package(ComponentCareTaker component) {
+void AirTransport::package(CarCareTaker* component) {
     std::cout << "Loading car onto the plane" << std::endl;
     shippingContainer = component;
 }
 
 void AirTransport::ship() {
     std::cout << "Plane is on it's way to the race track" << std::endl;
+    CurrentSeason::garage->setMemento(shippingContainer);
 }
 
-ComponentCareTaker AirTransport::unpackage(std::string place) {
+CarCareTaker* AirTransport::unpackage(std::string place) {
     std::cout << "Unloading car from the plane" << std::endl;
     return shippingContainer;
 }

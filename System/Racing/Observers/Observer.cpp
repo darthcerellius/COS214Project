@@ -3,12 +3,12 @@
 //
 
 #include "Observer.h"
-#include "../RaceTrack.h"
+#include "../RealRaceTrack.h"
 
 Observer::Observer() {
 
 }
-void Observer::attach(RaceTrack *s) {
+void Observer::attach(RealRaceTrack *s) {
     subject = s;
 }
 

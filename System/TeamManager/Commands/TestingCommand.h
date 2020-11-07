@@ -14,7 +14,8 @@ public:
     TestingCommand();
     void execute(Car *car) override;
 private:
-    Testing* test;
+    SoftwareTest* softwareTest;
+    WindTunnelTest* windTunnelTest;
 };
 
 

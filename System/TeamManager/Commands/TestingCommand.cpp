@@ -5,9 +5,14 @@
 #include "TestingCommand.h"
 
 TestingCommand::TestingCommand(){
-
+    softwareTest = new SoftwareTest();
+    windTunnelTest = new WindTunnelTest();
 }
 
 void TestingCommand::execute(Car *car) {
-  car->softwareTest();
+    std::cout << "Performing tests on the car..." << std::endl;
+    softwareTest->test(car);
+    windTunnelTest->test(car);
+    std::cout << "Testing complete" << std::endl;
+    successor->execute(car);
 }

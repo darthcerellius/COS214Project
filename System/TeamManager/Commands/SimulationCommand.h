@@ -9,6 +9,9 @@
 #include "Command.h"
 
 class SimulationCommand : public Command {
+private:
+    Simulation* simulation;
+public:
     SimulationCommand();
     void execute(Car *car) override;
 };

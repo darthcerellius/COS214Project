@@ -7,10 +7,12 @@
 #include "../Engineering/EngineeringTeam.h"
 #include "../Container/GoodsContainer.h"
 #include "../Calendar/RaceWeekend.h"
+#include "../Car/Memento/Car/CarStore.h"
 
 StrategyTeam* CurrentSeason::strategyTeam = nullptr;
 EngineeringTeam* CurrentSeason::engineeringTeam = nullptr;
 RaceWeekend* CurrentSeason::currentWeekend = nullptr;
+CarStore* CurrentSeason::garage = new CarStore();
 
 StrategyTeam* NextSeason::strategyTeam = nullptr;
 EngineeringTeam* NextSeason::engineeringTeam = nullptr;
@@ -34,6 +36,10 @@ void CurrentSeason::clean() {
     if (engineeringTeam != nullptr) {
         delete engineeringTeam;
         engineeringTeam = nullptr;
+    }
+    if (garage != nullptr) {
+        delete garage;
+        garage = nullptr;
     }
 }
 

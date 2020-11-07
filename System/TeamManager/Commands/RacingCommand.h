@@ -6,13 +6,13 @@
 #define COS214PROJECT_RACINGCOMMAND_H
 
 #include "Command.h"
-#include "../../Racing/RaceTrack.h"
+#include "../../Racing/RealRaceTrack.h"
 #include "../../Racing/Observers/Observer.h"
 class PitCrew;
 
 class RacingCommand : public Command {
 private:
-    RaceTrack* track;
+    RealRaceTrack* track;
     PitCrew* crew;
     Observer* posRecorder;
 public:
