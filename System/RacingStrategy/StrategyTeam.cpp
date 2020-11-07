@@ -54,3 +54,7 @@ void StrategyTeam::decideStrategy(int strategyDecider) {
 void StrategyTeam::decideComponents(EngineeringTeam * engineeringTeam) {
     engineeringTeam->buildCar();
 }
+
+void StrategyTeam::setCar(Car* racecar) {
+    this->raceCar = racecar;
+}

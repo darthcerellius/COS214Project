@@ -18,6 +18,7 @@ public:
     ~StrategyTeam();
     void decideStrategy(int);
     void decideComponents(EngineeringTeam*);
+    void setCar(Car*);
 };
 
 
