@@ -5,11 +5,11 @@
 #include "BrokenComponent.h"
 
 BrokenComponent::BrokenComponent(){
-    std::cout << "EVENT: One of the race car's component breaks and requires immediate attention.\n";
+    std::cout << "EVENT OCCURRED: One of the race car's component breaks and requires immediate attention.\n";
 }
 
 BrokenComponent::~BrokenComponent() {}
 
 std::string BrokenComponent::eventDescription() {
-    return "EVENT: The race car returns to the pit stop to have its broken component replaced or repaired.";
+    return "EVENT RESPONSE: The race car returns to the pit stop to have its broken component replaced or repaired.";
 }
