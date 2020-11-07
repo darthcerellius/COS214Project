@@ -46,7 +46,6 @@ void RealRaceTrack::race(){
         if(brokenComponent){
             delete event;
             event = new BrokenComponent();
-            event->eventDescription();
             event->changeEvent(crew);
             chance++;
             continue;
@@ -54,7 +53,6 @@ void RealRaceTrack::race(){
         else if(wornTyres){
             delete event;
             event = new WornTyres();
-            event->eventDescription();
             event->changeEvent(crew);
             chance++;
             continue;
@@ -62,7 +60,6 @@ void RealRaceTrack::race(){
         else if(redFlag){
             delete event;
             event = new RedFlag();
-            event->eventDescription();
             event->changeEvent(crew);
             chance++;
             continue;
@@ -70,7 +67,6 @@ void RealRaceTrack::race(){
         else if(safetyCar){
             delete event;
             event = new SafetyCar();
-            event->eventDescription();
             event->changeEvent(crew);
             chance++;
             continue;
@@ -78,7 +74,6 @@ void RealRaceTrack::race(){
         else if(yellowFlag){
             delete event;
             event = new YellowFlag();
-            event->eventDescription();
             event->changeEvent(crew);
             chance++;
             continue;
