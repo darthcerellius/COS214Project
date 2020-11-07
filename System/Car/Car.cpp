@@ -93,6 +93,10 @@ void Car::restore(CarCareTaker * state) {
 bool Car::softwareTest() {
     std::cout <<"Starting software test on car" << std::endl;
     int failedCount =0;
+    if (components->begin()->second==0){
+        std::cout << "There are no components in the car, software test passed" << std::endl;
+        return true;
+    }
     for (auto it : *components) {
         if (!it.second->softwareTest()){
             failedCount++;
@@ -122,6 +126,14 @@ bool Car::windTunnelTest() {
     }
     std::cout << "Car wind tunnel test passed, no components failed" << std::endl;
     return true;
+
+}
+
+void Car::printComponents() {
+    std::cout << "Components in car : " << std::endl;
+    for (auto it : *components) {
+        std::cout << it.second->getName()<< std::endl;
+    }
 
 }
 

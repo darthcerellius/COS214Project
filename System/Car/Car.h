@@ -37,5 +37,6 @@ public:
     bool softwareTest() override;
     bool windTunnelTest() override;
     map<string,Component*>* getComponents();
+    void printComponents();
 };
 #endif //COS214PROJECT_CAR_H

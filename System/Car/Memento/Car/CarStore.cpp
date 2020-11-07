@@ -17,5 +17,5 @@ CarStore::~CarStore() {
 }
 
 CarCareTaker *CarStore::getMemento() {
-    return nullptr;
+    return memento;
 }
