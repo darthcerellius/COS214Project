@@ -4,8 +4,8 @@
 
 #include "Instruction.h"
 
-Instruction::Instruction(Car* sentTo){
-    this->sentTo = sentTo;
+Instruction::Instruction(){
+    this->sentTo = nullptr;
 }
 
 Instruction::~Instruction() {}

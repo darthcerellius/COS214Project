@@ -10,7 +10,7 @@ class Instruction {
 protected:
     Car* sentTo;
 public:
-    Instruction(Car* = 0);
+    Instruction();
     ~Instruction();
     virtual void executeInstruction() = 0;
 };

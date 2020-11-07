@@ -13,11 +13,12 @@ private:
     Command* preSeasonCommand;
     Command* curSeasonCommand;
     ConcreteCalendar* calendar;
-    static TeamManager manager;
+    Car* raceCar;
+    static TeamManager* manager;
     static bool isCreated;
 public:
     ~TeamManager();
-    static TeamManager& getTeamManager();
+    static TeamManager* getTeamManager();
     void run();
 private:
     TeamManager();

@@ -12,6 +12,7 @@
 class TestingCommand : public Command {
 public:
     TestingCommand();
+    ~TestingCommand() override;
     void execute(Car *car) override;
 private:
     SoftwareTest* softwareTest;

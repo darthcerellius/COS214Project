@@ -12,17 +12,25 @@
 StrategyTeam* CurrentSeason::strategyTeam = nullptr;
 EngineeringTeam* CurrentSeason::engineeringTeam = nullptr;
 RaceWeekend* CurrentSeason::currentWeekend = nullptr;
-CarStore* CurrentSeason::garage = new CarStore();
+CarStore* CurrentSeason::garage = nullptr;
+Car* CurrentSeason::raceCar = nullptr;
 
 StrategyTeam* NextSeason::strategyTeam = nullptr;
 EngineeringTeam* NextSeason::engineeringTeam = nullptr;
 std::map<std::string, GoodsContainer> CurrentSeason::harbours;
 
-StrategyTeam *CurrentSeason::getStrategyTeam(Car* car) {
+StrategyTeam *CurrentSeason::getStrategyTeam() {
     if (strategyTeam == nullptr) {
-        strategyTeam = new StrategyTeam(car);
+        strategyTeam = new StrategyTeam();
     }
     return strategyTeam;
+}
+
+CarStore* CurrentSeason::getGarage() {
+    if (garage == nullptr) {
+        garage = new CarStore();
+    }
+    return garage;
 }
 
 EngineeringTeam *CurrentSeason::getEngineeringTeam() {
@@ -37,6 +45,10 @@ void CurrentSeason::clean() {
         delete engineeringTeam;
         engineeringTeam = nullptr;
     }
+    if (strategyTeam != nullptr) {
+        delete strategyTeam;
+        strategyTeam = nullptr;
+    }
     if (garage != nullptr) {
         delete garage;
         garage = nullptr;
@@ -49,6 +61,10 @@ void CurrentSeason::shipToHarbor(std::string name, GoodsContainer container) {
 
 GoodsContainer CurrentSeason::getContainer(std::string name) {
     return harbours[name];
+}
+
+void CurrentSeason::setRaceWeekend(RaceWeekend* rw) {
+    currentWeekend = rw;
 }
 
 StrategyTeam *NextSeason::getStrategyTeam() {

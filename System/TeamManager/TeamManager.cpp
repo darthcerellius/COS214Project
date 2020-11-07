@@ -9,23 +9,33 @@
 #include "../TransportMethod/SeaTransport.h"
 #include "../Calendar/RaceWeekend.h"
 #include "../TransportMethod/RoadTransport.h"
+#include "Builder/PreSeasonBuilder.h"
+#include "Builder/CurSeasonBuilder.h"
 
 bool TeamManager::isCreated = false;
-TeamManager TeamManager::manager;
+TeamManager* TeamManager::manager = nullptr;
 
 TeamManager::TeamManager() {
     calendar = new ConcreteCalendar();
+    PreSeasonBuilder preBuilder;
+    preSeasonCommand = preBuilder.buildCommandChain();
+    CurSeasonBuilder curBuilder;
+    curSeasonCommand = curBuilder.buildCommandChain();
+    raceCar = nullptr;
 }
 
 
 TeamManager::~TeamManager() {
+    delete calendar;
+    delete preSeasonCommand;
+    delete curSeasonCommand;
     CurrentSeason::clean();
     NextSeason::clean();
 }
 
-TeamManager &TeamManager::getTeamManager() {
+TeamManager* TeamManager::getTeamManager() {
     if (!isCreated) {
-        TeamManager::manager = TeamManager();
+        TeamManager::manager = new TeamManager();
         isCreated = true;
     }
     return TeamManager::manager;
@@ -35,6 +45,7 @@ void TeamManager::run() {
 
     //run the pre-season command
     preSeasonCommand->execute(nullptr);
+    raceCar = CurrentSeason::raceCar;
 
     std::cout << "Team Manager running" << std::endl;
     Iterator * calIterator = calendar->createIterator();
@@ -57,6 +68,7 @@ void TeamManager::run() {
     /*Transport goods to the race tracks */
     while (!calIterator->isDone()) {
         RaceWeekend* weekend = calIterator->current();
+        CurrentSeason::setRaceWeekend(weekend);
         GoodsContainer container;
         if (weekend->getLocation() == "Europe") {
             container.setShippingLabel(weekend->getName(), weekend->getLocation(), weekend->getDate());
@@ -69,7 +81,9 @@ void TeamManager::run() {
         std::cout << std::endl;
 
         //This assumes that a Command that will be called won't need an existing car, and will instead make one
-        curSeasonCommand->execute(nullptr);
+        curSeasonCommand->execute(CurrentSeason::raceCar);
         calIterator->next();
     }
+    Car * c = CurrentSeason::raceCar;
+    delete calIterator;
 }

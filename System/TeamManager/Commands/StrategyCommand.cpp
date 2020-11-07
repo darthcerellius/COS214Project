@@ -4,9 +4,13 @@
 
 #include "StrategyCommand.h"
 #include "../../RacingStrategy/StrategyTeam.h"
+#include <ctime>
 
 void StrategyCommand::execute(Car *car) {
-    /*TODO: READ WEATHER INFORMATION FROM THE CALENDAR TO INFLUENCE STRATEGY DECISION */
-    CurrentSeason::getStrategyTeam(car)->decideStrategy(0);
-    successor->execute(car);
+    srand(time(NULL));
+    CurrentSeason::getStrategyTeam()->decideStrategy(rand() % 5);
+    if (successor != nullptr) {
+        successor->execute(car);
+    }
 }
+

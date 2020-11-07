@@ -11,7 +11,7 @@ class CarCareTaker {
 private:
     friend class Car;
     CarState* state;
-    void setMemento(std::string, std::string, map<std::string, Component*>*,GeneralRaceStrategy*,double,double);
+    void setMemento(std::string, std::string, map<std::string, Component*>,GeneralRaceStrategy*,double,double);
     CarState* getMemento();
     CarCareTaker();
 

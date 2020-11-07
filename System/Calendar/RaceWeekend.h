@@ -19,6 +19,7 @@ struct Conditions {
 class RaceWeekend{
 public:
     RaceWeekend(std::string _trackName, double _length, std::string _location, Date* _date, Conditions* _condis);
+    ~RaceWeekend();
     void setName(std::string _trackName);
     std::string getName();
     void setLength(double _length);

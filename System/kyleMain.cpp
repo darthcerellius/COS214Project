@@ -9,7 +9,7 @@
 
 using namespace std;
 int main() {
-    TeamManager manager = TeamManager::getTeamManager();
-    manager.run();
-
+    TeamManager* manager = TeamManager::getTeamManager();
+    manager->run();
+    delete manager;
 }

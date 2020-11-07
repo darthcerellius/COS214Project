@@ -73,6 +73,7 @@ bool Chassis::windTunnelTest() {
         }
     }
     this->restore(s);
+    delete s;
     std::cout << "Wind tunnel test passed, chassis restored to previous state"<< std::endl;
     return true;
 }

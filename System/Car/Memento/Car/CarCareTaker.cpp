@@ -10,7 +10,7 @@ CarCareTaker::~CarCareTaker() {
     delete state;
 }
 
-void CarCareTaker::setMemento(std::string carName, std::string componentName, map<std::string, Component*>* component,GeneralRaceStrategy* strategy,double windResistance,double downForce) {
+void CarCareTaker::setMemento(std::string carName, std::string componentName, map<std::string, Component*> component,GeneralRaceStrategy* strategy,double windResistance,double downForce) {
     this->state->setStrategy(strategy);
     this->state->setCarName(carName);
     this->state->setName(componentName);

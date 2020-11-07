@@ -15,7 +15,7 @@ private:
     //Added this so that the Team manager can test individual components.
     friend class TestingCommand;
     std::string carName;
-    map<string,Component*>* components;
+    map<string,Component*> components;
     GeneralRaceStrategy* generalStrategy;
     double downForce;
     double windResistance;
@@ -36,7 +36,7 @@ public:
     CarCareTaker* createMemento();
     bool softwareTest() override;
     bool windTunnelTest() override;
-    map<string,Component*>* getComponents();
+    map<string,Component*> getComponents();
     void printComponents();
 };
 #endif //COS214PROJECT_CAR_H

@@ -11,7 +11,7 @@ void Simulation::Simulate(Car * car, RaceTrack * track) {
 
     std::cout << "Starting simulation of car , on track" << std::endl;
     std::cout <<"Number of laps : " << track->getLaps() << std::endl;
-    unique_ptr<Engine> engine(dynamic_cast<Engine*>(car->getComponents()->find("engine")->second)); /** unique pointer is not needed, but makes it easier to read the code */
+    Engine* engine = (dynamic_cast<Engine*>(car->getComponents().find("engine")->second)); /** unique pointer is not needed, but makes it easier to read the code */
     std::cout << "Estimated fuel usage : " << to_string(engine->getFuelConsumption()*track->getLaps()*6); /** litres per km * num of laps * average lap length */
     if (!car->softwareTest()){
         std::cout <<"Car is expected to fail during the race" << std::endl;

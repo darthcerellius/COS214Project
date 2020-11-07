@@ -7,6 +7,7 @@
 TestingCommand::TestingCommand(){
     softwareTest = new SoftwareTest();
     windTunnelTest = new WindTunnelTest();
+    successor = nullptr;
 }
 
 void TestingCommand::execute(Car *car) {
@@ -14,5 +15,12 @@ void TestingCommand::execute(Car *car) {
     softwareTest->test(car);
     windTunnelTest->test(car);
     std::cout << "Testing complete" << std::endl;
-    successor->execute(car);
+    if (successor != nullptr) {
+        successor->execute(car);
+    }
+}
+
+TestingCommand::~TestingCommand() {
+    delete softwareTest;
+    delete windTunnelTest;
 }

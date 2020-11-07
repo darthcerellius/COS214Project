@@ -7,11 +7,11 @@
 #include "Observers/Observer.h"
 #include <ctime>
 
-RealRaceTrack::RealRaceTrack(Observer* observer, PitCrew* _crew, RaceWeekend* _info){
+RealRaceTrack::RealRaceTrack(Observer* observer, PitCrew* _crew){
     crew = _crew;
-    info = _info;
+    info = nullptr;
     positionRecorder = observer;
-    event = new NoEvent();
+    event = nullptr;
     srand(time(NULL));
 }
 
@@ -26,62 +26,67 @@ int RealRaceTrack::getLaps(){
 
 void RealRaceTrack::race(){
     std::cout << "The day is: Sunday, " << info->getDate()->d + 2 << "-" << info->getDate()->m << "-" <<info->getDate()->y << std::endl;
-    bool brokenComponent;
-    bool redFlag;
-    bool safetyCar;
-    bool wornTyres;
-    bool yellowFlag;
-    bool changeDecision;
+    bool brokenComponent = false;
+    bool redFlag = false;
+    bool safetyCar = false;
+    bool wornTyres = false;
+    bool yellowFlag = false;
+    bool changeDecision = false;
     int chance = 0;
     std::cout << "Car is prepping for race..." << std::endl;
     std::cout << "GO!" << std::endl;
+
     for(int i = 0; i < laps; i++){
-        brokenComponent = (rand() % 100) < (5 + chance);
-        redFlag = (rand() % 100) < (5 + chance);
-        safetyCar = (rand() % 100) < (5 + chance);
-        wornTyres = (rand() % 100) < (5 + chance);
-        yellowFlag = (rand() % 100) < (5 + chance);
-        changeDecision = (rand() % 100) < (10 + chance);
+
+        if ((rand() % 10) == 1) {
+            brokenComponent = (rand() % 100) < (5 + chance);
+            redFlag = (rand() % 100) < (5 + chance);
+            safetyCar = (rand() % 100) < (5 + chance);
+            yellowFlag = (rand() % 100) < (5 + chance);
+            changeDecision = (rand() % 100) < (10 + chance);
+        }
+
+        wornTyres = (rand() % 100) < (1 + chance);
 
         if(brokenComponent){
-            delete event;
             event = new BrokenComponent();
             event->changeEvent(crew);
-            chance++;
+            chance = 0;
+            brokenComponent = false;
             continue;
         }
         else if(wornTyres){
-            delete event;
             event = new WornTyres();
             event->changeEvent(crew);
-            chance++;
+            chance = 0;
+            wornTyres = false;
             continue;
         }
         else if(redFlag){
-            delete event;
             event = new RedFlag();
             event->changeEvent(crew);
-            chance++;
+            chance = 0;
+            redFlag = false;
             continue;
         }
         else if(safetyCar){
-            delete event;
             event = new SafetyCar();
             event->changeEvent(crew);
-            chance++;
+            chance = 0;
+            safetyCar = false;
             continue;
         }
         else if(yellowFlag){
-            delete event;
             event = new YellowFlag();
             event->changeEvent(crew);
-            chance++;
+            chance = 0;
+            yellowFlag = false;
             continue;
         } else if (changeDecision) {
             crew->makeTacticalInstruction(rand() % 4);
+            changeDecision = false;
         }
         else{
-            event->eventDescription();
             chance++;
         }
     }
@@ -105,4 +110,8 @@ void RealRaceTrack::qualify() {
 
 int RealRaceTrack::getPosition() {
     return position;
+}
+
+void RealRaceTrack::setWeekend(RaceWeekend *weekend) {
+    info = weekend;
 }

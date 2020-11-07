@@ -4,7 +4,8 @@
 
 #include "EventResponse.h"
 
-EventResponse::EventResponse(Car* sentTo, RaceEvent* event) : Instruction(sentTo) {
+EventResponse::EventResponse(Car* sentTo, RaceEvent* event) : Instruction() {
+    this->sentTo = sentTo;
     this->event = event;
 }
 

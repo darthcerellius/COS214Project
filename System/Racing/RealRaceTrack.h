@@ -21,8 +21,9 @@ class Observer;
 
 class RealRaceTrack : public RaceTrack {
 public:
-    RealRaceTrack(Observer* observer, PitCrew* _crew, RaceWeekend* _info);
+    RealRaceTrack(Observer* observer, PitCrew* _crew);
     void numLaps();
+    void setWeekend(RaceWeekend* weekend);
     int getLaps() override;
     int getPosition();
     void race();

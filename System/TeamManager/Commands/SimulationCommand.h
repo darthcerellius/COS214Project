@@ -13,6 +13,7 @@ private:
     Simulation* simulation;
 public:
     SimulationCommand();
+    ~SimulationCommand() override;
     void execute(Car *car) override;
 };
 

@@ -11,7 +11,9 @@ friend class TeamManager; \
 friend class EngineeringCommand; \
 friend class SeaTransport;    \
 friend class RacingCommand;   \
-friend class AirTransport;
+friend class AirTransport;    \
+friend class CarStoreCommand; \
+friend class ServiceEngineeringCommand;
 
 class StrategyTeam;
 class EngineeringTeam;
@@ -29,15 +31,18 @@ class CurrentSeason {
     static std::map<std::string, GoodsContainer> harbours;
     static RaceWeekend* currentWeekend;
     static CarStore* garage;
+    static Car* raceCar;
 
     static void shipToHarbor(std::string name, GoodsContainer container);
     static GoodsContainer getContainer(std::string name);
 
-    static StrategyTeam *getStrategyTeam(Car* car);
+    static StrategyTeam *getStrategyTeam();
 
     static EngineeringTeam *getEngineeringTeam();
+    static CarStore* getGarage();
 
     static void clean();
+    static void setRaceWeekend(RaceWeekend* rw);
 };
 
 class NextSeason {

@@ -78,3 +78,8 @@ int RaceWeekend::countLeapYears(Date* date){
 
     return years/4 - years/100 + years/400;
 }
+
+RaceWeekend::~RaceWeekend() {
+    delete date;
+    delete condis;
+}

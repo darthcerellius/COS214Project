@@ -9,9 +9,8 @@
 RacingCommand::RacingCommand() {
     crew = new PitCrew();
     posRecorder = new Observer();
-    track = new RealRaceTrack(posRecorder, crew, CurrentSeason::currentWeekend);
+    track = new RealRaceTrack(posRecorder, crew);
     posRecorder->attach(track);
-    track->numLaps();
 }
 
 RacingCommand::~RacingCommand() {
@@ -21,6 +20,8 @@ RacingCommand::~RacingCommand() {
 }
 
 void RacingCommand::execute(Car *car) {
+    track->setWeekend(CurrentSeason::currentWeekend);
+    track->numLaps();
     std::cout << "Unloading car from airplane" << std::endl;
     car->restore(CurrentSeason::garage->getMemento());
     std::cout << "Current race is happening at: " <<
@@ -78,5 +79,7 @@ void RacingCommand::execute(Car *car) {
             points = 1;
     }
     std::cout << "The car received " << points << " points";
-    successor->execute(car);
+    if (successor != nullptr) {
+        successor->execute(car);
+    }
 }

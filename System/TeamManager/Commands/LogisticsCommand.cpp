@@ -13,6 +13,9 @@ LogisticsCommand::~LogisticsCommand() {
 }
 
 void LogisticsCommand::execute(Car *c) {
-    transport->load(c->createMemento());
-    successor->execute(c);
+    transport->package(c);
+    transport->ship();
+    if (successor != nullptr) {
+        successor->execute(c);
+    }
 }

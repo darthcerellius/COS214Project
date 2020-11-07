@@ -7,8 +7,6 @@
 #include "cmath"
 #include "Testing.h"
 class WindTunnelTest : public Testing {
-private:
-    bool test();
 public:
     bool test(Component *);
 };

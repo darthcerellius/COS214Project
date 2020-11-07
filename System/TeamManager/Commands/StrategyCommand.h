@@ -12,7 +12,6 @@ class StrategyTeam;
 class StrategyCommand : public Command {
 public:
     StrategyCommand() = default;
-    ~StrategyCommand() override = default;
     void execute(Car* car) override;
 
 };

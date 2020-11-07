@@ -30,3 +30,9 @@ Calendar::Calendar(){
         weekends.push_back(newWeekend);
     }
 }
+
+Calendar::~Calendar() {
+    for (auto i : weekends) {
+        delete i;
+    }
+}

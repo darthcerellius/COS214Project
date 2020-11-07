@@ -7,21 +7,22 @@
 
 Car::Car() : Component("Car"){
     generalStrategy = nullptr;
-    components = new map<string,Component*>;
+    components = map<string,Component*>();
 }
 
 Car::~Car() {
-    components->clear();
+    for (auto i : components) {
+        delete i.second;
+    }
     if(generalStrategy)
         delete generalStrategy;
-    delete components;
 }
 
 Component* Car::clone() {
     Car* temp = new Car();
     map<string,Component*>::iterator it;
 
-    for(it = components->begin(); it!= components->end(); it++){
+    for(it = components.begin(); it!= components.end(); it++){
         temp->add((*it).second->clone());
     }
 
@@ -32,14 +33,14 @@ Component* Car::clone() {
 }
 
 void Car::add(Component *c) {
-    components->insert(pair<string, Component*>(c->getName(),c));
+    components.insert(pair<string, Component*>(c->getName(),c));
 
 }
 
 void Car::remove(string c) {
-    map<string, Component *>::iterator it = components->find(c);
-    if (it != components->end())
-        components->erase(it);
+    map<string, Component *>::iterator it = components.find(c);
+    if (it != components.end())
+        components.erase(it);
 }
 
 
@@ -69,12 +70,16 @@ void Car::respondToEvent(string event) {
 
 CarCareTaker *Car::createMemento() {
     CarCareTaker* state= new CarCareTaker();
-    state->setMemento(this->carName, this->getName(),dynamic_cast<Car*>(clone())->getComponents(),dynamic_cast<Car*>(clone())->getStrategy(),this->windResistance,this->downForce);
+    std::map<string, Component*> newComponents;
+    for (auto i : components) {
+        newComponents[i.first] = i.second->clone();
+    }
+    state->setMemento(this->carName, this->getName(),newComponents,generalStrategy->clone(),this->windResistance,this->downForce);
     return state;
 
 }
 
-map<string, Component *> *Car::getComponents() {
+map<string, Component *> Car::getComponents() {
     return components;
 }
 
@@ -84,8 +89,15 @@ GeneralRaceStrategy *Car::getStrategy() {
 
 void Car::restore(CarCareTaker * state) {
     this->carName=state->getMemento()->getCarName();
-    this->components=state->getMemento()->getComponents();
-    this->generalStrategy = state->getMemento()->getStrategy();
+    for (auto i : components) {
+        delete i.second;
+    }
+    this->components.clear();
+    for (auto i : state->getMemento()->getComponents()) {
+        this->components[i.first] = i.second->clone();
+    }
+    delete generalStrategy;
+    this->generalStrategy = state->getMemento()->getStrategy()->clone();
     this->downForce = state->getMemento()->getDownForce();
     this->windResistance= state->getMemento()->getWindResistance();
 }
@@ -93,11 +105,11 @@ void Car::restore(CarCareTaker * state) {
 bool Car::softwareTest() {
     std::cout <<"Starting software test on car" << std::endl;
     int failedCount =0;
-    if (components->begin()->second==0){
+    if (components.begin()->second==0){
         std::cout << "There are no components in the car, software test passed" << std::endl;
         return true;
     }
-    for (auto it : *components) {
+    for (auto it : components) {
         if (!it.second->softwareTest()){
             failedCount++;
         }
@@ -114,7 +126,7 @@ bool Car::softwareTest() {
 bool Car::windTunnelTest() {
     std::cout <<"Starting wind tunnel test on car" << std::endl;
     int failedCount =0;
-    for (auto it : *components) {
+    for (auto it : components) {
         if (!it.second->windTunnelTest()){
             failedCount++;
         }
@@ -131,7 +143,7 @@ bool Car::windTunnelTest() {
 
 void Car::printComponents() {
     std::cout << "Components in car : " << std::endl;
-    for (auto it : *components) {
+    for (auto it : components) {
         std::cout << it.second->getName()<< std::endl;
     }
 

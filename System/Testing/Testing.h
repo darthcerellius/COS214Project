@@ -10,13 +10,10 @@
 #include "../Car/Memento/Component/ComponentCareTaker.h"
 #include "../Car/Memento/Component/ComponentStore.h"
 class Testing {
-protected:
-    ComponentStore* preTestingState;
 public:
     Testing();
     ~Testing();
     virtual bool test(Component*)=0;
-
 };
 
 

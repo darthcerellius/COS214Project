@@ -5,7 +5,7 @@
 #ifndef COS214PROJECT_TRANSPORTMETHOD_H
 #define COS214PROJECT_TRANSPORTMETHOD_H
 
-#include "../Car/Component.h"
+#include <string>
 
 enum TransportType {
     AIR,

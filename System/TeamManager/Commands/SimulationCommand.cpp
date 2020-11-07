@@ -12,5 +12,12 @@ SimulationCommand::SimulationCommand(){
 void SimulationCommand::execute(Car *car) {
     SimulationTrack* track = new SimulationTrack();
     simulation->Simulate(car, track);
+    delete track;
+    if (successor != nullptr) {
+        successor->execute(car);
+    }
+}
 
+SimulationCommand::~SimulationCommand() {
+    delete simulation;
 }
