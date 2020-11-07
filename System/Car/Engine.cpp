@@ -2,6 +2,7 @@
 // Created by bieldt on 2020/10/31.
 //
 
+#include <memory>
 #include "Engine.h"
 #include "../Car/Memento/Component/ComponentCareTaker.h"
 Engine::Engine() : Component("engine"){

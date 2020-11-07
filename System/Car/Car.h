@@ -19,7 +19,7 @@ private:
     GeneralRaceStrategy* generalStrategy;
     double downForce;
     double windResistance;
-    map<string,Component*>* getComponents();
+
 public:
     Car();
     ~Car();
@@ -36,5 +36,6 @@ public:
     CarCareTaker* createMemento();
     bool softwareTest() override;
     bool windTunnelTest() override;
+    map<string,Component*>* getComponents();
 };
 #endif //COS214PROJECT_CAR_H

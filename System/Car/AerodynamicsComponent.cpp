@@ -76,14 +76,17 @@ bool AerodynamicsComponent::windTunnelTest() {
         if (this->downForce<1 ){
             std::cout << "Wind tunnel test failed at test number : " + to_string(i) << " -  the downforce generated was not enough"<< std::endl;
             this->restore(x);
+            delete x;
             return false;
         }else if(this->windResistance>20){
             std::cout << "Wind tunnel test failed at test number : " + to_string(i) << " -  the wind resistance was too high"<< std::endl;
             this->restore(x);
+            delete x;
             return false;
         }
     }
     this->restore(x);
+    delete x;
     std::cout << "Wind tunnel test passed, aerodynamic component restored to previous state"<< std::endl;
     return true;
 }
