@@ -55,5 +55,29 @@ void Chassis::restore(ComponentCareTaker * state) {
     this->setName(dynamic_cast<ChassisAndAeroState*>(state->getMemento())->getName());
 }
 
+bool Chassis::windTunnelTest() {
+    std::cout << "Saving state of chassis" << std::endl;
+    ComponentCareTaker* s = new ComponentCareTaker();
+    s->setMemento(this);
+    for (int i = 0; i < 500; ++i) {
+        this->downForce = log(this->downForce);
+        this->windResistance += log(windResistance);
+        if (this->downForce<20 ){
+            std::cout << "Wind tunnel test failed at test number : " + to_string(i) << ", the downforce generated was not enough"<< std::endl;
+            return false;
+        }else if(this->windResistance>50){
+            std::cout << "Wind tunnel test failed at test number : " + to_string(i) << ", the wind resistance was too high"<< std::endl;
+            return false;
+        }
+    }
+    this->restore(s);
+    std::cout << "Wind tunnel test passed, chassis restored to previous state"<< std::endl;
+    return true;
+}
+
+bool Chassis::softwareTest() {
+    return false;
+}
+
 
 

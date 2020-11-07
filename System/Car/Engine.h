@@ -18,7 +18,8 @@ public:
     Engine(int,int);
     Engine(Engine* c);
     ~Engine();
-
+    bool softwareTest() override;
+    bool windTunnelTest() override;
     Component* clone();
     int getHP();
     void setHP(int);

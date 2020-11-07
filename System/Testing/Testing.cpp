@@ -11,3 +11,4 @@ Testing::Testing() {
 Testing::~Testing() {
     delete preTestingState;
 }
+

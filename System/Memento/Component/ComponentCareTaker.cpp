@@ -36,6 +36,7 @@ void ComponentCareTaker::setMemento(Component * c) {
     }else if(type=="engine"){
         this->state = new EngineState(dynamic_cast<Engine*>(c)->getHP(),dynamic_cast<Engine*>(c)->getFuelConsumption());
     }else{
-
+        std::cout <<"Component state cannot be stored as there is no attributes in the component" << std::endl;
+        return;
     }
 }

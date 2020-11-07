@@ -24,6 +24,7 @@ public:
     void setWindResistance(double);
     void restore(ComponentCareTaker*);
     ComponentCareTaker* createMemento();
-
+    bool softwareTest() override;
+    bool windTunnelTest() override;
 };
 #endif //COS214PROJECT_AERODYNAMICSCOMPONENT_H

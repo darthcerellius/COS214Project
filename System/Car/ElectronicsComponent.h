@@ -6,7 +6,8 @@
 #define COS214PROJECT_ELECTRONICSCOMPONENT_H
 
 #include "Component.h"
-
+#include <iostream>
+#include <random>
 class ElectronicsComponent: public Component{
 private:
 public:
@@ -16,6 +17,7 @@ public:
 
     Component* clone();
     void restore(ComponentCareTaker*);
-
+    bool windTunnelTest() override;
+    bool softwareTest() override;
 };
 #endif //COS214PROJECT_ELECTRONICSCOMPONENT_H

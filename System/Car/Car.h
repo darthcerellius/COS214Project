@@ -34,5 +34,7 @@ public:
     void respondToEvent(string event);
     void restore(CarCareTaker*);
     CarCareTaker* createMemento();
+    bool softwareTest() override;
+    bool windTunnelTest() override;
 };
 #endif //COS214PROJECT_CAR_H

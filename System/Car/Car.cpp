@@ -79,7 +79,34 @@ GeneralRaceStrategy *Car::getStrategy() {
 }
 
 void Car::restore(CarCareTaker * state) {
+    this->carName=state->getMemento()->getCarName();
+    this->components=state->getMemento()->getComponents();
+    this->generalStrategy = state->getMemento()->getStrategy();
+    this->downForce = state->getMemento()->getDownForce();
+    this->windResistance= state->getMemento()->getWindResistance();
+}
+
+bool Car::softwareTest() {
+    std::cout <<"Starting software test on car" << std::endl;
+}
+
+bool Car::windTunnelTest() {
+    std::cout <<"Starting wind tunnel test on car" << std::endl;
+    int failedCount =0;
+    for (auto it : *components) {
+        if (it.second->windTunnelTest()){
+            failedCount++;
+        }
+
+    }
+    if (failedCount> 1){
+        std::cout << "Car wind tunnel test failed, a component failed the test" << std::endl;
+        return false;
+    }
+    std::cout << "Car wind tunnel test passed, no components failed" << std::endl;
+    return true;
 
 }
+
 
 

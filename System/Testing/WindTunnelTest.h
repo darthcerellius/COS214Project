@@ -8,8 +8,7 @@
 #include "Testing.h"
 class WindTunnelTest : public Testing {
 private:
-    bool chassisTest(Chassis*);
-    bool aerodynamicComponentTest(AerodynamicsComponent*);
+    bool test();
 public:
     bool test(Component *);
 };

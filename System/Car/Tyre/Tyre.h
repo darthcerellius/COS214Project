@@ -4,10 +4,12 @@
 
 #ifndef COS214PROJECT_TYRE_H
 #define COS214PROJECT_TYRE_H
-
+#include <iostream>
 #include "../Component.h"
-#include "Compound.h"
 
+
+#include <cmath>
+#include <random>
 class Compound;
 
 class Tyre: public Component {
@@ -20,7 +22,8 @@ public:
     string getCompound();
     void setState(Compound* state_);
 
-    bool test();
+    bool softwareTest() override;
+    bool windTunnelTest() override;
     Component* clone();
 
 private:

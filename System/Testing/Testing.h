@@ -11,7 +11,7 @@
 #include "../Memento/Component/ComponentStore.h"
 class Testing {
 protected:
-    virtual bool test(Component*) =0;
+    virtual bool test(Component*)=0;
     ComponentStore* preTestingState;
 public:
     Testing();

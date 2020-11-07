@@ -61,4 +61,29 @@ void AerodynamicsComponent::restore(ComponentCareTaker * state) {
 
 }
 
+bool AerodynamicsComponent::softwareTest() {
+    std::cout << "No software test can be performed on a aerodynamic component" << std::endl;
+    return true;
+}
+
+bool AerodynamicsComponent::windTunnelTest() {
+    std::cout << "Starting wind tunnel test on aerodynamic component, saving state of component" << std::endl;
+    ComponentCareTaker* x = new ComponentCareTaker();
+    x->setMemento(this);
+    for (int i = 0; i < 500; ++i) {
+       this->downForce = log(downForce);
+        this->windResistance += log(windResistance);
+        if (this->downForce<10 ){
+            std::cout << "Wind tunnel test failed at test number : " + to_string(i) << ", the downforce generated was not enough"<< std::endl;
+            return false;
+        }else if(this->windResistance>20){
+            std::cout << "Wind tunnel test failed at test number : " + to_string(i) << ", the wind resistance was too high"<< std::endl;
+            return false;
+        }
+    }
+    this->restore(x);
+    std::cout << "Wind tunnel test passed, aerodynamic component restored to previous state"<< std::endl;
+    return true;
+}
+
 

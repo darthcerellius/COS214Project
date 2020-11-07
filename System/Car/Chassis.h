@@ -4,7 +4,7 @@
 
 #ifndef COS214PROJECT_CHASSIS_H
 #define COS214PROJECT_CHASSIS_H
-
+#include <cmath>
 #include "Component.h"
 class ComponentCareTaker;
 class Chassis: public Component{
@@ -23,6 +23,7 @@ public:
     double getWindResistance();
     ComponentCareTaker* createMemento();
     void restore(ComponentCareTaker*);
-
+    bool windTunnelTest() override;
+    bool softwareTest() override;
 };
 #endif //COS214PROJECT_CHASSIS_H
