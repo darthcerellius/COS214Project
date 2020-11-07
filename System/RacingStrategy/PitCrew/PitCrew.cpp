@@ -9,7 +9,7 @@
 
 PitCrew::PitCrew(){
     racecar = 0;
-    currentTyre = 1;
+    currentTyre = 0;
     currentEvent = new NoEvent();
     tyres = 0;
 }
@@ -68,6 +68,8 @@ void PitCrew::orderTyres(TyreSupplier* supplier) {
     tyres = dynamic_cast<Tyre*>(supplier->supply());
     racecar->remove("tyre");
     racecar->add(tyres);
+    currentTyre = 0;
+    this->changeTyre();
 }
 
 void PitCrew::changeTyre() {
