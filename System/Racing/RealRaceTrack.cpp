@@ -58,6 +58,7 @@ void RealRaceTrack::race(){
         else if(wornTyres){
             event = new WornTyres();
             event->changeEvent(crew);
+            crew->changeTyre();
             chance = 0;
             wornTyres = false;
             continue;

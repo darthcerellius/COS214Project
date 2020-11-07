@@ -59,13 +59,11 @@ void Car::executeStrategy() {
 }
 
 void Car::makeTacticalDecision(string decision) {
- std::cout << "TACTICS: The race car receives a tactical instruction from the pit crew and executes it:\n";
- std::cout << decision << std::endl;
+    std::cout << decision << std::endl;
 }
 
 void Car::respondToEvent(string event) {
-    std::cout << "EVENT NOTIFICATION: The race car is notified of an event by the pit crew and responds appropriately:\n";
-    std::cout<<event<<std::endl;
+     std::cout<<event<<std::endl;
 }
 
 CarCareTaker *Car::createMemento() {

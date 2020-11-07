@@ -12,7 +12,7 @@ TacticalDecision::TacticalDecision(Car* senTo, string decision) : Instruction() 
 TacticalDecision::~TacticalDecision() {}
 
 void TacticalDecision::executeInstruction() {
-    if(sentTo && decision.empty())
+    if(sentTo && !decision.empty())
         sentTo->makeTacticalDecision(decision);
     else
         std::cout << "DEBUG: Cannot make tactical decision since the receiver or the decision is null/not defined in TacticalDecision command.\n";

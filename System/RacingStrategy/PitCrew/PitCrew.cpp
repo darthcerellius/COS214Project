@@ -9,7 +9,7 @@
 
 PitCrew::PitCrew(){
     racecar = 0;
-    currentTyre = 0;
+    currentTyre = 1;
     currentEvent = new NoEvent();
     tyres = 0;
 }
@@ -77,5 +77,5 @@ void PitCrew::changeTyre() {
     }
     tyres->change();
     currentTyre++;
-    std::cout << "RACING: The car's tyres are replaced. The new tyres' compound: " << tyres->getCompound() << ". Tyre set number used for this race: " << currentTyre << std::endl;
+    std::cout << "The car's tyres are replaced. The new tyres' compound: " << tyres->getCompound() << ". Tyre sets used for this race: " << currentTyre << std::endl;
 }
