@@ -71,13 +71,15 @@ bool AerodynamicsComponent::windTunnelTest() {
     ComponentCareTaker* x = new ComponentCareTaker();
     x->setMemento(this);
     for (int i = 0; i < 500; ++i) {
-       this->downForce = log(downForce);
-        this->windResistance += log(windResistance);
-        if (this->downForce<10 ){
-            std::cout << "Wind tunnel test failed at test number : " + to_string(i) << ", the downforce generated was not enough"<< std::endl;
+       this->downForce -=log(i);
+        this->windResistance += log(i);
+        if (this->downForce<1 ){
+            std::cout << "Wind tunnel test failed at test number : " + to_string(i) << " -  the downforce generated was not enough"<< std::endl;
+            this->restore(x);
             return false;
         }else if(this->windResistance>20){
-            std::cout << "Wind tunnel test failed at test number : " + to_string(i) << ", the wind resistance was too high"<< std::endl;
+            std::cout << "Wind tunnel test failed at test number : " + to_string(i) << " -  the wind resistance was too high"<< std::endl;
+            this->restore(x);
             return false;
         }
     }
