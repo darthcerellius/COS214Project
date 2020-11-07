@@ -39,6 +39,6 @@ public:
 */
 
 /**
- * \fn void decideComponents(AbtractEngineeringTeam*)
+ * \fn void decideComponents(EngineeringTeam*)
  * \brief Selects components to be used during the car construction and issues the construction of the car
 */

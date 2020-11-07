@@ -14,7 +14,7 @@ class PitCrew {
 private:
     Car* racecar;
     RaceEvent* currentEvent;
-    Component** tyres;
+    Tyre* tyres;
     int currentTyre;
 public:
     PitCrew();

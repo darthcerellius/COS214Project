@@ -11,18 +11,21 @@ PitCrew::PitCrew(){
     racecar = 0;
     currentTyre = 0;
     currentEvent = new NoEvent();
+    tyres = 0;
 }
 
 void PitCrew::setCar(Car * racecar) {
     this->racecar = racecar;
     currentEvent = new NoEvent();
+    tyres = 0;
 }
 
 PitCrew::~PitCrew() {
     delete currentEvent;
-    for(int k=0; k<5;k++)
-        delete tyres[k];
-    delete [] tyres;
+    if(tyres) {
+        racecar->remove("tyre");
+        delete tyres;
+    }
 }
 
 void PitCrew::respondToEvent() {
@@ -64,9 +67,9 @@ void PitCrew::observeNewEvent(RaceEvent * newEvent) {
 
 void PitCrew::orderTyres(TyreSupplier* supplier) {
     std::cout << "STRATEGY: 5 sets of tyres have been ordered from the tyre supplier for the coming race.\n";
-    tyres = new Component*[5];
-    for(int k=0; k<5;k++)
-        tyres[k] = supplier->supply();
+    tyres = dynamic_cast<Tyre*>(supplier->supply());
+    racecar->remove("tyre");
+    racecar->add(tyres);
 }
 
 void PitCrew::changeTyre() {
@@ -74,7 +77,7 @@ void PitCrew::changeTyre() {
         std::cout << "RACING: The car has used all 5 of its tyre sets allowed for this race and cannot change anymore tyres.\n";
         return;
     }
-    racecar->remove("tyres"); // double check on this
-    racecar->add(tyres[currentTyre++]);
-    std::cout << "RACING: The car's tyres are switched out. Tyre set number used for this race: " << currentTyre << std::endl;
+    tyres->change();
+    currentTyre++;
+    std::cout << "RACING: The car's tyres are replaced. The new tyres' compound: " << tyres->getCompound() << ". Tyre set number used for this race: " << currentTyre << std::endl;
 }
