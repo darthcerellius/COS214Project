@@ -8,16 +8,15 @@
 #include "TransportMethod.h"
 #include "../Car/Car.h"
 
-class AirTransport {
+class AirTransport : public TransportMethod<Car*>{
 public:
     AirTransport();
-    ~AirTransport();
-    void package(Car* component);
-    void ship();
-    Car* unpackage(std::string place);
+    ~AirTransport() override;
 
-private:
-    Car* shippingContainer;
+protected:
+    void package(Car* component) override;
+    void ship() override;
+    Car* unpackage(std::string place) override;
 };
 
 

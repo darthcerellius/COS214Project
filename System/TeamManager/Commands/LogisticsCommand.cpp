@@ -13,8 +13,7 @@ LogisticsCommand::~LogisticsCommand() {
 }
 
 void LogisticsCommand::execute(Car *c) {
-    transport->package(c);
-    transport->ship();
+    transport->load(c);
     if (successor != nullptr) {
         successor->execute(c);
     }
