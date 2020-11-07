@@ -31,7 +31,7 @@ void ComponentCareTaker::setMemento(Component * c) {
     if(type=="chassis"){
         this->state = new ChassisAndAeroState(dynamic_cast<Chassis*>(c)->getDownForce(),dynamic_cast<Chassis*>(c)->getWindResistance(),"chassis");
     }else if(type=="aerodynamic"){
-        this->state = new ChassisAndAeroState(dynamic_cast<AerodynamicsComponent*>(c)->getDownForce(),dynamic_cast<AerodynamicsComponent*>(c)->getWindResistance(),"chassis");
+        this->state = new ChassisAndAeroState(dynamic_cast<AerodynamicsComponent*>(c)->getDownForce(),dynamic_cast<AerodynamicsComponent*>(c)->getWindResistance(),"aerodynamic");
     }else if(type=="engine"){
         this->state = new EngineState(dynamic_cast<Engine*>(c)->getHP(),dynamic_cast<Engine*>(c)->getFuelConsumption());
     }else{

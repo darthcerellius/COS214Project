@@ -14,6 +14,7 @@ Car::~Car() {
     components->clear();
     if(generalStrategy)
         delete generalStrategy;
+    delete components;
 }
 
 Component* Car::clone() {
@@ -92,7 +93,7 @@ bool Car::softwareTest() {
     std::cout <<"Starting software test on car" << std::endl;
     int failedCount =0;
     for (auto it : *components) {
-        if (it.second->softwareTest()){
+        if (!it.second->softwareTest()){
             failedCount++;
         }
 
@@ -109,7 +110,7 @@ bool Car::windTunnelTest() {
     std::cout <<"Starting wind tunnel test on car" << std::endl;
     int failedCount =0;
     for (auto it : *components) {
-        if (it.second->windTunnelTest()){
+        if (!it.second->windTunnelTest()){
             failedCount++;
         }
 

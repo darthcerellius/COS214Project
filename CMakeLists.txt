@@ -21,7 +21,6 @@ set(SOURCES
         ${CALENDAR_SOURCES}
         ${CAR_SOURCES}
         ${ENGINEERING_SOURCES}
-
         ${CONTAINER_SOURCES}
         ${RACINGSTRATEGY_SOURCES}
         ${TEAMMANAGER_SOURCES}
@@ -42,9 +41,7 @@ target_link_libraries(COS214Project
         TRANSPORT
         CALENDAR
         ENGINEERING
-
         CAR
-
         CONTAINER
         RACINGSTRATEGY
         JSONREADER
