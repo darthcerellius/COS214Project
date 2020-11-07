@@ -25,9 +25,10 @@ Component* Car::clone() {
         temp->add((*it).second->clone());
     }
 
-    temp->setRaceStrategy(generalStrategy->clone());
-    return temp;
+    if(generalStrategy)
+      temp->setRaceStrategy(generalStrategy->clone());
 
+    return temp;
 }
 
 void Car::add(Component *c) {
