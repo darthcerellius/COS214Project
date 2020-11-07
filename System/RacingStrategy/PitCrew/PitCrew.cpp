@@ -59,7 +59,6 @@ void PitCrew::observeNewEvent(RaceEvent * newEvent) {
     RaceEvent* temp = currentEvent; //NoEvent
     currentEvent = newEvent;
     respondToEvent();
-    delete currentEvent;
     currentEvent = temp;
 }
 
