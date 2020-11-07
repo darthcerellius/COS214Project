@@ -25,9 +25,11 @@ EngineeringTeam::EngineeringTeam() {
     electronicsFactory=new ElectronicsFactory();
     engineFactory=new EngineFactory();
     chassisFactory=new ChassisFactory();
+    car= nullptr;
 }
 
 void EngineeringTeam::buildCar() {
+    if(car!=nullptr) return;
     car=new Car();
     car->add(buildAerodynamicsComponent());
     car->add(buildChassis());
