@@ -4,6 +4,7 @@
 
 #include "Debugger.h"
 #include <iostream>
+#include <memory>
 #include "../RacingStrategy/Strategies/CorneringTechnique.h"
 #include "../RacingStrategy/Strategies/ConservativeStart.h"
 #include "../RacingStrategy/Strategies/TaxiStyle.h"
@@ -18,6 +19,7 @@
 #include "../RacingStrategy/PitCrew/RaceEvents/YellowFlag.h"
 #include "../RacingStrategy/PitCrew/RaceEvents/RedFlag.h"
 #include "../RacingStrategy/PitCrew/RaceEvents/SafetyCar.h"
+#include "../Car/Memento/Component/ComponentStore.h"
 
 void Debugger::testStrategy(){
     Car* testVehicle = new Car();
@@ -81,6 +83,33 @@ void Debugger::testTyres() {
         Soft Compound
         Medium Compound
     */
+}
+
+void Debugger::testComponentMemento() {
+    Component* z = new Engine(12,12);
+    unique_ptr<Engine> x(dynamic_cast<Engine*>(z));
+    ComponentStore * t = new ComponentStore();
+    std::cout << "Before alteration " << to_string(x->getHP()) << " - " << to_string(x->getFuelConsumption()) << std::endl;
+    t->setMemento(x->createMemento());
+    x->setHP(213);
+    x->setFuelConsumption(34223);
+    std::cout << "Before restore " << to_string(x->getHP()) << " - " << to_string(x->getFuelConsumption()) << std::endl;
+    x->restore(t->getMemento());
+    std::cout << "After restore " << to_string(x->getHP()) << " - " << to_string(x->getFuelConsumption()) << std::endl;
+    delete z;
+    delete t;
+}
+
+void Debugger::testCarMemento() {
+
+}
+
+void Debugger::testTesting() {
+
+}
+
+void Debugger::testSimulation() {
+
 }
 
 void Debugger::testEngineering(){

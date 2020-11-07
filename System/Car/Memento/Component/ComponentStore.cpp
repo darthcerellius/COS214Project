@@ -10,6 +10,7 @@ ComponentStore::ComponentStore() {
 
 ComponentStore::~ComponentStore() {
     delete memento;
+    memento= nullptr;
 }
 
 void ComponentStore::setMemento(ComponentCareTaker * newMemento) {

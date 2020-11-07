@@ -11,6 +11,9 @@ public:
     void testPitCrewInstructions();
     void testTyres();
     void testEngineering();
+    void testSimulation();
+    void testTesting();
+    void testCarMemento();
 };
 
 

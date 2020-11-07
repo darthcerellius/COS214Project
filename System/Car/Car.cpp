@@ -6,7 +6,7 @@
 #include "Car.h"
 
 Car::Car() : Component("Car"){
-    generalStrategy = 0;
+    generalStrategy = nullptr;
     components = new map<string,Component*>;
 }
 
