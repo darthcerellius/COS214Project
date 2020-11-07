@@ -5,7 +5,7 @@
 #include "BrokenComponent.h"
 
 BrokenComponent::BrokenComponent(){
-    std::cout << "EVENT OCCURRED: One of the race car's component breaks and requires immediate attention.\n";
+    std::cout << "EVENT: One of the race car's component breaks and requires immediate attention.\n";
 }
 
 BrokenComponent::~BrokenComponent() {}

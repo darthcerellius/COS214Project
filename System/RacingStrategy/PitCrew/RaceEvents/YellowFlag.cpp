@@ -5,7 +5,7 @@
 #include "YellowFlag.h"
 
 YellowFlag::YellowFlag(){
-    std::cout << "EVENT NOTIFICATION: Due to mildly hazardous conditions on the track, the yellow flag is displayed.\n";
+    std::cout << "EVENT: Due to mildly hazardous conditions on the track, the yellow flag is displayed.\n";
 }
 
 YellowFlag::~YellowFlag() {}

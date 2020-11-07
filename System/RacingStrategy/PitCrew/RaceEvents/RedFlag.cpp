@@ -5,7 +5,7 @@
 #include "RedFlag.h"
 
 RedFlag::RedFlag(){
-    std::cout << "EVENT NOTIFICAITON: Due to extremely hazardous conditions on the track, the red flag is displayed.\n";
+    std::cout << "EVENT: Due to extremely hazardous conditions on the track, the red flag is displayed.\n";
 }
 
 RedFlag::~RedFlag() {}

@@ -5,7 +5,7 @@
 #include "WornTyres.h"
 
 WornTyres::WornTyres(){
-    std::cout << "EVENT NOTIFICATION: The race car's tyres are worn out, and need to be replaced.\n";
+    std::cout << "EVENT: The race car's tyres are worn out, and need to be replaced.\n";
 }
 
 WornTyres::~WornTyres() {}

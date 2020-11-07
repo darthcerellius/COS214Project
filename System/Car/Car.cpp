@@ -63,7 +63,7 @@ void Car::makeTacticalDecision(string decision) {
 }
 
 void Car::respondToEvent(string event) {
-    std::cout << "EVENT: The race car is notified of an event by the pit crew and responds appropriately:\n";
+    std::cout << "EVENT NOTIFICATION: The race car is notified of an event by the pit crew and responds appropriately:\n";
     std::cout<<event<<std::endl;
 }
 

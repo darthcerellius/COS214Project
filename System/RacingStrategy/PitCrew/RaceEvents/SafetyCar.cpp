@@ -5,7 +5,7 @@
 #include "SafetyCar.h"
 
 SafetyCar::SafetyCar(){
-    std::cout << "EVENT NOTIFICATION: A safety car enters the track ahead of the leader.\n";
+    std::cout << "EVENT: A safety car enters the track ahead of the leader.\n";
 }
 
 SafetyCar::~SafetyCar() {}
