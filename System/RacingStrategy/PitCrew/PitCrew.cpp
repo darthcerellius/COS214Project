@@ -16,15 +16,13 @@ PitCrew::PitCrew(){
 
 void PitCrew::setCar(Car * racecar) {
     this->racecar = racecar;
-    currentEvent = new NoEvent();
-    tyres = 0;
 }
 
 PitCrew::~PitCrew() {
     delete currentEvent;
     if(tyres) {
         racecar->remove("tyre");
-        delete tyres;
+        delete tyres;   //double check on this with Ruan
     }
 }
 

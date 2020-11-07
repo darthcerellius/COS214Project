@@ -14,79 +14,8 @@
 #include "RacingStrategy/PitCrew/RaceEvents/RedFlag.h"
 #include "RacingStrategy/PitCrew/RaceEvents/SafetyCar.h"
 
-void testStrategy();
-void testPitCrewInstructions();
-void testTyres();//----->Ivan
-
 int main() {
     std::cout << "Hello, World!" << std::endl;
 
     return 0;
-}
-
-void testStrategy(){
-    //------------------------Testing for Racing Strategy--------------------------
-    Car* testVehicle = new Car();
-    StrategyTeam* stratTeam = new StrategyTeam(testVehicle);
-    const int chosenStrategy = 3;     //chosenStrategy must be [0,3]
-    //0 = MinimalPitstops
-    //1 = ConservativeStart
-    //2 = TaxiStyle
-    //3 = CorneringTechnique
-    //4 = InertiaDrift
-    stratTeam->decideStrategy(chosenStrategy);
-    testVehicle->executeStrategy();
-    delete stratTeam;
-    delete testVehicle;
-    //-----------------------------------------------------------------------------
-}
-
-void testPitCrewInstructions(){
-    //------------------------Testing for Pit Crew instructions--------------------------
-    Car* testVehicle = new Car();
-    PitCrew* testCrew = new PitCrew(testVehicle);
-
-    RaceEvent* currEvent = new SafetyCar();
-    //currEvent can be
-    /*
-     WornTyres
-     BrokenComponent
-     YellowFlag
-     RedFlag
-     SafetyCar
-     */
-    currEvent->changeEvent(testCrew);
-    delete currEvent;
-
-    const int tacticalDecision = 0; //[0,inf)
-    testCrew->makeTacticalInstruction(tacticalDecision);
-
-    delete testCrew;
-    delete testVehicle;
-    //-----------------------------------------------------------------------------------
-}
-
-void testTyres() {//----->Ivan
-    Supplier* tyreFact = new TyreSupplier();
-    //Compound* comp = new SoftCompound();
-    //Tyre* t = new Tyre(comp);
-    Component* t1 = tyreFact->supply();
-    Tyre* t = dynamic_cast<Tyre*>(t1);
-    std::cout << t->getCompound() << std::endl;
-    t->change();
-    std::cout << t->getCompound() << std::endl;
-    t->change();
-    std::cout << t->getCompound() << std::endl;
-    t->change();
-    std::cout << t->getCompound() << std::endl;
-    t->change();
-    std::cout << t->getCompound() << std::endl;
-
-    /*
-        Soft Compound
-        Medium Compound
-        Hard Compound
-        Soft Compound
-        Medium Compound
-    */
 }
