@@ -4,6 +4,7 @@
 
 #include "RaceTrack.h"
 #include "Observers/Observer.h"
+#include <ctime>
 
 RaceTrack::RaceTrack(Observer* observer, PitCrew* _crew, RaceWeekend* _info){
     crew = _crew;
