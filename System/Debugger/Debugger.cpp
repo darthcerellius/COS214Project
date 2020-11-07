@@ -20,6 +20,12 @@
 #include "../RacingStrategy/PitCrew/RaceEvents/RedFlag.h"
 #include "../RacingStrategy/PitCrew/RaceEvents/SafetyCar.h"
 #include "../Car/Memento/Component/ComponentStore.h"
+#include "../Car/Memento/Car/CarStore.h"
+#include "../Testing/Testing.h"
+#include "../Testing/SoftwareTest.h"
+#include "../Testing/WindTunnelTest.h"
+#include "../Simulation/Simulation.h"
+#include "../Racing/SimulationTrack.h"
 
 void Debugger::testStrategy(){
     Car* testVehicle = new Car();
@@ -101,15 +107,53 @@ void Debugger::testComponentMemento() {
 }
 
 void Debugger::testCarMemento() {
+    Component* c = new Car();
+    Component *aero = new AerodynamicsComponent(12.0, 12.0);
+    Component* engine = new Engine(500,500);
+    c->add(aero);
+    c->add(engine);
+    CarStore* store = new CarStore();
+    store->setMemento(dynamic_cast<Car*>(c)->createMemento());
+    dynamic_cast<Car*>(c)->printComponents();
+    c->remove("engine");
+    c->remove("aerodynamic");
+    std::cout << "After removing components" << std::endl;
+    dynamic_cast<Car*>(c)->printComponents();
+    dynamic_cast<Car*>(c)->restore(store->getMemento());
+    std::cout <<"After restoring" << std::endl;
+    dynamic_cast<Car*>(c)->printComponents();
+    delete c;
+    delete aero;
+    delete engine;
+    delete store;
+
 
 }
 
 void Debugger::testTesting() {
-
+    Component* c = new Car();
+    Component *aero = new AerodynamicsComponent(12.0, 12.0);
+    Component* engine = new Engine(500,500);
+    c->add(aero);
+    c->add(engine);
+    Testing * softwareTesting = new SoftwareTest();
+    Testing * windtunnelTesting = new WindTunnelTest();
+    softwareTesting->test(c);
+    windtunnelTesting->test(c);
+    delete c;
+    delete aero;
+    delete engine;
 }
 
 void Debugger::testSimulation() {
-
+    RaceTrack * track = new SimulationTrack();
+    Component* c = new Car();
+    Component *aero = new AerodynamicsComponent(12.0, 12.0);
+    Component* engine = new Engine(500,500);
+    c->add(aero);
+    c->add(engine);
+    Simulation * sim = new Simulation();
+    sim->Simulate(dynamic_cast<Car*>(c),track);
 }
 
 void Debugger::testEngineering(){

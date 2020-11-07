@@ -14,6 +14,7 @@ public:
     void testSimulation();
     void testTesting();
     void testCarMemento();
+    void testComponentMemento();
 };
 
 
