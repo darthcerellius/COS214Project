@@ -9,6 +9,11 @@
 #include "../Engineering/EngineeringTeam.h"
 #include "../Car/Tyre/TyreSupplier.h"
 
+/**
+ * The Strategy Team is responsible for choosing a general strategy for the racecar to follow per race, as well as selecting components that should be used when building the car.
+ * StrategyTeam acts as the Director participant in the Builder pattern when constructing the car.
+ */
+
 class StrategyTeam{
 private:
     Car* raceCar;
@@ -16,30 +21,10 @@ public:
     StrategyTeam(Car*);
     StrategyTeam();
     ~StrategyTeam();
-    void decideStrategy(int);
-    void decideComponents(EngineeringTeam*);
+    void decideStrategy(int); ///Selects and sets the generalStrategy that will be used by the racecar per race.
+    void decideComponents(EngineeringTeam*);///Initiates the construction process of the car in EngineeringTeam. Acts as the construct() function in the Director participant of the builder pattern.
     void setCar(Car*);
 };
 
 
 #endif //COS214PROJECT_STRATEGYTEAM_H
-
-/**
- * \class StrategyTeam
- * \brief The Strategy Team is responsible for choosing a general strategy for the racecar to follow per race, as well as selectign components that should be used when building the car
- */
-
-/**
- * \var Car* raceCar
- * \brief A pointer to the race car object to which this team is assigned
-*/
-
-/**
- * \fn void StrategyTeam::decideStrategy(int)
- * \brief Selects one of five general strategies depending on input and assigns it to the car
-*/
-
-/**
- * \fn void decideComponents(EngineeringTeam*)
- * \brief Selects components to be used during the car construction and issues the construction of the car
-*/

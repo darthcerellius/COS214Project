@@ -33,5 +33,7 @@
 
 *.idea
 cmake-build-debug/
+Data/Output/*.txt
+Data/Output/Races/*.txt
 cmake-build-release/
 .idea/

@@ -4,7 +4,9 @@
 
 #ifndef COS214PROJECT_CAR_H
 #define COS214PROJECT_CAR_H
-
+/**
+ * @brief
+ */
 #include "Component.h"
 #include "../RacingStrategy/Strategies/GeneralRaceStrategy.h"
 #include "../Car/Memento/Car/CarCareTaker.h"

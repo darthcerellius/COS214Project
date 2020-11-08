@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <fstream>
 #include "TeamManager.h"
 #include "TeamManagerObjects.h"
 #include "../Container/GoodsContainer.h"
@@ -26,11 +27,17 @@ TeamManager::TeamManager() {
 
 
 TeamManager::~TeamManager() {
+    auto oldState = std::cout.rdbuf();
+    std::ofstream preSeasonFile;
+    preSeasonFile.open("../Data/Output/Disband.txt");
+    std::cout.rdbuf(preSeasonFile.rdbuf());
     delete calendar;
     delete preSeasonCommand;
     delete curSeasonCommand;
     CurrentSeason::clean();
     NextSeason::clean();
+    preSeasonFile.close();
+    std::cout.rdbuf(oldState);
 }
 
 TeamManager* TeamManager::getTeamManager() {
@@ -42,12 +49,17 @@ TeamManager* TeamManager::getTeamManager() {
 }
 
 void TeamManager::run() {
-
+    auto oldState = std::cout.rdbuf();
+    std::ofstream preSeasonFile;
+    preSeasonFile.open("../Data/Output/PreSeasonEngineering.txt");
+    std::cout.rdbuf(preSeasonFile.rdbuf());
+    std::cout << "Team Manager running" << std::endl;
     //run the pre-season command
     preSeasonCommand->execute(nullptr);
+    preSeasonFile.close();
     raceCar = CurrentSeason::raceCar;
 
-    std::cout << "Team Manager running" << std::endl;
+    preSeasonFile.open("../Data/Output/PreSeasonTransport.txt");
     Iterator * calIterator = calendar->createIterator();
 
     /*plan ahead for non-European races */
@@ -64,9 +76,14 @@ void TeamManager::run() {
     }
 
     calIterator->first();
+    preSeasonFile.close();
+    std::ofstream curSeasonRaces;
+    std::cout.rdbuf(curSeasonRaces.rdbuf());
 
     /*Transport goods to the race tracks */
+    int raceCounter = 1;
     while (!calIterator->isDone()) {
+        curSeasonRaces.open("../Data/Output/Races/" + std::to_string(raceCounter) + ".txt");
         RaceWeekend* weekend = calIterator->current();
         CurrentSeason::setRaceWeekend(weekend);
         GoodsContainer container;
@@ -83,7 +100,10 @@ void TeamManager::run() {
         //This assumes that a Command that will be called won't need an existing car, and will instead make one
         curSeasonCommand->execute(CurrentSeason::raceCar);
         calIterator->next();
+        curSeasonRaces.close();
+        raceCounter++;
     }
     Car * c = CurrentSeason::raceCar;
     delete calIterator;
+    std::cout.rdbuf(oldState);
 }

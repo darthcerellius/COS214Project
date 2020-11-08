@@ -28,6 +28,7 @@ string Tyre::getCompound() {
 }
 
 void Tyre::setState(Compound *state_) {
+    delete state;
     state = state_;
 }
 

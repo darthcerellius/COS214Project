@@ -4,11 +4,16 @@
 
 #ifndef COS214PROJECT_CARSTORE_H
 #define COS214PROJECT_CARSTORE_H
-
+/**
+ * @brief Serves as the memento in the car memento design pattern
+ *
+ * @author Jeanre du Plessis
+ * @date 07 Nov 2020
+ */
 #include "CarCareTaker.h"
 class CarStore {
 private:
-    CarCareTaker* memento;
+    CarCareTaker* memento; /**  Stores the  */
 public:
     CarStore();
     ~CarStore();

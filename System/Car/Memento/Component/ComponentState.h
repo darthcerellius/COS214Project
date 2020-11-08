@@ -9,7 +9,6 @@
 
 class ComponentCaretaker;
 class ComponentState {
-private:
 
 public:
     ComponentState(std::string);
