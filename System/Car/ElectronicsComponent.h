@@ -16,7 +16,7 @@ public:
     ~ElectronicsComponent();
 
     Component* clone();
-    bool windTunnelTest() override;
+    bool windTunnelTest(int tokens) override;
     bool softwareTest() override;
 };
 #endif //COS214PROJECT_ELECTRONICSCOMPONENT_H

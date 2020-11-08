@@ -51,6 +51,6 @@ public:
      * Used to perform a windtunnel test on the component, by first storing the state of the component
      * @return true if the test is passed and false if the test is failed
      */
-    bool windTunnelTest() override;
+    bool windTunnelTest(int tokens) override;
 };
 #endif //COS214PROJECT_AERODYNAMICSCOMPONENT_H

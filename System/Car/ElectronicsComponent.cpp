@@ -23,7 +23,7 @@ Component *ElectronicsComponent::clone() {
 }
 
 
-bool ElectronicsComponent::windTunnelTest() {
+bool ElectronicsComponent::windTunnelTest(int tokens) {
     std::cout << this->getName() << " not suitable to test in the wind tunnel as it will be contained within the chassis" << std::endl<< std::endl;
     return true;
 }
