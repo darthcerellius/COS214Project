@@ -7,7 +7,9 @@
 
 #include "../Factory.h"
 #include "../../Car/Chassis.h"
-
+/**
+ * @brief Constructs the Chassis component
+ */
 class ChassisFactory : public Factory{
 public:
     Chassis* constructComponent() override;

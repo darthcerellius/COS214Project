@@ -8,6 +8,9 @@
 #include "../Factory.h"
 #include "../../Car/ElectronicsComponent.h"
 
+/**
+ * @brief Constructs the Electronics component
+ */
 class ElectronicsFactory : public Factory{
 public:
     ElectronicsComponent* constructComponent() override;

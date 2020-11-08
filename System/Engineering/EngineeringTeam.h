@@ -11,6 +11,10 @@
 #include "ConcreteFactories/ChassisFactory.h"
 #include "../Car/Car.h"
 
+/**
+ * @brief EngineeringTeam is used to build the car using the Factory and service the car
+ */
+
 class EngineeringTeam{
 private:
     AerodynamicsFactory* aerodynamicsFactory;
@@ -26,8 +30,18 @@ private:
 public:
     EngineeringTeam();
     ~EngineeringTeam();
+    /**
+     * Constructs the car and adds all the components
+     */
     void buildCar();
+    /**
+     * Gets the car that EngineeringTeam holds
+     * @return Returns the car
+     */
     Car* getCar();
+    /**
+     * Services the car (Outputs relevant info)
+     */
     void serviceCar();
 };
 

@@ -8,7 +8,9 @@
 #include "../Factory.h"
 #include "../../Car/AerodynamicsComponent.h"
 
-
+/**
+ * @brief Constructs the Aerodynamics component
+ */
 class AerodynamicsFactory : public Factory{
 public:
     AerodynamicsComponent* constructComponent() override;
