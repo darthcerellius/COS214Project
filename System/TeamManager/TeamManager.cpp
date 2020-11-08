@@ -49,17 +49,25 @@ TeamManager* TeamManager::getTeamManager() {
 }
 
 void TeamManager::run() {
-    auto oldState = std::cout.rdbuf();
+    std::cout << "Would you like to output content to files(1) or to the terminal(2)? ";
+    int response;
+    std::cin >> response;
     std::ofstream preSeasonFile;
-    preSeasonFile.open("../Data/Output/PreSeasonEngineering.txt");
-    std::cout.rdbuf(preSeasonFile.rdbuf());
+    auto oldState = std::cout.rdbuf();
+    if (response == 1) {
+        preSeasonFile.open("../Data/Output/PreSeasonEngineering.txt");
+        std::cout.rdbuf(preSeasonFile.rdbuf());
+    }
     std::cout << "Team Manager running" << std::endl;
     //run the pre-season command
     preSeasonCommand->execute(nullptr);
-    preSeasonFile.close();
+    if (response == 1) {
+        preSeasonFile.close();
+    }
     raceCar = CurrentSeason::raceCar;
-
-    preSeasonFile.open("../Data/Output/PreSeasonTransport.txt");
+    if (response == 1) {
+        preSeasonFile.open("../Data/Output/PreSeasonTransport.txt");
+    }
     Iterator * calIterator = calendar->createIterator();
 
     /*plan ahead for non-European races */
@@ -78,12 +86,16 @@ void TeamManager::run() {
     calIterator->first();
     preSeasonFile.close();
     std::ofstream curSeasonRaces;
-    std::cout.rdbuf(curSeasonRaces.rdbuf());
+    if (response == 1) {
+        std::cout.rdbuf(curSeasonRaces.rdbuf());
+    }
 
     /*Transport goods to the race tracks */
     int raceCounter = 1;
     while (!calIterator->isDone()) {
-        curSeasonRaces.open("../Data/Output/Races/" + std::to_string(raceCounter) + ".txt");
+        if (response == 1) {
+            curSeasonRaces.open("../Data/Output/Races/" + std::to_string(raceCounter) + ".txt");
+        }
         RaceWeekend* weekend = calIterator->current();
         CurrentSeason::setRaceWeekend(weekend);
         GoodsContainer container;
