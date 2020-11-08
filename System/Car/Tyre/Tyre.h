@@ -30,7 +30,7 @@ public:
     void setState(Compound* state_);///Changes the Compound to whichever Compound is passed in its parameter (i.e. Soft, Medium or Hard)
 
     bool softwareTest() override;
-    bool windTunnelTest(int tokens) override;
+    bool windTunnelTest(int &tokens) override;
     Component* clone();
 
 private:

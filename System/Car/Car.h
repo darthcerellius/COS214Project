@@ -14,6 +14,7 @@
 #include "../Car/Memento/Car/CarMemento.h"
 #include<map>
 class CarMemento;
+
 class Car: public Component{
 private:
     //Added this so that the Team manager can test individual components.
@@ -74,8 +75,8 @@ public:
     void makeTacticalDecision(string decision); // added by Marco, see commentary under Car::makeTacticalDecision() in Car.cpp
 
     /**
-     *
-     * @param event
+     * A method that prints out the cars response to the given event.
+     * @param event - The string event which the car should respond to.
      */
     void respondToEvent(string event);
 
@@ -101,7 +102,7 @@ public:
      * Iterates through the map containing components, then performs a windTunnelTest on each of those components (if they can perform such a test), if at least one component fails the test is failed
      * @return true if the test is passed and false if test is failed
      */
-    bool windTunnelTest(int tokens) override;
+    bool windTunnelTest(int &tokens) override;
 
     /**
      * A function that returns the components map of the car.

@@ -121,11 +121,11 @@ bool Car::softwareTest() {
     return true;
 }
 
-bool Car::windTunnelTest(int tokens) {
+bool Car::windTunnelTest(int &tokens) {
     std::cout <<"Starting wind tunnel test on car : " << carName << std::endl;
     int failedCount =0;
     for (auto it : components) {
-        if (!it.second->windTunnelTest(0)){
+        if (!it.second->windTunnelTest(tokens)){
             failedCount++;
         }
 

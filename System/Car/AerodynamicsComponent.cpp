@@ -66,7 +66,7 @@ bool AerodynamicsComponent::softwareTest() {
     return true;
 }
 
-bool AerodynamicsComponent::windTunnelTest(int tokens) {
+bool AerodynamicsComponent::windTunnelTest(int &tokens) {
     std::cout << "Starting wind tunnel test on aerodynamic component, saving state of component" << std::endl;
     ComponentMemento* x = new ComponentMemento();
     x->setMemento(this);

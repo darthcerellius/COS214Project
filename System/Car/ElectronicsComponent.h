@@ -10,13 +10,14 @@
 #include <random>
 class ElectronicsComponent: public Component{
 private:
+    string mode;
 public:
     ElectronicsComponent();
     ElectronicsComponent(ElectronicsComponent*);
     ~ElectronicsComponent();
 
     Component* clone();
-    bool windTunnelTest(int tokens) override;
+    bool windTunnelTest(int &tokens) override;
     bool softwareTest() override;
 };
 #endif //COS214PROJECT_ELECTRONICSCOMPONENT_H

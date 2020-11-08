@@ -5,8 +5,7 @@
 #include "WindTunnelTest.h"
 
 bool WindTunnelTest::test(Component * component) {
-    tokens-=20;
-    return component->windTunnelTest(0);
+    return component->windTunnelTest(tokens);
 }
 
 WindTunnelTest::WindTunnelTest() {

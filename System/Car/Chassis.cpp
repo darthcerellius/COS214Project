@@ -58,15 +58,18 @@ void Chassis::restore(ComponentMemento * state) {
     this->setName(dynamic_cast<ChassisAndAeroState*>(state->getMemento())->getName());
 }
 
-bool Chassis::windTunnelTest(int tokens) {
+bool Chassis::windTunnelTest(int &tokens) {
 
     std::cout << "Saving state of chassis" << std::endl;
     ComponentCareTaker * care = new ComponentCareTaker();
     ComponentMemento* s = new ComponentMemento();
     care->setMemento(this->createMemento());
-    for (int i = 0; i < 20; ++i) {
-        this->downForce += i % 2;
-        this->windResistance -= i % 2 ;
+    double factor = tokens/100;
+    for (int i = 0; i < 20; ++i, tokens--) {
+        this->downForce += factor;
+        this->windResistance -= factor;
+        factor = factor * 0.9;
+
         std::cout << "WINDTUNNEL TESTING - " << to_string(i+1) <<" : downforce has been adjusted to : " << to_string(this->downForce) << " | wind resistance has been adjusted to : " <<to_string(this->windResistance)<< std::endl;
         if (this->downForce<0.000001 ){
             std::cout << "Wind tunnel test failed at test number : " + to_string(i+1) << ", the downforce generated was not enough to keep the car on the ground, current downforce = "<< to_string(this->downForce)<< std::endl;
@@ -85,7 +88,7 @@ bool Chassis::windTunnelTest(int tokens) {
         }
     }
     std::cout << "TESTING final downforce : " << to_string(this->downForce) << ", final wind resistance : " << to_string(this->windResistance)<<std::endl;
-    this->restore(care->getMemento());
+    //this->restore(care->getMemento());
     delete s;
     delete care;
     std::cout << "Wind tunnel test passed, chassis restored to previous state"<< std::endl;

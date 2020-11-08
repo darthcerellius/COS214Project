@@ -24,7 +24,7 @@ public:
     double getWindResistance();
     ComponentMemento* createMemento();
     void restore(ComponentMemento*);
-    bool windTunnelTest(int tokens) override;
+    bool windTunnelTest(int &tokens) override;
     bool softwareTest() override;
 };
 #endif //COS214PROJECT_CHASSIS_H

@@ -71,7 +71,7 @@ bool Engine::softwareTest() {
     return true;
 }
 
-bool Engine::windTunnelTest(int tokens) {
+bool Engine::windTunnelTest(int &tokens) {
     std::cout << "Engine not suitable to test in the wind tunnel, as it will be contained within the chassis" << std::endl<< std::endl;
     return true;
 }

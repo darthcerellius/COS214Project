@@ -18,7 +18,7 @@ public:
     virtual Component* clone() = 0;
     void setName(std::string);
     virtual bool softwareTest()=0;
-    virtual bool windTunnelTest(int tokens) =0;
+    virtual bool windTunnelTest(int &tokens) =0;
 
 private:
     string name;
