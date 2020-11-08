@@ -77,21 +77,25 @@ bool AerodynamicsComponent::windTunnelTest(int &tokens) {
     double factor = tokens/100.0;
     std::cout << "WIND TUNNEL TESTING : "<< to_string(tokens)  <<" tokens remaining : downforce before testing: " << to_string(this->downForce) << " | wind resistance before testing : " <<to_string(this->windResistance)<< std::endl;
     for (int i = 0; i < 20; ++i, tokens--) {
+        if (tokens<0){
+            std::cout<<"Already ran all 400 wind tunnel tests" << std::endl << std::endl;
+           break;
+        }
         this->downForce += factor;
         this->windResistance -= factor;
         factor = factor * 0.9;
         std::cout << "WIND TUNNEL TESTING : "<< to_string(abs(tokens))  <<" tokens remaining : downforce altered to: " << to_string(this->downForce) << " | wind resistance altered to : " <<to_string(this->windResistance)<< std::endl;
         if (this->downForce<20 ){
-            std::cout << "Wind tunnel test failed at test number : " + to_string(i+1) << " -  the downforce generated was not enough to keep the car on the ground, current downforce : " << to_string(this->downForce)<< std::endl;
+          //  std::cout << "Wind tunnel test failed at test number : " + to_string(i+1) << " -  the downforce generated was not enough to keep the car on the ground, current downforce : " << to_string(this->downForce)<< std::endl;
             this->restore(x);
-            std::cout << "Restored values : downforce = " << to_string(this->downForce) << ", wind resistance : " << to_string(this->windResistance) << std::endl << std::endl;
+            std::cout << "Failed - Restoring values : downforce = " << to_string(this->downForce) << ", wind resistance : " << to_string(this->windResistance) << std::endl << std::endl;
             delete x;
             return false;
         }
-        if(this->windResistance>200  && this->windResistance > 0.1){
-            std::cout << "Wind tunnel test failed at test number : " + to_string(i+1) << " -  the wind resistance was too high, current wind resistance : "<< to_string(this->windResistance)<< std::endl;
+        if(this->windResistance>200  || this->windResistance < 0){
+            //std::cout << "Wind tunnel test failed at test number : " + to_string(i+1) << " -  the wind resistance was too high, current wind resistance : "<< to_string(this->windResistance)<< std::endl;
             this->restore(x);
-            std::cout << "Restored values : downforce = " << to_string(this->downForce) << ", wind resistance : " << to_string(this->windResistance) << std::endl << std::endl;
+            std::cout << "FAILED - Restoring values : downforce = " << to_string(this->downForce) << ", wind resistance : " << to_string(this->windResistance) << std::endl << std::endl;
             delete x;
             return false;
         }
@@ -99,8 +103,6 @@ bool AerodynamicsComponent::windTunnelTest(int &tokens) {
     std::cout << "TESTING final downforce : " << to_string(this->downForce) << ", final wind resistance : " << to_string(this->windResistance)<<std::endl;
     delete x;
     std::cout << "Wind tunnel test passed"<< std::endl<<std::endl;
-   // std::cout << "Restored values : downforce = " << to_string(this->downForce) << ", wind resistance : " << to_string(this->windResistance) << std::endl << std::endl;
-
     return true;
 }
 

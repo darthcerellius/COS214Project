@@ -6,8 +6,8 @@
 #include "Engine.h"
 #include "../Car/Memento/Component/ComponentMemento.h"
 Engine::Engine() : Component("engine"){
-    this->HP = 1000;
-    this->fuelConsumption =7;
+    this->HP = 800;
+    this->fuelConsumption =1;
 }
 
 Engine::Engine(Engine *c) :Component("engine"){
@@ -59,11 +59,11 @@ ComponentMemento *Engine::createMemento() {
 
 bool Engine::softwareTest() {
     std::cout << "Starting software test on engine" << std::endl;
-    if (fuelConsumption>10){
+    if (fuelConsumption>2){
         std::cout << "Software test failed, engine fuel consumption too high, more than 10 litres per km " << std::endl<< std::endl;
         return false;
     }
-    if (HP < 500){
+    if (HP < 600){
         std::cout << "Software test failed, engine does not have enough horsepower to be competitive, the horsepower was less than 500" << std::endl<< std::endl;
         return false;
     }
