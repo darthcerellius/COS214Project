@@ -104,7 +104,7 @@ bool Car::softwareTest() {
     std::cout <<"Starting software test on car : "<< carName << std::endl;
     int failedCount =0;
     if (components.begin()->second== nullptr){
-        std::cout << "There are no components in the car, software test passed" << std::endl;
+        std::cout << "There are no components in the car, software test passed" << std::endl<< std::endl;
         return true;
     }
     for (auto it : components) {
@@ -114,10 +114,10 @@ bool Car::softwareTest() {
 
     }
     if (failedCount> 1){
-        std::cout << "Car wind tunnel test failed, a component failed the test, number of failed components : " << to_string(failedCount) << std::endl;
+        std::cout << "Car wind tunnel test failed, a component failed the test, number of failed components : " << to_string(failedCount) << std::endl<< std::endl;
         return false;
     }
-    std::cout << "Car wind tunnel test passed, no components failed" << std::endl;
+    std::cout << "Car wind tunnel test passed, no components failed" << std::endl<< std::endl;
     return true;
 }
 
@@ -131,10 +131,10 @@ bool Car::windTunnelTest() {
 
     }
     if (failedCount> 1){
-        std::cout << "Car wind tunnel test failed, a component failed the test" << std::endl;
+        std::cout << "Car wind tunnel test failed, a component failed the test" << std::endl<< std::endl;
         return false;
     }
-    std::cout << "Car wind tunnel test passed, no components failed" << std::endl;
+    std::cout << "Car wind tunnel test passed, no components failed" << std::endl<< std::endl;
     return true;
 
 }
@@ -144,6 +144,7 @@ void Car::printComponents() {
     for (auto it : components) {
         std::cout << it.second->getName()<< std::endl;
     }
+    std::cout << std::endl;
 }
 
 

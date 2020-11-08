@@ -16,7 +16,7 @@ public:
     /**
      *
      * @param horsePower sets horsepower variable
-     * @param fuelConsumption setns fuelConsumption variable
+     * @param fuelConsumption sets fuelConsumption variable
      */
     EngineState(int horsePower,int fuelConsumption);
     EngineState();

@@ -78,7 +78,7 @@ void RacingCommand::execute(Car *car) {
         default:
             points = 1;
     }
-    std::cout << "The car received " << points << " points";
+    std::cout << "The car received " << points << " points" << std::endl;
     if (successor != nullptr) {
         successor->execute(car);
     }

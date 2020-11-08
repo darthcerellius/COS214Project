@@ -36,7 +36,7 @@ private:
     void setMemento(Component* c);
     /**
      *
-     * @return state object of the memento
+     * @return state  object of the memento
      */
     ComponentState* getMemento();
 public:

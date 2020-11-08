@@ -10,7 +10,7 @@
 void Simulation::Simulate(Car * car, RaceTrack * track) {
     CarCareTaker * care = new CarCareTaker();
     care->setMemento(car->createMemento());
-    std::cout << "State of car saved ... Starting simulation of car , on track" << std::endl;
+    std::cout << "State of car saved ... Starting simulation of car" << std::endl;
     std::cout <<"Number of laps : " << track->getLaps() << std::endl;
     Engine* engine = (dynamic_cast<Engine*>(car->getComponents().find("engine")->second)) ;
     std::cout << "Estimated fuel usage : " << to_string(engine->getFuelConsumption()*track->getLaps()*6)<< std::endl; // litres per km * num of laps * average lap length
@@ -25,7 +25,7 @@ void Simulation::Simulate(Car * car, RaceTrack * track) {
         std::cout << "Car is expected to be fast and relatively easy to control" <<std::endl;
     }
     car->restore(care->getMemento());
-    std::cout << "State of car restored after simulation" << std::endl;
+    std::cout << "State of car restored after simulation" << std::endl << std::endl;
     delete care;
 
 }

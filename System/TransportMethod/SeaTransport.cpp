@@ -16,7 +16,7 @@ SeaTransport::~SeaTransport() {
 }
 
 void SeaTransport::package(GoodsContainer component) {
-    std::cout << "Loading container..." << std::endl;
+    std::cout << "Scheduling container shipment..." << std::endl;
     int year = component.getDate()->y;
     int month = component.getDate()->m;
     int day = component.getDate()->d;
