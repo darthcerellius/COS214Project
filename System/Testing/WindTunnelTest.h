@@ -7,7 +7,10 @@
 #include "cmath"
 #include "Testing.h"
 class WindTunnelTest : public Testing {
+private:
+    int tokens;
 public:
+    WindTunnelTest();
     bool test(Component *);
 };
 

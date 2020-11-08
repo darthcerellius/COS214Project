@@ -66,16 +66,14 @@ bool AerodynamicsComponent::softwareTest() {
     return true;
 }
 
-bool AerodynamicsComponent::windTunnelTest() {
-    double maxDown= this->downForce;
-    double maxWind = this->windResistance;
+bool AerodynamicsComponent::windTunnelTest(int tokens) {
     std::cout << "Starting wind tunnel test on aerodynamic component, saving state of component" << std::endl;
     ComponentMemento* x = new ComponentMemento();
     x->setMemento(this);
     int val = 10;
     for (int i = 0; i < 20; ++i) {
-        this->downForce -= (i % 2) +val ;
-        this->windResistance +=  (i%2)-val ;
+        this->downForce += (i % 2) +val ;
+        this->windResistance -=  (i%2)-val ;
         val = val /2 ;
         std::cout << "WINDTUNNEL TESTING - " << to_string(i+1) <<" : downforce has been adjusted to : " << to_string(this->downForce) << " | wind resistance has been adjusted to : " <<to_string(this->windResistance)<< std::endl;
         if (this->downForce<1 ){

@@ -101,7 +101,7 @@ public:
      * Iterates through the map containing components, then performs a windTunnelTest on each of those components (if they can perform such a test), if at least one component fails the test is failed
      * @return true if the test is passed and false if test is failed
      */
-    bool windTunnelTest() override;
+    bool windTunnelTest(int tokens) override;
 
     /**
      * A function that returns the components map of the car.

@@ -19,7 +19,7 @@ public:
     Engine(Engine* c);
     ~Engine();
     bool softwareTest() override;
-    bool windTunnelTest() override;
+    bool windTunnelTest(int tokens) override;
     Component* clone();
     int getHP();
     void setHP(int);

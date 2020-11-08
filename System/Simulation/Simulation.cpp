@@ -19,7 +19,7 @@ void Simulation::Simulate(Car * car, RaceTrack * track) {
     }else{
         std::cout << "Car is expected to finish the race" <<std::endl;
     }
-    if (!car->windTunnelTest()){
+    if (!car->windTunnelTest(0)){
         std::cout << "Car is expected to be slow and hard to control" <<std::endl;
     }else{
         std::cout << "Car is expected to be fast and relatively easy to control" <<std::endl;
