@@ -19,7 +19,14 @@ public:
     explicit operator std::string () const override;
     explicit operator int() const override;
     explicit operator double() const override;
-    JSONObjectHolderIterator begin();
+    /**
+     * Creates an iterator for the JSONObjectHolder class
+     * @return - an iterator to the beginning of the element list
+     */
+    JSONObjectHolderIterator begin(); /**
+     * Creates an iterator for the JSONObjectHolder class
+     * @return - an iterator to the end of the element list
+     */
     JSONObjectHolderIterator end();
 
 protected:

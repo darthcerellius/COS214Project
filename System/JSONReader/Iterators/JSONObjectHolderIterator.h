@@ -10,6 +10,9 @@
 class AbstractJSONReader;
 using Iter2 = std::vector<AbstractJSONReader*>::iterator;
 
+/** @brief An iterator for the JSONObjectHolder class.
+ *
+ */
 class JSONObjectHolderIterator {
 private:
     friend class JSONObjectHolder;
@@ -17,8 +20,20 @@ private:
     JSONObjectHolderIterator(Iter2 i);
 
 public:
+    /**
+     * Gets an AbstractJSONReader class from the JSONObjectHolder class
+     * @return - an AbstractJSONReader class
+     */
     AbstractJSONReader& operator*();
+    /**
+     * Increments the iterator
+     */
     void operator++();
+    /**
+    * Compares two JSONObjectHolderIterator classes
+    * @param rhs - the class to compare to
+    * @return - whether the iterators are equal or not
+    */
     bool operator != (JSONObjectHolderIterator& rhs);
 };
 

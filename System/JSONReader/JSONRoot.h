@@ -10,6 +10,9 @@
 
 #include <map>
 
+/**
+ * @brief Holds JSON objects as key-value pairs
+ */
 class JSONRoot : public AbstractJSONReader{
 private:
     std::map<std::string, AbstractJSONReader*> elements;
@@ -21,7 +24,15 @@ public:
     explicit operator std::string () const override;
     explicit operator int() const override;
     explicit operator double() const override;
+    /**
+     * Creates an iterator for the JSONRoot class
+     * @return - an iterator to the beginning of the element map
+     */
     JSONRootIterator begin();
+    /**
+     * Creates an iterator for the JSONRoot class
+     * @return - an iterator the end of the element map
+     */
     JSONRootIterator end();
 
 protected:
