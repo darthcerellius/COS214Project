@@ -4,7 +4,9 @@
 
 #ifndef COS214PROJECT_COMPONENTSTATE_H
 #define COS214PROJECT_COMPONENTSTATE_H
-
+/**
+ * @brief Serves as the abstract class for the other states, such that one caretaker can manage all other component states
+ */
 #include <string>
 
 class ComponentCaretaker;

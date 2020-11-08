@@ -13,12 +13,16 @@
 #include "CarCareTaker.h"
 class CarStore {
 private:
-    CarCareTaker* memento; /**  Stores the  */
+    CarCareTaker* memento; ///stores the caretaker
 public:
     CarStore();
     ~CarStore();
-    void setMemento(CarCareTaker*);
-    CarCareTaker* getMemento();
+    /**
+     * sets member object memento to the passed in object
+     * @param newMemento a CarCareTaker object used to set the memento member object
+     */
+    void setMemento(CarCareTaker* newMemento);
+    CarCareTaker* getMemento(); ///@return  the caretaker member object
 };
 
 

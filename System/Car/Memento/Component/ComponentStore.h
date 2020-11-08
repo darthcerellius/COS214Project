@@ -4,7 +4,9 @@
 
 #ifndef COS214PROJECT_COMPONENTSTORE_H
 #define COS214PROJECT_COMPONENTSTORE_H
-
+/**
+ * @brief serves as the memento in the component's memento design pattern
+ */
 #include "ComponentCareTaker.h"
 class ComponentStore {
 private:

@@ -4,7 +4,12 @@
 
 #ifndef COS214PROJECT_COMPONENTCARETAKER_H
 #define COS214PROJECT_COMPONENTCARETAKER_H
-
+/**
+ * @brief serves as the caretaker in the component memento design pattern
+ *
+ *
+ * @author Jeanre du Plessis
+ */
 #include "ComponentState.h"
 #include "EngineState.h"
 #include <iostream>
@@ -23,7 +28,7 @@ private:
     friend class AerodynamicsComponent;
     friend class Engine;
     friend class Chassis;
-    ComponentState* state;
+    ComponentState* state; ///stores a state of the component
     void setMemento(Component*);
     ComponentState* getMemento();
 public:
