@@ -20,6 +20,7 @@ void SeaTransport::package(GoodsContainer component) {
     int year = component.getDate()->y;
     int month = component.getDate()->m;
     int day = component.getDate()->d;
+    std::cout << "Container is required for race on: " << day << "-" << month << "-" << year << std::endl;
     if (month - 3 < 0) {
         year -=1;
         month = (month-3) % 12;
@@ -30,10 +31,11 @@ void SeaTransport::package(GoodsContainer component) {
         year -= 1;
         month = 12;
     }
+
     std::cout << "Setting shipping date for container to " << year << "-" << (month < 10 ? "0" : "")
                 << month << "-" << (day < 10 ? "0" : "") << day << std::endl;
     Date date{day, month, year};
-    std::cout << "ETA: " << RaceWeekend::daysBetween(&date, component.getDate()) << " days!" << std::endl;
+    std::cout << "ETA: " << RaceWeekend::daysBetween(&date, component.getDate()) << " days after shipping!" << std::endl;
     shippingContainer = std::move(component);
 }
 
