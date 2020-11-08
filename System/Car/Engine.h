@@ -10,8 +10,8 @@ class ComponentMemento;
 
 class Engine: public Component{
 private:
-    int HP; //HP = horsepower
-    int fuelConsumption; // litres per km used by the engine
+    int HP; ///HP = horsepower
+    int fuelConsumption; /// litres per km used by the engine
 
 public:
     Engine();
@@ -26,6 +26,10 @@ public:
     int getFuelConsumption();
     void setFuelConsumption(int);
     void restore(ComponentMemento*);
+    /**
+     * Used to create a memento with the current state of the engine
+     * @return ComponentMemento containing the state of the engine
+     */
     ComponentMemento* createMemento();
 
 };

@@ -41,15 +41,15 @@ bool Tyre::softwareTest() {
     std::default_random_engine generator;
     std::binomial_distribution<int> distribution(9,0.5);
     if (distribution(generator) >4 &&distribution(generator)<6 ){
-        std::cout << "Tyre passed the software test" << std::endl;
+        std::cout << "Tyre passed the software test" << std::endl<< std::endl;
         return true;
     }else{
-        std::cout <<"Tyre failed the software test" << std::endl;
+        std::cout <<"Tyre failed the software test " << std::endl<< std::endl;
         return false;
     }
 }
 
 bool Tyre::windTunnelTest() {
-    std::cout << "Tyre not suitable for wind tunnel test" << std::endl;
+    std::cout << "Tyre not suitable for wind tunnel test" << std::endl<< std::endl;
     return true;
 }

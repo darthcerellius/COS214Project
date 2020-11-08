@@ -67,27 +67,35 @@ bool AerodynamicsComponent::softwareTest() {
 }
 
 bool AerodynamicsComponent::windTunnelTest() {
+    double maxDown= this->downForce;
+    double maxWind = this->windResistance;
     std::cout << "Starting wind tunnel test on aerodynamic component, saving state of component" << std::endl;
     ComponentMemento* x = new ComponentMemento();
     x->setMemento(this);
-    for (int i = 0; i < 500; ++i) {
-       this->downForce -=log(i);
-        this->windResistance += log(i);
+    for (int i = 0; i < 400; ++i) {
+       this->downForce = rand() % (int)maxDown;
+        this->windResistance = rand()%(int)maxWind;
+                ;
+        std::cout << "WINDTUNNEL TESTING : downforce has been adjusted to : " << to_string(this->downForce) << std::endl;
+        std::cout << "WINDTUNNEL TESTING : wind resistance has been adjusted to : " << to_string(this->windResistance) << std::endl;
         if (this->downForce<1 ){
-            std::cout << "Wind tunnel test failed at test number : " + to_string(i) << " -  the downforce generated was not enough"<< std::endl;
+            std::cout << "Wind tunnel test failed at test number : " + to_string(i) << " -  the downforce generated was not enough to keep the car on the ground, current downforce : " << to_string(this->downForce)<< std::endl<< std::endl;
             this->restore(x);
             delete x;
             return false;
-        }else if(this->windResistance>20){
-            std::cout << "Wind tunnel test failed at test number : " + to_string(i) << " -  the wind resistance was too high"<< std::endl;
+        }else if(this->windResistance>200){
+            std::cout << "Wind tunnel test failed at test number : " + to_string(i) << " -  the wind resistance was too high, current wind resistance : "<< to_string(this->windResistance)<< std::endl<< std::endl;
             this->restore(x);
             delete x;
             return false;
         }
     }
+    std::cout << "TESTING final downforce : " << to_string(this->downForce) << ", final wind resistance : " << to_string(this->windResistance)<<std::endl;
     this->restore(x);
     delete x;
     std::cout << "Wind tunnel test passed, aerodynamic component restored to previous state"<< std::endl;
+    std::cout << "Restored values : downforce = " << to_string(this->downForce) << ", wind resistance : " << to_string(this->windResistance) << std::endl << std::endl;
+
     return true;
 }
 
