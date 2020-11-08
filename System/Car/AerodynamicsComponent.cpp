@@ -71,7 +71,7 @@ bool AerodynamicsComponent::windTunnelTest(int &tokens) {
     ComponentMemento* x = new ComponentMemento();
     x->setMemento(this);
     double factor = tokens/100;
-    std::cout << "WIND TUNNEL TESTING : "<< tokens  <<" tokens remaining : downforce before testing: " << to_string(this->downForce) << " | wind resistance before testing : " <<to_string(this->windResistance)<< std::endl;
+    std::cout << "WIND TUNNEL TESTING : "<< to_string(abs(tokens))  <<" tokens remaining : downforce before testing: " << to_string(this->downForce) << " | wind resistance before testing : " <<to_string(this->windResistance)<< std::endl;
     for (int i = 0; i < 20; ++i, tokens--) {
         this->downForce += factor;
         this->windResistance -= factor;
@@ -93,8 +93,8 @@ bool AerodynamicsComponent::windTunnelTest(int &tokens) {
     }
     std::cout << "TESTING final downforce : " << to_string(this->downForce) << ", final wind resistance : " << to_string(this->windResistance)<<std::endl;
     delete x;
-    std::cout << "Wind tunnel test passed, aerodynamic component restored to previous state"<< std::endl;
-    std::cout << "Restored values : downforce = " << to_string(this->downForce) << ", wind resistance : " << to_string(this->windResistance) << std::endl << std::endl;
+    std::cout << "Wind tunnel test passed"<< std::endl;
+   // std::cout << "Restored values : downforce = " << to_string(this->downForce) << ", wind resistance : " << to_string(this->windResistance) << std::endl << std::endl;
 
     return true;
 }

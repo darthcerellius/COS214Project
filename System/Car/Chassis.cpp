@@ -66,14 +66,14 @@ bool Chassis::windTunnelTest(int &tokens) {
     ComponentMemento* s = new ComponentMemento();
     care->setMemento(this->createMemento());
     double factor = tokens/100;
-    std::cout << "WIND TUNNEL TESTING - "<< tokens  <<" tokens remaining : downforce before testing: " << to_string(this->downForce) << " | wind resistance before testing : " <<to_string(this->windResistance)<< std::endl;
+    std::cout << "WIND TUNNEL TESTING : "<< to_string(abs(tokens))  <<" tokens remaining : downforce before testing: " << to_string(this->downForce) << " | wind resistance before testing : " <<to_string(this->windResistance)<< std::endl;
     for (int i = 0; i < 20; ++i, tokens--) {
         this->downForce += factor;
         this->windResistance -= factor;
         factor = factor * 0.9;
 
 
-        if (this->downForce<0.000001 ){
+        if (this->downForce<10 ){
             //std::cout << "Wind tunnel test failed at test number : " + to_string(i+1) << ", the downforce generated was not enough to keep the car on the ground, current downforce = "<< to_string(this->downForce)<< std::endl;
             restore(care->getMemento());
             //std::cout << "Restored values : downforce = " << to_string(this->downForce) << ", wind resistance : " << to_string(this->windResistance) << std::endl << std::endl;
@@ -93,8 +93,8 @@ bool Chassis::windTunnelTest(int &tokens) {
     //this->restore(care->getMemento());
     delete s;
     delete care;
-    //std::cout << "Wind tunnel test passed, chassis restored to previous state"<< std::endl;
-    std::cout << "Restored values : downforce = " << to_string(this->downForce) << ", wind resistance : " << to_string(this->windResistance) << std::endl << std::endl;
+    std::cout << "Wind tunnel test passed"<< std::endl;
+    //std::cout << "Restored values : downforce = " << to_string(this->downForce) << ", wind resistance : " << to_string(this->windResistance) << std::endl << std::endl;
     return true;
 }
 
