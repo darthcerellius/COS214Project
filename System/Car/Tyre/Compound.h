@@ -11,7 +11,7 @@ class Tyre;
 class Compound {
 public:
     Compound();
-    ~Compound();
+    virtual ~Compound();
     virtual void handleChange(Tyre* t) = 0;
     virtual string getCompound() = 0;
 };

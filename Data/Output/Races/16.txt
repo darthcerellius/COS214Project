@@ -1,0 +1,45 @@
+Fetching goods from harbor...
+Packaging container into truck
+The fleet of trucks is on it's way to track Suzuka International Racing Course
+
+Loading car onto the plane
+Plane is on it's way to the race track
+Unloading car from airplane
+Current race is happening at: Marina Bay Street Circuit, Asia
+
+Number of laps: 59
+Ordering tyres...
+STRATEGY: 5 sets of tyres have been ordered from the tyre supplier for the coming race.
+The car's tyres are replaced. The new tyres' compound: Medium Compound. Tyre sets used for this race: 1
+Starting practice day.
+The day is: Friday, 20-9-2020
+The driver is practicing on the race track!
+Starting qualifying round.
+The day is: Saturday, 21-9-2020
+The Car is busy with the qualifier round...
+The qualifying round has finished.
+The car qualifies for position 1
+Starting race!
+The day is: Sunday, 22-9-2020
+Car is prepping for race...
+GO!
+EVENT: The race car's tyres are worn out, and need to be replaced.
+EVENT RESPONSE: The race car proceeds to the pit stop to have its worn out tyres replaced.
+The car's tyres are replaced. The new tyres' compound: Hard Compound. Tyre sets used for this race: 2
+TACTICS: The race car slows down to allow the car behind it to overtake it.
+EVENT: The race car's tyres are worn out, and need to be replaced.
+EVENT RESPONSE: The race car proceeds to the pit stop to have its worn out tyres replaced.
+The car's tyres are replaced. The new tyres' compound: Soft Compound. Tyre sets used for this race: 3
+EVENT: One of the race car's component breaks and requires immediate attention.
+EVENT RESPONSE: The race car returns to the pit stop to have its broken component replaced or repaired.
+TACTICS: The race car speeds up to overtake the car directly in front of it.
+EVENT: The race car's tyres are worn out, and need to be replaced.
+EVENT RESPONSE: The race car proceeds to the pit stop to have its worn out tyres replaced.
+The car's tyres are replaced. The new tyres' compound: Medium Compound. Tyre sets used for this race: 4
+EVENT: Due to extremely hazardous conditions on the track, the red flag is displayed.
+EVENT RESPONSE: The race car acknowledges the red flag and cautiously approaches the track's exit.
+The car has finished the final lap...
+Race is over
+The car came in position: 8
+The car received 4 pointsTransporting car to Engineering department...
+Engineering: Car has been serviced

@@ -1,0 +1,50 @@
+Fetching goods from harbor...
+Packaging container into truck
+The fleet of trucks is on it's way to track Melbourne Grand Prix Circuit
+
+Loading car onto the plane
+Plane is on it's way to the race track
+Unloading car from airplane
+Current race is happening at: Melbourne Grand Prix Circuit, Australia
+
+Number of laps: 57
+Ordering tyres...
+STRATEGY: 5 sets of tyres have been ordered from the tyre supplier for the coming race.
+The car's tyres are replaced. The new tyres' compound: Medium Compound. Tyre sets used for this race: 1
+Starting practice day.
+The day is: Friday, 15-3-2020
+The driver is practicing on the race track!
+Starting qualifying round.
+The day is: Saturday, 16-3-2020
+The Car is busy with the qualifier round...
+The qualifying round has finished.
+The car qualifies for position 9
+Starting race!
+The day is: Sunday, 17-3-2020
+Car is prepping for race...
+GO!
+EVENT: The race car's tyres are worn out, and need to be replaced.
+EVENT RESPONSE: The race car proceeds to the pit stop to have its worn out tyres replaced.
+The car's tyres are replaced. The new tyres' compound: Hard Compound. Tyre sets used for this race: 2
+EVENT: Due to mildly hazardous conditions on the track, the yellow flag is displayed.
+EVENT RESPONSE: The race car acknowledges the yellow flag and slows down until the flag is no longer displayed.
+TACTICS: The race car heads to the pitstop for an early maintenance.
+EVENT: The race car's tyres are worn out, and need to be replaced.
+EVENT RESPONSE: The race car proceeds to the pit stop to have its worn out tyres replaced.
+The car's tyres are replaced. The new tyres' compound: Soft Compound. Tyre sets used for this race: 3
+EVENT: Due to extremely hazardous conditions on the track, the red flag is displayed.
+EVENT RESPONSE: The race car acknowledges the red flag and cautiously approaches the track's exit.
+EVENT: The race car's tyres are worn out, and need to be replaced.
+EVENT RESPONSE: The race car proceeds to the pit stop to have its worn out tyres replaced.
+The car's tyres are replaced. The new tyres' compound: Medium Compound. Tyre sets used for this race: 4
+EVENT: The race car's tyres are worn out, and need to be replaced.
+EVENT RESPONSE: The race car proceeds to the pit stop to have its worn out tyres replaced.
+The car's tyres are replaced. The new tyres' compound: Hard Compound. Tyre sets used for this race: 5
+EVENT: The race car's tyres are worn out, and need to be replaced.
+EVENT RESPONSE: The race car proceeds to the pit stop to have its worn out tyres replaced.
+RACING: The car has used all 5 of its tyre sets allowed for this race and cannot change anymore tyres.
+The car has finished the final lap...
+Race is over
+The car came in position: 1
+The car received 25 pointsTransporting car to Engineering department...
+Engineering: Car has been serviced

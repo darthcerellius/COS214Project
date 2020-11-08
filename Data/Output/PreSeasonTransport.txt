@@ -1,0 +1,51 @@
+Sorting out logistics for any non-European races...
+Loading container...
+Setting shipping date for container to 2019-12-15
+ETA: 91 days!
+Container is being shipped to Australia
+
+Loading container...
+Setting shipping date for container to 2019-12-22
+ETA: 91 days!
+Container is being shipped to Asia
+
+Loading container...
+Setting shipping date for container to 2020-01-05
+ETA: 91 days!
+Container is being shipped to Asia
+
+Loading container...
+Setting shipping date for container to 2020-01-19
+ETA: 91 days!
+Container is being shipped to Asia
+
+Loading container...
+Setting shipping date for container to 2020-03-07
+ETA: 92 days!
+Container is being shipped to Asia
+
+Loading container...
+Setting shipping date for container to 2020-03-14
+ETA: 92 days!
+Container is being shipped to North America
+
+Loading container...
+Setting shipping date for container to 2020-06-20
+ETA: 92 days!
+Container is being shipped to Asia
+
+Loading container...
+Setting shipping date for container to 2020-07-11
+ETA: 92 days!
+Container is being shipped to Asia
+
+Loading container...
+Setting shipping date for container to 2020-07-25
+ETA: 92 days!
+Container is being shipped to North America
+
+Loading container...
+Setting shipping date for container to 2020-08-01
+ETA: 92 days!
+Container is being shipped to North America
+
