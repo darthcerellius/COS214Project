@@ -10,9 +10,17 @@
 #include "../Car/Memento/Car/CarCareTaker.h"
 class Simulation {
 public:
+    /**
+     * saves a car state
+     */
     CarCareTaker* state;
     Simulation();
-    void Simulate(Car*,RaceTrack*);
+    /**
+     * Used to output expected fuel usage
+     * @param car a car object who will be used to simulate
+     * @param track a track object who will be used in the simulate function
+     */
+    void Simulate(Car* car,RaceTrack* track);
 };
 
 

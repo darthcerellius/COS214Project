@@ -59,31 +59,39 @@ void Chassis::restore(ComponentMemento * state) {
 }
 
 bool Chassis::windTunnelTest(int &tokens) {
-
+    if(tokens<1){
+        std::cout<<"Already ran all 400 wind tunnel tests" << std::endl << std::endl;
+        return true;
+    }
     std::cout <<"Starting wind tunnel test on chassis" << std::endl;
     std::cout << "Saving state of chassis" << std::endl;
     ComponentCareTaker * care = new ComponentCareTaker();
     ComponentMemento* s = new ComponentMemento();
     care->setMemento(this->createMemento());
-    double factor = tokens/100;
-    std::cout << "WIND TUNNEL TESTING : "<< to_string(abs(tokens))  <<" tokens remaining : downforce before testing: " << to_string(this->downForce) << " | wind resistance before testing : " <<to_string(this->windResistance)<< std::endl;
+    double factor = tokens/100.0;
+    std::cout << "WIND TUNNEL TESTING : "<< to_string(tokens)  <<" tokens remaining : downforce before testing: " << to_string(this->downForce) << " | wind resistance before testing : " <<to_string(this->windResistance)<< std::endl;
     for (int i = 0; i < 20; ++i, tokens--) {
         this->downForce += factor;
         this->windResistance -= factor;
         factor = factor * 0.9;
+        std::cout << "WIND TUNNEL TESTING : "<< to_string(abs(tokens))  <<" tokens remaining : downforce altered to: " << to_string(this->downForce) << " | wind resistance altered to : " <<to_string(this->windResistance)<< std::endl;
 
 
-        if (this->downForce<10 ){
-            //std::cout << "Wind tunnel test failed at test number : " + to_string(i+1) << ", the downforce generated was not enough to keep the car on the ground, current downforce = "<< to_string(this->downForce)<< std::endl;
+        if (this->downForce<20 ) {
+            std::cout << "Wind tunnel test failed at test number : " + to_string(i + 1)
+                      << ", the downforce generated was not enough to keep the car on the ground, current downforce = "
+                      << to_string(this->downForce) << std::endl;
             restore(care->getMemento());
-            //std::cout << "Restored values : downforce = " << to_string(this->downForce) << ", wind resistance : " << to_string(this->windResistance) << std::endl << std::endl;
+            std::cout << "Restored values : downforce = " << to_string(this->downForce) << ", wind resistance : "
+                      << to_string(this->windResistance) << std::endl << std::endl;
             delete s;
             delete care;
             return false;
-        }else if(this->windResistance>200){
-            //std::cout << "Wind tunnel test failed at test number : " + to_string(i+1) << ", the wind resistance was too high for the car to move fast enough, current windresistance : " << to_string(this->windResistance)<< std::endl;
+        }
+        if(this->windResistance>200  && this->windResistance > 0.1){
+            std::cout << "Wind tunnel test failed at test number : " + to_string(i+1) << ", the wind resistance was too high for the car to move fast enough, current windresistance : " << to_string(this->windResistance)<< std::endl;
             restore(care->getMemento());
-            //std::cout << "Restored values : downforce = " << to_string(this->downForce) << ", wind resistance : " << to_string(this->windResistance) << std::endl<<std::endl;
+            std::cout << "Restored values : downforce = " << to_string(this->downForce) << ", wind resistance : " << to_string(this->windResistance) << std::endl<<std::endl;
             delete s;
             delete care;
             return false;
@@ -93,7 +101,7 @@ bool Chassis::windTunnelTest(int &tokens) {
     //this->restore(care->getMemento());
     delete s;
     delete care;
-    std::cout << "Wind tunnel test passed"<< std::endl;
+    std::cout << "Wind tunnel test passed"<< std::endl<<std::endl;
     //std::cout << "Restored values : downforce = " << to_string(this->downForce) << ", wind resistance : " << to_string(this->windResistance) << std::endl << std::endl;
     return true;
 }

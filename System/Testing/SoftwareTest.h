@@ -7,12 +7,16 @@
 
 #include "Testing.h"
 class SoftwareTest : public Testing{
-private:
-
 
 public:
-    SoftwareTest();
-    bool test(Component *) ;
+
+    SoftwareTest(); ///Default constructor
+    /**
+     *
+     * @param c a component that will have it's software test function called
+     * @return will return true if software test is passed and  false if software test is failed
+     */
+    bool test(Component * c) ;
  };
 
 

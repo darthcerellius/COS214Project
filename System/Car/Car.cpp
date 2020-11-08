@@ -122,7 +122,11 @@ bool Car::softwareTest() {
 }
 
 bool Car::windTunnelTest(int &tokens) {
-    std::cout <<"Starting wind tunnel test on car : " << carName << std::endl;
+    if(tokens<1){
+        std::cout<<"Already ran all 400 wind tunnel tests" << std::endl << std::endl;
+        return true;
+    }
+    std::cout <<"Starting wind tunnel test on car...."<< std::endl;
     int failedCount =0;
     for (auto it : components) {
         if (!it.second->windTunnelTest(tokens)){

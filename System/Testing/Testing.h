@@ -4,7 +4,9 @@
 
 #ifndef COS214PROJECT_TESTING_H
 #define COS214PROJECT_TESTING_H
-
+/**
+ * @brief serves as the base class for the testing classes (WindTunnelTest and SoftwareTest)
+ */
 #include "../Car/Component.h"
 #include "../Car/Memento/Component/ComponentState.h"
 #include "../Car/Memento/Component/ComponentMemento.h"

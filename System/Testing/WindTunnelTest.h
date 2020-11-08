@@ -8,10 +8,15 @@
 #include "Testing.h"
 class WindTunnelTest : public Testing {
 private:
-    int tokens;
+    int tokens; ///The total amount of wind tunnel tests that can be performed during one season
 public:
     WindTunnelTest();
-    bool test(Component *);
+    /**
+     *
+     * @param component a component that will have its wind tunnel test function called
+     * @return will return true if wind tunnel test is passed and false if wind tunnel test is failed
+     */
+    bool test(Component * component);
 };
 
 
