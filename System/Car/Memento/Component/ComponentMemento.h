@@ -5,7 +5,7 @@
 #ifndef COS214PROJECT_COMPONENTMEMENTO_H
 #define COS214PROJECT_COMPONENTMEMENTO_H
 /**
- * @brief serves as the caretaker in the component memento design pattern
+ * @brief serves as the caretaker in the component's memento design pattern
  *
  *
  * @author Jeanre du Plessis
@@ -29,7 +29,15 @@ private:
     friend class Engine;
     friend class Chassis;
     ComponentState* state; ///stores a state of the component
-    void setMemento(Component*);
+    /**
+     *
+     * @param c A component who's state will be saved using a ComponentState object
+     */
+    void setMemento(Component* c);
+    /**
+     *
+     * @return state object of the memento
+     */
     ComponentState* getMemento();
 public:
     ComponentMemento();

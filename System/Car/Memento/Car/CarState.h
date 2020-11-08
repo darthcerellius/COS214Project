@@ -30,20 +30,14 @@ public:
    * @param name - the name of the component
    * @param components - the map of components that make up the car
    * @param strategy1 - the strategy that the car is following
-   * @param windResistance - the wind resistance of the car
-   * @param downForce - the downforce of the car
    */
-    CarState(std::string carName, std::string name, map<std::string , Component*> components,GeneralRaceStrategy* strategy1 , double windResistance, double downForce);
+    CarState(std::string carName, std::string name, map<std::string , Component*> components,GeneralRaceStrategy* strategy1);
     map<std::string, Component*> getComponents();
     void setComponents(map<std::string,Component*> newComponents);
     std::string getName();
     void setName(std::string newComponentName);
     void setCarName(std::string newCarName);
     std::string getCarName();
-    void setWindResistance(double newWindResistance);
-    double getWindResistance();
-    double getDownForce();
-    void setDownForce(double newDownForce);
     void setStrategy(GeneralRaceStrategy* newStrat);
     GeneralRaceStrategy* getStrategy();
 

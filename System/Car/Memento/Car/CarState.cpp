@@ -8,16 +8,13 @@ CarState::CarState() {
     this->strategy = nullptr;
     this->carName= "No car Name";
     this->name="Car";
-    this->downForce=0;
-    this->windResistance=0;
+
 }
 
-CarState::CarState(std::string carName, std::string name, map<std::string, Component *> components,GeneralRaceStrategy* strategy1, double windResistance, double downForce) {
+CarState::CarState(std::string carName, std::string name, map<std::string, Component *> components,GeneralRaceStrategy* strategy1) {
     this->strategy= strategy1;
     this->carName= carName;
     this->components = components;
-    this->downForce = downForce;
-    this->windResistance= windResistance;
     this->name = name;
 
 }
@@ -53,23 +50,6 @@ CarState::~CarState() {
         delete it->second;
     }
     delete strategy;
-}
-
-void CarState::setWindResistance(double newWindResistance) {
-    this->windResistance = newWindResistance;
-}
-
-double CarState::getWindResistance() {
-    return this->windResistance;
-}
-
-double CarState::getDownForce() {
-    return  this->downForce;
-
-}
-
-void CarState::setDownForce(double newDownForce) {
-    this->downForce= newDownForce;
 }
 
 void CarState::setStrategy(GeneralRaceStrategy * newStrat) {

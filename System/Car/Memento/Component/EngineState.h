@@ -9,11 +9,16 @@
 #include "ComponentState.h"
 class EngineState : public ComponentState {
 private:
-    int horsePower;
-    int fuelConsumption;
-    std::string name;
+    int horsePower; ///stores the value of the engine's HP variable
+    int fuelConsumption; ///stores the value of the engine's fuel consumption variable
+
 public:
-    EngineState(int,int);
+    /**
+     *
+     * @param horsePower sets horsepower variable
+     * @param fuelConsumption setns fuelConsumption variable
+     */
+    EngineState(int horsePower,int fuelConsumption);
     EngineState();
     ~EngineState();
     void setHorsePower(int);

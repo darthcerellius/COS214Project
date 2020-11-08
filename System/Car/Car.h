@@ -26,10 +26,12 @@ private:
 
 public:
     /**
-     * Default Constructor. Initialise generalRaceStrategy and components to null.
+     * Default Constructor. Initialise generalRaceStrategy to ConservativeStart and components to null, windResistance to 10, downForce to 100 and carName to "Default Name"
      */
     Car();
-
+    /**
+     *  Deletes the generalRaceStrategy as well as each component within the components map
+     */
     ~Car();
 
     /**
@@ -80,24 +82,25 @@ public:
 
     /**
      * Restores a car from a car memento
+     * @param state a CarMemento that is used to restore the state
      */
-    void restore(CarMemento*);
+    void restore(CarMemento* state);
 
     /**
      *
-     * @return
+     * @return a CarMemento that will be saved inside a CarCareTaker
      */
     CarMemento* createMemento();
 
     /**
-     *
-     * @return
+     * Iterates through the map containing components, then performs a softWareTest on each of those components (if they can perform such a test), if at least one component fails the test is failed
+     * @return true if the test is passed and false if test is failed
      */
     bool softwareTest() override;
 
     /**
-     *
-     * @return
+     * Iterates through the map containing components, then performs a windTunnelTest on each of those components (if they can perform such a test), if at least one component fails the test is failed
+     * @return true if the test is passed and false if test is failed
      */
     bool windTunnelTest() override;
 
@@ -108,7 +111,7 @@ public:
     map<string,Component*> getComponents();
 
     /**
-     *
+     * Used to print the components contained within the components map
      */
     void printComponents();
 };

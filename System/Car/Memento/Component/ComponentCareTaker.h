@@ -10,11 +10,19 @@
 #include "ComponentMemento.h"
 class ComponentCareTaker {
 private:
-    ComponentMemento* memento;
+    ComponentMemento* memento;  ///stores the memento of the component's memento design pattern
 public:
-    ComponentCareTaker();
+    ComponentCareTaker(); ///default constructor
     ~ComponentCareTaker();
-    void setMemento(ComponentMemento*);
+    /**
+     *
+     * @param newMemento used to set the ComponentMemento variable
+     */
+    void setMemento(ComponentMemento* newMemento);
+    /**
+     *
+     * @return stored memento object
+     */
     ComponentMemento* getMemento();
 };
 

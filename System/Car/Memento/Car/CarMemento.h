@@ -20,10 +20,8 @@ private:
      * @param componentName - the name of the component
      * @param component - the map of components that make up the car
      * @param strategy - the strategy that the car is following
-     * @param windResistance - the wind resistance of the car
-     * @param downForce - the downforce of the car
      */
-    void setMemento(std::string carName , std::string componentName, map<std::string, Component*> component,GeneralRaceStrategy* strategy,double windResistance,double downForce);
+    void setMemento(std::string carName , std::string componentName, map<std::string, Component*> component,GeneralRaceStrategy* strategy);
     /**
      * @return the state of the car when the memento was created
      */

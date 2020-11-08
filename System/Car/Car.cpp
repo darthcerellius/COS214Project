@@ -8,8 +8,7 @@
 Car::Car() : Component("Car"){
     generalStrategy = new ConservativeStart() ;
     components = map<string,Component*>();
-    windResistance = 10;
-    downForce = 100;
+
     carName = "Default Name";
 }
 
@@ -75,7 +74,7 @@ CarMemento *Car::createMemento() {
     for (auto i : components) {
         newComponents[i.first] = i.second->clone();
     }
-    state->setMemento(this->carName, this->getName(),newComponents,generalStrategy->clone(),this->windResistance,this->downForce);
+    state->setMemento(this->carName, this->getName(),newComponents,generalStrategy->clone());
     return state;
 
 }
@@ -99,8 +98,6 @@ void Car::restore(CarMemento * state) {
     }
     delete generalStrategy;
     this->generalStrategy = state->getMemento()->getStrategy()->clone();
-    this->downForce = state->getMemento()->getDownForce();
-    this->windResistance= state->getMemento()->getWindResistance();
 }
 
 bool Car::softwareTest() {
@@ -147,7 +144,6 @@ void Car::printComponents() {
     for (auto it : components) {
         std::cout << it.second->getName()<< std::endl;
     }
-
 }
 
 

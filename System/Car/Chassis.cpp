@@ -4,6 +4,8 @@
 
 #include "Chassis.h"
 #include "../Car/Memento/Component/ComponentMemento.h"
+#include "../Car/Memento/Component/ComponentCareTaker.h"
+
 Chassis::Chassis():Component("chassis") {
     this->windResistance=20;
     this->downForce=200;
@@ -57,23 +59,29 @@ void Chassis::restore(ComponentMemento * state) {
 
 bool Chassis::windTunnelTest() {
     std::cout << "Saving state of chassis" << std::endl;
+    ComponentCareTaker * care = new ComponentCareTaker();
     ComponentMemento* s = new ComponentMemento();
-    s->setMemento(this);
+    care->setMemento(this->createMemento());
     for (int i = 0; i < 500; ++i) {
         this->downForce -=log(i);
         this->windResistance += log(i);
         if (this->downForce<1 ){
             std::cout << "Wind tunnel test failed at test number : " + to_string(i) << ", the downforce generated was not enough"<< std::endl;
-            restore(s);
+            restore(care->getMemento());
+            delete s;
+            delete care;
             return false;
         }else if(this->windResistance>50){
             std::cout << "Wind tunnel test failed at test number : " + to_string(i) << ", the wind resistance was too high"<< std::endl;
-            restore(s);
+            restore(care->getMemento());
+            delete s;
+            delete care;
             return false;
         }
     }
-    this->restore(s);
+    this->restore(care->getMemento());
     delete s;
+    delete care;
     std::cout << "Wind tunnel test passed, chassis restored to previous state"<< std::endl;
     return true;
 }

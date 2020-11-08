@@ -7,6 +7,7 @@
 #include <cmath>
 #include "Component.h"
 class ComponentMemento;
+class ComponentCareTaker;
 class Chassis: public Component{
 private:
     double downForce;

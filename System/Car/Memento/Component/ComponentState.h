@@ -9,17 +9,25 @@
  */
 #include <string>
 
-class ComponentCaretaker;
+class ComponentCareTaker;
 class ComponentState {
 
 public:
-    ComponentState(std::string);
+    /**
+     *
+     * @param name -  Name of type of component
+     */
+    ComponentState(std::string name) ;
     virtual ~ComponentState();
+    /**
+     *
+     * @return name of type of component
+     */
      std::string getName();
 
 
 protected:
-    std::string name;
+    std::string name; ///the name of the type of component
 
     virtual void setName(std::string)=0;
 };
