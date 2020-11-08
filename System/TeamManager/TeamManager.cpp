@@ -113,6 +113,7 @@ void TeamManager::run() {
         //This assumes that a Command that will be called won't need an existing car, and will instead make one
         curSeasonCommand->execute(CurrentSeason::raceCar);
         calIterator->next();
+        std::cout << "-----------------------------------------------------------------------" << std::endl << std::endl;
         curSeasonRaces.close();
         raceCounter++;
     }
