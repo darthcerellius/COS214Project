@@ -11,13 +11,25 @@
 #include "CalendarIterator.h"
 #include "RaceWeekend.h"
 
+/** @brief Abstract class for the Calendar class.
+
+    The abstract calendar class that holds a vector of race weekends.
+    @author COS214 project group-TaskFailedSuccessfully
+    @date November 2020
+    */
+
 class Calendar{
 public:
+    /** default constructor */
     Calendar();
+    /** virtual default destructor */
     virtual ~Calendar();
+    /** virtual creator for Iterator
+        return new CalendarIterator*
+    */
     virtual CalendarIterator* createIterator() = 0;
 protected:
-    std::vector<RaceWeekend*> weekends;
+    std::vector<RaceWeekend*> weekends;     /** ctor containing RaceWeekends* */
 };
 
 #endif //COS214PROJECT_CALENDAR_CPP//
