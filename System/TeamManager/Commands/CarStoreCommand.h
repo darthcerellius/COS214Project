@@ -7,6 +7,9 @@
 
 #include "Command.h"
 
+/**
+ * @brief Stores the newly constructed car in a global variable for later retrieval.
+ */
 class CarStoreCommand : public Command {
 public:
     CarStoreCommand() = default;

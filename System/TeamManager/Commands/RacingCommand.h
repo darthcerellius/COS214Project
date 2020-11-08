@@ -10,6 +10,9 @@
 #include "../../Racing/Observers/Observer.h"
 class PitCrew;
 
+/**
+ * @brief Constructs a race track, a Pit Crew team and an Observer. Invokes the race track to simulate a race.
+ */
 class RacingCommand : public Command {
 private:
     RealRaceTrack* track;

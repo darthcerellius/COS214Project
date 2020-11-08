@@ -8,6 +8,9 @@
 #include "../../Engineering/EngineeringTeam.h"
 #include "Command.h"
 
+/**
+ * @brief Invokes the Engineering team to construct a car.
+ */
 class EngineeringCommand : public Command {
 public:
     EngineeringCommand();

@@ -7,6 +7,9 @@
 
 #include "Command.h"
 
+/**
+ * @brief Transports the car to the Service Engineering team.
+ */
 class ServiceLogisticCommand : public Command {
 public:
     ServiceLogisticCommand() = default;

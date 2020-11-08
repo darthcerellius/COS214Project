@@ -9,6 +9,9 @@
 #include "../../Testing/WindTunnelTest.h"
 #include "Command.h"
 
+/**
+ * @brief Creates testing objects and uses them to perform tests on the car.
+ */
 class TestingCommand : public Command {
 public:
     TestingCommand();

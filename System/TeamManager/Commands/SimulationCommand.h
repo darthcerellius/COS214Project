@@ -8,6 +8,9 @@
 #include "../../Simulation/Simulation.h"
 #include "Command.h"
 
+/**
+ * @brief Uses the Simulation class to run a simulation on the car.
+ */
 class SimulationCommand : public Command {
 private:
     Simulation* simulation;

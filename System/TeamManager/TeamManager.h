@@ -8,6 +8,11 @@
 #include "Commands/Command.h"
 #include "../Calendar/ConcreteCalendar.h"
 
+/**
+ * @brief Facade class responsible for the runtime of the entire system.
+ *
+ * This class
+ */
 class TeamManager{
 private:
     Command* preSeasonCommand;

@@ -3,7 +3,9 @@
 //
 
 #include <iostream>
+#include <sstream>
 #include <fstream>
+#include <deque>
 #include "TeamManager.h"
 #include "TeamManagerObjects.h"
 #include "../Container/GoodsContainer.h"
@@ -60,6 +62,7 @@ void TeamManager::run() {
     }
     std::cout << "Team Manager running" << std::endl;
     //run the pre-season command
+    std::deque<std::string> transports;
     preSeasonCommand->execute(nullptr);
     if (response == 1) {
         preSeasonFile.close();
@@ -72,6 +75,9 @@ void TeamManager::run() {
 
     /*plan ahead for non-European races */
     std::cout << "Sorting out logistics for any non-European races..." << std::endl;
+    auto oldState2 = std::cout.rdbuf();
+    std::stringstream ss;
+    std::cout.rdbuf(ss.rdbuf());
     while (!calIterator->isDone()) {
         RaceWeekend* weekend = calIterator->current();
         if (weekend->getLocation() != "Europe") {
@@ -79,10 +85,12 @@ void TeamManager::run() {
             container.setShippingLabel(weekend->getName(), weekend->getLocation(), weekend->getDate());
             SeaTransport transport;
             transport.load(container);
+            transports.push_back(ss.str());
+            ss.str("");
         }
         calIterator->next();
     }
-
+    std::cout.rdbuf(oldState2);
     calIterator->first();
     preSeasonFile.close();
     std::ofstream curSeasonRaces;
@@ -102,6 +110,8 @@ void TeamManager::run() {
         if (weekend->getLocation() == "Europe") {
             container.setShippingLabel(weekend->getName(), weekend->getLocation(), weekend->getDate());
         } else {
+            std::cout << transports[0] << std::endl;
+            transports.pop_front();
             std::cout << "Fetching container from harbor..." << std::endl;
             container = CurrentSeason::getContainer(weekend->getLocation() + "Harbor");
             container.setShippingLabel(weekend->getName(), weekend->getLocation(), weekend->getDate());

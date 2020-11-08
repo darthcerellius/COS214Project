@@ -9,6 +9,9 @@
 
 class StrategyTeam;
 
+/**
+ * @brief Uses the strategy team to decide on the car's strategy.
+ */
 class StrategyCommand : public Command {
 public:
     StrategyCommand() = default;

@@ -8,6 +8,9 @@
 #include "../TeamManager.h"
 #include "../../TransportMethod/AirTransport.h"
 
+/**
+ * @brief Transports a car to the race track.
+ */
 class LogisticsCommand : public Command {
 private:
     AirTransport* transport;
