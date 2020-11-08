@@ -21,8 +21,7 @@ private:
     std::string carName;
     map<string,Component*> components;
     GeneralRaceStrategy* generalStrategy;
-    double downForce;
-    double windResistance;
+
 
 public:
     /**
