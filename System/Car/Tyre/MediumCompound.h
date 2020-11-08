@@ -8,10 +8,15 @@
 #include "Compound.h"
 #include "HardCompound.h"
 
+/**
+ * The Medium Compound acts as a Concrete State for the Tyre class.
+ * Changing the State from a MediumCompound will set it to a HardCompound
+ */
+
 class MediumCompound: public Compound {
 public:
-    void handleChange(Tyre* t);
-    string getCompound();
+    void handleChange(Tyre* t); ///Changes the State to HardCompound
+    string getCompound(); ///Returns a string indicating that the current State is a Medium Compound
 };
 
 

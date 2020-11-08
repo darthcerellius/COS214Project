@@ -6,6 +6,10 @@
 #define COS214PROJECT_COMPOUND_H
 #include "Tyre.h"
 
+/**
+ * The Compound represents the current State of the Tyre. It can be one of three types: Soft, Medium or Hard.
+ */
+
 class Tyre;
 
 class Compound {

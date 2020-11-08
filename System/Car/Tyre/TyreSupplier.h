@@ -8,11 +8,16 @@
 #include "Tyre.h"
 #include "SoftCompound.h"
 
+/**
+ * The TyreSupplier is the provider of the Tyre component
+ * TyreSupplier acts as the Concrete Creator in the Factory Pattern
+ */
+
 class TyreSupplier: public Supplier {
 public:
     TyreSupplier();
     ~TyreSupplier();
-    Component* supplyComponent();
+    Component* supplyComponent();///Creates and returns the actual Tyre Component
 };
 
 
