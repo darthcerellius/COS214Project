@@ -3,14 +3,25 @@
 //
 
 #include "WindTunnelTest.h"
+#include "../Car/Car.h"
 
 bool WindTunnelTest::test(Component * component) {
+    if (!rd && component->getName() == "Car"){
+        rd = component->clone();
+    }
+
     if(tokens<1){
         std::cout<<"Already ran all 400 wind tunnel tests" << std::endl << std::endl;
     }
-    return component->windTunnelTest(tokens);
+    return rd->windTunnelTest(tokens );
 }
 
 WindTunnelTest::WindTunnelTest() {
+    rd= nullptr;
     tokens=400;
+}
+
+WindTunnelTest::~WindTunnelTest() {
+    delete rd;
+
 }

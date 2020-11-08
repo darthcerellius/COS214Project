@@ -12,6 +12,7 @@
 #include "../Car/Memento/Component/ComponentMemento.h"
 #include "../Car/Memento/Component/ComponentCareTaker.h"
 class Testing {
+
 public:
     Testing();
     ~Testing();
