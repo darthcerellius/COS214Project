@@ -12,12 +12,10 @@
 Command *PreSeasonBuilder::buildCommandChain() {
     Command* stratComm = new StrategyCommand();
     Command* engTeam = new EngineeringCommand();
-    Command* testingCommand = new TestingCommand();
     Command* simCommand = new SimulationCommand();
     Command* carStore = new CarStoreCommand();
     simCommand->addSuccessor(carStore);
-    testingCommand->addSuccessor(simCommand);
-    stratComm->addSuccessor(testingCommand);
+    stratComm->addSuccessor(simCommand);
     engTeam->addSuccessor(stratComm);
     return engTeam;
 }
