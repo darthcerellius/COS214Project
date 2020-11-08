@@ -6,8 +6,11 @@
 #include "Car.h"
 
 Car::Car() : Component("Car"){
-    generalStrategy = nullptr;
+    generalStrategy = new ConservativeStart() ;
     components = map<string,Component*>();
+    windResistance = 10;
+    downForce = 100;
+    carName = "Default Name";
 }
 
 Car::~Car() {
@@ -67,7 +70,7 @@ void Car::respondToEvent(string event) {
 }
 
 CarMemento *Car::createMemento() {
-    CarMemento* state= new CarMemento();
+    auto* state= new CarMemento();
     std::map<string, Component*> newComponents;
     for (auto i : components) {
         newComponents[i.first] = i.second->clone();

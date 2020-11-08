@@ -9,6 +9,8 @@
  */
 #include "Component.h"
 #include "../RacingStrategy/Strategies/GeneralRaceStrategy.h"
+#include "../RacingStrategy/Strategies/ConservativeStart.h"
+
 #include "../Car/Memento/Car/CarMemento.h"
 #include<map>
 class CarMemento;

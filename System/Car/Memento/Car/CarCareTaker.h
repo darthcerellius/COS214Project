@@ -5,7 +5,7 @@
 #ifndef COS214PROJECT_CARCARETAKER_H
 #define COS214PROJECT_CARCARETAKER_H
 /**
- * @brief Serves as the memento in the car memento design pattern
+ * @brief Serves as the caretaker in the car memento design pattern
  *
  * @author Jeanre du Plessis
  * @date 07 Nov 2020

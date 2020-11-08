@@ -5,7 +5,7 @@
 #ifndef COS214PROJECT_CARSTATE_H
 #define COS214PROJECT_CARSTATE_H
 /**
- * @brief serves as the state in the car memento design pattern
+ * @brief stores the state of the car
  *
  * @author Jeanre du Plessis
  */

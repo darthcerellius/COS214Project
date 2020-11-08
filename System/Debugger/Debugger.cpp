@@ -94,7 +94,7 @@ void Debugger::testTyres() {
 void Debugger::testComponentMemento() {
     Component* z = new Engine(12,12);
     unique_ptr<Engine> x(dynamic_cast<Engine*>(z));
-    ComponentStore * t = new ComponentStore();
+    ComponentCareTaker* t = new ComponentCareTaker();
     std::cout << "Before alteration " << to_string(x->getHP()) << " - " << to_string(x->getFuelConsumption()) << std::endl;
     t->setMemento(x->createMemento());
     x->setHP(213);
@@ -112,7 +112,7 @@ void Debugger::testCarMemento() {
     Component* engine = new Engine(500,500);
     c->add(aero);
     c->add(engine);
-    CarStore* store = new CarStore();
+    CarCareTaker* store = new CarCareTaker();
     store->setMemento(dynamic_cast<Car*>(c)->createMemento());
     dynamic_cast<Car*>(c)->printComponents();
     c->remove("engine");
