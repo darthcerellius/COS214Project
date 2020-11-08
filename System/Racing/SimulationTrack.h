@@ -7,6 +7,9 @@
 
 #include "RaceTrack.h"
 
+/**
+ * @brief Implements the RaceTrack class for the Simulation class.
+ */
 class SimulationTrack : public RaceTrack {
 public:
     SimulationTrack() = default;
