@@ -66,8 +66,8 @@ void Car::respondToEvent(string event) {
      std::cout<<event<<std::endl;
 }
 
-CarCareTaker *Car::createMemento() {
-    CarCareTaker* state= new CarCareTaker();
+CarMemento *Car::createMemento() {
+    CarMemento* state= new CarMemento();
     std::map<string, Component*> newComponents;
     for (auto i : components) {
         newComponents[i.first] = i.second->clone();
@@ -85,7 +85,7 @@ GeneralRaceStrategy *Car::getStrategy() {
     return this->generalStrategy;
 }
 
-void Car::restore(CarCareTaker * state) {
+void Car::restore(CarMemento * state) {
     this->carName=state->getMemento()->getCarName();
     for (auto i : components) {
         delete i.second;

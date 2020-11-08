@@ -6,7 +6,7 @@
 #define COS214PROJECT_ENGINE_H
 
 #include "Component.h"
-class ComponentCareTaker;
+class ComponentMemento;
 
 class Engine: public Component{
 private:
@@ -25,8 +25,8 @@ public:
     void setHP(int);
     int getFuelConsumption();
     void setFuelConsumption(int);
-    void restore(ComponentCareTaker*);
-    ComponentCareTaker* createMemento();
+    void restore(ComponentMemento*);
+    ComponentMemento* createMemento();
 
 };
 #endif //COS214PROJECT_ENGINE_H

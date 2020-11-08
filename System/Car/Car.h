@@ -9,9 +9,9 @@
  */
 #include "Component.h"
 #include "../RacingStrategy/Strategies/GeneralRaceStrategy.h"
-#include "../Car/Memento/Car/CarCareTaker.h"
+#include "../Car/Memento/Car/CarMemento.h"
 #include<map>
-class CarCareTaker;
+class CarMemento;
 class Car: public Component{
 private:
     //Added this so that the Team manager can test individual components.
@@ -79,13 +79,13 @@ public:
     /**
      * Restores a car from a car memento
      */
-    void restore(CarCareTaker*);
+    void restore(CarMemento*);
 
     /**
      *
      * @return
      */
-    CarCareTaker* createMemento();
+    CarMemento* createMemento();
 
     /**
      *

@@ -20,7 +20,7 @@ class EngineeringTeam;
 class GoodsContainer;
 class RaceWeekend;
 class Car;
-class CarStore;
+class CarCareTaker;
 
 class CurrentSeason {
     //friends
@@ -30,7 +30,7 @@ class CurrentSeason {
     static EngineeringTeam *engineeringTeam;
     static std::map<std::string, GoodsContainer> harbours;
     static RaceWeekend* currentWeekend;
-    static CarStore* garage;
+    static CarCareTaker* garage;
     static Car* raceCar;
 
     static void shipToHarbor(std::string name, GoodsContainer container);
@@ -39,7 +39,7 @@ class CurrentSeason {
     static StrategyTeam *getStrategyTeam();
 
     static EngineeringTeam *getEngineeringTeam();
-    static CarStore* getGarage();
+    static CarCareTaker* getGarage();
 
     static void clean();
     static void setRaceWeekend(RaceWeekend* rw);

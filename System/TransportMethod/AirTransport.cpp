@@ -5,7 +5,7 @@
 #include <iostream>
 #include "AirTransport.h"
 #include "../TeamManager/TeamManagerObjects.h"
-#include "../Car/Memento/Car/CarStore.h"
+#include "../Car/Memento/Car/CarCareTaker.h"
 
 AirTransport::AirTransport() {
 
@@ -23,7 +23,7 @@ void AirTransport::package(Car* component) {
 void AirTransport::ship() {
     std::cout << "Plane is on it's way to the race track" << std::endl;
     if (CurrentSeason::garage == nullptr) {
-        CurrentSeason::garage = new CarStore();
+        CurrentSeason::garage = new CarCareTaker();
         CurrentSeason::garage->setMemento(shippingContainer->createMemento());
     }
 }

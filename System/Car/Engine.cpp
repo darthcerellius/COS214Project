@@ -4,10 +4,10 @@
 
 #include <memory>
 #include "Engine.h"
-#include "../Car/Memento/Component/ComponentCareTaker.h"
+#include "../Car/Memento/Component/ComponentMemento.h"
 Engine::Engine() : Component("engine"){
-    this->HP = 0;
-    this->fuelConsumption =0;
+    this->HP = 1000;
+    this->fuelConsumption =7;
 }
 
 Engine::Engine(Engine *c) :Component("engine"){
@@ -44,15 +44,15 @@ void Engine::setFuelConsumption(int newFuelConsumption) {
     this->fuelConsumption= newFuelConsumption;
 }
 
-void Engine::restore(ComponentCareTaker * state) {
+void Engine::restore(ComponentMemento * state) {
     this->fuelConsumption= dynamic_cast<EngineState*>(state->getMemento())->getFuelConsumption();
     this->HP = dynamic_cast<EngineState*>(state->getMemento())->getHorsePower();
     this->setName(dynamic_cast<EngineState*>(state->getMemento())->getName());
 
 }
 
-ComponentCareTaker *Engine::createMemento() {
-    auto* x = new ComponentCareTaker();
+ComponentMemento *Engine::createMemento() {
+    auto* x = new ComponentMemento();
     x->setMemento(this);
     return x;
 }

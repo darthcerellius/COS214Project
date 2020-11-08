@@ -6,7 +6,7 @@
 #define COS214PROJECT_COMPONENT_H
 #include <string>
 
-class ComponentCareTaker;
+class ComponentMemento;
 using namespace std;
 class Component{
 public:

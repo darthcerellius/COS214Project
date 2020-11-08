@@ -3,10 +3,10 @@
 //
 
 #include "AerodynamicsComponent.h"
-#include "../Car/Memento/Component/ComponentCareTaker.h"
+#include "../Car/Memento/Component/ComponentMemento.h"
 AerodynamicsComponent::AerodynamicsComponent() : Component("aerodynamic") {
-    this->windResistance=0;
-    this->downForce=0;
+    this->windResistance=50;
+    this->downForce=200;
 }
 
 AerodynamicsComponent::AerodynamicsComponent(AerodynamicsComponent *a):Component(a->getName()){
@@ -47,14 +47,14 @@ AerodynamicsComponent::AerodynamicsComponent(double downForce, double windResist
 
 
 
-ComponentCareTaker *AerodynamicsComponent::createMemento() {
-    ComponentCareTaker* state=new ComponentCareTaker();
+ComponentMemento *AerodynamicsComponent::createMemento() {
+    ComponentMemento* state=new ComponentMemento();
     state->setMemento(this);
     return state;
 
 }
 
-void AerodynamicsComponent::restore(ComponentCareTaker * state) {
+void AerodynamicsComponent::restore(ComponentMemento * state) {
     this->windResistance= dynamic_cast<ChassisAndAeroState*>(state->getMemento())->getWindResistance();
     this->downForce=dynamic_cast<ChassisAndAeroState*>(state->getMemento())->getDownForce();
     this->setName(dynamic_cast<ChassisAndAeroState*>(state->getMemento())->getName());
@@ -68,7 +68,7 @@ bool AerodynamicsComponent::softwareTest() {
 
 bool AerodynamicsComponent::windTunnelTest() {
     std::cout << "Starting wind tunnel test on aerodynamic component, saving state of component" << std::endl;
-    ComponentCareTaker* x = new ComponentCareTaker();
+    ComponentMemento* x = new ComponentMemento();
     x->setMemento(this);
     for (int i = 0; i < 500; ++i) {
        this->downForce -=log(i);

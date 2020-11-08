@@ -7,7 +7,7 @@
 
 #include <cmath>
 #include "Component.h"
-class ComponentCareTaker;
+class ComponentMemento;
 class AerodynamicsComponent: public Component{
 private:
     double downForce;
@@ -22,8 +22,8 @@ public:
     void setDownForce(double);
     double getWindResistance();
     void setWindResistance(double);
-    void restore(ComponentCareTaker*);
-    ComponentCareTaker* createMemento();
+    void restore(ComponentMemento*);
+    ComponentMemento* createMemento();
     bool softwareTest() override;
     bool windTunnelTest() override;
 };

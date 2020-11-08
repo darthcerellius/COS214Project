@@ -3,10 +3,10 @@
 //
 
 #include "Chassis.h"
-#include "../Car/Memento/Component/ComponentCareTaker.h"
+#include "../Car/Memento/Component/ComponentMemento.h"
 Chassis::Chassis():Component("chassis") {
-    this->windResistance=0;
-    this->downForce=0;
+    this->windResistance=20;
+    this->downForce=200;
 }
 Chassis::Chassis(Chassis *c): Component("chassis") {
     this->downForce=c->getDownForce();
@@ -43,13 +43,13 @@ Chassis::Chassis(double windResistance, double downForce) : Component("chassis")
     this->downForce=downForce;
 }
 
-ComponentCareTaker *Chassis::createMemento() {
-   ComponentCareTaker* state = new ComponentCareTaker();
+ComponentMemento *Chassis::createMemento() {
+   ComponentMemento* state = new ComponentMemento();
    state->setMemento(this);
    return state;
 }
 
-void Chassis::restore(ComponentCareTaker * state) {
+void Chassis::restore(ComponentMemento * state) {
     this->downForce =dynamic_cast<ChassisAndAeroState*>(state->getMemento())->getDownForce();
     this->windResistance= dynamic_cast<ChassisAndAeroState*>(state->getMemento())->getWindResistance();
     this->setName(dynamic_cast<ChassisAndAeroState*>(state->getMemento())->getName());
@@ -57,7 +57,7 @@ void Chassis::restore(ComponentCareTaker * state) {
 
 bool Chassis::windTunnelTest() {
     std::cout << "Saving state of chassis" << std::endl;
-    ComponentCareTaker* s = new ComponentCareTaker();
+    ComponentMemento* s = new ComponentMemento();
     s->setMemento(this);
     for (int i = 0; i < 500; ++i) {
         this->downForce -=log(i);

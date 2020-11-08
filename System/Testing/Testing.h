@@ -7,8 +7,8 @@
 
 #include "../Car/Component.h"
 #include "../Car/Memento/Component/ComponentState.h"
+#include "../Car/Memento/Component/ComponentMemento.h"
 #include "../Car/Memento/Component/ComponentCareTaker.h"
-#include "../Car/Memento/Component/ComponentStore.h"
 class Testing {
 public:
     Testing();

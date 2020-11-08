@@ -6,7 +6,7 @@
 #define COS214PROJECT_CHASSIS_H
 #include <cmath>
 #include "Component.h"
-class ComponentCareTaker;
+class ComponentMemento;
 class Chassis: public Component{
 private:
     double downForce;
@@ -21,8 +21,8 @@ public:
     double getDownForce();
     void setWindResistance(double);
     double getWindResistance();
-    ComponentCareTaker* createMemento();
-    void restore(ComponentCareTaker*);
+    ComponentMemento* createMemento();
+    void restore(ComponentMemento*);
     bool windTunnelTest() override;
     bool softwareTest() override;
 };

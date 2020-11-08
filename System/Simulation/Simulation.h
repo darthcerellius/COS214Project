@@ -7,10 +7,10 @@
 
 #include "../Car/Car.h"
 #include "../Racing/RaceTrack.h"
-#include "../Car/Memento/Car/CarStore.h"
+#include "../Car/Memento/Car/CarCareTaker.h"
 class Simulation {
 public:
-    CarStore* state;
+    CarCareTaker* state;
     Simulation();
     void Simulate(Car*,RaceTrack*);
 };

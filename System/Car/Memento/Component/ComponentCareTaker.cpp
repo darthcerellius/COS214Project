@@ -3,39 +3,20 @@
 //
 
 #include "ComponentCareTaker.h"
-#include "../../Chassis.h"
-#include "../../Engine.h"
-#include "../../AerodynamicsComponent.h"
-#include "../../Component.h"
+
 ComponentCareTaker::ComponentCareTaker() {
-    state = nullptr;
+    this->memento= nullptr;
 }
+
 ComponentCareTaker::~ComponentCareTaker() {
-    delete state;
+    delete memento;
+    memento= nullptr;
 }
 
-
-ComponentState* ComponentCareTaker::getMemento() {
-    if (state){
-        return state;
-    }else{
-        std::cout <<"The memento has not yet been created, to access the memento, create one first" << std::endl;
-        return nullptr;
-    }
-
+void ComponentCareTaker::setMemento(ComponentMemento * newMemento) {
+    this->memento = newMemento;
 }
 
-void ComponentCareTaker::setMemento(Component * c) {
-    delete state;
-    std::string type = c->getName();
-    if(type=="chassis"){
-        this->state = new ChassisAndAeroState(dynamic_cast<Chassis*>(c)->getDownForce(),dynamic_cast<Chassis*>(c)->getWindResistance(),"chassis");
-    }else if(type=="aerodynamic"){
-        this->state = new ChassisAndAeroState(dynamic_cast<AerodynamicsComponent*>(c)->getDownForce(),dynamic_cast<AerodynamicsComponent*>(c)->getWindResistance(),"aerodynamic");
-    }else if(type=="engine"){
-        this->state = new EngineState(dynamic_cast<Engine*>(c)->getHP(),dynamic_cast<Engine*>(c)->getFuelConsumption());
-    }else{
-        std::cout <<"Component state cannot be stored as there is no attributes in the component" << std::endl;
-        return;
-    }
+ComponentMemento *ComponentCareTaker::getMemento() {
+    return memento;
 }

@@ -7,12 +7,12 @@
 #include "../Engineering/EngineeringTeam.h"
 #include "../Container/GoodsContainer.h"
 #include "../Calendar/RaceWeekend.h"
-#include "../Car/Memento/Car/CarStore.h"
+#include "../Car/Memento/Car/CarCareTaker.h"
 
 StrategyTeam* CurrentSeason::strategyTeam = nullptr;
 EngineeringTeam* CurrentSeason::engineeringTeam = nullptr;
 RaceWeekend* CurrentSeason::currentWeekend = nullptr;
-CarStore* CurrentSeason::garage = nullptr;
+CarCareTaker* CurrentSeason::garage = nullptr;
 Car* CurrentSeason::raceCar = nullptr;
 
 StrategyTeam* NextSeason::strategyTeam = nullptr;
@@ -26,9 +26,9 @@ StrategyTeam *CurrentSeason::getStrategyTeam() {
     return strategyTeam;
 }
 
-CarStore* CurrentSeason::getGarage() {
+CarCareTaker* CurrentSeason::getGarage() {
     if (garage == nullptr) {
-        garage = new CarStore();
+        garage = new CarCareTaker();
     }
     return garage;
 }
