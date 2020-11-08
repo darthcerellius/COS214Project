@@ -62,7 +62,6 @@ void TeamManager::run() {
     }
     std::cout << "Team Manager running" << std::endl;
     //run the pre-season command
-    std::deque<std::string> transports;
     preSeasonCommand->execute(nullptr);
     if (response == 1) {
         preSeasonFile.close();
@@ -72,6 +71,7 @@ void TeamManager::run() {
         preSeasonFile.open("../Data/Output/PreSeasonTransport.txt");
     }
     Iterator * calIterator = calendar->createIterator();
+    std::deque<std::pair<std::string, Date*>> shippingDates;
 
     /*plan ahead for non-European races */
     std::cout << "Sorting out logistics for any non-European races..." << std::endl;
@@ -82,6 +82,10 @@ void TeamManager::run() {
             container.setShippingLabel(weekend->getName(), weekend->getLocation(), weekend->getDate());
             SeaTransport transport;
             transport.load(container);
+            int d = weekend->getDate()->d;
+            int m = weekend->getDate()->m;
+            int y = weekend->getDate()->y;
+            shippingDates.emplace_back(weekend->getName() + ", " + weekend->getLocation(), new Date{d,m,y});
         }
         calIterator->next();
     }
@@ -92,13 +96,41 @@ void TeamManager::run() {
         std::cout.rdbuf(curSeasonRaces.rdbuf());
     }
 
+    std::cout << "Shipping containers that need to be shipped before the season starts" << std::endl;
+    for (auto i = shippingDates.begin(); i != shippingDates.end(); i++) {
+        int diff = (*i).second->m - calIterator->current()->getDate()->m;
+        if (diff < 3) {
+            std::cout << "Shipping goods container to " << (*i).first << " for race on date " <<
+                      (*i).second->y << "-" << (*i).second->m << "-" << (*i).second->d << std::endl;
+            delete (*i).second;
+            shippingDates.erase(i);
+            i = shippingDates.begin();
+        }
+    }
+    std::cout << std::endl;
+
     /*Transport goods to the race tracks */
     int raceCounter = 1;
     while (!calIterator->isDone()) {
+        RaceWeekend* weekend = calIterator->current();
+        std::cout << "Current date: " << weekend->getDate()->y << "-" << weekend->getDate()->m << "-" <<
+        weekend->getDate()->d << std::endl;
+        for (auto i = shippingDates.begin(); i != shippingDates.end(); i++) {
+            int diff = (*i).second->m - weekend->getDate()->m;
+            if (diff <= 3) {
+                std::cout << "Shipping goods container to " << (*i).first << " for race on date " <<
+                (*i).second->y << "-" << (*i).second->m << "-" << (*i).second->d << std::endl;
+                delete (*i).second;
+                shippingDates.erase(i);
+                i = shippingDates.begin();
+                if (shippingDates.empty()) {
+                    break;
+                }
+            }
+        }
         if (response == 1) {
             curSeasonRaces.open("../Data/Output/Races/" + std::to_string(raceCounter) + ".txt");
         }
-        RaceWeekend* weekend = calIterator->current();
         CurrentSeason::setRaceWeekend(weekend);
         GoodsContainer container;
         if (weekend->getLocation() == "Europe") {
