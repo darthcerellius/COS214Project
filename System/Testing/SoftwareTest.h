@@ -12,6 +12,7 @@ public:
 
     SoftwareTest(); ///Default constructor
     /**
+     * Calls software test function of passed in component
      *
      * @param c a component that will have it's software test function called
      * @return will return true if software test is passed and  false if software test is failed

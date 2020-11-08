@@ -14,6 +14,7 @@ public:
     ~WindTunnelTest();
     WindTunnelTest();
     /**
+     * Performs the wind tunnel test on the passed in component
      *
      * @param component a component that will have its wind tunnel test function called
      * @return will return true if wind tunnel test is passed and false if wind tunnel test is failed

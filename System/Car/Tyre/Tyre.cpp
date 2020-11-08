@@ -50,6 +50,6 @@ bool Tyre::softwareTest() {
 }
 
 bool Tyre::windTunnelTest(int &tokens) {
-    std::cout << "Tyre not suitable for wind tunnel test" << std::endl<< std::endl;
+   // std::cout << "Tyre not suitable for wind tunnel test" << std::endl<< std::endl;
     return true;
 }

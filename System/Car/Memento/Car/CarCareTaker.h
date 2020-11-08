@@ -22,7 +22,12 @@ public:
      * @param newMemento a CarMemento object used to set the memento member object
      */
     void setMemento(CarMemento* newMemento);
-    CarMemento* getMemento(); ///@return  the caretaker member object
+    /**
+     *
+     *
+     * @return the caretaker member object
+     */
+    CarMemento* getMemento();
 };
 
 

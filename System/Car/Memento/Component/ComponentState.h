@@ -14,6 +14,7 @@ class ComponentState {
 
 public:
     /**
+     * Constructor that sets name = to the parameter
      *
      * @param name -  Name of type of component
      */

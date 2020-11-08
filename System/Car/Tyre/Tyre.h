@@ -28,8 +28,18 @@ public:
     void change();///changes the State of the Tyre by calling the handleChange() function of the Compound class
     string getCompound();///Returns a string indicating the current Compound the Tyre has
     void setState(Compound* state_);///Changes the Compound to whichever Compound is passed in its parameter (i.e. Soft, Medium or Hard)
-
+    /**
+     * Serves as the software test of the tyres
+     *
+     * @return returns true if test is passed and false if test is failed
+     */
     bool softwareTest() override;
+    /**
+     * Always returns true as there is no wind tunnel test for the tyres
+     *
+     * @param tokens number of wind tunnel tests left during the season
+     * @return return true
+     */
     bool windTunnelTest(int &tokens) override;
     Component* clone();
 

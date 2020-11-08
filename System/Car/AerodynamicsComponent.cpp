@@ -62,7 +62,7 @@ void AerodynamicsComponent::restore(ComponentMemento * state) {
 }
 
 bool AerodynamicsComponent::softwareTest() {
-    std::cout << "No software test can be performed on a aerodynamic component" << std::endl;
+    //std::cout << "No software test can be performed on a aerodynamic component" << std::endl;
     return true;
 }
 

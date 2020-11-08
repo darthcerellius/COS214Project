@@ -121,7 +121,7 @@ bool Chassis::windTunnelTest(int &tokens) {
 }
 
 bool Chassis::softwareTest() {
-    std::cout << "No software test can be performed on a chassis" << std::endl << std::endl;
+   // std::cout << "No software test can be performed on a chassis" << std::endl << std::endl;
     return true;;
 }
 

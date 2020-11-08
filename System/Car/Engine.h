@@ -35,9 +35,10 @@ public:
      */
     bool softwareTest() override;
     /**
+     *Engine cannot be tested in a wind tunnel, therefore returns true always
      *
      * @param tokens the number of windtunnel test still available to use during the season
-     * @return true if test
+     * @return true
      */
     bool windTunnelTest(int &tokens) override;
     Component* clone();
@@ -45,7 +46,12 @@ public:
     void setHP(int);
     int getFuelConsumption();
     void setFuelConsumption(int);
-    void restore(ComponentMemento*);
+    /**
+     * Used to restore the engine to a previous state
+     *
+     * @param state will be used to retrieve the values of the attributes of the previous state of engine
+     */
+    void restore(ComponentMemento* state);
     /**
      * Used to create a memento with the current state of the engine
      * @return ComponentMemento containing the state of the engine
