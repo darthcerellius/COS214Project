@@ -22,9 +22,6 @@ Component *ElectronicsComponent::clone() {
     return dynamic_cast<Component*>(new ElectronicsComponent(this));
 }
 
-void ElectronicsComponent::restore(ComponentCareTaker *) {
-
-}
 
 bool ElectronicsComponent::windTunnelTest() {
     std::cout << this->getName() << " not suitable to test in the wind tunnel" << std::endl;

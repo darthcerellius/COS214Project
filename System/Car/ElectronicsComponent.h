@@ -16,7 +16,6 @@ public:
     ~ElectronicsComponent();
 
     Component* clone();
-    void restore(ComponentCareTaker*);
     bool windTunnelTest() override;
     bool softwareTest() override;
 };
