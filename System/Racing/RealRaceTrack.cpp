@@ -35,6 +35,7 @@ void RealRaceTrack::race(){
     int chance = 0;
     std::cout << "Car is prepping for race..." << std::endl;
     std::cout << "GO!" << std::endl;
+    crew->getCar()->executeStrategy();
 
     for(int i = 0; i < laps; i++){
 

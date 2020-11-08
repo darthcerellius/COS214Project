@@ -81,3 +81,7 @@ void PitCrew::changeTyre() {
     currentTyre++;
     std::cout << "The car's tyres are replaced. The new tyres' compound: " << tyres->getCompound() << ". Tyre sets used for this race: " << currentTyre << std::endl;
 }
+
+Car* PitCrew::getCar(){
+    return racecar;
+}

@@ -19,6 +19,7 @@ private:
 public:
     PitCrew();
     void setCar(Car*);
+    Car* getCar();
     ~PitCrew();
     void makeTacticalInstruction(int);
     void respondToEvent();
