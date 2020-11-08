@@ -1,0 +1,166 @@
+\hypertarget{classAbstractJSONReader}{}\doxysection{Abstract\+J\+S\+O\+N\+Reader Class Reference}
+\label{classAbstractJSONReader}\index{AbstractJSONReader@{AbstractJSONReader}}
+
+
+Parses a J\+S\+ON string and constructs a J\+S\+ON object.  
+
+
+
+
+{\ttfamily \#include $<$Abstract\+J\+S\+O\+N\+Reader.\+h$>$}
+
+
+
+Inheritance diagram for Abstract\+J\+S\+O\+N\+Reader\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classAbstractJSONReader__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAbstractJSONReader_ac593e4370b6011c515567f723a07de4d}{Abstract\+J\+S\+O\+N\+Reader}} (std\+::string ctx)
+\item 
+virtual \mbox{\hyperlink{classAbstractJSONReader_a95aa13235b8b537f01c1393770582b66}{$\sim$\+Abstract\+J\+S\+O\+N\+Reader}} ()=default
+\item 
+virtual \mbox{\hyperlink{classAbstractJSONReader}{Abstract\+J\+S\+O\+N\+Reader}} \& \mbox{\hyperlink{classAbstractJSONReader_abf9c1faa5fd3fe9587a8b040904ca51a}{operator\mbox{[}$\,$\mbox{]}}} (std\+::string key)=0
+\item 
+virtual \mbox{\hyperlink{classAbstractJSONReader}{Abstract\+J\+S\+O\+N\+Reader}} \& \mbox{\hyperlink{classAbstractJSONReader_a7bdc0f0d09d3b0d97daac60258dee14c}{operator\mbox{[}$\,$\mbox{]}}} (int pos)=0
+\item 
+virtual \mbox{\hyperlink{classAbstractJSONReader_a9c816883089e12b2a7ebeb85b3b96111}{operator std\+::string}} () const =0
+\item 
+virtual \mbox{\hyperlink{classAbstractJSONReader_a1917e8635129506c4b5fb220ff301bf5}{operator int}} () const =0
+\item 
+virtual \mbox{\hyperlink{classAbstractJSONReader_a722043f93a4b4c294ed2daa3edab6397}{operator double}} () const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classAbstractJSONReader_ae288079903bb7d3c57ebd7d4568c161c}{add\+Context}} (std\+::string ctx)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Parses a J\+S\+ON string and constructs a J\+S\+ON object. 
+
+A string is passed into a J\+S\+ON reader (either a \mbox{\hyperlink{classJSONRoot}{J\+S\+O\+N\+Root}} or \mbox{\hyperlink{classJSONObjectHolder}{J\+S\+O\+N\+Object\+Holder}}) when it is constructed. This automatically creates a J\+S\+ON object. You can access methods as you would in Java\+Script, through the \mbox{[}\mbox{]} operator. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAbstractJSONReader_ac593e4370b6011c515567f723a07de4d}\label{classAbstractJSONReader_ac593e4370b6011c515567f723a07de4d}} 
+\index{AbstractJSONReader@{AbstractJSONReader}!AbstractJSONReader@{AbstractJSONReader}}
+\index{AbstractJSONReader@{AbstractJSONReader}!AbstractJSONReader@{AbstractJSONReader}}
+\doxysubsubsection{\texorpdfstring{AbstractJSONReader()}{AbstractJSONReader()}}
+{\footnotesize\ttfamily Abstract\+J\+S\+O\+N\+Reader\+::\+Abstract\+J\+S\+O\+N\+Reader (\begin{DoxyParamCaption}\item[{std\+::string}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructor for the J\+S\+ON object. 
+\begin{DoxyParams}{Parameters}
+{\em ctx} & -\/ A context string to parse \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAbstractJSONReader_a95aa13235b8b537f01c1393770582b66}\label{classAbstractJSONReader_a95aa13235b8b537f01c1393770582b66}} 
+\index{AbstractJSONReader@{AbstractJSONReader}!````~AbstractJSONReader@{$\sim$AbstractJSONReader}}
+\index{````~AbstractJSONReader@{$\sim$AbstractJSONReader}!AbstractJSONReader@{AbstractJSONReader}}
+\doxysubsubsection{\texorpdfstring{$\sim$AbstractJSONReader()}{~AbstractJSONReader()}}
+{\footnotesize\ttfamily virtual Abstract\+J\+S\+O\+N\+Reader\+::$\sim$\+Abstract\+J\+S\+O\+N\+Reader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Default destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAbstractJSONReader_ae288079903bb7d3c57ebd7d4568c161c}\label{classAbstractJSONReader_ae288079903bb7d3c57ebd7d4568c161c}} 
+\index{AbstractJSONReader@{AbstractJSONReader}!addContext@{addContext}}
+\index{addContext@{addContext}!AbstractJSONReader@{AbstractJSONReader}}
+\doxysubsubsection{\texorpdfstring{addContext()}{addContext()}}
+{\footnotesize\ttfamily virtual void Abstract\+J\+S\+O\+N\+Reader\+::add\+Context (\begin{DoxyParamCaption}\item[{std\+::string}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Adds a string context to the object (does the actual parsing) 
+\begin{DoxyParams}{Parameters}
+{\em ctx} & -\/ the context to be parsed \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classJSONRoot_ab4f010ba6609bfd5c5d19f44fbfff482}{J\+S\+O\+N\+Root}}, \mbox{\hyperlink{classJSONObjectHolder_a4102756db4e9b3275a689dcd6b7363e1}{J\+S\+O\+N\+Object\+Holder}}, and \mbox{\hyperlink{classJSONElement_a4e0285969bff0a884de4480193df85f9}{J\+S\+O\+N\+Element}}.
+
+\mbox{\Hypertarget{classAbstractJSONReader_a722043f93a4b4c294ed2daa3edab6397}\label{classAbstractJSONReader_a722043f93a4b4c294ed2daa3edab6397}} 
+\index{AbstractJSONReader@{AbstractJSONReader}!operator double@{operator double}}
+\index{operator double@{operator double}!AbstractJSONReader@{AbstractJSONReader}}
+\doxysubsubsection{\texorpdfstring{operator double()}{operator double()}}
+{\footnotesize\ttfamily virtual Abstract\+J\+S\+O\+N\+Reader\+::operator double (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [pure virtual]}}
+
+Enables the object to be cast to a double (basically returns a double) \begin{DoxyReturn}{Returns}
+-\/ the double data in the object. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classJSONRoot_a5e21aa07b3b717e7cf4f7fc81a25a792}{J\+S\+O\+N\+Root}}, \mbox{\hyperlink{classJSONObjectHolder_a2aad6fe333e73b06a47a88d8371edaf9}{J\+S\+O\+N\+Object\+Holder}}, \mbox{\hyperlink{classIntegerElement_ad07027eba6e2e969b74015c06be2e495}{Integer\+Element}}, \mbox{\hyperlink{classDoubleElement_adeaaf86ddae517bb103464faa58b167f}{Double\+Element}}, and \mbox{\hyperlink{classStringElement_a095dc86f29e20865e23953a92439f5de}{String\+Element}}.
+
+\mbox{\Hypertarget{classAbstractJSONReader_a1917e8635129506c4b5fb220ff301bf5}\label{classAbstractJSONReader_a1917e8635129506c4b5fb220ff301bf5}} 
+\index{AbstractJSONReader@{AbstractJSONReader}!operator int@{operator int}}
+\index{operator int@{operator int}!AbstractJSONReader@{AbstractJSONReader}}
+\doxysubsubsection{\texorpdfstring{operator int()}{operator int()}}
+{\footnotesize\ttfamily virtual Abstract\+J\+S\+O\+N\+Reader\+::operator int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [pure virtual]}}
+
+Enables the object to be cast to a int (basically returns a int) \begin{DoxyReturn}{Returns}
+-\/ the int data in the object. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classJSONRoot_a9541c79bac7627725f58a77008635fca}{J\+S\+O\+N\+Root}}, \mbox{\hyperlink{classJSONObjectHolder_a05764d950ad39ffc6b69e084a0c7ebbf}{J\+S\+O\+N\+Object\+Holder}}, \mbox{\hyperlink{classIntegerElement_a68c776fbb0bf4cced45f91903e426a05}{Integer\+Element}}, \mbox{\hyperlink{classDoubleElement_a0bf1e407f12ff1c751cdd7c077a1ecc3}{Double\+Element}}, and \mbox{\hyperlink{classStringElement_a4f5b9257154ff273e5cc980541f01503}{String\+Element}}.
+
+\mbox{\Hypertarget{classAbstractJSONReader_a9c816883089e12b2a7ebeb85b3b96111}\label{classAbstractJSONReader_a9c816883089e12b2a7ebeb85b3b96111}} 
+\index{AbstractJSONReader@{AbstractJSONReader}!operator std::string@{operator std::string}}
+\index{operator std::string@{operator std::string}!AbstractJSONReader@{AbstractJSONReader}}
+\doxysubsubsection{\texorpdfstring{operator std::string()}{operator std::string()}}
+{\footnotesize\ttfamily virtual Abstract\+J\+S\+O\+N\+Reader\+::operator std\+::string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [pure virtual]}}
+
+Enables the object to be cast to a string (basically returns a string) \begin{DoxyReturn}{Returns}
+-\/ the string data in the object. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classJSONRoot_aaf316af4bd8f9fa60798081bc6019320}{J\+S\+O\+N\+Root}}, \mbox{\hyperlink{classJSONObjectHolder_a5aed62fea0ab998c650e680cfe3b4fea}{J\+S\+O\+N\+Object\+Holder}}, \mbox{\hyperlink{classIntegerElement_ae92395514e75d1e15c4779fb3fa63df7}{Integer\+Element}}, \mbox{\hyperlink{classDoubleElement_afd48e0a79293fcff47de6a8d78952b23}{Double\+Element}}, and \mbox{\hyperlink{classStringElement_aa521415997a5fc2d07fa4de717f6b362}{String\+Element}}.
+
+\mbox{\Hypertarget{classAbstractJSONReader_a7bdc0f0d09d3b0d97daac60258dee14c}\label{classAbstractJSONReader_a7bdc0f0d09d3b0d97daac60258dee14c}} 
+\index{AbstractJSONReader@{AbstractJSONReader}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!AbstractJSONReader@{AbstractJSONReader}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classAbstractJSONReader}{Abstract\+J\+S\+O\+N\+Reader}}\& Abstract\+J\+S\+O\+N\+Reader\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Returns a J\+S\+ON object element by index 
+\begin{DoxyParams}{Parameters}
+{\em pos} & -\/ index of the element you want to access \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Returns an Abstract\+J\+S\+O\+N\+Object (Either an Element, or another \mbox{\hyperlink{classJSONRoot}{J\+S\+O\+N\+Root}} or \mbox{\hyperlink{classJSONObjectHolder}{J\+S\+O\+N\+Object\+Holder}}) 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classJSONRoot_a7445bc4e86146dba8e273550e6ef5371}{J\+S\+O\+N\+Root}}, \mbox{\hyperlink{classJSONObjectHolder_ae64876e2f368ce4f3fb592a13dddb92a}{J\+S\+O\+N\+Object\+Holder}}, and \mbox{\hyperlink{classJSONElement_abca38fcc6350954f229728afde406110}{J\+S\+O\+N\+Element}}.
+
+\mbox{\Hypertarget{classAbstractJSONReader_abf9c1faa5fd3fe9587a8b040904ca51a}\label{classAbstractJSONReader_abf9c1faa5fd3fe9587a8b040904ca51a}} 
+\index{AbstractJSONReader@{AbstractJSONReader}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!AbstractJSONReader@{AbstractJSONReader}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classAbstractJSONReader}{Abstract\+J\+S\+O\+N\+Reader}}\& Abstract\+J\+S\+O\+N\+Reader\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{std\+::string}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Returns a J\+S\+ON object element by key 
+\begin{DoxyParams}{Parameters}
+{\em key} & -\/ name of the element you want to access \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Returns an Abstract\+J\+S\+O\+N\+Object (Either an Element, or another \mbox{\hyperlink{classJSONRoot}{J\+S\+O\+N\+Root}} or \mbox{\hyperlink{classJSONObjectHolder}{J\+S\+O\+N\+Object\+Holder}}) 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classJSONRoot_aceaebc7ceffa42d0431ef9a7d316f4fe}{J\+S\+O\+N\+Root}}, \mbox{\hyperlink{classJSONObjectHolder_a300b5d98f7114cff6ee818f3b68572ea}{J\+S\+O\+N\+Object\+Holder}}, and \mbox{\hyperlink{classJSONElement_a37b6210bbd61706c029b359cb4a4b242}{J\+S\+O\+N\+Element}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/kyle-\/pc/\+Documents/\+University Notes/\+Year 2/\+Semester 2/\+C\+O\+S 214/\+Project/\+C\+O\+S214\+Project/\+System/\+J\+S\+O\+N\+Reader/Abstract\+J\+S\+O\+N\+Reader.\+h\item 
+/home/kyle-\/pc/\+Documents/\+University Notes/\+Year 2/\+Semester 2/\+C\+O\+S 214/\+Project/\+C\+O\+S214\+Project/\+System/\+J\+S\+O\+N\+Reader/Abstract\+J\+S\+O\+N\+Reader.\+cpp\end{DoxyCompactItemize}

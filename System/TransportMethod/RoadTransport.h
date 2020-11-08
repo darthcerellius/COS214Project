@@ -8,6 +8,9 @@
 #include "TransportMethod.h"
 #include "../Container/GoodsContainer.h"
 
+/**
+ * @brief Ships GoodsContainers to the race tracks.
+ */
 class RoadTransport : public TransportMethod<GoodsContainer>{
 public:
     RoadTransport();

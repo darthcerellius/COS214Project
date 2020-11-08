@@ -1,0 +1,4 @@
+<map id="AirTransport" name="AirTransport">
+<area shape="rect" id="node1" title="Ships cars to the race tracks." alt="" coords="46,80,139,107"/>
+<area shape="rect" id="node2" href="$classTransportMethod.html" title=" " alt="" coords="5,5,180,32"/>
+</map>

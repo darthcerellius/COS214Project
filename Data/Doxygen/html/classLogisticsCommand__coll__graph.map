@@ -1,0 +1,4 @@
+<map id="LogisticsCommand" name="LogisticsCommand">
+<area shape="rect" id="node1" title="Transports a car to the race track." alt="" coords="5,81,140,108"/>
+<area shape="rect" id="node2" href="$classCommand.html" title="Command object that executes part of the system." alt="" coords="31,5,114,32"/>
+</map>

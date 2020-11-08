@@ -6,6 +6,9 @@
 #define COS214PROJECT_JSONELEMENT_H
 #include "AbstractJSONReader.h"
 
+/**
+ * @brief Leaf node that holds a string data, but returns it as various types depending on the child implementation.
+ */
 class JSONElement : public AbstractJSONReader{
 protected:
     std::string value;

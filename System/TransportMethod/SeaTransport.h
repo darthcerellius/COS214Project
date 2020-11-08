@@ -8,6 +8,9 @@
 #include "TransportMethod.h"
 #include "../Container/GoodsContainer.h"
 
+/**
+ * @brief Transport GoodsContainers to non-European races
+ */
 class SeaTransport : public TransportMethod<GoodsContainer>{
 public:
     SeaTransport();

@@ -8,6 +8,9 @@
 #include "AbstractJSONReader.h"
 #include "Iterators/JSONObjectHolderIterator.h"
 
+/**
+ * @brief Holds AbstractJSONReader objects in an array. Data are accessed with an index.
+ */
 class JSONObjectHolder : public AbstractJSONReader {
 private:
     std::vector<AbstractJSONReader*> children;

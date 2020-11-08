@@ -1,0 +1,8 @@
+<map id="GeneralRaceStrategy" name="GeneralRaceStrategy">
+<area shape="rect" id="node1" title=" " alt="" coords="286,5,433,32"/>
+<area shape="rect" id="node2" href="$classConservativeStart.html" title=" " alt="" coords="5,80,132,107"/>
+<area shape="rect" id="node3" href="$classCorneringTechnique.html" title=" " alt="" coords="156,80,293,107"/>
+<area shape="rect" id="node4" href="$classInertiaDrift.html" title=" " alt="" coords="318,80,401,107"/>
+<area shape="rect" id="node5" href="$classMinimalPitstops.html" title=" " alt="" coords="425,80,539,107"/>
+<area shape="rect" id="node6" href="$classTaxiStyle.html" title=" " alt="" coords="564,80,640,107"/>
+</map>

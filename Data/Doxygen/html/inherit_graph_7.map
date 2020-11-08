@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classFactory.html" title="Creator participant for the factory pattern used to construct components that should be added to car." alt="" coords="5,81,72,108"/>
+<area shape="rect" id="node2" href="$classAerodynamicsFactory.html" title="Constructs the Aerodynamics component." alt="" coords="120,5,269,32"/>
+<area shape="rect" id="node3" href="$classChassisFactory.html" title="Constructs the Chassis component." alt="" coords="137,56,252,83"/>
+<area shape="rect" id="node4" href="$classElectronicsFactory.html" title="Constructs the Electronics component." alt="" coords="129,107,260,133"/>
+<area shape="rect" id="node5" href="$classEngineFactory.html" title="Constructs the Engine component." alt="" coords="141,157,248,184"/>
+</map>

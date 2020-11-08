@@ -1,0 +1,4 @@
+<map id="ChassisFactory" name="ChassisFactory">
+<area shape="rect" id="node1" title="Constructs the Chassis component." alt="" coords="5,80,120,107"/>
+<area shape="rect" id="node2" href="$classFactory.html" title="Creator participant for the factory pattern used to construct components that should be added to car." alt="" coords="29,5,96,32"/>
+</map>

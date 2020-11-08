@@ -1,0 +1,30 @@
+\hypertarget{classStrategyTeam}{}\doxysection{Strategy\+Team Class Reference}
+\label{classStrategyTeam}\index{StrategyTeam@{StrategyTeam}}
+
+
+{\ttfamily \#include $<$Strategy\+Team.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classStrategyTeam_a671a6b2ffd3436a0cd828e953f336722}\label{classStrategyTeam_a671a6b2ffd3436a0cd828e953f336722}} 
+{\bfseries Strategy\+Team} (Car $\ast$)
+\item 
+\mbox{\Hypertarget{classStrategyTeam_aa1571d4b62f96bf9ee1391e90dd27931}\label{classStrategyTeam_aa1571d4b62f96bf9ee1391e90dd27931}} 
+void {\bfseries decide\+Strategy} (int)
+\item 
+\mbox{\Hypertarget{classStrategyTeam_a7641fef36c77f8ef50acc43aa06426dd}\label{classStrategyTeam_a7641fef36c77f8ef50acc43aa06426dd}} 
+void \mbox{\hyperlink{classStrategyTeam_a7641fef36c77f8ef50acc43aa06426dd}{decide\+Components}} (\mbox{\hyperlink{classEngineeringTeam}{Engineering\+Team}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Selects and sets the general\+Strategy that will be used by the racecar per race. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategyTeam_aeb485ce539c98929964b8315a1d489f5}\label{classStrategyTeam_aeb485ce539c98929964b8315a1d489f5}} 
+void \mbox{\hyperlink{classStrategyTeam_aeb485ce539c98929964b8315a1d489f5}{set\+Car}} (Car $\ast$)
+\begin{DoxyCompactList}\small\item\em Initiates the construction process of the car in \mbox{\hyperlink{classEngineeringTeam}{Engineering\+Team}}. Acts as the construct() function in the Director participant of the builder pattern. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The Strategy Team is responsible for choosing a general strategy for the racecar to follow per race, as well as selecting components that should be used when building the car. \mbox{\hyperlink{classStrategyTeam}{Strategy\+Team}} acts as the Director participant in the Builder pattern when constructing the car. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/kyle-\/pc/\+Documents/\+University Notes/\+Year 2/\+Semester 2/\+C\+O\+S 214/\+Project/\+C\+O\+S214\+Project/\+System/\+Racing\+Strategy/Strategy\+Team.\+h\item 
+/home/kyle-\/pc/\+Documents/\+University Notes/\+Year 2/\+Semester 2/\+C\+O\+S 214/\+Project/\+C\+O\+S214\+Project/\+System/\+Racing\+Strategy/Strategy\+Team.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,4 @@
+<map id="AerodynamicsFactory" name="AerodynamicsFactory">
+<area shape="rect" id="node1" title="Constructs the Aerodynamics component." alt="" coords="5,80,155,107"/>
+<area shape="rect" id="node2" href="$classFactory.html" title="Creator participant for the factory pattern used to construct components that should be added to car." alt="" coords="47,5,113,32"/>
+</map>

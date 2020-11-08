@@ -1,0 +1,101 @@
+\hypertarget{classJSONElement}{}\doxysection{J\+S\+O\+N\+Element Class Reference}
+\label{classJSONElement}\index{JSONElement@{JSONElement}}
+
+
+Inheritance diagram for J\+S\+O\+N\+Element\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classJSONElement__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for J\+S\+O\+N\+Element\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{classJSONElement__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classJSONElement_af932df2e2f84e41f735a0917a15b1883}\label{classJSONElement_af932df2e2f84e41f735a0917a15b1883}} 
+{\bfseries J\+S\+O\+N\+Element} (std\+::string element)
+\item 
+\mbox{\hyperlink{classAbstractJSONReader}{Abstract\+J\+S\+O\+N\+Reader}} \& \mbox{\hyperlink{classJSONElement_a37b6210bbd61706c029b359cb4a4b242}{operator\mbox{[}$\,$\mbox{]}}} (std\+::string key) override
+\item 
+\mbox{\hyperlink{classAbstractJSONReader}{Abstract\+J\+S\+O\+N\+Reader}} \& \mbox{\hyperlink{classJSONElement_abca38fcc6350954f229728afde406110}{operator\mbox{[}$\,$\mbox{]}}} (int pos) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classJSONElement_a4e0285969bff0a884de4480193df85f9}{add\+Context}} (std\+::string ctx) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classJSONElement_a690b111acd1ee12e8a94df9b5b6de63a}\label{classJSONElement_a690b111acd1ee12e8a94df9b5b6de63a}} 
+std\+::string {\bfseries value}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classJSONElement_a4e0285969bff0a884de4480193df85f9}\label{classJSONElement_a4e0285969bff0a884de4480193df85f9}} 
+\index{JSONElement@{JSONElement}!addContext@{addContext}}
+\index{addContext@{addContext}!JSONElement@{JSONElement}}
+\doxysubsubsection{\texorpdfstring{addContext()}{addContext()}}
+{\footnotesize\ttfamily void J\+S\+O\+N\+Element\+::add\+Context (\begin{DoxyParamCaption}\item[{std\+::string}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Adds a string context to the object (does the actual parsing) 
+\begin{DoxyParams}{Parameters}
+{\em ctx} & -\/ the context to be parsed \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classAbstractJSONReader_ae288079903bb7d3c57ebd7d4568c161c}{Abstract\+J\+S\+O\+N\+Reader}}.
+
+\mbox{\Hypertarget{classJSONElement_abca38fcc6350954f229728afde406110}\label{classJSONElement_abca38fcc6350954f229728afde406110}} 
+\index{JSONElement@{JSONElement}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!JSONElement@{JSONElement}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classAbstractJSONReader}{Abstract\+J\+S\+O\+N\+Reader}} \& J\+S\+O\+N\+Element\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Returns a J\+S\+ON object element by index 
+\begin{DoxyParams}{Parameters}
+{\em pos} & -\/ index of the element you want to access \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Returns an Abstract\+J\+S\+O\+N\+Object (Either an Element, or another \mbox{\hyperlink{classJSONRoot}{J\+S\+O\+N\+Root}} or \mbox{\hyperlink{classJSONObjectHolder}{J\+S\+O\+N\+Object\+Holder}}) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classAbstractJSONReader_a7bdc0f0d09d3b0d97daac60258dee14c}{Abstract\+J\+S\+O\+N\+Reader}}.
+
+\mbox{\Hypertarget{classJSONElement_a37b6210bbd61706c029b359cb4a4b242}\label{classJSONElement_a37b6210bbd61706c029b359cb4a4b242}} 
+\index{JSONElement@{JSONElement}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!JSONElement@{JSONElement}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classAbstractJSONReader}{Abstract\+J\+S\+O\+N\+Reader}} \& J\+S\+O\+N\+Element\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{std\+::string}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Returns a J\+S\+ON object element by key 
+\begin{DoxyParams}{Parameters}
+{\em key} & -\/ name of the element you want to access \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Returns an Abstract\+J\+S\+O\+N\+Object (Either an Element, or another \mbox{\hyperlink{classJSONRoot}{J\+S\+O\+N\+Root}} or \mbox{\hyperlink{classJSONObjectHolder}{J\+S\+O\+N\+Object\+Holder}}) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classAbstractJSONReader_abf9c1faa5fd3fe9587a8b040904ca51a}{Abstract\+J\+S\+O\+N\+Reader}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/kyle-\/pc/\+Documents/\+University Notes/\+Year 2/\+Semester 2/\+C\+O\+S 214/\+Project/\+C\+O\+S214\+Project/\+System/\+J\+S\+O\+N\+Reader/J\+S\+O\+N\+Element.\+h\item 
+/home/kyle-\/pc/\+Documents/\+University Notes/\+Year 2/\+Semester 2/\+C\+O\+S 214/\+Project/\+C\+O\+S214\+Project/\+System/\+J\+S\+O\+N\+Reader/J\+S\+O\+N\+Element.\+cpp\end{DoxyCompactItemize}

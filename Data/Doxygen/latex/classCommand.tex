@@ -1,0 +1,101 @@
+\hypertarget{classCommand}{}\doxysection{Command Class Reference}
+\label{classCommand}\index{Command@{Command}}
+
+
+\mbox{\hyperlink{classCommand}{Command}} object that executes part of the system.  
+
+
+
+
+{\ttfamily \#include $<$Command.\+h$>$}
+
+
+
+Inheritance diagram for Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{classCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{classCommand__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCommand_a18df2d81039392daeb0b78c346a70537}{Command}} ()
+\item 
+virtual \mbox{\hyperlink{classCommand_ab552bb3a07fdd1acbfd8ea76e69b2278}{$\sim$\+Command}} ()
+\item 
+void \mbox{\hyperlink{classCommand_a272b4223236185e33dbe87d8c07c27fc}{add\+Successor}} (\mbox{\hyperlink{classCommand}{Command}} $\ast$succ)
+\item 
+virtual void \mbox{\hyperlink{classCommand_af2a98ee97c2db01103e13a216ff7ae76}{execute}} (Car $\ast$car)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCommand_aa46e826d59674d1acc244d03593a89c8}\label{classCommand_aa46e826d59674d1acc244d03593a89c8}} 
+\mbox{\hyperlink{classCommand}{Command}} $\ast$ {\bfseries successor}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classCommand}{Command}} object that executes part of the system. 
+
+The \mbox{\hyperlink{classCommand}{Command}} class is the abstract class that allows concrete commands to be linked in a Chain of Responsibility. This class enables linking, while the children commands implement the execute function. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCommand_a18df2d81039392daeb0b78c346a70537}\label{classCommand_a18df2d81039392daeb0b78c346a70537}} 
+\index{Command@{Command}!Command@{Command}}
+\index{Command@{Command}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{Command()}{Command()}}
+{\footnotesize\ttfamily Command\+::\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor \mbox{\Hypertarget{classCommand_ab552bb3a07fdd1acbfd8ea76e69b2278}\label{classCommand_ab552bb3a07fdd1acbfd8ea76e69b2278}} 
+\index{Command@{Command}!````~Command@{$\sim$Command}}
+\index{````~Command@{$\sim$Command}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{$\sim$Command()}{~Command()}}
+{\footnotesize\ttfamily Command\+::$\sim$\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Default virtual destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCommand_a272b4223236185e33dbe87d8c07c27fc}\label{classCommand_a272b4223236185e33dbe87d8c07c27fc}} 
+\index{Command@{Command}!addSuccessor@{addSuccessor}}
+\index{addSuccessor@{addSuccessor}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{addSuccessor()}{addSuccessor()}}
+{\footnotesize\ttfamily void Command\+::add\+Successor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCommand}{Command}} $\ast$}]{succ }\end{DoxyParamCaption})}
+
+Adds a successor command to the Chain 
+\begin{DoxyParams}{Parameters}
+{\em succ} & -\/ the successor command to add \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCommand_af2a98ee97c2db01103e13a216ff7ae76}\label{classCommand_af2a98ee97c2db01103e13a216ff7ae76}} 
+\index{Command@{Command}!execute@{execute}}
+\index{execute@{execute}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily virtual void Command\+::execute (\begin{DoxyParamCaption}\item[{Car $\ast$}]{car }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Invokes the class to run a specific aspect of the system. 
+\begin{DoxyParams}{Parameters}
+{\em car} & -\/ A Car object for the command class to use. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classRacingCommand_a59849db1f61acda10280c5e584b57946}{Racing\+Command}}, \mbox{\hyperlink{classSimulationCommand_a2ff4b568a0fb21fb36634eb25aef0870}{Simulation\+Command}}, \mbox{\hyperlink{classTestingCommand_aeff08e9b14fde89deb74db29adde21c4}{Testing\+Command}}, \mbox{\hyperlink{classStrategyCommand_a82ef880106d744e806cbbeac00282dd1}{Strategy\+Command}}, \mbox{\hyperlink{classEngineeringCommand_a3222bec2b81ee1387725cfd230c13a28}{Engineering\+Command}}, \mbox{\hyperlink{classLogisticsCommand_ac876c516f8239af441566d2635e270fe}{Logistics\+Command}}, \mbox{\hyperlink{classServiceEngineeringCommand_a7c3a2cca16f790c7946794870f9d12e6}{Service\+Engineering\+Command}}, \mbox{\hyperlink{classCarStoreCommand_a505c2a230b5556d5be06c277cd119b08}{Car\+Store\+Command}}, and \mbox{\hyperlink{classServiceLogisticCommand_aeb424396d6cfc463db93c8a17c5d71c1}{Service\+Logistic\+Command}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/kyle-\/pc/\+Documents/\+University Notes/\+Year 2/\+Semester 2/\+C\+O\+S 214/\+Project/\+C\+O\+S214\+Project/\+System/\+Team\+Manager/\+Commands/Command.\+h\item 
+/home/kyle-\/pc/\+Documents/\+University Notes/\+Year 2/\+Semester 2/\+C\+O\+S 214/\+Project/\+C\+O\+S214\+Project/\+System/\+Team\+Manager/\+Commands/Command.\+cpp\end{DoxyCompactItemize}

@@ -7,6 +7,9 @@
 
 #include "JSONElement.h"
 
+/**
+ * @brief Returns a string representation of data.
+ */
 class StringElement : public JSONElement {
 public:
     StringElement(std::string value);

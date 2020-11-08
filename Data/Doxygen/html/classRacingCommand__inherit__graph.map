@@ -1,0 +1,4 @@
+<map id="RacingCommand" name="RacingCommand">
+<area shape="rect" id="node1" title="Constructs a race track, a Pit Crew team and an Observer. Invokes the race track to simulate a race." alt="" coords="5,80,128,107"/>
+<area shape="rect" id="node2" href="$classCommand.html" title="Command object that executes part of the system." alt="" coords="25,5,108,32"/>
+</map>

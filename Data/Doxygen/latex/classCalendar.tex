@@ -1,0 +1,80 @@
+\hypertarget{classCalendar}{}\doxysection{Calendar Class Reference}
+\label{classCalendar}\index{Calendar@{Calendar}}
+
+
+Abstract class for the \mbox{\hyperlink{classCalendar}{Calendar}} class.  
+
+
+
+
+{\ttfamily \#include $<$Calendar.\+h$>$}
+
+
+
+Inheritance diagram for Calendar\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classCalendar__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCalendar_a423ef27351bfa2309c6e2173bff61756}{Calendar}} ()
+\item 
+virtual \mbox{\hyperlink{classCalendar_a23aa939f694874a8f98ec54326d80741}{$\sim$\+Calendar}} ()
+\item 
+virtual \mbox{\hyperlink{classCalendarIterator}{Calendar\+Iterator}} $\ast$ \mbox{\hyperlink{classCalendar_a54adaea5b2d22389b4a796da2810541d}{create\+Iterator}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCalendar_ae14df04579d9ca3b7daea1f8fdf47e37}\label{classCalendar_ae14df04579d9ca3b7daea1f8fdf47e37}} 
+std\+::vector$<$ \mbox{\hyperlink{classRaceWeekend}{Race\+Weekend}} $\ast$ $>$ {\bfseries weekends}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class for the \mbox{\hyperlink{classCalendar}{Calendar}} class. 
+
+The abstract calendar class that holds a vector of race weekends. \begin{DoxyAuthor}{Author}
+C\+O\+S214 project group-\/\+Task\+Failed\+Successfully 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCalendar_a423ef27351bfa2309c6e2173bff61756}\label{classCalendar_a423ef27351bfa2309c6e2173bff61756}} 
+\index{Calendar@{Calendar}!Calendar@{Calendar}}
+\index{Calendar@{Calendar}!Calendar@{Calendar}}
+\doxysubsubsection{\texorpdfstring{Calendar()}{Calendar()}}
+{\footnotesize\ttfamily Calendar\+::\+Calendar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+default constructor \mbox{\Hypertarget{classCalendar_a23aa939f694874a8f98ec54326d80741}\label{classCalendar_a23aa939f694874a8f98ec54326d80741}} 
+\index{Calendar@{Calendar}!````~Calendar@{$\sim$Calendar}}
+\index{````~Calendar@{$\sim$Calendar}!Calendar@{Calendar}}
+\doxysubsubsection{\texorpdfstring{$\sim$Calendar()}{~Calendar()}}
+{\footnotesize\ttfamily Calendar\+::$\sim$\+Calendar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+virtual default destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCalendar_a54adaea5b2d22389b4a796da2810541d}\label{classCalendar_a54adaea5b2d22389b4a796da2810541d}} 
+\index{Calendar@{Calendar}!createIterator@{createIterator}}
+\index{createIterator@{createIterator}!Calendar@{Calendar}}
+\doxysubsubsection{\texorpdfstring{createIterator()}{createIterator()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classCalendarIterator}{Calendar\+Iterator}}$\ast$ Calendar\+::create\+Iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+virtual creator for \mbox{\hyperlink{classIterator}{Iterator}} return new Calendar\+Iterator$\ast$ 
+
+Implemented in \mbox{\hyperlink{classConcreteCalendar_af4eb0cf57b743f9a4f6ab281afe0d796}{Concrete\+Calendar}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/kyle-\/pc/\+Documents/\+University Notes/\+Year 2/\+Semester 2/\+C\+O\+S 214/\+Project/\+C\+O\+S214\+Project/\+System/\+Calendar/Calendar.\+h\item 
+/home/kyle-\/pc/\+Documents/\+University Notes/\+Year 2/\+Semester 2/\+C\+O\+S 214/\+Project/\+C\+O\+S214\+Project/\+System/\+Calendar/Calendar.\+cpp\end{DoxyCompactItemize}

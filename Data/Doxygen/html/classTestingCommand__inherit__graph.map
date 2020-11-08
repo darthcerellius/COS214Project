@@ -1,0 +1,4 @@
+<map id="TestingCommand" name="TestingCommand">
+<area shape="rect" id="node1" title="Creates testing objects and uses them to perform tests on the car." alt="" coords="5,80,129,107"/>
+<area shape="rect" id="node2" href="$classCommand.html" title="Command object that executes part of the system." alt="" coords="26,5,109,32"/>
+</map>

@@ -11,7 +11,8 @@
 /**
  * @brief Facade class responsible for the runtime of the entire system.
  *
- * This class
+ * This class constructs the Pre-Season and Current season command chains and
+ * Calendar class to coordinate and facilitate the running of the entire system.
  */
 class TeamManager{
 private:
@@ -23,9 +24,19 @@ private:
     static bool isCreated;
 public:
     ~TeamManager();
+    /**
+     * Static getter function to ensure that only one Team manager instance can exist.
+     * @return - a single Team Manager instance
+     */
     static TeamManager* getTeamManager();
+    /**
+     * Runs the system
+     */
     void run();
 private:
+    /**
+     * Private constructor.
+     */
     TeamManager();
 };
 

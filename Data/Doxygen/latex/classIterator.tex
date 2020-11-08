@@ -1,0 +1,101 @@
+\hypertarget{classIterator}{}\doxysection{Iterator Class Reference}
+\label{classIterator}\index{Iterator@{Iterator}}
+
+
+Abstract class for iterator.  
+
+
+
+
+{\ttfamily \#include $<$Iterator.\+h$>$}
+
+
+
+Inheritance diagram for Iterator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{classIterator__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classIterator_a4c28388b53ec9c8a502aeccf13295899}{$\sim$\+Iterator}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classIterator_aad56ef26673ea3c74b7ac964f24b8ef5}{first}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classIterator_ac639e96c519e2e78cff17bee372ad750}{next}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{classIterator_ac3f6409895d4701123a91ca528d61565}{is\+Done}} ()=0
+\item 
+virtual \mbox{\hyperlink{classRaceWeekend}{Race\+Weekend}} $\ast$ \mbox{\hyperlink{classIterator_aec68e66ab1a30a2d0fb2e20d3622d4af}{current}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class for iterator. 
+
+The abstract class for an \mbox{\hyperlink{classIterator}{Iterator}} that will be used to iterate through the race weekend objects stored in the calendar as a vector. \begin{DoxyAuthor}{Author}
+C\+O\+S214 project group-\/\+Task\+Failed\+Successfully 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classIterator_a4c28388b53ec9c8a502aeccf13295899}\label{classIterator_a4c28388b53ec9c8a502aeccf13295899}} 
+\index{Iterator@{Iterator}!````~Iterator@{$\sim$Iterator}}
+\index{````~Iterator@{$\sim$Iterator}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{$\sim$Iterator()}{~Iterator()}}
+{\footnotesize\ttfamily virtual Iterator\+::$\sim$\+Iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+virtual default destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIterator_aec68e66ab1a30a2d0fb2e20d3622d4af}\label{classIterator_aec68e66ab1a30a2d0fb2e20d3622d4af}} 
+\index{Iterator@{Iterator}!current@{current}}
+\index{current@{current}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{current()}{current()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classRaceWeekend}{Race\+Weekend}}$\ast$ Iterator\+::current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+virtual function to return Race\+Weekend$\ast$ at current index 
+
+Implemented in \mbox{\hyperlink{classCalendarIterator_abc787fb68a3c3e7badce6c97e6682a9b}{Calendar\+Iterator}}.
+
+\mbox{\Hypertarget{classIterator_aad56ef26673ea3c74b7ac964f24b8ef5}\label{classIterator_aad56ef26673ea3c74b7ac964f24b8ef5}} 
+\index{Iterator@{Iterator}!first@{first}}
+\index{first@{first}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{first()}{first()}}
+{\footnotesize\ttfamily virtual void Iterator\+::first (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+virtual function to set first index 
+
+Implemented in \mbox{\hyperlink{classCalendarIterator_a189ae14784802e78f0ff10b5d5200d9d}{Calendar\+Iterator}}.
+
+\mbox{\Hypertarget{classIterator_ac3f6409895d4701123a91ca528d61565}\label{classIterator_ac3f6409895d4701123a91ca528d61565}} 
+\index{Iterator@{Iterator}!isDone@{isDone}}
+\index{isDone@{isDone}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{isDone()}{isDone()}}
+{\footnotesize\ttfamily virtual bool Iterator\+::is\+Done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+virtual function to set last index 
+
+Implemented in \mbox{\hyperlink{classCalendarIterator_ac6a9aee1a902c0e19dbc377a65a51078}{Calendar\+Iterator}}.
+
+\mbox{\Hypertarget{classIterator_ac639e96c519e2e78cff17bee372ad750}\label{classIterator_ac639e96c519e2e78cff17bee372ad750}} 
+\index{Iterator@{Iterator}!next@{next}}
+\index{next@{next}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily virtual void Iterator\+::next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+virtual function to set next index 
+
+Implemented in \mbox{\hyperlink{classCalendarIterator_a8b630f46c11d45e617beba00a9de6fee}{Calendar\+Iterator}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/kyle-\/pc/\+Documents/\+University Notes/\+Year 2/\+Semester 2/\+C\+O\+S 214/\+Project/\+C\+O\+S214\+Project/\+System/\+Calendar/Iterator.\+h\end{DoxyCompactItemize}

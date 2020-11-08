@@ -13,19 +13,42 @@ enum TransportType {
     ROAD
 };
 
+/**
+ * @brief Template class for the transport methods.
+ *
+ * This class has one load function that uses the package and ship functions implemented by the
+ * children
+ * @tparam T - Class type to be transported
+ */
 template <typename T>
 class TransportMethod {
 public:
+    /**
+     * Default constructor
+     */
     TransportMethod();
+
+    /**
+     * Virtual destructor
+     */
     virtual ~TransportMethod();
+    /**
+     * Loads the component by calling the protected children methods
+     * @param component - the component to transport
+     */
     void load(T component);
     T unload(std::string place);
 
 protected:
     T shippingContainer;
-    /*puts the pointer into a memento*/
+    /**
+     * Packages the component
+     * @param component
+     */
     virtual void package(T component) = 0;
-    /*specify how the car is being shipped*/
+    /**
+     * Ships the component.
+     */
     virtual void ship() = 0;
     /*Brings the pointer out of the memento*/
     virtual T unpackage(std::string place) = 0;

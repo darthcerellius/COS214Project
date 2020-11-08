@@ -1,0 +1,165 @@
+\hypertarget{classRaceWeekend}{}\doxysection{Race\+Weekend Class Reference}
+\label{classRaceWeekend}\index{RaceWeekend@{RaceWeekend}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRaceWeekend_a995aa7a3e0abed0d1cf6f9fd880f3b7d}{Race\+Weekend}} (std\+::string \+\_\+track\+Name, double \+\_\+length, std\+::string \+\_\+location, \mbox{\hyperlink{structDate}{Date}} $\ast$\+\_\+date, \mbox{\hyperlink{structConditions}{Conditions}} $\ast$\+\_\+condis)
+\item 
+\mbox{\hyperlink{classRaceWeekend_a91632ae88452468bed8f4b4225a3032c}{$\sim$\+Race\+Weekend}} ()
+\item 
+void \mbox{\hyperlink{classRaceWeekend_a0325e5aef485b9db8e359d46da44bc25}{set\+Name}} (std\+::string \+\_\+track\+Name)
+\item 
+std\+::string \mbox{\hyperlink{classRaceWeekend_a650f124b64ec8bca8049bdd730af4c64}{get\+Name}} ()
+\item 
+void \mbox{\hyperlink{classRaceWeekend_add3b828d668d1498d6b15a93cd3baa23}{set\+Length}} (double \+\_\+length)
+\item 
+double \mbox{\hyperlink{classRaceWeekend_aef057fe516e8a252de523be87157e944}{get\+Length}} ()
+\item 
+void \mbox{\hyperlink{classRaceWeekend_ae48109976301bf61ab99ba8766878082}{set\+Location}} (std\+::string \+\_\+location)
+\item 
+std\+::string \mbox{\hyperlink{classRaceWeekend_a0571235217e5a53037385bba1d29fbab}{get\+Location}} ()
+\item 
+void \mbox{\hyperlink{classRaceWeekend_aff69cae7b28f9b23fa25e809d68d127d}{set\+Date}} (\mbox{\hyperlink{structDate}{Date}} $\ast$\+\_\+date)
+\item 
+\mbox{\hyperlink{structDate}{Date}} $\ast$ \mbox{\hyperlink{classRaceWeekend_ac3dcedda3390f820081fc1895f139085}{get\+Date}} ()
+\item 
+void \mbox{\hyperlink{classRaceWeekend_a42cbc11254320da16552a77c194a3c87}{set\+Condis}} (\mbox{\hyperlink{structConditions}{Conditions}} $\ast$\+\_\+condis)
+\item 
+\mbox{\hyperlink{structConditions}{Conditions}} $\ast$ \mbox{\hyperlink{classRaceWeekend_a72846c08fe7d9af9a0e1229df3cac9a5}{get\+Condis}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classRaceWeekend_aab62d6ec9edca7cb01b57b2f8f182e1a}{days\+Between}} (\mbox{\hyperlink{structDate}{Date}} $\ast$date1, \mbox{\hyperlink{structDate}{Date}} $\ast$date2)
+\item 
+static int \mbox{\hyperlink{classRaceWeekend_a854f02c94bbd03f7bc08b5e5b0fcbcad}{count\+Leap\+Years}} (\mbox{\hyperlink{structDate}{Date}} $\ast$date)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRaceWeekend_a995aa7a3e0abed0d1cf6f9fd880f3b7d}\label{classRaceWeekend_a995aa7a3e0abed0d1cf6f9fd880f3b7d}} 
+\index{RaceWeekend@{RaceWeekend}!RaceWeekend@{RaceWeekend}}
+\index{RaceWeekend@{RaceWeekend}!RaceWeekend@{RaceWeekend}}
+\doxysubsubsection{\texorpdfstring{RaceWeekend()}{RaceWeekend()}}
+{\footnotesize\ttfamily Race\+Weekend\+::\+Race\+Weekend (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+track\+Name,  }\item[{double}]{\+\_\+length,  }\item[{std\+::string}]{\+\_\+location,  }\item[{\mbox{\hyperlink{structDate}{Date}} $\ast$}]{\+\_\+date,  }\item[{\mbox{\hyperlink{structConditions}{Conditions}} $\ast$}]{\+\_\+condis }\end{DoxyParamCaption})}
+
+constructor to initialise all variables of the race weekend \mbox{\Hypertarget{classRaceWeekend_a91632ae88452468bed8f4b4225a3032c}\label{classRaceWeekend_a91632ae88452468bed8f4b4225a3032c}} 
+\index{RaceWeekend@{RaceWeekend}!````~RaceWeekend@{$\sim$RaceWeekend}}
+\index{````~RaceWeekend@{$\sim$RaceWeekend}!RaceWeekend@{RaceWeekend}}
+\doxysubsubsection{\texorpdfstring{$\sim$RaceWeekend()}{~RaceWeekend()}}
+{\footnotesize\ttfamily Race\+Weekend\+::$\sim$\+Race\+Weekend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+default destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRaceWeekend_a854f02c94bbd03f7bc08b5e5b0fcbcad}\label{classRaceWeekend_a854f02c94bbd03f7bc08b5e5b0fcbcad}} 
+\index{RaceWeekend@{RaceWeekend}!countLeapYears@{countLeapYears}}
+\index{countLeapYears@{countLeapYears}!RaceWeekend@{RaceWeekend}}
+\doxysubsubsection{\texorpdfstring{countLeapYears()}{countLeapYears()}}
+{\footnotesize\ttfamily int Race\+Weekend\+::count\+Leap\+Years (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structDate}{Date}} $\ast$}]{date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Function to calculate difference, in days, between 2 dates 
+\begin{DoxyParams}{Parameters}
+{\em date} & first parameter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int years/4 -\/ years/100 + years/400 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRaceWeekend_aab62d6ec9edca7cb01b57b2f8f182e1a}\label{classRaceWeekend_aab62d6ec9edca7cb01b57b2f8f182e1a}} 
+\index{RaceWeekend@{RaceWeekend}!daysBetween@{daysBetween}}
+\index{daysBetween@{daysBetween}!RaceWeekend@{RaceWeekend}}
+\doxysubsubsection{\texorpdfstring{daysBetween()}{daysBetween()}}
+{\footnotesize\ttfamily int Race\+Weekend\+::days\+Between (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structDate}{Date}} $\ast$}]{date1,  }\item[{\mbox{\hyperlink{structDate}{Date}} $\ast$}]{date2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Function to calculate difference, in days, between 2 dates 
+\begin{DoxyParams}{Parameters}
+{\em date1} & first parameter \\
+\hline
+{\em date2} & second parameter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int (num2 -\/ num1) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRaceWeekend_a72846c08fe7d9af9a0e1229df3cac9a5}\label{classRaceWeekend_a72846c08fe7d9af9a0e1229df3cac9a5}} 
+\index{RaceWeekend@{RaceWeekend}!getCondis@{getCondis}}
+\index{getCondis@{getCondis}!RaceWeekend@{RaceWeekend}}
+\doxysubsubsection{\texorpdfstring{getCondis()}{getCondis()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structConditions}{Conditions}} $\ast$ Race\+Weekend\+::get\+Condis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+getter for the condis variable \begin{DoxyReturn}{Returns}
+Condition$\ast$ condis 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRaceWeekend_ac3dcedda3390f820081fc1895f139085}\label{classRaceWeekend_ac3dcedda3390f820081fc1895f139085}} 
+\index{RaceWeekend@{RaceWeekend}!getDate@{getDate}}
+\index{getDate@{getDate}!RaceWeekend@{RaceWeekend}}
+\doxysubsubsection{\texorpdfstring{getDate()}{getDate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structDate}{Date}} $\ast$ Race\+Weekend\+::get\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+getter for the date variable \begin{DoxyReturn}{Returns}
+Date$\ast$ date 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRaceWeekend_aef057fe516e8a252de523be87157e944}\label{classRaceWeekend_aef057fe516e8a252de523be87157e944}} 
+\index{RaceWeekend@{RaceWeekend}!getLength@{getLength}}
+\index{getLength@{getLength}!RaceWeekend@{RaceWeekend}}
+\doxysubsubsection{\texorpdfstring{getLength()}{getLength()}}
+{\footnotesize\ttfamily double Race\+Weekend\+::get\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+getter for the track length variable \begin{DoxyReturn}{Returns}
+double length 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRaceWeekend_a0571235217e5a53037385bba1d29fbab}\label{classRaceWeekend_a0571235217e5a53037385bba1d29fbab}} 
+\index{RaceWeekend@{RaceWeekend}!getLocation@{getLocation}}
+\index{getLocation@{getLocation}!RaceWeekend@{RaceWeekend}}
+\doxysubsubsection{\texorpdfstring{getLocation()}{getLocation()}}
+{\footnotesize\ttfamily std\+::string Race\+Weekend\+::get\+Location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+getter for the location name variable \begin{DoxyReturn}{Returns}
+string location 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRaceWeekend_a650f124b64ec8bca8049bdd730af4c64}\label{classRaceWeekend_a650f124b64ec8bca8049bdd730af4c64}} 
+\index{RaceWeekend@{RaceWeekend}!getName@{getName}}
+\index{getName@{getName}!RaceWeekend@{RaceWeekend}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Race\+Weekend\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+getter for the track name variable \begin{DoxyReturn}{Returns}
+string track\+Name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRaceWeekend_a42cbc11254320da16552a77c194a3c87}\label{classRaceWeekend_a42cbc11254320da16552a77c194a3c87}} 
+\index{RaceWeekend@{RaceWeekend}!setCondis@{setCondis}}
+\index{setCondis@{setCondis}!RaceWeekend@{RaceWeekend}}
+\doxysubsubsection{\texorpdfstring{setCondis()}{setCondis()}}
+{\footnotesize\ttfamily void Race\+Weekend\+::set\+Condis (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structConditions}{Conditions}} $\ast$}]{\+\_\+condis }\end{DoxyParamCaption})}
+
+setter for the condis variable \mbox{\Hypertarget{classRaceWeekend_aff69cae7b28f9b23fa25e809d68d127d}\label{classRaceWeekend_aff69cae7b28f9b23fa25e809d68d127d}} 
+\index{RaceWeekend@{RaceWeekend}!setDate@{setDate}}
+\index{setDate@{setDate}!RaceWeekend@{RaceWeekend}}
+\doxysubsubsection{\texorpdfstring{setDate()}{setDate()}}
+{\footnotesize\ttfamily void Race\+Weekend\+::set\+Date (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structDate}{Date}} $\ast$}]{\+\_\+date }\end{DoxyParamCaption})}
+
+setter for the date variable \mbox{\Hypertarget{classRaceWeekend_add3b828d668d1498d6b15a93cd3baa23}\label{classRaceWeekend_add3b828d668d1498d6b15a93cd3baa23}} 
+\index{RaceWeekend@{RaceWeekend}!setLength@{setLength}}
+\index{setLength@{setLength}!RaceWeekend@{RaceWeekend}}
+\doxysubsubsection{\texorpdfstring{setLength()}{setLength()}}
+{\footnotesize\ttfamily void Race\+Weekend\+::set\+Length (\begin{DoxyParamCaption}\item[{double}]{\+\_\+length }\end{DoxyParamCaption})}
+
+setter for the track length variable \mbox{\Hypertarget{classRaceWeekend_ae48109976301bf61ab99ba8766878082}\label{classRaceWeekend_ae48109976301bf61ab99ba8766878082}} 
+\index{RaceWeekend@{RaceWeekend}!setLocation@{setLocation}}
+\index{setLocation@{setLocation}!RaceWeekend@{RaceWeekend}}
+\doxysubsubsection{\texorpdfstring{setLocation()}{setLocation()}}
+{\footnotesize\ttfamily void Race\+Weekend\+::set\+Location (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+location }\end{DoxyParamCaption})}
+
+setter for the location name variable \mbox{\Hypertarget{classRaceWeekend_a0325e5aef485b9db8e359d46da44bc25}\label{classRaceWeekend_a0325e5aef485b9db8e359d46da44bc25}} 
+\index{RaceWeekend@{RaceWeekend}!setName@{setName}}
+\index{setName@{setName}!RaceWeekend@{RaceWeekend}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void Race\+Weekend\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+track\+Name }\end{DoxyParamCaption})}
+
+setter for the track name variable 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/kyle-\/pc/\+Documents/\+University Notes/\+Year 2/\+Semester 2/\+C\+O\+S 214/\+Project/\+C\+O\+S214\+Project/\+System/\+Calendar/Race\+Weekend.\+h\item 
+/home/kyle-\/pc/\+Documents/\+University Notes/\+Year 2/\+Semester 2/\+C\+O\+S 214/\+Project/\+C\+O\+S214\+Project/\+System/\+Calendar/Race\+Weekend.\+cpp\end{DoxyCompactItemize}

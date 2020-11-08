@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classTesting.html" title="serves as the base class for the testing classes (WindTunnelTest and SoftwareTest)" alt="" coords="5,31,69,57"/>
+<area shape="rect" id="node2" href="$classSoftwareTest.html" title=" " alt="" coords="126,5,225,32"/>
+<area shape="rect" id="node3" href="$classWindTunnelTest.html" title=" " alt="" coords="117,56,233,83"/>
+</map>

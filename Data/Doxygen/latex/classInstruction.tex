@@ -1,0 +1,36 @@
+\hypertarget{classInstruction}{}\doxysection{Instruction Class Reference}
+\label{classInstruction}\index{Instruction@{Instruction}}
+
+
+{\ttfamily \#include $<$Instruction.\+h$>$}
+
+
+
+Inheritance diagram for Instruction\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{classInstruction__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classInstruction_a92a05c09735ce29ede6a5fa5d804e5a2}\label{classInstruction_a92a05c09735ce29ede6a5fa5d804e5a2}} 
+virtual void {\bfseries execute\+Instruction} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classInstruction_ad6ea31ab077de5f5de7631f36d8368e8}\label{classInstruction_ad6ea31ab077de5f5de7631f36d8368e8}} 
+Car $\ast$ {\bfseries sent\+To}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The abstract \mbox{\hyperlink{classInstruction}{Instruction}} class acts as an interface for the concrete commands. These commands are invoked by the \mbox{\hyperlink{classPitCrew}{Pit\+Crew}} and execute instructions in the Car class. \mbox{\hyperlink{classPitCrew}{Pit\+Crew}} will send a command to the Car through one of the child classes\+: \mbox{\hyperlink{classTacticalDecision}{Tactical\+Decision}} or \mbox{\hyperlink{classEventResponse}{Event\+Response}}. Acts as the \mbox{\hyperlink{classCommand}{Command}} participants in the \mbox{\hyperlink{classInstruction}{Instruction}} \mbox{\hyperlink{classCommand}{Command}} pattern. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/kyle-\/pc/\+Documents/\+University Notes/\+Year 2/\+Semester 2/\+C\+O\+S 214/\+Project/\+C\+O\+S214\+Project/\+System/\+Racing\+Strategy/\+Pit\+Crew/\+Instructions/Instruction.\+h\item 
+/home/kyle-\/pc/\+Documents/\+University Notes/\+Year 2/\+Semester 2/\+C\+O\+S 214/\+Project/\+C\+O\+S214\+Project/\+System/\+Racing\+Strategy/\+Pit\+Crew/\+Instructions/Instruction.\+cpp\end{DoxyCompactItemize}

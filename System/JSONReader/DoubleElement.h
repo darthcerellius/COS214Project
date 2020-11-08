@@ -7,6 +7,9 @@
 
 #include "JSONElement.h"
 
+/**
+ * @brief Holds a double representation of data.
+ */
 class DoubleElement : public JSONElement {
 public:
     DoubleElement(std::string value);

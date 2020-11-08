@@ -1,0 +1,116 @@
+\hypertarget{classTransportMethod}{}\doxysection{Transport\+Method$<$ T $>$ Class Template Reference}
+\label{classTransportMethod}\index{TransportMethod$<$ T $>$@{TransportMethod$<$ T $>$}}
+
+
+Template class for the transport methods.  
+
+
+
+
+{\ttfamily \#include $<$Transport\+Method.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTransportMethod_a97632d97781399502a0a5586a4419cfc}{Transport\+Method}} ()
+\item 
+virtual \mbox{\hyperlink{classTransportMethod_a833f45883b72e05d361f7c2d95236734}{$\sim$\+Transport\+Method}} ()
+\item 
+void \mbox{\hyperlink{classTransportMethod_a7af4b8aa9d446742c665384989f1c9a4}{load}} (T component)
+\item 
+\mbox{\Hypertarget{classTransportMethod_a1c048d6e5a89aa2b9fd72d8860ff407b}\label{classTransportMethod_a1c048d6e5a89aa2b9fd72d8860ff407b}} 
+T {\bfseries unload} (std\+::string place)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classTransportMethod_ae24d639c5ab5a0057153e3bb381e7e77}{package}} (T component)=0
+\item 
+virtual void \mbox{\hyperlink{classTransportMethod_ab9dd06e0b9cf7b7eb475aa5a57aa6be9}{ship}} ()=0
+\item 
+\mbox{\Hypertarget{classTransportMethod_ae45a67f5c144f7f8a9dcf720d1d7832f}\label{classTransportMethod_ae45a67f5c144f7f8a9dcf720d1d7832f}} 
+virtual T {\bfseries unpackage} (std\+::string place)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTransportMethod_a90a8cb7059e51a927e9156f525ab8677}\label{classTransportMethod_a90a8cb7059e51a927e9156f525ab8677}} 
+T {\bfseries shipping\+Container}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Transport\+Method$<$ T $>$}
+
+Template class for the transport methods. 
+
+This class has one load function that uses the package and ship functions implemented by the children 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & -\/ Class type to be transported \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTransportMethod_a97632d97781399502a0a5586a4419cfc}\label{classTransportMethod_a97632d97781399502a0a5586a4419cfc}} 
+\index{TransportMethod$<$ T $>$@{TransportMethod$<$ T $>$}!TransportMethod@{TransportMethod}}
+\index{TransportMethod@{TransportMethod}!TransportMethod$<$ T $>$@{TransportMethod$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{TransportMethod()}{TransportMethod()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classTransportMethod}{Transport\+Method}}$<$ T $>$\+::\mbox{\hyperlink{classTransportMethod}{Transport\+Method}}}
+
+Default constructor \mbox{\Hypertarget{classTransportMethod_a833f45883b72e05d361f7c2d95236734}\label{classTransportMethod_a833f45883b72e05d361f7c2d95236734}} 
+\index{TransportMethod$<$ T $>$@{TransportMethod$<$ T $>$}!````~TransportMethod@{$\sim$TransportMethod}}
+\index{````~TransportMethod@{$\sim$TransportMethod}!TransportMethod$<$ T $>$@{TransportMethod$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$TransportMethod()}{~TransportMethod()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classTransportMethod}{Transport\+Method}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classTransportMethod}{Transport\+Method}}\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Virtual destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTransportMethod_a7af4b8aa9d446742c665384989f1c9a4}\label{classTransportMethod_a7af4b8aa9d446742c665384989f1c9a4}} 
+\index{TransportMethod$<$ T $>$@{TransportMethod$<$ T $>$}!load@{load}}
+\index{load@{load}!TransportMethod$<$ T $>$@{TransportMethod$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classTransportMethod}{Transport\+Method}}$<$ T $>$\+::load (\begin{DoxyParamCaption}\item[{T}]{component }\end{DoxyParamCaption})}
+
+Loads the component by calling the protected children methods 
+\begin{DoxyParams}{Parameters}
+{\em component} & -\/ the component to transport \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTransportMethod_ae24d639c5ab5a0057153e3bb381e7e77}\label{classTransportMethod_ae24d639c5ab5a0057153e3bb381e7e77}} 
+\index{TransportMethod$<$ T $>$@{TransportMethod$<$ T $>$}!package@{package}}
+\index{package@{package}!TransportMethod$<$ T $>$@{TransportMethod$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{package()}{package()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual void \mbox{\hyperlink{classTransportMethod}{Transport\+Method}}$<$ T $>$\+::package (\begin{DoxyParamCaption}\item[{T}]{component }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Packages the component 
+\begin{DoxyParams}{Parameters}
+{\em component} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classRoadTransport_a6c64a4501929606ba56d8b22cd5b59c3}{Road\+Transport}}, \mbox{\hyperlink{classSeaTransport_a506daf85cb1e4a0d430204c22d039fb2}{Sea\+Transport}}, and \mbox{\hyperlink{classAirTransport_adef3469324c4413306d2e7f803fe3100}{Air\+Transport}}.
+
+\mbox{\Hypertarget{classTransportMethod_ab9dd06e0b9cf7b7eb475aa5a57aa6be9}\label{classTransportMethod_ab9dd06e0b9cf7b7eb475aa5a57aa6be9}} 
+\index{TransportMethod$<$ T $>$@{TransportMethod$<$ T $>$}!ship@{ship}}
+\index{ship@{ship}!TransportMethod$<$ T $>$@{TransportMethod$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ship()}{ship()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual void \mbox{\hyperlink{classTransportMethod}{Transport\+Method}}$<$ T $>$\+::ship (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Ships the component. 
+
+Implemented in \mbox{\hyperlink{classAirTransport_a1a86ab26f924d7bed33f1c47085cea00}{Air\+Transport}}, \mbox{\hyperlink{classRoadTransport_a61bf344a593b5fc22269d2981918993c}{Road\+Transport}}, and \mbox{\hyperlink{classSeaTransport_a69be981b37c3d8c7969236437948139a}{Sea\+Transport}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/kyle-\/pc/\+Documents/\+University Notes/\+Year 2/\+Semester 2/\+C\+O\+S 214/\+Project/\+C\+O\+S214\+Project/\+System/\+Transport\+Method/Transport\+Method.\+h\end{DoxyCompactItemize}

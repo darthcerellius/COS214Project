@@ -1,0 +1,53 @@
+\hypertarget{classFactory}{}\doxysection{Factory Class Reference}
+\label{classFactory}\index{Factory@{Factory}}
+
+
+Creator participant for the factory pattern used to construct components that should be added to car.  
+
+
+
+
+{\ttfamily \#include $<$Factory.\+h$>$}
+
+
+
+Inheritance diagram for Factory\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFactory__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual Component $\ast$ \mbox{\hyperlink{classFactory_a350ff8c9d3472e7b6f8676e3ef327f3f}{construct\+Component}} ()=0
+\begin{DoxyCompactList}\small\item\em Method used by concrete creators to construct different components. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Creator participant for the factory pattern used to construct components that should be added to car. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFactory_a350ff8c9d3472e7b6f8676e3ef327f3f}\label{classFactory_a350ff8c9d3472e7b6f8676e3ef327f3f}} 
+\index{Factory@{Factory}!constructComponent@{constructComponent}}
+\index{constructComponent@{constructComponent}!Factory@{Factory}}
+\doxysubsubsection{\texorpdfstring{constructComponent()}{constructComponent()}}
+{\footnotesize\ttfamily virtual Component$\ast$ Factory\+::construct\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Method used by concrete creators to construct different components. 
+
+\begin{DoxyReturn}{Returns}
+Returns the constructed component 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classAerodynamicsFactory_a15f9925e59f02d05ff01a9bf1f91777d}{Aerodynamics\+Factory}}, \mbox{\hyperlink{classElectronicsFactory_a184cf80e668a9f1840751188ff9dc24b}{Electronics\+Factory}}, \mbox{\hyperlink{classEngineFactory_a546eb1932728c84e16e00b2fd38714ac}{Engine\+Factory}}, and \mbox{\hyperlink{classChassisFactory_a7c65d1ad4410e7e8008566b99ab9ab32}{Chassis\+Factory}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/kyle-\/pc/\+Documents/\+University Notes/\+Year 2/\+Semester 2/\+C\+O\+S 214/\+Project/\+C\+O\+S214\+Project/\+System/\+Engineering/Factory.\+h\end{DoxyCompactItemize}
