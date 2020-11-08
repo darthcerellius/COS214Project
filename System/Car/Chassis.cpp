@@ -60,12 +60,13 @@ void Chassis::restore(ComponentMemento * state) {
 
 bool Chassis::windTunnelTest(int &tokens) {
 
+    std::cout <<"Starting wind tunnel test on chassis" << std::endl;
     std::cout << "Saving state of chassis" << std::endl;
     ComponentCareTaker * care = new ComponentCareTaker();
     ComponentMemento* s = new ComponentMemento();
     care->setMemento(this->createMemento());
     double factor = tokens/100;
-    std::cout << "WINDTUNNEL TESTING - "<< tokens  <<" tokens remaining : downforce before testing: " << to_string(this->downForce) << " | wind resistance before testing : " <<to_string(this->windResistance)<< std::endl;
+    std::cout << "WIND TUNNEL TESTING - "<< tokens  <<" tokens remaining : downforce before testing: " << to_string(this->downForce) << " | wind resistance before testing : " <<to_string(this->windResistance)<< std::endl;
     for (int i = 0; i < 20; ++i, tokens--) {
         this->downForce += factor;
         this->windResistance -= factor;
