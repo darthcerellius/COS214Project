@@ -15,7 +15,7 @@ RoadTransport::~RoadTransport() {
 
 void RoadTransport::package(GoodsContainer component) {
     std::cout << "Packaging container into truck" << std::endl;
-    shippingContainer = std::move(component);
+    shippingContainer = component;
 }
 
 void RoadTransport::ship() {

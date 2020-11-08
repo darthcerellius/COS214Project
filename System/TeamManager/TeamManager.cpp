@@ -102,8 +102,9 @@ void TeamManager::run() {
         if (weekend->getLocation() == "Europe") {
             container.setShippingLabel(weekend->getName(), weekend->getLocation(), weekend->getDate());
         } else {
-            std::cout << "Fetching goods from harbor..." << std::endl;
+            std::cout << "Fetching container from harbor..." << std::endl;
             container = CurrentSeason::getContainer(weekend->getLocation() + "Harbor");
+            container.setShippingLabel(weekend->getName(), weekend->getLocation(), weekend->getDate());
         }
         RoadTransport transport;
         transport.load(container);
