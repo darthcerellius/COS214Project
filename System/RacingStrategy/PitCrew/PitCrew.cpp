@@ -64,7 +64,7 @@ void PitCrew::observeNewEvent(RaceEvent * newEvent) {
 }
 
 void PitCrew::orderTyres(TyreSupplier* supplier) {
-    std::cout << "STRATEGY: 5 sets of tyres have been ordered from the tyre supplier for the coming race.\n";
+    std::cout << "STRATEGY: 5 sets of tyres have been ordered from the tyre supplier 5 months before the start of the race.\n";
     tyres = dynamic_cast<Tyre*>(supplier->supply());
     racecar->remove("tyre");
     racecar->add(tyres);
@@ -74,7 +74,7 @@ void PitCrew::orderTyres(TyreSupplier* supplier) {
 
 void PitCrew::changeTyre() {
     if(currentTyre == 5){
-        std::cout << "RACING: The car has used all 5 of its tyre sets allowed for this race and cannot change anymore tyres.\n";
+        std::cout << "RACING: The car has used all 5 of its tyre sets allowed for this race and cannot change anymore tyres. It has to continue the race with its worn out tyres.\n";
         return;
     }
     tyres->change();
