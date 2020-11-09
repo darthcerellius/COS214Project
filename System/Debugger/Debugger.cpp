@@ -102,7 +102,6 @@ void Debugger::testComponentMemento() {
     std::cout << "Before restore " << to_string(x->getHP()) << " - " << to_string(x->getFuelConsumption()) << std::endl;
     x->restore(t->getMemento());
     std::cout << "After restore " << to_string(x->getHP()) << " - " << to_string(x->getFuelConsumption()) << std::endl;
-    delete z;
     delete t;
 }
 
