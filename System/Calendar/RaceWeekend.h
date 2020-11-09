@@ -11,8 +11,6 @@
     The race weekend class holds the details of each a track that will be used for a race.
     It includes the track name, location (continent) as well as the length of a track in km.
     The date and weather conditions for the track is stored in structs.
-    @author COS214 project group-TaskFailedSuccessfully
-    @date November 2020
     */
 
 /** struct that holds date of the race weekend

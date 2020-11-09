@@ -9,7 +9,7 @@
 #include "MediumCompound.h"
 
 /**
- * The Soft Compound acts as the starting Concrete State for the Tyre class.
+ * @brief The Soft Compound acts as the starting Concrete State for the Tyre class.
  * Changing the State from a SoftCompound will set it to a MediumCompound
  */
 

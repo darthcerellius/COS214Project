@@ -7,7 +7,7 @@
 #include "Tyre.h"
 
 /**
- * The Supplier is the Creator of the Tyre component, and acts as parent to the TyreSupplier Concrete Creator in this Factory Pattern
+ * @brief The Supplier is the Creator of the Tyre component, and acts as parent to the TyreSupplier Concrete Creator in this Factory Pattern
  */
 
 class Supplier {

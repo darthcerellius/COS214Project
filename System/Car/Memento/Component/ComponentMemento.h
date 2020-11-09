@@ -8,7 +8,6 @@
  * @brief serves as the caretaker in the component's memento design pattern
  *
  *
- * @author Jeanre du Plessis
  */
 #include "ComponentState.h"
 #include "EngineState.h"

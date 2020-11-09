@@ -8,7 +8,6 @@
  * @brief serves as a state in the component memento design pattern
  * Only serves as the state to a chassis or aerodynamic component
  *
- * @author Jeanre du Plessis
  */
 #include "ComponentState.h"
 #include <string>

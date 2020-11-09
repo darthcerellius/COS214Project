@@ -10,8 +10,6 @@ class RaceWeekend;
 
     The abstract class for an Iterator that will be used to iterate through
     the race weekend objects stored in the calendar as a vector.
-    @author COS214 project group-TaskFailedSuccessfully
-    @date November 2020
     */
 
 class Iterator

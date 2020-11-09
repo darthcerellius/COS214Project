@@ -7,8 +7,6 @@
 /**
  * @brief Serves as the caretaker in the car memento design pattern
  *
- * @author Jeanre du Plessis
- * @date 07 Nov 2020
  */
 #include "CarMemento.h"
 class CarCareTaker {

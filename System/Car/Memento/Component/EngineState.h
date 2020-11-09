@@ -7,6 +7,10 @@
 
 #include <string>
 #include "ComponentState.h"
+
+/**
+ * @brief This is the state class for the Engine class
+ */
 class EngineState : public ComponentState {
 private:
     int horsePower; ///stores the value of the engine's HP variable

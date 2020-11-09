@@ -5,7 +5,7 @@
 #ifndef COS214PROJECT_CAR_H
 #define COS214PROJECT_CAR_H
 /**
- * @brief
+ * @brief The F1 car the entire system uses.
  */
 #include "Component.h"
 #include "../RacingStrategy/Strategies/GeneralRaceStrategy.h"

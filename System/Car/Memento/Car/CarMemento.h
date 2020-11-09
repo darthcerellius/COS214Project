@@ -7,7 +7,6 @@
 /**
  * @brief Serves as the memento in the car memento design pattern
  *
- * @author Jeanre du Plessis
  */
 #include "CarState.h"
 

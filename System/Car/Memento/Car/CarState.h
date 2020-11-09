@@ -7,7 +7,6 @@
 /**
  * @brief stores the state of the car
  *
- * @author Jeanre du Plessis
  */
 
 #include "../../Component.h"

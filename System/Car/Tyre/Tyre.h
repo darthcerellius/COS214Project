@@ -12,7 +12,9 @@
 #include <random>
 
 /**
- * The Tyre acts as both the Concrete Product created by the TyreSupplier Concrete Creator for the Factory Pattern, as well as the Context participant in the State Pattern
+ * @briefThe Tyre acts as both the Concrete Product created by the TyreSupplier Concrete Creator for the Factory Pattern, as well as the Context participant in the State Pattern
+ *
+ *
  * The Tyre will change its compound State when its change() method is called. Initially it starts with a soft compound, changed to a medium compound, and then to a hard compound.
  * If it's State is a hard compound, and it changes, it will change to a soft compound again.
  */

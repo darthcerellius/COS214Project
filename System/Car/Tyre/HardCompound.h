@@ -9,7 +9,7 @@
 #include "SoftCompound.h"
 
 /**
- * The Hard Compound acts as a Concrete State for the Tyre class.
+ * @brief The Hard Compound acts as a Concrete State for the Tyre class.
  * Changing the State from a HardCompound will set it back to a SoftCompound
  */
 

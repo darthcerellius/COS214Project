@@ -7,7 +7,7 @@
 #include "Tyre.h"
 
 /**
- * The Compound represents the current State of the Tyre. It can be one of three types: Soft, Medium or Hard.
+ * @brief The Compound represents the current State of the Tyre. It can be one of three types: Soft, Medium or Hard.
  */
 
 class Tyre;

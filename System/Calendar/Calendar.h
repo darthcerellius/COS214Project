@@ -14,8 +14,6 @@
 /** @brief Abstract class for the Calendar class.
 
     The abstract calendar class that holds a vector of race weekends.
-    @author COS214 project group-TaskFailedSuccessfully
-    @date November 2020
     */
 
 class Calendar{

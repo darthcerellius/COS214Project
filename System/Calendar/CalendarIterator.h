@@ -12,8 +12,6 @@
 
     The concrete class for an Iterator that will be used to iterate through
     the race weekend objects stored in calendar as a vector.
-    @author COS214 project group-TaskFailedSuccessfully
-    @date November 2020
     */
 
 class CalendarIterator : public Iterator

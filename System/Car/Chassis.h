@@ -8,6 +8,10 @@
 #include "Component.h"
 class ComponentMemento;
 class ComponentCareTaker;
+
+/**
+ * @brief The Chassis component for the car
+ */
 class Chassis: public Component{
 private:
     double downForce;

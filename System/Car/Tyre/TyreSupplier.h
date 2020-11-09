@@ -9,7 +9,7 @@
 #include "SoftCompound.h"
 
 /**
- * The TyreSupplier is the provider of the Tyre component
+ * @brief The TyreSupplier is the provider of the Tyre component
  * TyreSupplier acts as the Concrete Creator in the Factory Pattern
  */
 

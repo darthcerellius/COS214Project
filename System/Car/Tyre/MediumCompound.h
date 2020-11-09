@@ -9,7 +9,7 @@
 #include "HardCompound.h"
 
 /**
- * The Medium Compound acts as a Concrete State for the Tyre class.
+ * @brief The Medium Compound acts as a Concrete State for the Tyre class.
  * Changing the State from a MediumCompound will set it to a HardCompound
  */
 
