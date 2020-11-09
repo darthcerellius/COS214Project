@@ -64,13 +64,13 @@ void RealRaceTrack::race(){
             wornTyres = false;
             continue;
         }
-        else if(redFlag){
+        /*else if(redFlag){
             event = new RedFlag();
             event->changeEvent(crew);
             chance = 0;
             redFlag = false;
             continue;
-        }
+        }*/
         else if(safetyCar){
             event = new SafetyCar();
             event->changeEvent(crew);

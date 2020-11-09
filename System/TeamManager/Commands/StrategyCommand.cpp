@@ -8,7 +8,7 @@
 
 void StrategyCommand::execute(Car *car) {
     srand(time(NULL));
-    CurrentSeason::getStrategyTeam()->decideComponents();
+    CurrentSeason::getStrategyTeam()->decideComponents(CurrentSeason::getEngineeringTeam());
     CurrentSeason::getStrategyTeam()->decideStrategy(rand() % 5);
     if (successor != nullptr) {
         successor->execute(car);

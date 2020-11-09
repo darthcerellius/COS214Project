@@ -51,12 +51,12 @@ void StrategyTeam::decideStrategy(int strategyDecider) {
 
 }
 
-void StrategyTeam::decideComponents() {
+void StrategyTeam::decideComponents(EngineeringTeam * eng) {
     std::string strat = "aggressive";
     if (dynamic_cast<ConservativeStart*>(raceCar->getStrategy())) {
         strat = "conservative";
     }
-    dynamic_cast<ElectronicsComponent*>(this->raceCar->getComponents()["electronics"])->setMode(strat);
+    eng->changeElectronicsMode(strat);
 }
 
 void StrategyTeam::setCar(Car* racecar) {

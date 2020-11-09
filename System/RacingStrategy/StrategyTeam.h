@@ -22,7 +22,7 @@ public:
     StrategyTeam();
     ~StrategyTeam();
     void decideStrategy(int); ///Selects and sets the generalStrategy that will be used by the racecar per race.
-    void decideComponents();///Decides an Electronic component for a car.
+    void decideComponents(EngineeringTeam* eng);///Decides an Electronic component for a car.
     void setCar(Car*);
 };
 
