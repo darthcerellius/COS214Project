@@ -5,7 +5,7 @@
 #ifndef COS214PROJECT_CAR_H
 #define COS214PROJECT_CAR_H
 /**
- * @brief Car is a class which has collection of components stored in a map and a raceStrategy
+ * @brief
  */
 #include "Component.h"
 #include "../RacingStrategy/Strategies/GeneralRaceStrategy.h"
@@ -38,6 +38,12 @@ public:
      * Clone method which will return a deep copy of the car.
     */
     Component* clone();
+
+    /**
+     * A method to get a component in the car with the given name
+     * @param name - the name of the component to be returned
+     * @return - Returns the component if found, returns 0 otherwise
+     * */
     Component* getComponent(string name);
     /**
      * Method to add a component to the map of components.
