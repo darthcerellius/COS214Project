@@ -8,6 +8,9 @@
 
 class ComponentMemento;
 using namespace std;
+/**
+ * @brief Abstract Component class
+ */
 class Component{
 public:
     Component(string name);

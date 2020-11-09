@@ -8,6 +8,9 @@
 
 #include "../Calendar/Calendar.h"
 
+/**
+ * @brief Goods container for the racetrack
+ */
 class GoodsContainer {
 private:
     std::string contents;

@@ -8,6 +8,9 @@
 #include "Component.h"
 class ComponentMemento;
 
+/**
+ * @brief The Engine component for the Car class
+ */
 class Engine: public Component{
 private:
     int HP; ///HP = horsepower

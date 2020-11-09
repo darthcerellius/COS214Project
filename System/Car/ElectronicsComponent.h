@@ -8,6 +8,10 @@
 #include "Component.h"
 #include <iostream>
 #include <random>
+
+/**
+ * @brief The Electronics component for the Car
+ */
 class ElectronicsComponent: public Component{
 private:
     string mode;
