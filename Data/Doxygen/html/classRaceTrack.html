@@ -68,23 +68,59 @@ $(function() {
 <div class="title">RaceTrack Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Virtual parent class for <a class="el" href="classSimulationTrack.html" title="Implements the RaceTrack class for the Simulation class.">SimulationTrack</a> and <a class="el" href="classRealRaceTrack.html" title="Simulates a race event for the system.">RealRaceTrack</a>.  
+ <a href="classRaceTrack.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="RaceTrack_8h_source.html">RaceTrack.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for RaceTrack:</div>
 <div class="dyncontent">
 <div class="center"><img src="classRaceTrack__inherit__graph.png" border="0" usemap="#RaceTrack_inherit__map" alt="Inheritance graph"/></div>
 <map name="RaceTrack_inherit__map" id="RaceTrack_inherit__map">
-<area shape="rect" title=" " alt="" coords="88,5,175,32"/>
-<area shape="rect" href="classRealRaceTrack.html" title=" " alt="" coords="5,80,119,107"/>
-<area shape="rect" href="classSimulationTrack.html" title=" " alt="" coords="143,80,259,107"/>
+<area shape="rect" title="Virtual parent class for SimulationTrack and RealRaceTrack." alt="" coords="88,5,175,32"/>
+<area shape="rect" href="classRealRaceTrack.html" title="Simulates a race event for the system." alt="" coords="5,80,119,107"/>
+<area shape="rect" href="classSimulationTrack.html" title="Implements the RaceTrack class for the Simulation class." alt="" coords="143,80,259,107"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0e2b564a8b904c37e155e1d951fece42"><td class="memItemLeft" align="right" valign="top"><a id="a0e2b564a8b904c37e155e1d951fece42"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>getLaps</b> ()=0</td></tr>
+<tr class="memitem:a0e2b564a8b904c37e155e1d951fece42"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRaceTrack.html#a0e2b564a8b904c37e155e1d951fece42">getLaps</a> ()=0</td></tr>
 <tr class="separator:a0e2b564a8b904c37e155e1d951fece42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Virtual parent class for <a class="el" href="classSimulationTrack.html" title="Implements the RaceTrack class for the Simulation class.">SimulationTrack</a> and <a class="el" href="classRealRaceTrack.html" title="Simulates a race event for the system.">RealRaceTrack</a>. </p>
+<p>This class exists for the <a class="el" href="classSimulation.html">Simulation</a> class, as it calls a <a class="el" href="classRaceTrack.html" title="Virtual parent class for SimulationTrack and RealRaceTrack.">RaceTrack</a> class. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0e2b564a8b904c37e155e1d951fece42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e2b564a8b904c37e155e1d951fece42">&#9670;&nbsp;</a></span>getLaps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int RaceTrack::getLaps </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the number of laps the race track has. </p><dl class="section return"><dt>Returns</dt><dd>- Number of race laps. </dd></dl>
+
+<p>Implemented in <a class="el" href="classRealRaceTrack.html#aceec1c80da177374bd2b6c9e5a96e47d">RealRaceTrack</a>, and <a class="el" href="classSimulationTrack.html#a034f3a3cbb2c2a5ebe92b53b79f5fd65">SimulationTrack</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/kyle-pc/Documents/University Notes/Year 2/Semester 2/COS 214/Project/COS214Project/System/Racing/<a class="el" href="RaceTrack_8h_source.html">RaceTrack.h</a></li>
 </ul>

@@ -1,5 +1,5 @@
 <map id="DoubleElement" name="DoubleElement">
-<area shape="rect" id="node1" title=" " alt="" coords="25,155,135,181"/>
-<area shape="rect" id="node2" href="$classJSONElement.html" title=" " alt="" coords="27,80,133,107"/>
+<area shape="rect" id="node1" title="Holds a double representation of data." alt="" coords="25,155,135,181"/>
+<area shape="rect" id="node2" href="$classJSONElement.html" title="Leaf node that holds a string data, but returns it as various types depending on the child implementa..." alt="" coords="27,80,133,107"/>
 <area shape="rect" id="node3" href="$classAbstractJSONReader.html" title="Parses a JSON string and constructs a JSON object." alt="" coords="5,5,155,32"/>
 </map>

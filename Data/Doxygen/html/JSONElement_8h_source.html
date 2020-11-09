@@ -77,25 +77,25 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define COS214PROJECT_JSONELEMENT_H</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;AbstractJSONReader.h&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classJSONElement.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="classJSONElement.html">JSONElement</a> : <span class="keyword">public</span> <a class="code" href="classAbstractJSONReader.html">AbstractJSONReader</a>{</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    std::string value;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classJSONElement.html">JSONElement</a>(std::string element);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    ~<a class="code" href="classJSONElement.html">JSONElement</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="classAbstractJSONReader.html">AbstractJSONReader</a>&amp; <a class="code" href="classJSONElement.html#a37b6210bbd61706c029b359cb4a4b242">operator[]</a>(std::string key) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="classAbstractJSONReader.html">AbstractJSONReader</a>&amp; <a class="code" href="classJSONElement.html#a37b6210bbd61706c029b359cb4a4b242">operator[]</a>(<span class="keywordtype">int</span> pos) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classJSONElement.html#a4e0285969bff0a884de4480193df85f9">addContext</a>(std::string ctx) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif //COS214PROJECT_JSONELEMENT_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classJSONElement.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classJSONElement.html">JSONElement</a> : <span class="keyword">public</span> <a class="code" href="classAbstractJSONReader.html">AbstractJSONReader</a>{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    std::string value;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="classJSONElement.html">JSONElement</a>(std::string element);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    ~<a class="code" href="classJSONElement.html">JSONElement</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="classAbstractJSONReader.html">AbstractJSONReader</a>&amp; <a class="code" href="classJSONElement.html#a37b6210bbd61706c029b359cb4a4b242">operator[]</a>(std::string key) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classAbstractJSONReader.html">AbstractJSONReader</a>&amp; <a class="code" href="classJSONElement.html#a37b6210bbd61706c029b359cb4a4b242">operator[]</a>(<span class="keywordtype">int</span> pos) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classJSONElement.html#a4e0285969bff0a884de4480193df85f9">addContext</a>(std::string ctx) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif //COS214PROJECT_JSONELEMENT_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassAbstractJSONReader_html"><div class="ttname"><a href="classAbstractJSONReader.html">AbstractJSONReader</a></div><div class="ttdoc">Parses a JSON string and constructs a JSON object.</div><div class="ttdef"><b>Definition:</b> AbstractJSONReader.h:16</div></div>
 <div class="ttc" id="aclassJSONElement_html_a37b6210bbd61706c029b359cb4a4b242"><div class="ttname"><a href="classJSONElement.html#a37b6210bbd61706c029b359cb4a4b242">JSONElement::operator[]</a></div><div class="ttdeci">AbstractJSONReader &amp; operator[](std::string key) override</div><div class="ttdef"><b>Definition:</b> JSONElement.cpp:12</div></div>
-<div class="ttc" id="aclassJSONElement_html"><div class="ttname"><a href="classJSONElement.html">JSONElement</a></div><div class="ttdef"><b>Definition:</b> JSONElement.h:9</div></div>
+<div class="ttc" id="aclassJSONElement_html"><div class="ttname"><a href="classJSONElement.html">JSONElement</a></div><div class="ttdoc">Leaf node that holds a string data, but returns it as various types depending on the child implementa...</div><div class="ttdef"><b>Definition:</b> JSONElement.h:12</div></div>
 <div class="ttc" id="aclassJSONElement_html_a4e0285969bff0a884de4480193df85f9"><div class="ttname"><a href="classJSONElement.html#a4e0285969bff0a884de4480193df85f9">JSONElement::addContext</a></div><div class="ttdeci">void addContext(std::string ctx) override</div><div class="ttdef"><b>Definition:</b> JSONElement.cpp:20</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

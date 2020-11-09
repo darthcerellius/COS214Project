@@ -68,19 +68,106 @@ $(function() {
 <div class="title">Observer Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Observes the <a class="el" href="classRealRaceTrack.html" title="Simulates a race event for the system.">RealRaceTrack</a> position and records it when notified of a position change.  
+ <a href="classObserver.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Observer_8h_source.html">Observer.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a809568535bf53b092338522f24366333"><td class="memItemLeft" align="right" valign="top"><a id="a809568535bf53b092338522f24366333"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>attach</b> (<a class="el" href="classRealRaceTrack.html">RealRaceTrack</a> *s)</td></tr>
+<tr class="memitem:a19c43f80a38a332a6f694783df3c9835"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObserver.html#a19c43f80a38a332a6f694783df3c9835">Observer</a> ()</td></tr>
+<tr class="separator:a19c43f80a38a332a6f694783df3c9835"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a809568535bf53b092338522f24366333"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObserver.html#a809568535bf53b092338522f24366333">attach</a> (<a class="el" href="classRealRaceTrack.html">RealRaceTrack</a> *s)</td></tr>
 <tr class="separator:a809568535bf53b092338522f24366333"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bc221867819f9489cba3993cee98bf2"><td class="memItemLeft" align="right" valign="top"><a id="a1bc221867819f9489cba3993cee98bf2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>notify</b> ()</td></tr>
+<tr class="memitem:a1bc221867819f9489cba3993cee98bf2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObserver.html#a1bc221867819f9489cba3993cee98bf2">notify</a> ()</td></tr>
 <tr class="separator:a1bc221867819f9489cba3993cee98bf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f58a4a530dc0ee7f8edf9e571fdfa4f"><td class="memItemLeft" align="right" valign="top"><a id="a6f58a4a530dc0ee7f8edf9e571fdfa4f"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getEvent</b> ()</td></tr>
+<tr class="memitem:a6f58a4a530dc0ee7f8edf9e571fdfa4f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObserver.html#a6f58a4a530dc0ee7f8edf9e571fdfa4f">getEvent</a> ()</td></tr>
 <tr class="separator:a6f58a4a530dc0ee7f8edf9e571fdfa4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Observes the <a class="el" href="classRealRaceTrack.html" title="Simulates a race event for the system.">RealRaceTrack</a> position and records it when notified of a position change. </p>
+<p>The <a class="el" href="classRacingCommand.html" title="Constructs a race track, a Pit Crew team and an Observer. Invokes the race track to simulate a race.">RacingCommand</a> uses this object to read the state of the race track after a qualifying or real race occurs. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a19c43f80a38a332a6f694783df3c9835"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19c43f80a38a332a6f694783df3c9835">&#9670;&nbsp;</a></span>Observer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Observer::Observer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Default constructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a809568535bf53b092338522f24366333"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a809568535bf53b092338522f24366333">&#9670;&nbsp;</a></span>attach()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Observer::attach </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRealRaceTrack.html">RealRaceTrack</a> *&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Attaches a race track to this object. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>- The race track to observe. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6f58a4a530dc0ee7f8edf9e571fdfa4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f58a4a530dc0ee7f8edf9e571fdfa4f">&#9670;&nbsp;</a></span>getEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Observer::getEvent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the data observed. </p><dl class="section return"><dt>Returns</dt><dd>- The position the car came in. </dd></dl>
+
+</div>
+</div>
+<a id="a1bc221867819f9489cba3993cee98bf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bc221867819f9489cba3993cee98bf2">&#9670;&nbsp;</a></span>notify()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Observer::notify </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Used by the <a class="el" href="classRealRaceTrack.html" title="Simulates a race event for the system.">RealRaceTrack</a> object to notify this class of any changes. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/kyle-pc/Documents/University Notes/Year 2/Semester 2/COS 214/Project/COS214Project/System/Racing/Observers/<a class="el" href="Observer_8h_source.html">Observer.h</a></li>
 <li>/home/kyle-pc/Documents/University Notes/Year 2/Semester 2/COS 214/Project/COS214Project/System/Racing/Observers/Observer.cpp</li>

@@ -53,6 +53,10 @@ EngineeringTeam::~EngineeringTeam() {
     delete chassisFactory;
     delete aerodynamicsFactory;
     delete electronicsFactory;
-    delete car;
+    //delete car;
 
+}
+
+void EngineeringTeam::setCar(Car *car) {
+    this->car = car;
 }

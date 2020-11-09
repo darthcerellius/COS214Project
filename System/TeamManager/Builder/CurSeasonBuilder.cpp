@@ -9,16 +9,23 @@
 #include "../Commands/ServiceLogisticCommand.h"
 #include "../Commands/ServiceEngineeringCommand.h"
 #include "../Commands/TestingCommand.h"
+#include "../Commands/EndSeasonCommand.h"
 
 Command *CurSeasonBuilder::buildCommandChain() {
     LogisticsCommand* logisticsCommand = new LogisticsCommand();
     RacingCommand* race = new RacingCommand();
     Command* testingCommand = new TestingCommand();
+    Command* endSeasonCommand = new EndSeasonCommand();
     ServiceEngineeringCommand* serviceEng = new ServiceEngineeringCommand();
     ServiceLogisticCommand* serveLog = new ServiceLogisticCommand();
+    logisticsCommand->addSuccessor(testingCommand);
+    testingCommand->addSuccessor(race);
+    race->addSuccessor(endSeasonCommand);
+    endSeasonCommand->addSuccessor(serveLog);
     serveLog->addSuccessor(serviceEng);
+    /*serveLog->addSuccessor(serviceEng);
     race->addSuccessor(serveLog);
     testingCommand->addSuccessor(race);
-    logisticsCommand->addSuccessor(testingCommand);
+    logisticsCommand->addSuccessor(testingCommand);*/
     return logisticsCommand;
 }

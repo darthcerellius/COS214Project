@@ -10,10 +10,12 @@ friend class StrategyCommand; \
 friend class TeamManager; \
 friend class EngineeringCommand; \
 friend class SeaTransport;    \
+friend class TestingCommand;   \
 friend class RacingCommand;   \
 friend class AirTransport;    \
 friend class CarStoreCommand; \
-friend class ServiceEngineeringCommand;
+friend class ServiceEngineeringCommand; \
+friend class EndSeasonCommand;
 
 class StrategyTeam;
 class EngineeringTeam;
@@ -32,6 +34,9 @@ class CurrentSeason {
     static RaceWeekend* currentWeekend;
     static CarCareTaker* garage;
     static Car* raceCar;
+    static Car* testingCar;
+    static int curSeason;
+    static int endSeason;
 
     static void shipToHarbor(std::string name, GoodsContainer container);
     static GoodsContainer getContainer(std::string name);

@@ -14,6 +14,7 @@
 #include "../TransportMethod/RoadTransport.h"
 #include "Builder/PreSeasonBuilder.h"
 #include "Builder/CurSeasonBuilder.h"
+#include "Commands/EndSeasonCommand.h"
 
 bool TeamManager::isCreated = false;
 TeamManager* TeamManager::manager = nullptr;
@@ -24,6 +25,7 @@ TeamManager::TeamManager() {
     preSeasonCommand = preBuilder.buildCommandChain();
     CurSeasonBuilder curBuilder;
     curSeasonCommand = curBuilder.buildCommandChain();
+    nextCommand = new EndSeasonCommand();
     raceCar = nullptr;
 }
 
@@ -36,6 +38,7 @@ TeamManager::~TeamManager() {
     delete calendar;
     delete preSeasonCommand;
     delete curSeasonCommand;
+    delete nextCommand;
     CurrentSeason::clean();
     NextSeason::clean();
     preSeasonFile.close();
@@ -111,6 +114,8 @@ void TeamManager::run() {
 
     /*Transport goods to the race tracks */
     int raceCounter = 1;
+    CurrentSeason::curSeason = 0;
+    CurrentSeason::endSeason = 19;
     while (!calIterator->isDone()) {
         RaceWeekend* weekend = calIterator->current();
         std::cout << "Current date: " << weekend->getDate()->y << "-" << weekend->getDate()->m << "-" <<
@@ -150,8 +155,10 @@ void TeamManager::run() {
         std::cout << "-----------------------------------------------------------------------" << std::endl << std::endl;
         curSeasonRaces.close();
         raceCounter++;
+        CurrentSeason::curSeason++;
     }
     Car * c = CurrentSeason::raceCar;
+    //nextCommand->execute(CurrentSeason::raceCar);
     delete calIterator;
     std::cout.rdbuf(oldState);
 }

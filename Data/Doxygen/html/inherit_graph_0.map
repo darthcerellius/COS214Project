@@ -1,9 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
 <area shape="rect" id="node1" href="$classAbstractJSONReader.html" title="Parses a JSON string and constructs a JSON object." alt="" coords="5,107,155,133"/>
-<area shape="rect" id="node2" href="$classJSONElement.html" title=" " alt="" coords="217,56,323,83"/>
-<area shape="rect" id="node6" href="$classJSONObjectHolder.html" title=" " alt="" coords="203,107,337,133"/>
+<area shape="rect" id="node2" href="$classJSONElement.html" title="Leaf node that holds a string data, but returns it as various types depending on the child implementa..." alt="" coords="217,56,323,83"/>
+<area shape="rect" id="node6" href="$classJSONObjectHolder.html" title="Holds AbstractJSONReader objects in an array. Data are accessed with an index." alt="" coords="203,107,337,133"/>
 <area shape="rect" id="node7" href="$classJSONRoot.html" title="Holds JSON objects as key&#45;value pairs." alt="" coords="227,157,313,184"/>
-<area shape="rect" id="node3" href="$classDoubleElement.html" title=" " alt="" coords="385,5,496,32"/>
-<area shape="rect" id="node4" href="$classIntegerElement.html" title=" " alt="" coords="385,56,496,83"/>
-<area shape="rect" id="node5" href="$classStringElement.html" title=" " alt="" coords="389,107,493,133"/>
+<area shape="rect" id="node3" href="$classDoubleElement.html" title="Holds a double representation of data." alt="" coords="385,5,496,32"/>
+<area shape="rect" id="node4" href="$classIntegerElement.html" title="Holds an integer representation of data." alt="" coords="385,56,496,83"/>
+<area shape="rect" id="node5" href="$classStringElement.html" title="Returns a string representation of data." alt="" coords="389,107,493,133"/>
 </map>

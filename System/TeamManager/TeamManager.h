@@ -18,6 +18,7 @@ class TeamManager{
 private:
     Command* preSeasonCommand;
     Command* curSeasonCommand;
+    Command* nextCommand;
     ConcreteCalendar* calendar;
     Car* raceCar;
     static TeamManager* manager;

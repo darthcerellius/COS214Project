@@ -14,6 +14,9 @@ EngineeringTeam* CurrentSeason::engineeringTeam = nullptr;
 RaceWeekend* CurrentSeason::currentWeekend = nullptr;
 CarCareTaker* CurrentSeason::garage = nullptr;
 Car* CurrentSeason::raceCar = nullptr;
+Car* CurrentSeason::testingCar = nullptr;
+int CurrentSeason::curSeason = 0;
+int CurrentSeason::endSeason = 0;
 
 StrategyTeam* NextSeason::strategyTeam = nullptr;
 EngineeringTeam* NextSeason::engineeringTeam = nullptr;

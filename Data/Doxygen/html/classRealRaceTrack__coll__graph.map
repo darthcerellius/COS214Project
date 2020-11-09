@@ -1,4 +1,4 @@
 <map id="RealRaceTrack" name="RealRaceTrack">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,119,107"/>
-<area shape="rect" id="node2" href="$classRaceTrack.html" title=" " alt="" coords="19,5,105,32"/>
+<area shape="rect" id="node1" title="Simulates a race event for the system." alt="" coords="5,80,119,107"/>
+<area shape="rect" id="node2" href="$classRaceTrack.html" title="Virtual parent class for SimulationTrack and RealRaceTrack." alt="" coords="19,5,105,32"/>
 </map>

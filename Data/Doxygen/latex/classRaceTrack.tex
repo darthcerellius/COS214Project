@@ -2,7 +2,17 @@
 \label{classRaceTrack}\index{RaceTrack@{RaceTrack}}
 
 
-Inheritance diagram for Race\+Track\+:\nopagebreak
+Virtual parent class for \mbox{\hyperlink{classSimulationTrack}{Simulation\+Track}} and \mbox{\hyperlink{classRealRaceTrack}{Real\+Race\+Track}}.  
+
+
+
+
+{\ttfamily \#include $<$Race\+Track.\+h$>$}
+
+
+
+Inheritance diagram for Race\+Track\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,9 +22,29 @@ Inheritance diagram for Race\+Track\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classRaceTrack_a0e2b564a8b904c37e155e1d951fece42}\label{classRaceTrack_a0e2b564a8b904c37e155e1d951fece42}} 
-virtual int {\bfseries get\+Laps} ()=0
+virtual int \mbox{\hyperlink{classRaceTrack_a0e2b564a8b904c37e155e1d951fece42}{get\+Laps}} ()=0
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Virtual parent class for \mbox{\hyperlink{classSimulationTrack}{Simulation\+Track}} and \mbox{\hyperlink{classRealRaceTrack}{Real\+Race\+Track}}. 
+
+This class exists for the \mbox{\hyperlink{classSimulation}{Simulation}} class, as it calls a \mbox{\hyperlink{classRaceTrack}{Race\+Track}} class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRaceTrack_a0e2b564a8b904c37e155e1d951fece42}\label{classRaceTrack_a0e2b564a8b904c37e155e1d951fece42}} 
+\index{RaceTrack@{RaceTrack}!getLaps@{getLaps}}
+\index{getLaps@{getLaps}!RaceTrack@{RaceTrack}}
+\doxysubsubsection{\texorpdfstring{getLaps()}{getLaps()}}
+{\footnotesize\ttfamily virtual int Race\+Track\+::get\+Laps (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Returns the number of laps the race track has. \begin{DoxyReturn}{Returns}
+-\/ Number of race laps. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classRealRaceTrack_aceec1c80da177374bd2b6c9e5a96e47d}{Real\+Race\+Track}}, and \mbox{\hyperlink{classSimulationTrack_a034f3a3cbb2c2a5ebe92b53b79f5fd65}{Simulation\+Track}}.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

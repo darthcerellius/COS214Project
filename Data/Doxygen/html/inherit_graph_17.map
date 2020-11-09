@@ -1,5 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classRaceTrack.html" title=" " alt="" coords="5,31,92,57"/>
-<area shape="rect" id="node2" href="$classRealRaceTrack.html" title=" " alt="" coords="141,5,255,32"/>
-<area shape="rect" id="node3" href="$classSimulationTrack.html" title=" " alt="" coords="140,56,256,83"/>
+<area shape="rect" id="node1" href="$classRaceTrack.html" title="Virtual parent class for SimulationTrack and RealRaceTrack." alt="" coords="5,31,92,57"/>
+<area shape="rect" id="node2" href="$classRealRaceTrack.html" title="Simulates a race event for the system." alt="" coords="141,5,255,32"/>
+<area shape="rect" id="node3" href="$classSimulationTrack.html" title="Implements the RaceTrack class for the Simulation class." alt="" coords="140,56,256,83"/>
 </map>

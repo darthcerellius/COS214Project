@@ -3,6 +3,7 @@
 //
 
 #include "TestingCommand.h"
+#include "../TeamManagerObjects.h"
 
 TestingCommand::TestingCommand(){
     softwareTest = new SoftwareTest();
@@ -14,6 +15,7 @@ void TestingCommand::execute(Car *car) {
     std::cout << "Performing tests on the car..." << std::endl;
     softwareTest->test(car);
     windTunnelTest->test(car);
+    CurrentSeason::testingCar = dynamic_cast<Car*>(windTunnelTest->getCar());
     std::cout << "Testing complete" << std::endl;
     if (successor != nullptr) {
         successor->execute(car);

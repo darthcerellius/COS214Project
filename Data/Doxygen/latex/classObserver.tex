@@ -1,18 +1,69 @@
 \hypertarget{classObserver}{}\doxysection{Observer Class Reference}
 \label{classObserver}\index{Observer@{Observer}}
+
+
+Observes the \mbox{\hyperlink{classRealRaceTrack}{Real\+Race\+Track}} position and records it when notified of a position change.  
+
+
+
+
+{\ttfamily \#include $<$Observer.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classObserver_a809568535bf53b092338522f24366333}\label{classObserver_a809568535bf53b092338522f24366333}} 
-void {\bfseries attach} (\mbox{\hyperlink{classRealRaceTrack}{Real\+Race\+Track}} $\ast$s)
+\mbox{\hyperlink{classObserver_a19c43f80a38a332a6f694783df3c9835}{Observer}} ()
 \item 
-\mbox{\Hypertarget{classObserver_a1bc221867819f9489cba3993cee98bf2}\label{classObserver_a1bc221867819f9489cba3993cee98bf2}} 
-void {\bfseries notify} ()
+void \mbox{\hyperlink{classObserver_a809568535bf53b092338522f24366333}{attach}} (\mbox{\hyperlink{classRealRaceTrack}{Real\+Race\+Track}} $\ast$s)
 \item 
-\mbox{\Hypertarget{classObserver_a6f58a4a530dc0ee7f8edf9e571fdfa4f}\label{classObserver_a6f58a4a530dc0ee7f8edf9e571fdfa4f}} 
-int {\bfseries get\+Event} ()
+void \mbox{\hyperlink{classObserver_a1bc221867819f9489cba3993cee98bf2}{notify}} ()
+\item 
+int \mbox{\hyperlink{classObserver_a6f58a4a530dc0ee7f8edf9e571fdfa4f}{get\+Event}} ()
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Observes the \mbox{\hyperlink{classRealRaceTrack}{Real\+Race\+Track}} position and records it when notified of a position change. 
+
+The \mbox{\hyperlink{classRacingCommand}{Racing\+Command}} uses this object to read the state of the race track after a qualifying or real race occurs. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classObserver_a19c43f80a38a332a6f694783df3c9835}\label{classObserver_a19c43f80a38a332a6f694783df3c9835}} 
+\index{Observer@{Observer}!Observer@{Observer}}
+\index{Observer@{Observer}!Observer@{Observer}}
+\doxysubsubsection{\texorpdfstring{Observer()}{Observer()}}
+{\footnotesize\ttfamily Observer\+::\+Observer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classObserver_a809568535bf53b092338522f24366333}\label{classObserver_a809568535bf53b092338522f24366333}} 
+\index{Observer@{Observer}!attach@{attach}}
+\index{attach@{attach}!Observer@{Observer}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}}
+{\footnotesize\ttfamily void Observer\+::attach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRealRaceTrack}{Real\+Race\+Track}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Attaches a race track to this object. 
+\begin{DoxyParams}{Parameters}
+{\em s} & -\/ The race track to observe. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classObserver_a6f58a4a530dc0ee7f8edf9e571fdfa4f}\label{classObserver_a6f58a4a530dc0ee7f8edf9e571fdfa4f}} 
+\index{Observer@{Observer}!getEvent@{getEvent}}
+\index{getEvent@{getEvent}!Observer@{Observer}}
+\doxysubsubsection{\texorpdfstring{getEvent()}{getEvent()}}
+{\footnotesize\ttfamily int Observer\+::get\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the data observed. \begin{DoxyReturn}{Returns}
+-\/ The position the car came in. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classObserver_a1bc221867819f9489cba3993cee98bf2}\label{classObserver_a1bc221867819f9489cba3993cee98bf2}} 
+\index{Observer@{Observer}!notify@{notify}}
+\index{notify@{notify}!Observer@{Observer}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}}
+{\footnotesize\ttfamily void Observer\+::notify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Used by the \mbox{\hyperlink{classRealRaceTrack}{Real\+Race\+Track}} object to notify this class of any changes. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

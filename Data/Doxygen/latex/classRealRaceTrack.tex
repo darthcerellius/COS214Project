@@ -2,7 +2,17 @@
 \label{classRealRaceTrack}\index{RealRaceTrack@{RealRaceTrack}}
 
 
-Inheritance diagram for Real\+Race\+Track\+:\nopagebreak
+Simulates a race event for the system.  
+
+
+
+
+{\ttfamily \#include $<$Real\+Race\+Track.\+h$>$}
+
+
+
+Inheritance diagram for Real\+Race\+Track\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -11,7 +21,8 @@ Inheritance diagram for Real\+Race\+Track\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Real\+Race\+Track\+:\nopagebreak
+Collaboration diagram for Real\+Race\+Track\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -24,27 +35,85 @@ Collaboration diagram for Real\+Race\+Track\+:\nopagebreak
 \mbox{\Hypertarget{classRealRaceTrack_a953e26e5e5ec57c9c1b293141ee19b08}\label{classRealRaceTrack_a953e26e5e5ec57c9c1b293141ee19b08}} 
 {\bfseries Real\+Race\+Track} (\mbox{\hyperlink{classObserver}{Observer}} $\ast$observer, \mbox{\hyperlink{classPitCrew}{Pit\+Crew}} $\ast$\+\_\+crew)
 \item 
-\mbox{\Hypertarget{classRealRaceTrack_a95b4ece1a9fa1dc193437b6eba00b74d}\label{classRealRaceTrack_a95b4ece1a9fa1dc193437b6eba00b74d}} 
-void {\bfseries num\+Laps} ()
+void \mbox{\hyperlink{classRealRaceTrack_a95b4ece1a9fa1dc193437b6eba00b74d}{num\+Laps}} ()
 \item 
-\mbox{\Hypertarget{classRealRaceTrack_aeb655de985b6e5dec31c4a59824788fa}\label{classRealRaceTrack_aeb655de985b6e5dec31c4a59824788fa}} 
-void {\bfseries set\+Weekend} (\mbox{\hyperlink{classRaceWeekend}{Race\+Weekend}} $\ast$weekend)
+void \mbox{\hyperlink{classRealRaceTrack_aeb655de985b6e5dec31c4a59824788fa}{set\+Weekend}} (\mbox{\hyperlink{classRaceWeekend}{Race\+Weekend}} $\ast$weekend)
 \item 
-\mbox{\Hypertarget{classRealRaceTrack_aceec1c80da177374bd2b6c9e5a96e47d}\label{classRealRaceTrack_aceec1c80da177374bd2b6c9e5a96e47d}} 
-int {\bfseries get\+Laps} () override
+int \mbox{\hyperlink{classRealRaceTrack_aceec1c80da177374bd2b6c9e5a96e47d}{get\+Laps}} () override
 \item 
-\mbox{\Hypertarget{classRealRaceTrack_a7c58e53b35db0f2bed0db13bf3d48ac6}\label{classRealRaceTrack_a7c58e53b35db0f2bed0db13bf3d48ac6}} 
-int {\bfseries get\+Position} ()
+int \mbox{\hyperlink{classRealRaceTrack_a7c58e53b35db0f2bed0db13bf3d48ac6}{get\+Position}} ()
 \item 
-\mbox{\Hypertarget{classRealRaceTrack_a0334254bb80f3208d1cca05d84c3f237}\label{classRealRaceTrack_a0334254bb80f3208d1cca05d84c3f237}} 
-void {\bfseries race} ()
+void \mbox{\hyperlink{classRealRaceTrack_a0334254bb80f3208d1cca05d84c3f237}{race}} ()
 \item 
-\mbox{\Hypertarget{classRealRaceTrack_a2e69e081974a5fd918b4d864688ad414}\label{classRealRaceTrack_a2e69e081974a5fd918b4d864688ad414}} 
-void {\bfseries practice} ()
+void \mbox{\hyperlink{classRealRaceTrack_a2e69e081974a5fd918b4d864688ad414}{practice}} ()
 \item 
-\mbox{\Hypertarget{classRealRaceTrack_a7654970a249d0eea39856f7d555e8318}\label{classRealRaceTrack_a7654970a249d0eea39856f7d555e8318}} 
-void {\bfseries qualify} ()
+void \mbox{\hyperlink{classRealRaceTrack_a7654970a249d0eea39856f7d555e8318}{qualify}} ()
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Simulates a race event for the system. 
+
+This class has three functions\+: qualify, practice and race. Practice is meant for the Friday practice day, qualify is meant to determine the qualifying position of the car, and race performs the actual race. Race also generates random events for the \mbox{\hyperlink{classPitCrew}{Pit\+Crew}} to handle. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRealRaceTrack_aceec1c80da177374bd2b6c9e5a96e47d}\label{classRealRaceTrack_aceec1c80da177374bd2b6c9e5a96e47d}} 
+\index{RealRaceTrack@{RealRaceTrack}!getLaps@{getLaps}}
+\index{getLaps@{getLaps}!RealRaceTrack@{RealRaceTrack}}
+\doxysubsubsection{\texorpdfstring{getLaps()}{getLaps()}}
+{\footnotesize\ttfamily int Real\+Race\+Track\+::get\+Laps (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Returns the number of laps the race track has. \begin{DoxyReturn}{Returns}
+-\/ Number of race laps. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaceTrack_a0e2b564a8b904c37e155e1d951fece42}{Race\+Track}}.
+
+\mbox{\Hypertarget{classRealRaceTrack_a7c58e53b35db0f2bed0db13bf3d48ac6}\label{classRealRaceTrack_a7c58e53b35db0f2bed0db13bf3d48ac6}} 
+\index{RealRaceTrack@{RealRaceTrack}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!RealRaceTrack@{RealRaceTrack}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily int Real\+Race\+Track\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the positon of the car \begin{DoxyReturn}{Returns}
+-\/ The car\textquotesingle{}s position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRealRaceTrack_a95b4ece1a9fa1dc193437b6eba00b74d}\label{classRealRaceTrack_a95b4ece1a9fa1dc193437b6eba00b74d}} 
+\index{RealRaceTrack@{RealRaceTrack}!numLaps@{numLaps}}
+\index{numLaps@{numLaps}!RealRaceTrack@{RealRaceTrack}}
+\doxysubsubsection{\texorpdfstring{numLaps()}{numLaps()}}
+{\footnotesize\ttfamily void Real\+Race\+Track\+::num\+Laps (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Calculates how many laps this race track has \mbox{\Hypertarget{classRealRaceTrack_a2e69e081974a5fd918b4d864688ad414}\label{classRealRaceTrack_a2e69e081974a5fd918b4d864688ad414}} 
+\index{RealRaceTrack@{RealRaceTrack}!practice@{practice}}
+\index{practice@{practice}!RealRaceTrack@{RealRaceTrack}}
+\doxysubsubsection{\texorpdfstring{practice()}{practice()}}
+{\footnotesize\ttfamily void Real\+Race\+Track\+::practice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Runs the practice day. \mbox{\Hypertarget{classRealRaceTrack_a7654970a249d0eea39856f7d555e8318}\label{classRealRaceTrack_a7654970a249d0eea39856f7d555e8318}} 
+\index{RealRaceTrack@{RealRaceTrack}!qualify@{qualify}}
+\index{qualify@{qualify}!RealRaceTrack@{RealRaceTrack}}
+\doxysubsubsection{\texorpdfstring{qualify()}{qualify()}}
+{\footnotesize\ttfamily void Real\+Race\+Track\+::qualify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Runs the qualifying round. \mbox{\Hypertarget{classRealRaceTrack_a0334254bb80f3208d1cca05d84c3f237}\label{classRealRaceTrack_a0334254bb80f3208d1cca05d84c3f237}} 
+\index{RealRaceTrack@{RealRaceTrack}!race@{race}}
+\index{race@{race}!RealRaceTrack@{RealRaceTrack}}
+\doxysubsubsection{\texorpdfstring{race()}{race()}}
+{\footnotesize\ttfamily void Real\+Race\+Track\+::race (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Performs the real race \mbox{\Hypertarget{classRealRaceTrack_aeb655de985b6e5dec31c4a59824788fa}\label{classRealRaceTrack_aeb655de985b6e5dec31c4a59824788fa}} 
+\index{RealRaceTrack@{RealRaceTrack}!setWeekend@{setWeekend}}
+\index{setWeekend@{setWeekend}!RealRaceTrack@{RealRaceTrack}}
+\doxysubsubsection{\texorpdfstring{setWeekend()}{setWeekend()}}
+{\footnotesize\ttfamily void Real\+Race\+Track\+::set\+Weekend (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRaceWeekend}{Race\+Weekend}} $\ast$}]{weekend }\end{DoxyParamCaption})}
+
+Gets a Weekend class to determine race track information 
+\begin{DoxyParams}{Parameters}
+{\em weekend} & -\/ The weekend where thre race is happening \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

@@ -80,12 +80,12 @@ Inheritance diagram for AbstractJSONReader:</div>
 <div class="center"><img src="classAbstractJSONReader__inherit__graph.png" border="0" usemap="#AbstractJSONReader_inherit__map" alt="Inheritance graph"/></div>
 <map name="AbstractJSONReader_inherit__map" id="AbstractJSONReader_inherit__map">
 <area shape="rect" title="Parses a JSON string and constructs a JSON object." alt="" coords="266,5,415,32"/>
-<area shape="rect" href="classJSONElement.html" title=" " alt="" coords="142,80,249,107"/>
-<area shape="rect" href="classJSONObjectHolder.html" title=" " alt="" coords="273,80,408,107"/>
+<area shape="rect" href="classJSONElement.html" title="Leaf node that holds a string data, but returns it as various types depending on the child implementa..." alt="" coords="142,80,249,107"/>
+<area shape="rect" href="classJSONObjectHolder.html" title="Holds AbstractJSONReader objects in an array. Data are accessed with an index." alt="" coords="273,80,408,107"/>
 <area shape="rect" href="classJSONRoot.html" title="Holds JSON objects as key&#45;value pairs." alt="" coords="432,80,519,107"/>
-<area shape="rect" href="classDoubleElement.html" title=" " alt="" coords="5,155,116,181"/>
-<area shape="rect" href="classIntegerElement.html" title=" " alt="" coords="140,155,251,181"/>
-<area shape="rect" href="classStringElement.html" title=" " alt="" coords="275,155,379,181"/>
+<area shape="rect" href="classDoubleElement.html" title="Holds a double representation of data." alt="" coords="5,155,116,181"/>
+<area shape="rect" href="classIntegerElement.html" title="Holds an integer representation of data." alt="" coords="140,155,251,181"/>
+<area shape="rect" href="classStringElement.html" title="Returns a string representation of data." alt="" coords="275,155,379,181"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -113,7 +113,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Parses a JSON string and constructs a JSON object. </p>
-<p>A string is passed into a JSON reader (either a <a class="el" href="classJSONRoot.html" title="Holds JSON objects as key-value pairs.">JSONRoot</a> or <a class="el" href="classJSONObjectHolder.html">JSONObjectHolder</a>) when it is constructed. This automatically creates a JSON object. You can access methods as you would in JavaScript, through the [] operator. </p>
+<p>A string is passed into a JSON reader (either a <a class="el" href="classJSONRoot.html" title="Holds JSON objects as key-value pairs.">JSONRoot</a> or <a class="el" href="classJSONObjectHolder.html" title="Holds AbstractJSONReader objects in an array. Data are accessed with an index.">JSONObjectHolder</a>) when it is constructed. This automatically creates a JSON object. You can access methods as you would in JavaScript, through the [] operator. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac593e4370b6011c515567f723a07de4d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac593e4370b6011c515567f723a07de4d">&#9670;&nbsp;</a></span>AbstractJSONReader()</h2>
@@ -321,7 +321,7 @@ Protected Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>- Returns an AbstractJSONObject (Either an Element, or another <a class="el" href="classJSONRoot.html" title="Holds JSON objects as key-value pairs.">JSONRoot</a> or <a class="el" href="classJSONObjectHolder.html">JSONObjectHolder</a>) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>- Returns an AbstractJSONObject (Either an Element, or another <a class="el" href="classJSONRoot.html" title="Holds JSON objects as key-value pairs.">JSONRoot</a> or <a class="el" href="classJSONObjectHolder.html" title="Holds AbstractJSONReader objects in an array. Data are accessed with an index.">JSONObjectHolder</a>) </dd></dl>
 
 <p>Implemented in <a class="el" href="classJSONRoot.html#a7445bc4e86146dba8e273550e6ef5371">JSONRoot</a>, <a class="el" href="classJSONObjectHolder.html#ae64876e2f368ce4f3fb592a13dddb92a">JSONObjectHolder</a>, and <a class="el" href="classJSONElement.html#abca38fcc6350954f229728afde406110">JSONElement</a>.</p>
 
@@ -356,7 +356,7 @@ Protected Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>- Returns an AbstractJSONObject (Either an Element, or another <a class="el" href="classJSONRoot.html" title="Holds JSON objects as key-value pairs.">JSONRoot</a> or <a class="el" href="classJSONObjectHolder.html">JSONObjectHolder</a>) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>- Returns an AbstractJSONObject (Either an Element, or another <a class="el" href="classJSONRoot.html" title="Holds JSON objects as key-value pairs.">JSONRoot</a> or <a class="el" href="classJSONObjectHolder.html" title="Holds AbstractJSONReader objects in an array. Data are accessed with an index.">JSONObjectHolder</a>) </dd></dl>
 
 <p>Implemented in <a class="el" href="classJSONRoot.html#aceaebc7ceffa42d0431ef9a7d316f4fe">JSONRoot</a>, <a class="el" href="classJSONObjectHolder.html#a300b5d98f7114cff6ee818f3b68572ea">JSONObjectHolder</a>, and <a class="el" href="classJSONElement.html#a37b6210bbd61706c029b359cb4a4b242">JSONElement</a>.</p>
 

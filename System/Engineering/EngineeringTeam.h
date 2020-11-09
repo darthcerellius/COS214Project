@@ -43,6 +43,8 @@ public:
      * Services the car (Outputs relevant info)
      */
     void serviceCar();
+
+    void setCar(Car* car);
 };
 
 
