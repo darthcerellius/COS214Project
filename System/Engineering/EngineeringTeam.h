@@ -45,6 +45,8 @@ public:
     void serviceCar();
 
     void setCar(Car* car);
+
+    void changeElectronicsMode(string);
 };
 
 

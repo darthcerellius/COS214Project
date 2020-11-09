@@ -60,3 +60,7 @@ EngineeringTeam::~EngineeringTeam() {
 void EngineeringTeam::setCar(Car *car) {
     this->car = car;
 }
+
+void EngineeringTeam::changeElectronicsMode(string) {
+
+}

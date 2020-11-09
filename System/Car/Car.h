@@ -38,7 +38,7 @@ public:
      * Clone method which will return a deep copy of the car.
     */
     Component* clone();
-
+    Component* getComponent();
     /**
      * Method to add a component to the map of components.
      @param c - The component to be added to the car
