@@ -78,15 +78,15 @@ bool AerodynamicsComponent::windTunnelTest(int &tokens) {
     x->setMemento(this);
     double factor = tokens/100.0;
     std::cout << "WIND TUNNEL TESTING : "<< to_string(tokens)  <<" tokens remaining : downforce before testing: " << to_string(this->downForce) << " | wind resistance before testing : " <<to_string(this->windResistance)<< std::endl;
-    for (int i = 0; i < 20; ++i, tokens--) {
+    for (int i = 0; i < 10; ++i, tokens--) {
         if (tokens<0){
             std::cout<<"Already ran all 400 wind tunnel tests" << std::endl << std::endl;
            break;
         }
         this->downForce += factor;
-        this->windResistance -= factor;
+        this->windResistance -= factor/10.0;
         factor = factor * 0.9;
-        std::cout << "WIND TUNNEL TESTING : "<< to_string(abs(tokens))  <<" tokens remaining : downforce altered to: " << to_string(this->downForce) << " | wind resistance altered to : " <<to_string(this->windResistance)<< std::endl;
+        //std::cout << "WIND TUNNEL TESTING : "<< to_string(abs(tokens))  <<" tokens remaining : downforce altered to: " << to_string(this->downForce) << " | wind resistance altered to : " <<to_string(this->windResistance)<< std::endl;
         if (this->downForce<20 ){
             //std::cout << "Wind tunnel test failed at test number : " + to_string(i+1) << " -  the downforce generated was not enough to keep the car on the ground, current downforce : " << to_string(this->downForce)<< std::endl;
             this->restore(x);

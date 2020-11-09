@@ -71,15 +71,15 @@ bool Chassis::windTunnelTest(int &tokens) {
     care->setMemento(this->createMemento());
     double factor = tokens/100.0;
     std::cout << "WIND TUNNEL TESTING : "<< to_string(tokens)  <<" tokens remaining : downforce before testing: " << to_string(this->downForce) << " | wind resistance before testing : " <<to_string(this->windResistance)<< std::endl;
-    for (int i = 0; i < 20; ++i, tokens--) {
+    for (int i = 0; i < 10; ++i, tokens--) {
         if (tokens<0){
             std::cout<<"Already ran all 400 wind tunnel tests" << std::endl << std::endl;
            break;
         }
         this->downForce += factor;
-        this->windResistance -= factor/10;
+        this->windResistance -= factor/20.0;
         factor = factor * 0.9;
-        std::cout << "WIND TUNNEL TESTING : "<< to_string(abs(tokens))  <<" tokens remaining : downforce altered to: " << to_string(this->downForce) << " | wind resistance altered to : " <<to_string(this->windResistance)<< std::endl;
+        //std::cout << "WIND TUNNEL TESTING : "<< to_string(abs(tokens))  <<" tokens remaining : downforce altered to: " << to_string(this->downForce) << " | wind resistance altered to : " <<to_string(this->windResistance)<< std::endl;
 
 
         if (this->downForce<20 ) {

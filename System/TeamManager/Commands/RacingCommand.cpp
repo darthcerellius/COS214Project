@@ -23,7 +23,7 @@ void RacingCommand::execute(Car *car) {
     track->setWeekend(CurrentSeason::currentWeekend);
     track->numLaps();
     std::cout << "Unloading car from airplane" << std::endl;
-    car->restore(CurrentSeason::garage->getMemento());
+    //car->restore(CurrentSeason::garage->getMemento());
     std::cout << "Current race is happening at: " <<
     CurrentSeason::currentWeekend->getName() << ", "
     << CurrentSeason::currentWeekend->getLocation() << std::endl;

@@ -20,9 +20,9 @@ Command *CurSeasonBuilder::buildCommandChain() {
     Command* endSeasonCommand = new EndSeasonCommand();
     ServiceEngineeringCommand* serviceEng = new ServiceEngineeringCommand();
     ServiceLogisticCommand* serveLog = new ServiceLogisticCommand();
-    logisticsCommand->addSuccessor(stratComm);
-    stratComm->addSuccessor(testingCommand);
-    testingCommand->addSuccessor(race);
+    logisticsCommand->addSuccessor(testingCommand);
+    testingCommand->addSuccessor(stratComm);
+    stratComm->addSuccessor(race);
     race->addSuccessor(endSeasonCommand);
     endSeasonCommand->addSuccessor(serveLog);
     serveLog->addSuccessor(serviceEng);
