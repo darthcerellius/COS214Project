@@ -1,12 +1,13 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classCommand.html" title="Command object that executes part of the system." alt="" coords="5,208,88,235"/>
+<area shape="rect" id="node1" href="$classCommand.html" title="Command object that executes part of the system." alt="" coords="5,233,88,260"/>
 <area shape="rect" id="node2" href="$classCarStoreCommand.html" title="Stores the newly constructed car in a global variable for later retrieval." alt="" coords="166,5,301,32"/>
-<area shape="rect" id="node3" href="$classEngineeringCommand.html" title="Invokes the Engineering team to construct a car." alt="" coords="158,56,309,83"/>
-<area shape="rect" id="node4" href="$classLogisticsCommand.html" title="Transports a car to the race track." alt="" coords="166,107,301,133"/>
-<area shape="rect" id="node5" href="$classRacingCommand.html" title="Constructs a race track, a Pit Crew team and an Observer. Invokes the race track to simulate a race." alt="" coords="172,157,295,184"/>
-<area shape="rect" id="node6" href="$classServiceEngineeringCommand.html" title="Invokes the Engineering team to service a car." alt="" coords="136,208,331,235"/>
-<area shape="rect" id="node7" href="$classServiceLogisticCommand.html" title="Transports the car to the Service Engineering team." alt="" coords="148,259,319,285"/>
-<area shape="rect" id="node8" href="$classSimulationCommand.html" title="Uses the Simulation class to run a simulation on the car." alt="" coords="162,309,305,336"/>
-<area shape="rect" id="node9" href="$classStrategyCommand.html" title="Uses the strategy team to decide on the car&#39;s strategy." alt="" coords="168,360,299,387"/>
-<area shape="rect" id="node10" href="$classTestingCommand.html" title="Creates testing objects and uses them to perform tests on the car." alt="" coords="171,411,295,437"/>
+<area shape="rect" id="node3" href="$classEndSeasonCommand.html" title=" " alt="" coords="159,56,308,83"/>
+<area shape="rect" id="node4" href="$classEngineeringCommand.html" title="Invokes the Engineering team to construct a car." alt="" coords="158,107,309,133"/>
+<area shape="rect" id="node5" href="$classLogisticsCommand.html" title="Transports a car to the race track." alt="" coords="166,157,301,184"/>
+<area shape="rect" id="node6" href="$classRacingCommand.html" title="Constructs a race track, a Pit Crew team and an Observer. Invokes the race track to simulate a race." alt="" coords="172,208,295,235"/>
+<area shape="rect" id="node7" href="$classServiceEngineeringCommand.html" title="Invokes the Engineering team to service a car." alt="" coords="136,259,331,285"/>
+<area shape="rect" id="node8" href="$classServiceLogisticCommand.html" title="Transports the car to the Service Engineering team." alt="" coords="148,309,319,336"/>
+<area shape="rect" id="node9" href="$classSimulationCommand.html" title="Uses the Simulation class to run a simulation on the car." alt="" coords="162,360,305,387"/>
+<area shape="rect" id="node10" href="$classStrategyCommand.html" title="Uses the strategy team to decide on the car&#39;s strategy." alt="" coords="168,411,299,437"/>
+<area shape="rect" id="node11" href="$classTestingCommand.html" title="Creates testing objects and uses them to perform tests on the car." alt="" coords="171,461,295,488"/>
 </map>

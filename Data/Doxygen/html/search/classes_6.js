@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['generalracestrategy_159',['GeneralRaceStrategy',['../classGeneralRaceStrategy.html',1,'']]]
+  ['generalracestrategy_163',['GeneralRaceStrategy',['../classGeneralRaceStrategy.html',1,'']]]
 ];

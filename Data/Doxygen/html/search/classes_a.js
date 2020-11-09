@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['minimalpitstops_170',['MinimalPitstops',['../classMinimalPitstops.html',1,'']]]
+  ['minimalpitstops_174',['MinimalPitstops',['../classMinimalPitstops.html',1,'']]]
 ];

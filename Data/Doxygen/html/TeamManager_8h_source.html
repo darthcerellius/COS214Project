@@ -83,25 +83,26 @@ $(function() {
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classCommand.html">Command</a>* preSeasonCommand;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classCommand.html">Command</a>* curSeasonCommand;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classConcreteCalendar.html">ConcreteCalendar</a>* calendar;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    Car* raceCar;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">static</span> <a class="code" href="classTeamManager.html">TeamManager</a>* manager;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> isCreated;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    ~<a class="code" href="classTeamManager.html">TeamManager</a>();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">static</span> <a class="code" href="classTeamManager.html">TeamManager</a>* <a class="code" href="classTeamManager.html#acf634272666999c5f5fa76023b1b4d9e">getTeamManager</a>();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTeamManager.html#ad970d659991c1a66de74572df5b46874">run</a>();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classTeamManager.html">TeamManager</a>();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classCommand.html">Command</a>* nextCommand;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classConcreteCalendar.html">ConcreteCalendar</a>* calendar;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    Car* raceCar;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">static</span> <a class="code" href="classTeamManager.html">TeamManager</a>* manager;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> isCreated;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    ~<a class="code" href="classTeamManager.html">TeamManager</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">static</span> <a class="code" href="classTeamManager.html">TeamManager</a>* <a class="code" href="classTeamManager.html#acf634272666999c5f5fa76023b1b4d9e">getTeamManager</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTeamManager.html#ad970d659991c1a66de74572df5b46874">run</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="classTeamManager.html">TeamManager</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;};</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif //COS214PROJECT_TEAMMANAGER_H</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif //COS214PROJECT_TEAMMANAGER_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassTeamManager_html"><div class="ttname"><a href="classTeamManager.html">TeamManager</a></div><div class="ttdoc">Facade class responsible for the runtime of the entire system.</div><div class="ttdef"><b>Definition:</b> TeamManager.h:17</div></div>
 <div class="ttc" id="aclassCommand_html"><div class="ttname"><a href="classCommand.html">Command</a></div><div class="ttdoc">Command object that executes part of the system.</div><div class="ttdef"><b>Definition:</b> Command.h:18</div></div>
-<div class="ttc" id="aclassTeamManager_html_acf634272666999c5f5fa76023b1b4d9e"><div class="ttname"><a href="classTeamManager.html#acf634272666999c5f5fa76023b1b4d9e">TeamManager::getTeamManager</a></div><div class="ttdeci">static TeamManager * getTeamManager()</div><div class="ttdef"><b>Definition:</b> TeamManager.cpp:45</div></div>
-<div class="ttc" id="aclassTeamManager_html_ad970d659991c1a66de74572df5b46874"><div class="ttname"><a href="classTeamManager.html#ad970d659991c1a66de74572df5b46874">TeamManager::run</a></div><div class="ttdeci">void run()</div><div class="ttdef"><b>Definition:</b> TeamManager.cpp:53</div></div>
+<div class="ttc" id="aclassTeamManager_html_acf634272666999c5f5fa76023b1b4d9e"><div class="ttname"><a href="classTeamManager.html#acf634272666999c5f5fa76023b1b4d9e">TeamManager::getTeamManager</a></div><div class="ttdeci">static TeamManager * getTeamManager()</div><div class="ttdef"><b>Definition:</b> TeamManager.cpp:48</div></div>
+<div class="ttc" id="aclassTeamManager_html_ad970d659991c1a66de74572df5b46874"><div class="ttname"><a href="classTeamManager.html#ad970d659991c1a66de74572df5b46874">TeamManager::run</a></div><div class="ttdeci">void run()</div><div class="ttdef"><b>Definition:</b> TeamManager.cpp:56</div></div>
 <div class="ttc" id="aclassConcreteCalendar_html"><div class="ttname"><a href="classConcreteCalendar.html">ConcreteCalendar</a></div><div class="ttdoc">Concrete class for the Calendar class.</div><div class="ttdef"><b>Definition:</b> ConcreteCalendar.h:17</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

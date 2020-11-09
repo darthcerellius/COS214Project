@@ -79,27 +79,27 @@ $(function() {
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;Iterator.h&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classCalendarIterator.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCalendarIterator.html">CalendarIterator</a> : <span class="keyword">public</span> <a class="code" href="classIterator.html">Iterator</a></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classCalendarIterator.html#af47c7dfe7e92be2ce2c1ff8394ce9adc">CalendarIterator</a>(std::vector&lt;RaceWeekend*&gt; weekends);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCalendarIterator.html#a189ae14784802e78f0ff10b5d5200d9d">first</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCalendarIterator.html#a8b630f46c11d45e617beba00a9de6fee">next</a>();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classCalendarIterator.html#ac6a9aee1a902c0e19dbc377a65a51078">isDone</a>();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classRaceWeekend.html">RaceWeekend</a>* <a class="code" href="classCalendarIterator.html#abc787fb68a3c3e7badce6c97e6682a9b">current</a>();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    std::vector&lt;RaceWeekend*&gt; weekends; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">int</span> index = 0;  </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif //COS214PROJECT_CALENDARITERATOR_H</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classCalendarIterator.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCalendarIterator.html">CalendarIterator</a> : <span class="keyword">public</span> <a class="code" href="classIterator.html">Iterator</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classCalendarIterator.html#af47c7dfe7e92be2ce2c1ff8394ce9adc">CalendarIterator</a>(std::vector&lt;RaceWeekend*&gt; weekends);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCalendarIterator.html#a189ae14784802e78f0ff10b5d5200d9d">first</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCalendarIterator.html#a8b630f46c11d45e617beba00a9de6fee">next</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classCalendarIterator.html#ac6a9aee1a902c0e19dbc377a65a51078">isDone</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="classRaceWeekend.html">RaceWeekend</a>* <a class="code" href="classCalendarIterator.html#abc787fb68a3c3e7badce6c97e6682a9b">current</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    std::vector&lt;RaceWeekend*&gt; weekends; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">int</span> index = 0;  </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;};</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif //COS214PROJECT_CALENDARITERATOR_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassCalendarIterator_html"><div class="ttname"><a href="classCalendarIterator.html">CalendarIterator</a></div><div class="ttdoc">Concrete class for the Iterator class.</div><div class="ttdef"><b>Definition:</b> CalendarIterator.h:19</div></div>
+<div class="ttc" id="aclassCalendarIterator_html"><div class="ttname"><a href="classCalendarIterator.html">CalendarIterator</a></div><div class="ttdoc">Concrete class for the Iterator class.</div><div class="ttdef"><b>Definition:</b> CalendarIterator.h:17</div></div>
 <div class="ttc" id="aclassCalendarIterator_html_a189ae14784802e78f0ff10b5d5200d9d"><div class="ttname"><a href="classCalendarIterator.html#a189ae14784802e78f0ff10b5d5200d9d">CalendarIterator::first</a></div><div class="ttdeci">void first()</div><div class="ttdef"><b>Definition:</b> CalendarIterator.cpp:12</div></div>
 <div class="ttc" id="aclassCalendarIterator_html_ac6a9aee1a902c0e19dbc377a65a51078"><div class="ttname"><a href="classCalendarIterator.html#ac6a9aee1a902c0e19dbc377a65a51078">CalendarIterator::isDone</a></div><div class="ttdeci">bool isDone()</div><div class="ttdef"><b>Definition:</b> CalendarIterator.cpp:22</div></div>
-<div class="ttc" id="aclassIterator_html"><div class="ttname"><a href="classIterator.html">Iterator</a></div><div class="ttdoc">Abstract class for iterator.</div><div class="ttdef"><b>Definition:</b> Iterator.h:17</div></div>
-<div class="ttc" id="aclassRaceWeekend_html"><div class="ttname"><a href="classRaceWeekend.html">RaceWeekend</a></div><div class="ttdef"><b>Definition:</b> RaceWeekend.h:34</div></div>
+<div class="ttc" id="aclassIterator_html"><div class="ttname"><a href="classIterator.html">Iterator</a></div><div class="ttdoc">Abstract class for iterator.</div><div class="ttdef"><b>Definition:</b> Iterator.h:15</div></div>
+<div class="ttc" id="aclassRaceWeekend_html"><div class="ttname"><a href="classRaceWeekend.html">RaceWeekend</a></div><div class="ttdef"><b>Definition:</b> RaceWeekend.h:32</div></div>
 <div class="ttc" id="aclassCalendarIterator_html_a8b630f46c11d45e617beba00a9de6fee"><div class="ttname"><a href="classCalendarIterator.html#a8b630f46c11d45e617beba00a9de6fee">CalendarIterator::next</a></div><div class="ttdeci">void next()</div><div class="ttdef"><b>Definition:</b> CalendarIterator.cpp:16</div></div>
 <div class="ttc" id="aclassCalendarIterator_html_abc787fb68a3c3e7badce6c97e6682a9b"><div class="ttname"><a href="classCalendarIterator.html#abc787fb68a3c3e7badce6c97e6682a9b">CalendarIterator::current</a></div><div class="ttdeci">RaceWeekend * current()</div><div class="ttdef"><b>Definition:</b> CalendarIterator.cpp:26</div></div>
 <div class="ttc" id="aclassCalendarIterator_html_af47c7dfe7e92be2ce2c1ff8394ce9adc"><div class="ttname"><a href="classCalendarIterator.html#af47c7dfe7e92be2ce2c1ff8394ce9adc">CalendarIterator::CalendarIterator</a></div><div class="ttdeci">CalendarIterator(std::vector&lt; RaceWeekend * &gt; weekends)</div><div class="ttdef"><b>Definition:</b> CalendarIterator.cpp:8</div></div>

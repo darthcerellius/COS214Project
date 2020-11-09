@@ -77,53 +77,53 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef COS214PROJECT_RACEWEEKEND_H</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define COS214PROJECT_RACEWEEKEND_H</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structDate.html">   23</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structDate.html">Date</a> {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">int</span> d, m, y;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structConditions.html">   28</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structConditions.html">Conditions</a> {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    std::string weather;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">double</span> temperature;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">double</span> humidity;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classRaceWeekend.html">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRaceWeekend.html">RaceWeekend</a>{</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classRaceWeekend.html#a995aa7a3e0abed0d1cf6f9fd880f3b7d">RaceWeekend</a>(std::string _trackName, <span class="keywordtype">double</span> _length, std::string _location, <a class="code" href="structDate.html">Date</a>* _date, <a class="code" href="structConditions.html">Conditions</a>* _condis);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="classRaceWeekend.html#a91632ae88452468bed8f4b4225a3032c">~RaceWeekend</a>();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRaceWeekend.html#a0325e5aef485b9db8e359d46da44bc25">setName</a>(std::string _trackName);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    std::string <a class="code" href="classRaceWeekend.html#a650f124b64ec8bca8049bdd730af4c64">getName</a>();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRaceWeekend.html#add3b828d668d1498d6b15a93cd3baa23">setLength</a>(<span class="keywordtype">double</span> _length);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classRaceWeekend.html#aef057fe516e8a252de523be87157e944">getLength</a>();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRaceWeekend.html#ae48109976301bf61ab99ba8766878082">setLocation</a>(std::string _location);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    std::string <a class="code" href="classRaceWeekend.html#a0571235217e5a53037385bba1d29fbab">getLocation</a>();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRaceWeekend.html#aff69cae7b28f9b23fa25e809d68d127d">setDate</a>(<a class="code" href="structDate.html">Date</a>* _date);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="structDate.html">Date</a>* <a class="code" href="classRaceWeekend.html#ac3dcedda3390f820081fc1895f139085">getDate</a>();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRaceWeekend.html#a42cbc11254320da16552a77c194a3c87">setCondis</a>(<a class="code" href="structConditions.html">Conditions</a>* _condis);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="structConditions.html">Conditions</a>* <a class="code" href="classRaceWeekend.html#a72846c08fe7d9af9a0e1229df3cac9a5">getCondis</a>();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classRaceWeekend.html#aab62d6ec9edca7cb01b57b2f8f182e1a">daysBetween</a>(<a class="code" href="structDate.html">Date</a>* date1, <a class="code" href="structDate.html">Date</a>* date2);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classRaceWeekend.html#a854f02c94bbd03f7bc08b5e5b0fcbcad">countLeapYears</a>(<a class="code" href="structDate.html">Date</a>* date);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    std::string trackName; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">double</span> length; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    std::string location; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="structDate.html">Date</a>* date; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="structConditions.html">Conditions</a>* condis; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;};</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#endif //COS214PROJECT_RACEWEEKEND_H</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structDate.html">   21</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structDate.html">Date</a> {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">int</span> d, m, y;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structConditions.html">   26</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structConditions.html">Conditions</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    std::string weather;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">double</span> temperature;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">double</span> humidity;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classRaceWeekend.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRaceWeekend.html">RaceWeekend</a>{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classRaceWeekend.html#a995aa7a3e0abed0d1cf6f9fd880f3b7d">RaceWeekend</a>(std::string _trackName, <span class="keywordtype">double</span> _length, std::string _location, <a class="code" href="structDate.html">Date</a>* _date, <a class="code" href="structConditions.html">Conditions</a>* _condis);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classRaceWeekend.html#a91632ae88452468bed8f4b4225a3032c">~RaceWeekend</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRaceWeekend.html#a0325e5aef485b9db8e359d46da44bc25">setName</a>(std::string _trackName);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    std::string <a class="code" href="classRaceWeekend.html#a650f124b64ec8bca8049bdd730af4c64">getName</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRaceWeekend.html#add3b828d668d1498d6b15a93cd3baa23">setLength</a>(<span class="keywordtype">double</span> _length);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classRaceWeekend.html#aef057fe516e8a252de523be87157e944">getLength</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRaceWeekend.html#ae48109976301bf61ab99ba8766878082">setLocation</a>(std::string _location);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    std::string <a class="code" href="classRaceWeekend.html#a0571235217e5a53037385bba1d29fbab">getLocation</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRaceWeekend.html#aff69cae7b28f9b23fa25e809d68d127d">setDate</a>(<a class="code" href="structDate.html">Date</a>* _date);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="structDate.html">Date</a>* <a class="code" href="classRaceWeekend.html#ac3dcedda3390f820081fc1895f139085">getDate</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRaceWeekend.html#a42cbc11254320da16552a77c194a3c87">setCondis</a>(<a class="code" href="structConditions.html">Conditions</a>* _condis);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="structConditions.html">Conditions</a>* <a class="code" href="classRaceWeekend.html#a72846c08fe7d9af9a0e1229df3cac9a5">getCondis</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classRaceWeekend.html#aab62d6ec9edca7cb01b57b2f8f182e1a">daysBetween</a>(<a class="code" href="structDate.html">Date</a>* date1, <a class="code" href="structDate.html">Date</a>* date2);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classRaceWeekend.html#a854f02c94bbd03f7bc08b5e5b0fcbcad">countLeapYears</a>(<a class="code" href="structDate.html">Date</a>* date);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    std::string trackName; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">double</span> length; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    std::string location; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="structDate.html">Date</a>* date; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="structConditions.html">Conditions</a>* condis; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;};</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#endif //COS214PROJECT_RACEWEEKEND_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassRaceWeekend_html_aab62d6ec9edca7cb01b57b2f8f182e1a"><div class="ttname"><a href="classRaceWeekend.html#aab62d6ec9edca7cb01b57b2f8f182e1a">RaceWeekend::daysBetween</a></div><div class="ttdeci">static int daysBetween(Date *date1, Date *date2)</div><div class="ttdef"><b>Definition:</b> RaceWeekend.cpp:54</div></div>
 <div class="ttc" id="aclassRaceWeekend_html_aff69cae7b28f9b23fa25e809d68d127d"><div class="ttname"><a href="classRaceWeekend.html#aff69cae7b28f9b23fa25e809d68d127d">RaceWeekend::setDate</a></div><div class="ttdeci">void setDate(Date *_date)</div><div class="ttdef"><b>Definition:</b> RaceWeekend.cpp:30</div></div>
 <div class="ttc" id="aclassRaceWeekend_html_a0325e5aef485b9db8e359d46da44bc25"><div class="ttname"><a href="classRaceWeekend.html#a0325e5aef485b9db8e359d46da44bc25">RaceWeekend::setName</a></div><div class="ttdeci">void setName(std::string _trackName)</div><div class="ttdef"><b>Definition:</b> RaceWeekend.cpp:15</div></div>
 <div class="ttc" id="aclassRaceWeekend_html_aef057fe516e8a252de523be87157e944"><div class="ttname"><a href="classRaceWeekend.html#aef057fe516e8a252de523be87157e944">RaceWeekend::getLength</a></div><div class="ttdeci">double getLength()</div><div class="ttdef"><b>Definition:</b> RaceWeekend.cpp:26</div></div>
 <div class="ttc" id="aclassRaceWeekend_html_a72846c08fe7d9af9a0e1229df3cac9a5"><div class="ttname"><a href="classRaceWeekend.html#a72846c08fe7d9af9a0e1229df3cac9a5">RaceWeekend::getCondis</a></div><div class="ttdeci">Conditions * getCondis()</div><div class="ttdef"><b>Definition:</b> RaceWeekend.cpp:50</div></div>
-<div class="ttc" id="astructConditions_html"><div class="ttname"><a href="structConditions.html">Conditions</a></div><div class="ttdef"><b>Definition:</b> RaceWeekend.h:28</div></div>
+<div class="ttc" id="astructConditions_html"><div class="ttname"><a href="structConditions.html">Conditions</a></div><div class="ttdef"><b>Definition:</b> RaceWeekend.h:26</div></div>
 <div class="ttc" id="aclassRaceWeekend_html_a995aa7a3e0abed0d1cf6f9fd880f3b7d"><div class="ttname"><a href="classRaceWeekend.html#a995aa7a3e0abed0d1cf6f9fd880f3b7d">RaceWeekend::RaceWeekend</a></div><div class="ttdeci">RaceWeekend(std::string _trackName, double _length, std::string _location, Date *_date, Conditions *_condis)</div><div class="ttdef"><b>Definition:</b> RaceWeekend.cpp:7</div></div>
-<div class="ttc" id="aclassRaceWeekend_html"><div class="ttname"><a href="classRaceWeekend.html">RaceWeekend</a></div><div class="ttdef"><b>Definition:</b> RaceWeekend.h:34</div></div>
+<div class="ttc" id="aclassRaceWeekend_html"><div class="ttname"><a href="classRaceWeekend.html">RaceWeekend</a></div><div class="ttdef"><b>Definition:</b> RaceWeekend.h:32</div></div>
 <div class="ttc" id="aclassRaceWeekend_html_ae48109976301bf61ab99ba8766878082"><div class="ttname"><a href="classRaceWeekend.html#ae48109976301bf61ab99ba8766878082">RaceWeekend::setLocation</a></div><div class="ttdeci">void setLocation(std::string _location)</div><div class="ttdef"><b>Definition:</b> RaceWeekend.cpp:38</div></div>
 <div class="ttc" id="aclassRaceWeekend_html_add3b828d668d1498d6b15a93cd3baa23"><div class="ttname"><a href="classRaceWeekend.html#add3b828d668d1498d6b15a93cd3baa23">RaceWeekend::setLength</a></div><div class="ttdeci">void setLength(double _length)</div><div class="ttdef"><b>Definition:</b> RaceWeekend.cpp:22</div></div>
-<div class="ttc" id="astructDate_html"><div class="ttname"><a href="structDate.html">Date</a></div><div class="ttdoc">Class to construct a race weekend.</div><div class="ttdef"><b>Definition:</b> RaceWeekend.h:23</div></div>
+<div class="ttc" id="astructDate_html"><div class="ttname"><a href="structDate.html">Date</a></div><div class="ttdoc">Class to construct a race weekend.</div><div class="ttdef"><b>Definition:</b> RaceWeekend.h:21</div></div>
 <div class="ttc" id="aclassRaceWeekend_html_a91632ae88452468bed8f4b4225a3032c"><div class="ttname"><a href="classRaceWeekend.html#a91632ae88452468bed8f4b4225a3032c">RaceWeekend::~RaceWeekend</a></div><div class="ttdeci">~RaceWeekend()</div><div class="ttdef"><b>Definition:</b> RaceWeekend.cpp:82</div></div>
 <div class="ttc" id="aclassRaceWeekend_html_a0571235217e5a53037385bba1d29fbab"><div class="ttname"><a href="classRaceWeekend.html#a0571235217e5a53037385bba1d29fbab">RaceWeekend::getLocation</a></div><div class="ttdeci">std::string getLocation()</div><div class="ttdef"><b>Definition:</b> RaceWeekend.cpp:42</div></div>
 <div class="ttc" id="aclassRaceWeekend_html_a42cbc11254320da16552a77c194a3c87"><div class="ttname"><a href="classRaceWeekend.html#a42cbc11254320da16552a77c194a3c87">RaceWeekend::setCondis</a></div><div class="ttdeci">void setCondis(Conditions *_condis)</div><div class="ttdef"><b>Definition:</b> RaceWeekend.cpp:46</div></div>

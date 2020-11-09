@@ -17,6 +17,10 @@ void \mbox{\hyperlink{classEngineeringTeam_a320701bf83f45a4020e83a74e7be1222}{bu
 Car $\ast$ \mbox{\hyperlink{classEngineeringTeam_a27819afa14ce2f64df5b87d30ac15e12}{get\+Car}} ()
 \item 
 void \mbox{\hyperlink{classEngineeringTeam_aad4cc37ec404a0b94ad83ae469d394d1}{service\+Car}} ()
+\item 
+void \mbox{\hyperlink{classEngineeringTeam_a9c4002fc9f2d6e788908eced4daaae15}{set\+Car}} (Car $\ast$car)
+\item 
+void \mbox{\hyperlink{classEngineeringTeam_a3719d5914b254d1ead33035facb9c4c4}{change\+Electronics\+Mode}} (string)
 \end{DoxyCompactItemize}
 
 
@@ -30,7 +34,18 @@ void \mbox{\hyperlink{classEngineeringTeam_aad4cc37ec404a0b94ad83ae469d394d1}{se
 \doxysubsubsection{\texorpdfstring{buildCar()}{buildCar()}}
 {\footnotesize\ttfamily void Engineering\+Team\+::build\+Car (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Constructs the car and adds all the components \mbox{\Hypertarget{classEngineeringTeam_a27819afa14ce2f64df5b87d30ac15e12}\label{classEngineeringTeam_a27819afa14ce2f64df5b87d30ac15e12}} 
+Constructs the car and adds all the components \mbox{\Hypertarget{classEngineeringTeam_a3719d5914b254d1ead33035facb9c4c4}\label{classEngineeringTeam_a3719d5914b254d1ead33035facb9c4c4}} 
+\index{EngineeringTeam@{EngineeringTeam}!changeElectronicsMode@{changeElectronicsMode}}
+\index{changeElectronicsMode@{changeElectronicsMode}!EngineeringTeam@{EngineeringTeam}}
+\doxysubsubsection{\texorpdfstring{changeElectronicsMode()}{changeElectronicsMode()}}
+{\footnotesize\ttfamily void Engineering\+Team\+::change\+Electronics\+Mode (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})}
+
+Changes the mode of the electronics in the car. 
+\begin{DoxyParams}{Parameters}
+{\em s} & -\/ The string description of the new mode. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEngineeringTeam_a27819afa14ce2f64df5b87d30ac15e12}\label{classEngineeringTeam_a27819afa14ce2f64df5b87d30ac15e12}} 
 \index{EngineeringTeam@{EngineeringTeam}!getCar@{getCar}}
 \index{getCar@{getCar}!EngineeringTeam@{EngineeringTeam}}
 \doxysubsubsection{\texorpdfstring{getCar()}{getCar()}}
@@ -45,7 +60,18 @@ Returns the car
 \doxysubsubsection{\texorpdfstring{serviceCar()}{serviceCar()}}
 {\footnotesize\ttfamily void Engineering\+Team\+::service\+Car (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Services the car (Outputs relevant info) 
+Services the car (Outputs relevant info) \mbox{\Hypertarget{classEngineeringTeam_a9c4002fc9f2d6e788908eced4daaae15}\label{classEngineeringTeam_a9c4002fc9f2d6e788908eced4daaae15}} 
+\index{EngineeringTeam@{EngineeringTeam}!setCar@{setCar}}
+\index{setCar@{setCar}!EngineeringTeam@{EngineeringTeam}}
+\doxysubsubsection{\texorpdfstring{setCar()}{setCar()}}
+{\footnotesize\ttfamily void Engineering\+Team\+::set\+Car (\begin{DoxyParamCaption}\item[{Car $\ast$}]{car }\end{DoxyParamCaption})}
+
+A method to set the active car of this engineering team. 
+\begin{DoxyParams}{Parameters}
+{\em car} & -\/ The car component to set to the active car. \\
+\hline
+\end{DoxyParams}
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

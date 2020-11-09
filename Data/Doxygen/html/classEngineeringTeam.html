@@ -82,6 +82,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a27819afa14ce2f64df5b87d30ac15e12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad4cc37ec404a0b94ad83ae469d394d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngineeringTeam.html#aad4cc37ec404a0b94ad83ae469d394d1">serviceCar</a> ()</td></tr>
 <tr class="separator:aad4cc37ec404a0b94ad83ae469d394d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c4002fc9f2d6e788908eced4daaae15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngineeringTeam.html#a9c4002fc9f2d6e788908eced4daaae15">setCar</a> (Car *car)</td></tr>
+<tr class="separator:a9c4002fc9f2d6e788908eced4daaae15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3719d5914b254d1ead33035facb9c4c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngineeringTeam.html#a3719d5914b254d1ead33035facb9c4c4">changeElectronicsMode</a> (string)</td></tr>
+<tr class="separator:a3719d5914b254d1ead33035facb9c4c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classEngineeringTeam.html" title="EngineeringTeam is used to build the car using the Factory and service the car.">EngineeringTeam</a> is used to build the car using the <a class="el" href="classFactory.html" title="Creator participant for the factory pattern used to construct components that should be added to car.">Factory</a> and service the car. </p>
@@ -101,6 +105,30 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Constructs the car and adds all the components </p>
+
+</div>
+</div>
+<a id="a3719d5914b254d1ead33035facb9c4c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3719d5914b254d1ead33035facb9c4c4">&#9670;&nbsp;</a></span>changeElectronicsMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EngineeringTeam::changeElectronicsMode </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Changes the mode of the electronics in the car. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>- The string description of the new mode. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -137,6 +165,30 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Services the car (Outputs relevant info) </p>
+
+</div>
+</div>
+<a id="a9c4002fc9f2d6e788908eced4daaae15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c4002fc9f2d6e788908eced4daaae15">&#9670;&nbsp;</a></span>setCar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EngineeringTeam::setCar </td>
+          <td>(</td>
+          <td class="paramtype">Car *&#160;</td>
+          <td class="paramname"><em>car</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A method to set the active car of this engineering team. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">car</td><td>- The car component to set to the active car. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
