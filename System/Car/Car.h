@@ -5,7 +5,7 @@
 #ifndef COS214PROJECT_CAR_H
 #define COS214PROJECT_CAR_H
 /**
- * @brief
+ * @brief Car is a class which has collection of components stored in a map and a raceStrategy
  */
 #include "Component.h"
 #include "../RacingStrategy/Strategies/GeneralRaceStrategy.h"
