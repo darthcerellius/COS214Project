@@ -40,3 +40,7 @@ bool ElectronicsComponent::softwareTest() {
     }
 
 }
+
+void ElectronicsComponent::setMode(string mode) {
+    std::cout <<"Set electronics mode to: " << mode<<endl;
+}

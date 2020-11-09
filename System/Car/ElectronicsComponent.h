@@ -37,6 +37,9 @@ public:
     /**
      * No implementation since electronics have no need to be software tested
      * */
+
     bool softwareTest() override;
+
+    void setMode(string mode);
 };
 #endif //COS214PROJECT_ELECTRONICSCOMPONENT_H
