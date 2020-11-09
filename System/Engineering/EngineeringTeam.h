@@ -45,7 +45,10 @@ public:
     void serviceCar();
 
     void setCar(Car* car);
-
+/**
+ * Changes the mode of the electronics in the car.
+ * @param s - The string description of the new mode
+ * */
     void changeElectronicsMode(string);
 };
 

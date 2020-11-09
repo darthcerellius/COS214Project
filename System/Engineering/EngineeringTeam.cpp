@@ -60,10 +60,7 @@ EngineeringTeam::~EngineeringTeam() {
 void EngineeringTeam::setCar(Car *car) {
     this->car = car;
 }
-/**
- * Changes the mode of the electronics in the car.
- * @param s - The string description of the new mode
- * */
+
 void EngineeringTeam::changeElectronicsMode(string s) {
     Component* comp = (car->getComponent("electronics"));
     if(comp){
