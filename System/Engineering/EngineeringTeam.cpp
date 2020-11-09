@@ -61,6 +61,12 @@ void EngineeringTeam::setCar(Car *car) {
     this->car = car;
 }
 
-void EngineeringTeam::changeElectronicsMode(string) {
+void EngineeringTeam::changeElectronicsMode(string s) {
+    Component* comp = (car->getComponent("electronics"));
+    if(comp){
+        dynamic_cast<ElectronicsComponent*>(comp)->setMode(s);
+    }else{
+        cout<<"No electronics component to alter"<<endl;
+    }
 
 }

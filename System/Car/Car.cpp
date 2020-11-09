@@ -151,5 +151,14 @@ void Car::printComponents() {
     std::cout << std::endl;
 }
 
+Component *Car::getComponent(string name) {
+    map<string,Component*>::iterator temp = components.find(name);
+    if(temp != components.end()){
+        return (*temp).second;//return the found component
+    }else{
+        return 0;
+    }
+}
+
 
 
