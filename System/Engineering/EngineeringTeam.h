@@ -44,10 +44,15 @@ public:
      */
     void serviceCar();
 
+
+    /**
+     * A method to set the active car of this engineering team.
+     * @param car - The car component to set to the active car.
+     * */
     void setCar(Car* car);
 /**
  * Changes the mode of the electronics in the car.
- * @param s - The string description of the new mode
+ * @param s - The string description of the new mode.
  * */
     void changeElectronicsMode(string);
 };

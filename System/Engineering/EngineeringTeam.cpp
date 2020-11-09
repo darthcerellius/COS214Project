@@ -68,5 +68,4 @@ void EngineeringTeam::changeElectronicsMode(string s) {
     }else{
         cout<<"No electronics component to alter"<<endl;
     }
-
 }
