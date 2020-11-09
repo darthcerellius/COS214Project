@@ -10,7 +10,7 @@ EngineeringCommand::EngineeringCommand() {
 }
 
 void EngineeringCommand::execute(Car *car) {
-    CurrentSeason::getStrategyTeam()->decideComponents(CurrentSeason::getEngineeringTeam());
+    CurrentSeason::getEngineeringTeam()->buildCar();
     Car * c = CurrentSeason::getEngineeringTeam()->getCar();
     CurrentSeason::getStrategyTeam()->setCar(c);
     if (successor != nullptr) {

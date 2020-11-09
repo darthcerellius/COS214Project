@@ -10,12 +10,10 @@
 #include "../Commands/EngineeringCommand.h"
 
 Command *PreSeasonBuilder::buildCommandChain() {
-    Command* stratComm = new StrategyCommand();
     Command* engTeam = new EngineeringCommand();
     Command* simCommand = new SimulationCommand();
     Command* carStore = new CarStoreCommand();
     simCommand->addSuccessor(carStore);
-    stratComm->addSuccessor(simCommand);
-    engTeam->addSuccessor(stratComm);
+    engTeam->addSuccessor(simCommand);
     return engTeam;
 }

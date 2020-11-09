@@ -22,7 +22,7 @@ public:
     StrategyTeam();
     ~StrategyTeam();
     void decideStrategy(int); ///Selects and sets the generalStrategy that will be used by the racecar per race.
-    void decideComponents(EngineeringTeam*);///Initiates the construction process of the car in EngineeringTeam. Acts as the construct() function in the Director participant of the builder pattern.
+    void decideComponents();///Decides an Electronic component for a car.
     void setCar(Car*);
 };
 
