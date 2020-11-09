@@ -9,7 +9,7 @@
 class WindTunnelTest : public Testing {
 private:
     int tokens; ///The total amount of wind tunnel tests that can be performed during one season
-    Component* rd ;
+
 public:
     ~WindTunnelTest();
     WindTunnelTest();

@@ -6,22 +6,22 @@
 #include "../Car/Car.h"
 
 bool WindTunnelTest::test(Component * component) {
-    if (!rd && component->getName() == "Car"){
-        rd = component->clone();
+    if (!development_car && component->getName() == "Car"){
+        development_car = component->clone();
     }
 
     if(tokens<1){
         std::cout<<"Already ran all 400 wind tunnel tests" << std::endl << std::endl;
     }
-    return rd->windTunnelTest(tokens );
+    return development_car->windTunnelTest(tokens );
 }
 
 WindTunnelTest::WindTunnelTest() {
-    rd= nullptr;
+    development_car= nullptr;
     tokens=400;
 }
 
 WindTunnelTest::~WindTunnelTest() {
-    delete rd;
+    delete development_car;
 
 }

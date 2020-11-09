@@ -12,10 +12,12 @@
 #include "../Car/Memento/Component/ComponentMemento.h"
 #include "../Car/Memento/Component/ComponentCareTaker.h"
 class Testing {
-
+protected:
+    Component* development_car;
 public:
     Testing();
     ~Testing();
+    Component* getCar();
     virtual bool test(Component*)=0;
 };
 

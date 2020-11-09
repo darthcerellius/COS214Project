@@ -11,3 +11,7 @@ Testing::Testing() {
 Testing::~Testing() {
 }
 
+Component *Testing::getCar() {
+    return development_car;
+}
+
