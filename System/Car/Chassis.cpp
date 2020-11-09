@@ -77,7 +77,7 @@ bool Chassis::windTunnelTest(int &tokens) {
            break;
         }
         this->downForce += factor;
-        this->windResistance -= factor;
+        this->windResistance -= factor/10;
         factor = factor * 0.9;
         std::cout << "WIND TUNNEL TESTING : "<< to_string(abs(tokens))  <<" tokens remaining : downforce altered to: " << to_string(this->downForce) << " | wind resistance altered to : " <<to_string(this->windResistance)<< std::endl;
 

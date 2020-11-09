@@ -12,12 +12,31 @@ class ElectronicsComponent: public Component{
 private:
     string mode;
 public:
+
+    /**
+     * Default constructor for an electronics component
+     * */
     ElectronicsComponent();
+
+    /**
+     * Copy constructor for an electronics component
+     * */
     ElectronicsComponent(ElectronicsComponent*);
     ~ElectronicsComponent();
 
+    /**
+     * A clone method which returns a deep copy of the Electronics Component
+     * */
     Component* clone();
+
+    /**
+     * No implementation since electronics have no need to be tested in wind tunnel
+     * */
     bool windTunnelTest(int &tokens) override;
+
+    /**
+     * No implementation since electronics have no need to be software tested
+     * */
     bool softwareTest() override;
 };
 #endif //COS214PROJECT_ELECTRONICSCOMPONENT_H
